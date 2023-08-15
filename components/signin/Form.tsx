@@ -42,11 +42,11 @@ export default function SigninForm() {
 
         console.log(data)
 
-        if (data?.user.role == "Admin") {
+        if (data?.user.role == "admin") {
             return router.push("/admin");
         }
 
-        if (data?.user.role == "Student") {
+        if (data?.user.role == "user") {
             return router.push("/user");
         }
     };

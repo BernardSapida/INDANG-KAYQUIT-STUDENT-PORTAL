@@ -14,14 +14,15 @@ export default async function handler(
 ) {
   try {
     const client = await clientPromise;
-    const db = client.db("sample_db");
+    // const db = client.db("");
+
     const { email, password } = req.body;
 
-    // const buildings = await db.collection("listingsAndReviews").find({}).limit(2).toArray();
+    // const buildings = await db.collection("").find({}).limit(2).toArray();
     // console.log(buildings.length)
     res.json({
       id: 123,
-      role: "Admin",
+      role: "admin", // admin or user
       email: email,
       password: password,
     });
