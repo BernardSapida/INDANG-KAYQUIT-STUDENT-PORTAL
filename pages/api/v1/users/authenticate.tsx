@@ -18,6 +18,10 @@ export default async function handler(
 
     const { email, password } = req.body;
 
+    const data = await axios.get(
+      `${process.env.NEXTAUTH_URL}/api/v1/test`
+    );
+
     // const data = await db.collection("").find({}).limit(2).toArray();
     // console.log(data.length)
     res.json({
