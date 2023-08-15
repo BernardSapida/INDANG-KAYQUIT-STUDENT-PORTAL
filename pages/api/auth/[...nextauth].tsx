@@ -74,17 +74,8 @@ export const authOptions: NextAuthOptions = {
 
         const user = authResponse.data || null;
 
-
         if (!user) throw new Error(JSON.stringify(authResponse.data));
 
-        // const userInfoResponse = await axios.post(
-        //   `${process.env.NEXTAUTH_URL}/api/v1/user_informations/read`,
-        //   { user_id: user.id }
-        // );
-
-        // const userInfo = userInfoResponse.data.data || null;
-
-        // return { ...user, ...userInfo };
         return { ...user };
       },
     })
