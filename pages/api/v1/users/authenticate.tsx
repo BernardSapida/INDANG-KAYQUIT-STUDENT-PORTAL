@@ -18,8 +18,8 @@ export default async function handler(
 
     const { email, password } = req.body;
 
-    // const buildings = await db.collection("").find({}).limit(2).toArray();
-    // console.log(buildings.length)
+    // const data = await db.collection("").find({}).limit(2).toArray();
+    // console.log(data.length)
     res.json({
       id: 123,
       role: "admin", // admin or user
