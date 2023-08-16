@@ -1,0 +1,28 @@
+{
+    "personalDetails": {
+        "fullname": "String",
+        "birthdate": "String",
+        "sex": "String",
+        "religion": "String",
+        "civilStatus": "String",
+        "nationality": "String",
+        "ethnicity": "String",
+        "citizenship": "String"
+    },
+    "sectionHandle": {
+        "currentGradeLevel": "NumberInt",
+        "currentSection": "string",
+        "academicYear": "NumberInt"
+    },
+    "contactDetails": {
+        "address": "String",
+        "contactNumber": "String"
+    },
+    "kayquitGoogleAccount": {
+        "kayquitAccount": "String",
+        "defaultPassword": "String",
+        "password": "String"
+    },
+    "createdAt": "date",
+    "updatedAt": "date"
+}

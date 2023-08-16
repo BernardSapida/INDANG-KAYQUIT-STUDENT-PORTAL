@@ -1,0 +1,42 @@
+{
+    "personalDetails": {
+        "fullname": "string",
+        "birthdate": "date",
+        "sex": "string",
+        "religion": "string",
+        "civilStatus": "string",
+        "nationality": "string",
+        "ethnicity": "string",
+        "citizenship": "string"
+    },
+    "enrollmentDetails": {
+        "currentGradeLevel": "int",
+        "currentSection": "string",
+        "lrn": "string",
+        "studentNumber": "int"
+    },
+    "grades": {
+        "academicYear": {
+            "year-year": {
+                "subject": {
+                    "firstQuarter": "int",
+                    "secondQuarter": "int",
+                    "thirdQuarter": "int",
+                    "fourtQuarter": "int"
+                }
+            }
+        }
+    },
+    "contactDetails": {
+        "address": "string",
+        "guardian": "string",
+        "contactNumber": "string"
+    },
+    "kayquitGoogleAccount": {
+        "kayquitAccount": "string",
+        "defaultPassword": "string",
+        "password": "string"
+    },
+    "createdAt": "date",
+    "updatedAt": "date"
+}
