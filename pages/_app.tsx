@@ -6,6 +6,7 @@ import Head from "next/head";
 import Container from "react-bootstrap/Container";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "@/components/navigation/Header";
 
 // import "@/public/css/home.css";
 
@@ -29,6 +30,7 @@ export default function App({
         color="linear-gradient(to right, hsl(0, 100%, 66%), hsl(0, 100%, 71%))"
         options={{ showSpinner: false }}
       />
+      <Header />
       <main>
         <Container className="my-5" style={{ marginTop: 50 }}>
           <Component {...pageProps} />

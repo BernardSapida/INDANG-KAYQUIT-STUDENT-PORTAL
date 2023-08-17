@@ -1,0 +1,18 @@
+header.header_portal {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.06);
+}
+header.header_portal nav div {
+  display: grid;
+  place-items: center;
+  height: 60px;
+  width: 60px;
+  color: #031E66;
+  font-size: 25px;
+  border-right: 1px solid #eee;
+}
+header.header_portal img {
+  margin-left: 20px;
+}/*# sourceMappingURL=header.module.css.map */

@@ -13,7 +13,7 @@ import { initialValues, validationSchema } from "@/helpers/signin/Form";
 
 import { Alert } from "@/utils/alert/swal";
 
-import style from "@/public/css/ButtonProvider.module.css";
+import style from "@/public/css/button-provider.module.css";
 
 export default function SigninForm() {
     const [loading, setLoading] = useState<boolean>(false);
