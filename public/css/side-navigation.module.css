@@ -1,0 +1,40 @@
+aside.aside_navigation {
+  width: 300px;
+  height: calc(100vh - 60px);
+  box-shadow: 4px 0 4px rgba(0, 0, 0, 0.06);
+}
+aside.aside_navigation h2 {
+  margin: 0 20px;
+  padding: 20px 0;
+  font-size: 24px;
+  border-bottom: 1px solid hsl(0, 0%, 93%);
+}
+aside.aside_navigation ul {
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
+  display: inline-block;
+}
+aside.aside_navigation ul li {
+  display: grid;
+  align-items: center;
+}
+aside.aside_navigation ul li a {
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #505050;
+  font-size: 18px;
+  font-weight: 500;
+}
+aside.aside_navigation ul li a svg {
+  margin-bottom: 5px;
+}
+aside.aside_navigation ul li:hover {
+  background-color: rgba(233, 233, 233, 0.5);
+}
+
+@media (max-width: 1200px) {
+  aside.aside_navigation {
+    display: none;
+  }
+}/*# sourceMappingURL=side-navigation.module.css.map */

@@ -1,0 +1,35 @@
+div.title {
+    height: 100px;
+    border-bottom: 1px solid hwb(0 93% 7%);
+    display: grid;
+    align-items: center;
+
+    & h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0;
+
+        & svg {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+div.container {
+    display: flex;
+    gap: 20px;
+
+    &>div {
+        padding: 20px;
+        width: 100%;
+        border-radius: 5px;
+
+        & p {
+            font-weight: bold;
+
+            & svg {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

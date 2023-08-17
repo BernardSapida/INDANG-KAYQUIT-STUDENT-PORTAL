@@ -1,0 +1,19 @@
+main {
+    display: flex;
+
+    & section.content {
+        width: calc(100vw - 300px);
+        height: calc(100vh - 60px);
+        overflow-y: scroll;
+    }
+}
+
+@media (max-width: 1200px) {
+    main {
+        display: block;
+
+        & section.content {
+            width: 100%;
+        }
+    }
+}

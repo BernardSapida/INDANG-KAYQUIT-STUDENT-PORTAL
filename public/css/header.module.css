@@ -1,18 +1,24 @@
-header.header_portal {
+header.header {
   height: 60px;
   display: flex;
   align-items: center;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.06);
 }
-header.header_portal nav div {
+header.header nav div {
   display: grid;
   place-items: center;
   height: 60px;
   width: 60px;
-  color: #031E66;
+  color: hsl(224, 94%, 21%);
   font-size: 25px;
-  border-right: 1px solid #eee;
+  border-right: 1px solid hsl(0, 0%, 93%);
 }
-header.header_portal img {
+header.header nav div svg {
+  cursor: pointer;
+}
+header.header nav div svg:hover {
+  color: hsl(224, 94%, 41%);
+}
+header.header img {
   margin-left: 20px;
 }/*# sourceMappingURL=header.module.css.map */

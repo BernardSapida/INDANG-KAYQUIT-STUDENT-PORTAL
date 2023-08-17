@@ -1,14 +1,15 @@
-import type { AppProps } from "next/app";
-import NextNProgress from "nextjs-progressbar";
+// Next Modules
 import { SessionProvider } from "next-auth/react";
+import NextNProgress from "nextjs-progressbar";
+import type { AppProps } from "next/app";
 import Head from "next/head";
 
-import Container from "react-bootstrap/Container";
+// Navigations
+import Header from "@/components/navigation/Header";
+import SideNavigation from "@/components/navigation/SideNavigation";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "@/components/navigation/Header";
-
-// import "@/public/css/home.css";
+import "@/public/css/main.css";
 
 export default function App({
   Component,
@@ -18,7 +19,7 @@ export default function App({
     <SessionProvider session={session}>
       <Head>
         <title>Website Name</title>
-        <link rel="shortcut icon" href="/icon.png" />
+        <link rel="shortcut icon" href="/images/kayquit-logo.png" />
         <meta name="description" content="Paragraph" />
         <meta name="keywords" content="Paragraph" />
         <meta name="author" content="Names" />
@@ -27,14 +28,15 @@ export default function App({
         <meta property="og:image" content="Website Image" />
       </Head>
       <NextNProgress
-        color="linear-gradient(to right, hsl(0, 100%, 66%), hsl(0, 100%, 71%))"
+        color="linear-gradient(to right, hsl(224, 94%, 41%), hsl(224, 94%, 21%))"
         options={{ showSpinner: false }}
       />
       <Header />
       <main>
-        <Container className="my-5" style={{ marginTop: 50 }}>
+        <SideNavigation />
+        <section className="content px-5">
           <Component {...pageProps} />
-        </Container>
+        </section>
       </main>
     </SessionProvider>
   );

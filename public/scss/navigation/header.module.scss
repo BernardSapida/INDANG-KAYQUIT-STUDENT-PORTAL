@@ -1,4 +1,4 @@
-header.header_portal {
+header.header {
     height: 60px;
     display: flex;
     align-items: center;
@@ -9,9 +9,17 @@ header.header_portal {
         place-items: center;
         height: 60px;
         width: 60px;
-        color: #031E66;
+        color: hsl(224, 94%, 21%);
         font-size: 25px;
-        border-right: 1px solid #eee;
+        border-right: 1px solid hsl(0, 0%, 93%);
+
+        & svg {
+            cursor: pointer;
+
+            &:hover {
+                color: hsl(224, 94%, 41%);
+            }
+        }
     }
 
     & img {
