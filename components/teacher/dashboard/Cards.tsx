@@ -7,7 +7,7 @@ import { FaGraduationCap } from 'react-icons/fa';
 import { getAcademicYear } from "@/utils/date/date";
 
 // CSS
-import style from "@/public/css/cards.module.css";
+import style from "@/public/css/teacher-cards.module.css";
 
 function Cards() {
     return (

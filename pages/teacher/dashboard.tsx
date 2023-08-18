@@ -8,9 +8,8 @@ import { TbSpeakerphone } from 'react-icons/tb';
 import Cards from "@/components/teacher/dashboard/Cards";
 import News from "@/components/teacher/dashboard/news";
 
-
 // CSS
-import style from "@/public/css/dashboard.module.css";
+import style from "@/public/css/teacher-dashboard.module.css";
 
 // Utilities
 import { getGreeting } from "@/utils/greetings";
