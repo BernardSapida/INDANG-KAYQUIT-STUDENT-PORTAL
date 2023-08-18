@@ -29,8 +29,8 @@ import style from "@/public/css/button-provider.module.css";
 
 export default function SigninForm() {
     const [loading, setLoading] = useState<boolean>(false);
-    const router = useRouter();
     const { data } = useSession();
+    const router = useRouter();
 
     const handleSubmit = async (
         values: { email: string; password: string },

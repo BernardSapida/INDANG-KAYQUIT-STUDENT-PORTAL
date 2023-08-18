@@ -29,5 +29,5 @@ div.container div.topic div.descriptions p {
   color: hsl(0, 0%, 31%);
 }
 div.container div.topic div.descriptions p a {
-  color: #00C896;
+  color: hsl(165, 100%, 39%);
 }/*# sourceMappingURL=news.module.css.map */
