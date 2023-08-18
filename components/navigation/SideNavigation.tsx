@@ -1,3 +1,6 @@
+// React Modules
+import { Dispatch, SetStateAction } from "react";
+
 // Next Modules
 import Link from "next/link";
 
@@ -8,14 +11,14 @@ import { AiFillUnlock } from 'react-icons/ai';
 // CSS
 import style from "@/public/css/side-navigation.module.css";
 
-function SideNavigation() {
+function SideNavigation({ showNavigation, setShowNavigation }: { showNavigation: boolean, setShowNavigation: Dispatch<SetStateAction<boolean>> }) {
     return (
-        <aside className={`${style.aside_navigation}`}>
+        <aside className={`${style.aside_navigation} ${showNavigation ? style.active : ''}`}>
             <h2>Navigation</h2>
             <ul>
 
-                <li><Link href="/auth/signin"><AiOutlineLogin /> Login</Link></li>
-                <li><Link href="/signup"><AiFillUnlock /> Forgot Password</Link></li>
+                <li><Link href="/auth/signin" onClick={() => setShowNavigation(!showNavigation)}><AiOutlineLogin /> Login</Link></li>
+                <li><Link href="/signup" onClick={() => setShowNavigation(!showNavigation)}><AiFillUnlock /> Forgot Password</Link></li>
             </ul>
         </aside>
     );

@@ -1,7 +1,12 @@
 aside.aside_navigation {
-  width: 300px;
+  position: absolute;
+  left: -300px;
+  width: 0;
   height: calc(100vh - 60px);
   box-shadow: 4px 0 4px rgba(0, 0, 0, 0.06);
+  background-color: hsl(0, 0%, 100%);
+  transition: all 150ms linear;
+  z-index: 1;
 }
 aside.aside_navigation h2 {
   margin: 0 20px;
@@ -32,9 +37,16 @@ aside.aside_navigation ul li a svg {
 aside.aside_navigation ul li:hover {
   background-color: rgba(233, 233, 233, 0.5);
 }
+aside.active {
+  width: 300px;
+  left: 0;
+}
 
 @media (max-width: 1200px) {
-  aside.aside_navigation {
-    display: none;
+  aside.active {
+    display: block;
+    position: absolute;
+    left: 0;
+    transition: all 150ms linear;
   }
 }/*# sourceMappingURL=side-navigation.module.css.map */

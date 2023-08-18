@@ -1,8 +1,10 @@
 header.header {
+  position: relative;
   height: 60px;
   display: flex;
   align-items: center;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.06);
+  z-index: 2;
 }
 header.header nav div {
   display: grid;

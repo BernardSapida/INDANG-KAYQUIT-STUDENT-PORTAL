@@ -12,11 +12,14 @@ import SideNavigation from "@/components/navigation/SideNavigation";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/public/css/main.css";
 import Footer from "@/components/footer/Footer";
+import { useState } from "react";
 
 export default function App({
   Component,
   pageProps: { session, ...pageProps },
 }: AppProps) {
+  const [showNavigation, setShowNavigation] = useState(false);
+
   return (
     <SessionProvider session={session}>
       <Head>
@@ -33,9 +36,9 @@ export default function App({
         color="linear-gradient(to right, hsl(224, 94%, 41%), hsl(224, 94%, 21%))"
         options={{ showSpinner: false }}
       />
-      <Header />
+      <Header showNavigation={showNavigation} setShowNavigation={setShowNavigation} />
       <main>
-        <SideNavigation />
+        <SideNavigation showNavigation={showNavigation} setShowNavigation={setShowNavigation} />
         <section className="content px-3">
           <Component {...pageProps} />
           <Footer />

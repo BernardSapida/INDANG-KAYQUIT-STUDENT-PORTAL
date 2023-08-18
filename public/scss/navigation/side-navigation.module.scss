@@ -1,46 +1,63 @@
-aside.aside_navigation {
-    width: 300px;
-    height: calc(100vh - 60px);
-    box-shadow: 4px 0 4px rgba(0, 0, 0, 6%);
+aside {
+    &.aside_navigation {
+        position: absolute;
+        left: -300px;
+        width: 0;
+        height: calc(100vh - 60px);
+        box-shadow: 4px 0 4px rgba(0, 0, 0, 6%);
+        background-color: hsl(0, 0%, 100%);
+        transition: all 150ms linear;
+        z-index: 1;
 
-    & h2 {
-        margin: 0 20px;
-        padding: 20px 0;
-        font-size: 24px;
-        border-bottom: 1px solid hsl(0, 0%, 93%);
-    }
+        & h2 {
+            margin: 0 20px;
+            padding: 20px 0;
+            font-size: 24px;
+            border-bottom: 1px solid hsl(0, 0%, 93%);
+        }
 
-    & ul {
-        width: 100%;
-        padding: 0;
-        list-style-type: none;
-        display: inline-block;
+        & ul {
+            width: 100%;
+            padding: 0;
+            list-style-type: none;
+            display: inline-block;
 
-        & li {
-            display: grid;
-            align-items: center;
+            & li {
+                display: grid;
+                align-items: center;
 
-            & a {
-                padding: 15px 20px;
-                text-decoration: none;
-                color: #505050;
-                font-size: 18px;
-                font-weight: 500;
+                & a {
+                    padding: 15px 20px;
+                    text-decoration: none;
+                    color: #505050;
+                    font-size: 18px;
+                    font-weight: 500;
 
-                & svg {
-                    margin-bottom: 5px;
+                    & svg {
+                        margin-bottom: 5px;
+                    }
+                }
+
+                &:hover {
+                    background-color: rgba(233, 233, 233, 0.5);
                 }
             }
-
-            &:hover {
-                background-color: rgba(233, 233, 233, 0.5);
-            }
         }
+    }
+
+    &.active {
+        width: 300px;
+        left: 0;
     }
 }
 
 @media (max-width: 1200px) {
-    aside.aside_navigation {
-        display: none;
+    aside {
+        &.active {
+            display: block;
+            position: absolute;
+            left: 0;
+            transition: all 150ms linear;
+        }
     }
 }

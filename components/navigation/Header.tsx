@@ -1,3 +1,6 @@
+// React Modules
+import { Dispatch, SetStateAction } from "react";
+
 // Next Modules
 import Image from "next/image";
 
@@ -7,12 +10,17 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 // CSS
 import style from "@/public/css/header.module.css";
 
-function Header() {
+function Header({ showNavigation, setShowNavigation }: { showNavigation: boolean, setShowNavigation: Dispatch<SetStateAction<boolean>> }) {
+    const clickMenu = () => {
+        console.log(!showNavigation);
+        setShowNavigation(!showNavigation);
+    }
+
     return (
         <header className={`${style.header}`}>
             <nav>
                 <div>
-                    <GiHamburgerMenu className="hamburger_menu" />
+                    <GiHamburgerMenu className="hamburger_menu" onClick={clickMenu} />
                 </div>
             </nav>
             <div className="logo">

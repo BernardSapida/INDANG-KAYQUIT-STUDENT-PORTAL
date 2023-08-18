@@ -1,0 +1,48 @@
+div.container {
+    display: grid;
+    place-items: center;
+    height: calc(100vh - 60px);
+
+    & div.content {
+        & img {
+            display: block;
+            margin: auto;
+        }
+
+        & h1.title {
+            margin-top: 30px;
+            font-size: clamp(1rem, 2.469vw + 0.648rem, 2.5rem);
+            font-weight: bolder;
+        }
+
+        & button.btn_back {
+            display: block;
+            margin: 30px auto 0 auto;
+            background-color: hsl(0, 0%, 12%);
+            border: none;
+
+            & svg {
+                margin-bottom: 5px;
+            }
+
+            &:hover {
+                background-color: hsl(0, 0%, 22%);
+            }
+        }
+
+        & a {
+            display: block;
+            margin: auto;
+            background-color: hsl(0, 0%, 12%);
+            border: none;
+
+            & svg {
+                margin-bottom: 5px;
+            }
+
+            &:hover {
+                background-color: hsl(0, 0%, 22%);
+            }
+        }
+    }
+}
