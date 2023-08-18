@@ -11,10 +11,11 @@ div.login_container div.title {
   border-bottom: 1px solid hsl(0, 0%, 93%);
   height: 100px;
 }
-div.login_container div.title > p {
+div.login_container div.title p {
   margin: 0 30px;
   font-weight: bold;
+  font-size: 24px;
 }
-div.login_container div.title > p svg {
+div.login_container div.title p svg {
   margin-bottom: 5px;
 }/*# sourceMappingURL=login.module.css.map */

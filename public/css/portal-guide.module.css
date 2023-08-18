@@ -14,6 +14,7 @@ div.guide_container div.title {
 div.guide_container div.title p {
   margin: 0 30px;
   font-weight: bold;
+  font-size: 24px;
 }
 div.guide_container div.title p svg {
   margin-bottom: 5px;

@@ -11,9 +11,10 @@ div.login_container {
         border-bottom: 1px solid hsl(0, 0%, 93%);
         height: 100px;
 
-        &>p {
+        & p {
             margin: 0 30px;
             font-weight: bold;
+            font-size: 24px;
 
             & svg {
                 margin-bottom: 5px;
