@@ -1,5 +1,5 @@
 // React-Icons
-import { FaGraduationCap } from 'react-icons/Fa';
+import { FaGraduationCap } from 'react-icons/fa';
 
 // CSS
 import style from "@/public/css/signin.module.css";

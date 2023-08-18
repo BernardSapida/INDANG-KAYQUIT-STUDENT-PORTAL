@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 // React-Icons
-import { FaGraduationCap } from 'react-icons/Fa';
+import { FaGraduationCap } from 'react-icons/fa';
 
 // Components
 import PortalGuide from "@/components/signin/PortalGuide";
