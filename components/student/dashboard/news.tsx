@@ -4,8 +4,11 @@ import Link from "next/link";
 // React-Icons
 import { TbSpeakerphone } from 'react-icons/tb';
 
+// Utilities
+import { getAcademicYear } from "@/utils/date/date";
+
 // CSS
-import style from "@/public/css/teacher-news.module.css";
+import style from "@/public/css/student-news.module.css";
 
 function News() {
     return (
@@ -20,15 +23,15 @@ function News() {
                 </div>
             </div>
             <div className={`${style.topic}`}>
-                <p className={`${style.title}`}>Teacher Information</p>
+                <p className={`${style.title}`}>Student Information</p>
                 <div className={`${style.descriptions}`}>
-                    <p>• Feel free to access <Link href="#">this link</Link> to explore the details included in the teacher profile information.</p>
+                    <p>• Feel free to access <Link href="#">this link</Link> to explore the details included in the student profile information.</p>
                 </div>
             </div>
             <div className={`${style.topic}`}>
-                <p className={`${style.title}`}>Students</p>
+                <p className={`${style.title}`}>Classmates</p>
                 <div className={`${style.descriptions}`}>
-                    <p>• Visit <Link href="#">this link</Link> to easily access the list of students who will be sharing your classroom in the upcoming section.</p>
+                    <p>• Visit <Link href="#">this link</Link> to easily access the list of fellow students who will be sharing your classroom in the upcoming section.</p>
                 </div>
             </div>
         </div >

@@ -1,23 +1,23 @@
-// Next Modules
-import Link from "next/link";
-
 // React-Icons
-import { FaGraduationCap } from 'react-icons/fa';
-
-// Components
-
+import { MdPassword } from 'react-icons/md';
 
 // CSS
-import style from "@/public/css/signin.module.css";
+import style from "@/public/css/student-password.module.css";
+
+// Components
+import ChangePassword from "@/components/student/password/ChangePassword";
 
 function Password() {
+
+
     return (
         <div className="mb-5">
             <div className={`${style.title}`}>
-                <h1><FaGraduationCap /> Change Password</h1>
+                <h1><MdPassword /> Change Password</h1>
             </div>
             <div className={`${style.container}`}>
-                {/* Components / Contents Goes here */}
+                <p className="fw-bold">Password</p>
+                <ChangePassword />
             </div>
         </div>
     );

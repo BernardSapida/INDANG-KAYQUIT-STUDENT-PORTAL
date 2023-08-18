@@ -1,11 +1,11 @@
 // React-Icons
-import { MdPassword } from 'react-icons/md';
+import { HiOutlineDocumentReport } from 'react-icons/hi';
 
 // CSS
 import style from "@/public/css/teacher-password.module.css";
 
 // Components
-import ChangePassword from "@/components/teacher/password/ChangePassword";
+import ReportForm from "@/components/teacher/reports/ReportForm";
 
 function Password() {
 
@@ -13,11 +13,11 @@ function Password() {
     return (
         <div className="mb-5">
             <div className={`${style.title}`}>
-                <h1><MdPassword /> Change Password</h1>
+                <h1><HiOutlineDocumentReport /> Reports</h1>
             </div>
             <div className={`${style.container}`}>
-                <p className="fw-bold">Password</p>
-                <ChangePassword />
+                <p className="fw-bold">Generate Excel Report</p>
+                <ReportForm />
             </div>
         </div>
     );

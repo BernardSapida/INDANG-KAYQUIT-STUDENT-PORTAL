@@ -5,12 +5,12 @@ import Link from "next/link";
 import { TbSpeakerphone } from 'react-icons/tb';
 
 // Components
-import Cards from "@/components/students/dashboard/Cards";
-import News from "@/components/students/dashboard/news";
+import Cards from "@/components/student/dashboard/Cards";
+import News from "@/components/student/dashboard/news";
 
 
 // CSS
-import style from "@/public/css/dashboard.module.css";
+import style from "@/public/css/student-dashboard.module.css";
 
 // Utilities
 import { getGreeting } from "@/utils/greetings";

@@ -9,10 +9,10 @@ import { FaGraduationCap } from 'react-icons/fa';
 
 // CSS
 import style from "@/public/css/student-profile.module.css";
-import PersonalDetails from "@/components/students/profile/PersonalDetails";
-import EnrollmentDetails from "@/components/students/profile/EnrollmentDetails";
-import ContactDetails from "@/components/students/profile/ContactDetails";
-import KayquitGoogleAccount from "@/components/students/profile/KayquitGoogleAccount";
+import PersonalDetails from "@/components/student/profile/PersonalDetails";
+import EnrollmentDetails from "@/components/student/profile/EnrollmentDetails";
+import ContactDetails from "@/components/student/profile/ContactDetails";
+import KayquitGoogleAccount from "@/components/student/profile/KayquitGoogleAccount";
 
 function Profile() {
     return (

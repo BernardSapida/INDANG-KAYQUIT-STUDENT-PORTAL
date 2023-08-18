@@ -52,8 +52,6 @@ export default function SigninForm() {
             return null;
         }
 
-        console.log(data)
-
         if (data?.user.role == "admin") {
             return router.push("/admin");
         }
@@ -88,8 +86,8 @@ export default function SigninForm() {
                         loading={loading}
                     />
                     <div className="d-flex justify-content-between mb-3">
-                        <div>
-                            <Link href="/forgot_password">Forgot password?</Link>
+                        <div className="w-100">
+                            <Link className="text-end" href="/forgot_password">Forgot password?</Link>
                         </div>
                     </div>
                     <div className="d-grid gap-2">
