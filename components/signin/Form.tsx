@@ -58,7 +58,7 @@ export default function SigninForm() {
             onSubmit={handleSubmit}
         >
             {({ handleSubmit, handleChange, values }) => (
-                <Form onSubmit={handleSubmit}>
+                <Form className={`${style.login_form}`} onSubmit={handleSubmit}>
                     <Field
                         type="text"
                         name="email"
@@ -77,15 +77,12 @@ export default function SigninForm() {
                     />
                     <div className="d-flex justify-content-between mb-3">
                         <div>
-                            <input className="form-check-input" type="checkbox" /> Remember me
-                        </div>
-                        <div>
                             <Link href="/forgot_password">Forgot password?</Link>
                         </div>
                     </div>
                     <div className="d-grid gap-2">
-                        <Button type="submit" className={`btn ${style.signin_btn}`}>
-                            Sign In
+                        <Button type="submit" className={`${style.signin_btn}`}>
+                            Login
                         </Button>
                     </div>
                 </Form>

@@ -1,58 +1,32 @@
 .signin_btn {
-  background: hsl(0, 100%, 71%);
+  height: 40px;
+  background: hsl(224, 94%, 21%);
   border: none;
-  font-weight: 500;
   transition: all 250ms ease-out;
+  font-size: 18px;
+  line-height: 1;
 }
 .signin_btn:hover {
-  background: hsl(0, 100%, 76%);
-}
-.signin_btn:active {
-  background: hsl(0, 100%, 76%) !important;
+  background: hsl(224, 94%, 41%);
 }
 
-.btn_provider {
-  display: grid;
-  height: 44px;
-  width: 44px;
-  background-color: hsl(0, 0%, 100%);
-  border: none;
-  box-shadow: 0 0 10px #c5c5c5;
-  color: hsl(0, 100%, 71%);
-  border-radius: 50%;
-  transition: all 250ms ease-out;
+form.login_form {
+  margin: 0 30px;
 }
-.btn_provider:hover {
-  background-color: #ff6d6d;
-  color: hsl(0, 0%, 100%);
+form.login_form input[type=text], form.login_form input[type=password] {
+  height: 45px !important;
+  font-size: 14px;
 }
-.btn_provider:active {
-  background-color: #ff6d6d !important;
+form.login_form input[type=checkbox] {
+  height: 45px !important;
+  font-size: 14px;
 }
-
-.signin_provider_text {
-  position: relative;
-  width: -moz-max-content;
-  width: max-content;
-  background-color: white;
-}
-.signin_provider_text::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -70%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 0.5px;
-  background-color: hsla(0, 0%, 43%, 0.459);
-}
-.signin_provider_text::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 170%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 0.5px;
-  background-color: hsla(0, 0%, 43%, 0.459);
+form.login_form a {
+  display: block;
+  text-align: right;
+  width: 100%;
+  font-size: 14px;
+  color: hsl(224, 94%, 21%);
+  text-decoration: none;
+  font-weight: bold;
 }/*# sourceMappingURL=button-provider.module.css.map */

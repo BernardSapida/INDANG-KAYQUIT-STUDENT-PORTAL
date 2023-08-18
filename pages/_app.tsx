@@ -8,6 +8,7 @@ import Head from "next/head";
 import Header from "@/components/navigation/Header";
 import SideNavigation from "@/components/navigation/SideNavigation";
 
+// CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/public/css/main.css";
 
@@ -34,7 +35,7 @@ export default function App({
       <Header />
       <main>
         <SideNavigation />
-        <section className="content px-5">
+        <section className="content px-3">
           <Component {...pageProps} />
         </section>
       </main>

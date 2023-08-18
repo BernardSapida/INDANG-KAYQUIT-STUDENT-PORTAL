@@ -3,30 +3,25 @@ import Link from "next/link";
 
 // React-Icons
 import { FaGraduationCap } from 'react-icons/Fa';
-import { AiOutlineLogin, AiOutlineInfoCircle } from 'react-icons/Ai';
 
 // Components
-import SigninForm from "@/components/signin/Form";
+import PortalGuide from "@/components/signin/PortalGuide";
+import Login from "@/components/signin/Login";
 
 // CSS
 import style from "@/public/css/signin.module.css";
 
 function Signin() {
     return (
-        <>
+        <div className="mb-5">
             <div className={`${style.title}`}>
                 <h1><FaGraduationCap /> Student Portal</h1>
             </div>
             <div className={`${style.container}`}>
-                <div>
-                    <p><AiOutlineLogin /> Login your account</p>
-                    <SigninForm />
-                </div>
-                <div>
-                    <p><AiOutlineInfoCircle /> Portal Guide</p>
-                </div>
+                <Login />
+                <PortalGuide />
             </div>
-        </>
+        </div>
     );
 }
 

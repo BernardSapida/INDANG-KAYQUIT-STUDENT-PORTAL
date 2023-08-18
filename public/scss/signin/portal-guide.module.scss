@@ -1,0 +1,45 @@
+div.guide_container {
+    width: 100%;
+    padding-bottom: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+
+    & div.title {
+        margin-bottom: 40px;
+        display: grid;
+        align-items: center;
+        border-bottom: 1px solid hsl(0, 0%, 93%);
+        height: 100px;
+
+        & p {
+            margin: 0 30px;
+            font-weight: bold;
+
+            & svg {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    & div.topic {
+        margin: 0 30px;
+
+        & p.title {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: hsl(0, 0%, 31%);
+        }
+
+        & div.descriptions {
+            margin-bottom: 20px;
+
+            & p {
+                margin: 0 30px;
+                font-size: 18px;
+                line-height: 1.2;
+                color: hsl(0, 0%, 31%);
+            }
+        }
+    }
+}
