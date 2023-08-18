@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 // React-Icons
-import { GiHamburgerMenu } from 'react-icons/Gi';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 // CSS
 import style from "@/public/css/header.module.css";
