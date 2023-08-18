@@ -11,6 +11,7 @@ import SideNavigation from "@/components/navigation/SideNavigation";
 // CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/public/css/main.css";
+import Footer from "@/components/footer/Footer";
 
 export default function App({
   Component,
@@ -37,6 +38,7 @@ export default function App({
         <SideNavigation />
         <section className="content px-3">
           <Component {...pageProps} />
+          <Footer />
         </section>
       </main>
     </SessionProvider>

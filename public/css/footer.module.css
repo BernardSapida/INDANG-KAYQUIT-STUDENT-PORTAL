@@ -1,0 +1,11 @@
+footer.portal_footer {
+  display: grid;
+  place-items: center;
+  height: 60px;
+  border-top: 1px solid hsl(0, 0%, 93%);
+}
+footer.portal_footer p {
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}/*# sourceMappingURL=footer.module.css.map */
