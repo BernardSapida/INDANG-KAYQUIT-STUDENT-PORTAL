@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 // React-Icons
-import { AiOutlineInfoCircle } from 'react-icons/Ai';
+import { AiOutlineInfoCircle } from 'react-icons/ai';
 
 // CSS
 import style from "@/public/css/portal-guide.module.css";

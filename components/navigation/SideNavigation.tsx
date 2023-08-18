@@ -2,8 +2,8 @@
 import Link from "next/link";
 
 // React-Icons
-import { AiOutlineLogin } from 'react-icons/Ai';
-import { AiFillUnlock } from 'react-icons/Ai';
+import { AiOutlineLogin } from 'react-icons/ai';
+import { AiFillUnlock } from 'react-icons/ai';
 
 // CSS
 import style from "@/public/css/side-navigation.module.css";
