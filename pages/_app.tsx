@@ -28,8 +28,8 @@ export default function App({
         <meta name="description" content="Paragraph" />
         <meta name="keywords" content="Paragraph" />
         <meta name="author" content="Names" />
-        <meta property="og:title" content="Website Name" />
-        <meta property="og:url" content="Website URL" />
+        <meta property="og:title" content="Kayquit Elementary School | Student Portal" />
+        <meta property="og:url" content="https://myportal-kayquit.vercel.app/" />
         <meta property="og:image" content="Website Image" />
       </Head>
       <NextNProgress
