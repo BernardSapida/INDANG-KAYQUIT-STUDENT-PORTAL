@@ -23,7 +23,7 @@ export default function App({
   return (
     <SessionProvider session={session}>
       <Head>
-        <title>Website Name</title>
+        <title>Kayquit Student Portal</title>
         <link rel="shortcut icon" href="/images/kayquit-logo.png" />
         <meta name="description" content="Paragraph" />
         <meta name="keywords" content="Paragraph" />
