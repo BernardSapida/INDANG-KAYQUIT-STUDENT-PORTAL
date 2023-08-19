@@ -1,0 +1,11 @@
+button.btn_edit {
+  height: 40px;
+  background: hsl(250, 100%, 66%);
+  border: none;
+  transition: all 250ms ease-out;
+  font-size: 18px;
+  line-height: 1;
+}
+button.btn_edit button.btn_add:hover {
+  background: hsl(250, 90%, 66%);
+}/*# sourceMappingURL=teacher-grades.module.css.map */

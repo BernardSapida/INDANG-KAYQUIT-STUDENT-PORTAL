@@ -1,5 +1,5 @@
 // Next Modules
-import Link from "next/link";
+import dynamic from "next/dynamic";
 
 // React Bootstrap Components
 import { InputGroup } from "react-bootstrap";
@@ -7,11 +7,13 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 // React-Icons
-import { FaGraduationCap } from 'react-icons/fa';
+import { AiOutlineUnorderedList } from 'react-icons/ai';
 import { AiOutlineSearch, AiOutlinePlus } from "react-icons/ai";
 
 // Components
-import TableList from "@/components/teacher/students/TableList";
+const TableList = dynamic(() => import("@/components/teacher/students/TableList"), {
+    ssr: false,
+});
 
 // CSS
 import style from "@/public/css/teacher-students.module.css";
@@ -20,7 +22,7 @@ function Students() {
     return (
         <div className="mb-5">
             <div className={`${style.title}`}>
-                <h1><FaGraduationCap /> List of Students</h1>
+                <h1><AiOutlineUnorderedList /> List of Students</h1>
             </div>
             <div className={`${style.container}`}>
                 <div className={`${style.table_header}`}>

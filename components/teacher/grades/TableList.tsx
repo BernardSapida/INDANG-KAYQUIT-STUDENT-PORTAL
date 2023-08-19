@@ -3,9 +3,16 @@ import { useState, useEffect } from "react";
 
 // React Bootstrap Components
 import Spinner from "react-bootstrap/Spinner";
+import { Button } from "react-bootstrap";
 
 // React Data Table Component
 import DataTable from "react-data-table-component";
+
+// React-Icons
+import { FaEdit } from 'react-icons/fa';
+
+// CSS
+import style from "@/public/css/teacher-grades.module.css";
 
 function TableList() {
     const [tableLoading, setLoadingTable] = useState<boolean>(false);
@@ -27,6 +34,22 @@ function TableList() {
         {
             name: "Student Number",
             selector: (row: Record<any, any>) => row.studentNumber,
+        },
+        {
+            name: "Actions",
+            button: true,
+            cell: (row: Record<any, any>) => (
+                <Button
+                    size="sm"
+                    className={`${style.btn_edit}`}
+                    onClick={() => {
+                        // setFormData(row);
+                        // setModalShow(true);
+                    }}
+                >
+                    <FaEdit /> Edit
+                </Button>
+            ),
         }
     ];
     const data = [
@@ -173,6 +196,7 @@ function TableList() {
                         color: "white",
                         fontSize: "16px",
                         fontFamily: "system-ui, -apple-system",
+                        width: "100px"
                     },
                 },
                 rows: {
@@ -180,7 +204,13 @@ function TableList() {
                         fontSize: "16px",
                         fontFamily: "system-ui, -apple-system",
                     },
-                }
+                },
+                cells: {
+                    style: {
+                        maxWidth: '20px', // override the cell padding for data cells
+                        paddingRight: '8px',
+                    },
+                },
             }}
             columns={table_columns}
             data={data}
