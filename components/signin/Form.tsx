@@ -53,7 +53,7 @@ export default function SigninForm() {
         }
 
         if (data?.user.role == "admin") {
-            return router.push("/admin");
+            return router.push("/teacher/dashboard");
         }
 
         if (data?.user.role == "user") {

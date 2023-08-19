@@ -1,3 +1,9 @@
+// Next Modules
+import dynamic from "next/dynamic";
+
+// React Modules
+import { useState } from "react";
+
 // React Bootstrap Components
 import Button from "react-bootstrap/Button";
 
@@ -7,11 +13,15 @@ import { AiOutlinePlus } from 'react-icons/ai';
 
 // Components
 import AccordionDropdown from "@/components/teacher/subjects/Accordion";
+const ModalForm = dynamic(() => import("@/components/teacher/subjects/ModalForm"), {
+    ssr: false,
+});
 
 // CSS
 import style from "@/public/css/teacher-subjects.module.css";
 
 function Subjects() {
+    const [modalShow, setModalShow] = useState(true);
     const data = [
         {
             academicYear: "2021-2022",
@@ -243,11 +253,12 @@ function Subjects() {
         <div className="mb-5">
             <div className={`${style.title}`}>
                 <h1><MdSubject /> Sections & Subjects</h1>
-                <Button type="button" className={`d-block ms-auto ${style.btn_add}`}>
-                    <AiOutlinePlus /> Add Section
-                </Button>
+
             </div>
             <div className={`${style.container}`}>
+                <Button type="button" className={`d-block ms-auto mb-3 ${style.btn_add}`} onClick={() => setModalShow(true)}>
+                    <AiOutlinePlus /> Add subject
+                </Button>
                 {
                     data.map((d, key) => (
                         <AccordionDropdown
@@ -260,6 +271,7 @@ function Subjects() {
                     ))
                 }
             </div>
+            <ModalForm modalShow={modalShow} setModalShow={setModalShow} />
         </div>
     );
 }

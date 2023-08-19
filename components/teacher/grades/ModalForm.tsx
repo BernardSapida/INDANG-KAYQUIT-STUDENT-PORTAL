@@ -15,13 +15,6 @@ import Swal from "sweetalert2";
 import { BsSave } from 'react-icons/bs';
 import { MdGrade } from 'react-icons/md';
 
-// Helpers
-import { initialValues, validationSchema } from "@/helpers/teacher/announcements/Form";
-
-// Components
-import Field from "@/components/form/InputField";
-import TextAreaField from "@/components/form/TextAreaField";
-
 // CSS
 import style from "@/public/css/teacher-modal.module.css";
 
@@ -102,7 +95,7 @@ function ModalForm({
         const formValues: Record<string, any> = {};
 
         formDataObject.forEach((value, key) => {
-            let [subjectName, quarter] = [key.split(".")[0], key.split(".")[1]];
+            let [subjectName, quarter] = key.split(".");
             // formValues[key] = value;
             // console.log(subjectName, quarter, Number(value))
 

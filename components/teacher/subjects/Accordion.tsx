@@ -32,7 +32,7 @@ function AccordionDropdown({ academicYear, section, subjects, uniqueKey }: { aca
                         <tbody>
                             {
                                 subjects.map((d, key) => (
-                                    <tr>
+                                    <tr key={key}>
                                         <td>{d.subjectName}</td>
                                         <td>{d.time}</td>
                                         <td>{d.day}</td>
