@@ -1,0 +1,37 @@
+div div.title {
+  margin-bottom: 40px;
+  height: 100px;
+  border-bottom: 1px solid hsl(0, 0%, 93%);
+  display: grid;
+  align-items: center;
+}
+div div.title h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+div div.title h1 svg {
+  margin-bottom: 5px;
+}
+div div.container div.table_header {
+  display: flex;
+  gap: 15px;
+}
+div div.container div.table_header > div {
+  max-width: 400px !important;
+  width: 100%;
+}
+div div.container div.table_header button.btn_add {
+  height: 40px;
+  background: hsl(224, 94%, 21%);
+  border: none;
+  transition: all 250ms ease-out;
+  font-size: 18px;
+  line-height: 1;
+}
+div div.container div.table_header button.btn_add svg {
+  margin-bottom: 5px;
+}
+div div.container div.table_header button.btn_add:hover {
+  background: hsl(224, 94%, 41%);
+}/*# sourceMappingURL=teacher-students.module.css.map */

@@ -1,4 +1,3 @@
-
 // React Bootstrap Components
 import Accordion from 'react-bootstrap/Accordion';
 import Table from 'react-bootstrap/Table';
