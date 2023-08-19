@@ -1,22 +1,16 @@
-// React Boostrap Modules
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 
-// React Modules
+import { ErrorMessage } from "formik";
 import { ChangeEvent } from "react";
 
-// Formik Modules
-import { ErrorMessage } from "formik";
-
-export default function Field({
-    type,
+function TextAreaField({
     name,
     label,
     value,
     handleChange,
     loading,
 }: {
-    type: string;
     name: string;
     label: string;
     value: string | undefined;
@@ -31,12 +25,13 @@ export default function Field({
     return (
         <FloatingLabel className="mb-3 w-100" label={label}>
             <Form.Control
-                type={type}
+                as="textarea"
                 name={name}
                 onChange={handleChange}
                 value={value}
                 placeholder={label}
                 disabled={loading}
+                style={{ height: '200px' }}
             />
             <ErrorMessage
                 name={name}
@@ -46,3 +41,5 @@ export default function Field({
         </FloatingLabel>
     );
 }
+
+export default TextAreaField;

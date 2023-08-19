@@ -15,7 +15,7 @@ div div.title h1 {
 div div.title h1 svg {
   margin-bottom: 5px;
 }
-div div.title button.btn_add {
+div div.title button.btn_post {
   height: 40px;
   background: hsl(224, 94%, 21%);
   border: none;
@@ -23,9 +23,9 @@ div div.title button.btn_add {
   font-size: 18px;
   line-height: 1;
 }
-div div.title button.btn_add svg {
+div div.title button.btn_post svg {
   margin-bottom: 5px;
 }
-div div.title button.btn_add:hover {
+div div.title button.btn_post:hover {
   background: hsl(224, 94%, 41%);
 }/*# sourceMappingURL=teacher-announcements.module.css.map */

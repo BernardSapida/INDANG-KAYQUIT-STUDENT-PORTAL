@@ -1,0 +1,14 @@
+button.btn_post {
+  height: 40px;
+  background: hsl(224, 94%, 21%);
+  border: none;
+  transition: all 250ms ease-out;
+  font-size: 18px;
+  line-height: 1;
+}
+button.btn_post svg {
+  margin-bottom: 5px;
+}
+button.btn_post:hover {
+  background: hsl(224, 94%, 41%);
+}/*# sourceMappingURL=teacher-modal.module.css.map */

@@ -5,14 +5,13 @@ import Link from "next/link";
 import { FaGraduationCap } from 'react-icons/fa';
 
 // Components
-
-
-// CSS
-import style from "@/public/css/student-profile.module.css";
 import PersonalDetails from "@/components/student/profile/PersonalDetails";
 import EnrollmentDetails from "@/components/student/profile/EnrollmentDetails";
 import ContactDetails from "@/components/student/profile/ContactDetails";
 import KayquitGoogleAccount from "@/components/student/profile/KayquitGoogleAccount";
+
+// CSS
+import style from "@/public/css/student-profile.module.css";
 
 function Profile() {
     return (
