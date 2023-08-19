@@ -20,7 +20,7 @@ function AccordionDropdown({ academicYear, section, subjects, uniqueKey }: { aca
                     <Button type="button" className={`d-block ms-auto mb-2 ${style.btn_add}`}>
                         <FaEdit /> Edit Table
                     </Button>
-                    <Table className='text-center' bordered striped>
+                    <Table className='text-center' bordered striped responsive>
                         <thead>
                             <tr>
                                 <th className="bg-dark text-light">Subject Name</th>

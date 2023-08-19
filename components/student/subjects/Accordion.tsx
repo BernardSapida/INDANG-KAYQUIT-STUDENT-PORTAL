@@ -11,7 +11,7 @@ function AccordionDropdown({ academicYear, section, subjects, uniqueKey }: { aca
                     <strong>Academic Year: {academicYear} | {section}</strong>
                 </Accordion.Header>
                 <Accordion.Body>
-                    <Table className='text-center' bordered striped>
+                    <Table className='text-center' bordered striped responsive>
                         <thead>
                             <tr>
                                 <th className="bg-dark text-light">Subject Name</th>
