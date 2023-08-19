@@ -40,12 +40,15 @@ function AccordionDropdown(
                     <Table className='text-center' bordered striped responsive>
                         <thead>
                             <tr>
-                                <th className="bg-dark text-light">Subject Name</th>
-                                <th className="bg-dark text-light">1st Quarter</th>
-                                <th className="bg-dark text-light">2nd Quarter</th>
-                                <th className="bg-dark text-light">3rd Quarter</th>
-                                <th className="bg-dark text-light">4th Quarter</th>
-                                <th className="bg-dark text-light">Final Grade</th>
+                                <th className="bg-dark text-light align-middle" rowSpan={2}>Subject Name</th>
+                                <th className="bg-dark text-light" colSpan={4}>Quarter</th>
+                                <th className="bg-dark text-light  align-middle" rowSpan={2}>Final Grade</th>
+                            </tr>
+                            <tr>
+                                <th className="bg-dark text-light">1st</th>
+                                <th className="bg-dark text-light">2nd</th>
+                                <th className="bg-dark text-light">3rd</th>
+                                <th className="bg-dark text-light">4th</th>
                             </tr>
                         </thead>
                         <tbody>

@@ -180,42 +180,42 @@ function Grades() {
             ],
             grades: [
                 {
-                    subjectName: "english",
+                    subjectName: "English",
                     firstQuarter: 85,
                     secondQuarter: 88,
                     thirdQuarter: 90,
                     fourthQuarter: 92
                 },
                 {
-                    subjectName: "math",
+                    subjectName: "Math",
                     firstQuarter: 90,
                     secondQuarter: 88,
                     thirdQuarter: 85,
                     fourthQuarter: 88
                 },
                 {
-                    subjectName: "science",
+                    subjectName: "Science",
                     firstQuarter: 78,
                     secondQuarter: 80,
                     thirdQuarter: 82,
                     fourthQuarter: 85
                 },
                 {
-                    subjectName: "physical education (PE)",
+                    subjectName: "Physical Education (PE)",
                     firstQuarter: 78,
                     secondQuarter: 90,
                     thirdQuarter: 82,
                     fourthQuarter: 85
                 },
                 {
-                    subjectName: "music",
+                    subjectName: "Music",
                     firstQuarter: 78,
                     secondQuarter: 80,
                     thirdQuarter: 82,
                     fourthQuarter: 85
                 },
                 {
-                    subjectName: "social studies",
+                    subjectName: "Social Studies",
                     firstQuarter: 78,
                     secondQuarter: 80,
                     thirdQuarter: 82,

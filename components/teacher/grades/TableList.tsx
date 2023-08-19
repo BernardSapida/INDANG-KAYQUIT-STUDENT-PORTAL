@@ -1,5 +1,5 @@
 // React Modules
-import { useState, useEffect } from "react";
+import { Dispatch, SetStateAction, useState, useEffect } from "react";
 
 // React Bootstrap Components
 import Spinner from "react-bootstrap/Spinner";
@@ -14,7 +14,11 @@ import { FaEdit } from 'react-icons/fa';
 // CSS
 import style from "@/public/css/teacher-grades.module.css";
 
-function TableList() {
+function TableList({
+    setModalShow,
+}: {
+    setModalShow: Dispatch<SetStateAction<boolean>>;
+}) {
     const [tableLoading, setLoadingTable] = useState<boolean>(false);
     const table_columns = [
         {
@@ -44,7 +48,7 @@ function TableList() {
                     className={`${style.btn_edit}`}
                     onClick={() => {
                         // setFormData(row);
-                        // setModalShow(true);
+                        setModalShow(true);
                     }}
                 >
                     <FaEdit /> Edit
