@@ -4,10 +4,11 @@ aside {
         left: -300px;
         width: 0;
         height: calc(100vh - 60px);
-        box-shadow: 4px 0 4px rgba(0, 0, 0, 6%);
+        box-shadow: 4px 0 4px hsla(0, 0%, 0%, 0.06);
         background-color: hsl(0, 0%, 100%);
         transition: all 150ms linear;
         z-index: 1;
+        overflow-y: scroll;
 
         & h2 {
             margin: 0 20px;
@@ -35,6 +36,14 @@ aside {
 
                     & svg {
                         margin-bottom: 5px;
+                    }
+                }
+
+                &.active {
+                    background-color: hsl(224, 94%, 21%) !important;
+
+                    & a {
+                        color: white;
                     }
                 }
 

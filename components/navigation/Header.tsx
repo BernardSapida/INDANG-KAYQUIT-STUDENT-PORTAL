@@ -11,10 +11,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import style from "@/public/css/header.module.css";
 
 function Header({ showNavigation, setShowNavigation }: { showNavigation: boolean, setShowNavigation: Dispatch<SetStateAction<boolean>> }) {
-    const clickMenu = () => {
-        console.log(!showNavigation);
-        setShowNavigation(!showNavigation);
-    }
+    const clickMenu = () => setShowNavigation(!showNavigation);
 
     return (
         <header className={`${style.header}`}>

@@ -24,7 +24,7 @@ import { getAcademicYear } from "@/utils/date/date";
 import style from "@/public/css/teacher-announcements.module.css";
 
 function Announcements() {
-    const [modalShow, setModalShow] = useState(true);
+    const [modalShow, setModalShow] = useState(false);
 
     return (
         <div className="mb-5">

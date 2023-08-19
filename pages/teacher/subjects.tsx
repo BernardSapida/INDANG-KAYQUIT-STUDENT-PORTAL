@@ -21,7 +21,7 @@ const ModalForm = dynamic(() => import("@/components/teacher/subjects/ModalForm"
 import style from "@/public/css/teacher-subjects.module.css";
 
 function Subjects() {
-    const [modalShow, setModalShow] = useState(true);
+    const [modalShow, setModalShow] = useState(false);
     const data = [
         {
             academicYear: "2021-2022",

@@ -3,10 +3,11 @@ aside.aside_navigation {
   left: -300px;
   width: 0;
   height: calc(100vh - 60px);
-  box-shadow: 4px 0 4px rgba(0, 0, 0, 0.06);
+  box-shadow: 4px 0 4px hsla(0, 0%, 0%, 0.06);
   background-color: hsl(0, 0%, 100%);
   transition: all 150ms linear;
   z-index: 1;
+  overflow-y: scroll;
 }
 aside.aside_navigation h2 {
   margin: 0 20px;
@@ -33,6 +34,12 @@ aside.aside_navigation ul li a {
 }
 aside.aside_navigation ul li a svg {
   margin-bottom: 5px;
+}
+aside.aside_navigation ul li.active {
+  background-color: hsl(224, 94%, 21%) !important;
+}
+aside.aside_navigation ul li.active a {
+  color: white;
 }
 aside.aside_navigation ul li:hover {
   background-color: rgba(233, 233, 233, 0.5);

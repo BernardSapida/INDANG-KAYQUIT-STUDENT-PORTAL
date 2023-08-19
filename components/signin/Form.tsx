@@ -52,12 +52,12 @@ export default function SigninForm() {
             return null;
         }
 
-        if (data?.user.role == "admin") {
+        if (data?.user.role == "teacher") {
             return router.push("/teacher/dashboard");
         }
 
-        if (data?.user.role == "user") {
-            return router.push("/user");
+        if (data?.user.role == "student") {
+            return router.push("/student/dashboard");
         }
     };
 

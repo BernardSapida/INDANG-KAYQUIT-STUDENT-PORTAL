@@ -60,7 +60,7 @@ function ModalForm({
         }
 
         // Replace schoolSchedule element with this
-        console.log(res)
+        // console.log(res)
     };
 
     const removeRow = (position: number) => {

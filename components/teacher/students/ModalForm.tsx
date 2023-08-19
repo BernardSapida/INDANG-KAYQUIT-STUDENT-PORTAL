@@ -75,8 +75,6 @@ function ModalForm({
             temporaryPassword,
         } = values;
         setLoading(true);
-
-        console.log(values);
     };
 
     return (

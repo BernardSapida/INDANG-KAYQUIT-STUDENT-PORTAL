@@ -1,8 +1,8 @@
 // Next Modules
-import Link from "next/link";
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
 
-// React-Icons
-import { TbSpeakerphone } from 'react-icons/tb';
+// Next-Auth Modules
+import { getSession } from "next-auth/react";
 
 // Components
 import Cards from "@/components/student/dashboard/Cards";
@@ -14,6 +14,36 @@ import style from "@/public/css/student-dashboard.module.css";
 
 // Utilities
 import { getGreeting } from "@/utils/greetings";
+
+export const getServerSideProps: GetServerSideProps = async (
+    context: GetServerSidePropsContext
+) => {
+    try {
+        const { req } = context;
+        const session = await getSession({ req: req });
+
+        if (!session) {
+            return {
+                props: {},
+                redirect: {
+                    destination: "/",
+                },
+            };
+        }
+
+        return {
+            props: {
+                user: session.user,
+            },
+        };
+    } catch (error) {
+        return {
+            props: {
+                error: "Error",
+            },
+        };
+    }
+};
 
 function Dashboard() {
     return (

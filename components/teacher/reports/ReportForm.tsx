@@ -41,8 +41,6 @@ function ReportForm() {
     ) => {
         setLoading(true);
         const { report, gradeLevel, section, academicYear, sortBy, sortOrder } = values;
-
-        console.log(values);
     };
 
     return (

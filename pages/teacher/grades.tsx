@@ -24,7 +24,7 @@ const ModalForm = dynamic(() => import("@/components/teacher/grades/ModalForm"),
 import style from "@/public/css/teacher-students.module.css";
 
 function Students() {
-    const [modalShow, setModalShow] = useState(true);
+    const [modalShow, setModalShow] = useState(false);
 
     return (
         <div className="mb-5">
