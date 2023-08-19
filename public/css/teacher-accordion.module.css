@@ -1,0 +1,14 @@
+button.btn_add {
+  height: 40px;
+  background: hsl(224, 94%, 21%);
+  border: none;
+  transition: all 250ms ease-out;
+  font-size: 18px;
+  line-height: 1;
+}
+button.btn_add svg {
+  margin-bottom: 5px;
+}
+button.btn_add:hover {
+  background: hsl(224, 94%, 41%);
+}/*# sourceMappingURL=teacher-accordion.module.css.map */

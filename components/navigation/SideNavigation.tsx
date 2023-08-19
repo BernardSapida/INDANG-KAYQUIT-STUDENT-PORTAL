@@ -17,8 +17,8 @@ function SideNavigation({ showNavigation, setShowNavigation }: { showNavigation:
             <h2>Navigation</h2>
             <ul>
 
-                <li><Link href="/auth/signin" onClick={() => setShowNavigation(!showNavigation)}><AiOutlineLogin /> Login</Link></li>
-                <li><Link href="/signup" onClick={() => setShowNavigation(!showNavigation)}><AiFillUnlock /> Forgot Password</Link></li>
+                <li><Link href="/" onClick={() => setShowNavigation(!showNavigation)}><AiOutlineLogin /> Login</Link></li>
+                <li><Link href="/forgot-password" onClick={() => setShowNavigation(!showNavigation)}><AiFillUnlock /> Forgot Password</Link></li>
             </ul>
         </aside>
     );
