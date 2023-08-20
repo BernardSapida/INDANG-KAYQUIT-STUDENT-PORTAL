@@ -5,9 +5,20 @@ export const Alert = (
     title: string,
     message: string
 ) => {
-    Swal.fire({
+    const swal = Swal.mixin({
+        customClass: {
+            title: 'fs-5',
+            confirmButton: 'btn btn-primary',
+            // cancelButton: 'btn btn-danger',
+        },
+        buttonsStyling: false
+    })
+
+    swal.fire({
         icon: icon,
         title: title,
         text: message,
+        background: 'bg-dark',
+        width: "10rem"
     });
 };

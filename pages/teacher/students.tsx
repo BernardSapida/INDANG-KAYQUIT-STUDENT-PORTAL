@@ -61,8 +61,11 @@ function Students() {
             </div>
             <div className={`${style.container}`}>
                 <div className={`${style.table_header}`}>
-                    <InputGroup className="mb-3">
-                        <InputGroup.Text id="basic-addon1"><AiOutlineSearch /></InputGroup.Text>
+                    <Button type="button" className={`${style.btn_add}`} onClick={() => setModalShow(true)}>
+                        <AiOutlinePlus /> Add Student
+                    </Button>
+                    <InputGroup className="ms-auto mb-3">
+                        <InputGroup.Text><AiOutlineSearch /></InputGroup.Text>
                         <Form.Control
                             type="text"
                             name="keyword"
@@ -71,9 +74,6 @@ function Students() {
                             placeholder="Search student"
                         />
                     </InputGroup>
-                    <Button type="button" className={`d-block ms-auto ${style.btn_add}`} onClick={() => setModalShow(true)}>
-                        <AiOutlinePlus /> Add Student
-                    </Button>
                 </div>
                 <TableList />
             </div>

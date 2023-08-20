@@ -8,10 +8,7 @@ import Form from "react-bootstrap/Form";
 import { Dispatch, SetStateAction, useState } from "react";
 
 // Formik Modules
-import { Formik, ErrorMessage } from "formik";
-
-// Sweet Alert Modules
-import Swal from "sweetalert2";
+import { Formik } from "formik";
 
 // React-Icons
 import { BsFillSendFill } from 'react-icons/bs';
@@ -62,7 +59,7 @@ function ModalForm({
                 {({ handleSubmit, handleChange, values, resetForm }) => (
                     <>
                         <Modal.Header closeButton>
-                            <Modal.Title id="contained-modal-title-vcenter">
+                            <Modal.Title>
                                 <MdNotificationsActive /> Announcement
                             </Modal.Title>
                         </Modal.Header>

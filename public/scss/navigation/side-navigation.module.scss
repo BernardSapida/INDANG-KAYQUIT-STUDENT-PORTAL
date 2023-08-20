@@ -45,10 +45,16 @@ aside {
                     & a {
                         color: white;
                     }
+
+                    &:hover,
+                    &:active {
+                        background-color: hsl(224, 94%, 21%) !important;
+                    }
                 }
 
-                &:hover {
-                    background-color: rgba(233, 233, 233, 0.5);
+                &:hover,
+                &:active {
+                    background-color: rgba(233, 233, 233, 0.5) !important;
                 }
             }
         }

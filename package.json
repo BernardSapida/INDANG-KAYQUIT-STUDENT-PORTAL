@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@sweetalert2/theme-bootstrap-4": "^5.0.15",
     "axios": "^1.4.0",
     "bootstrap": "^5.3.1",
     "formik": "^2.4.3",
@@ -18,7 +19,8 @@
     "react-data-table-component": "^7.5.3",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
-    "sweetalert2": "^11.7.22",
+    "react-ripples": "^2.2.1",
+    "sweetalert2": "^11.7.26",
     "yup": "^1.2.0"
   },
   "devDependencies": {

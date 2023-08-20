@@ -8,14 +8,14 @@ div div.title {
   gap: 20px;
 }
 div div.title h1 {
-  font-size: 24px;
+  font-size: clamp(1.125rem, 0.674vw + 0.961rem, 1.5rem);
   font-weight: bold;
   margin: 0;
 }
 div div.title h1 svg {
   margin-bottom: 5px;
 }
-div div.title button.btn_post {
+div div.container button.btn_post {
   height: 40px;
   background: hsl(224, 94%, 21%);
   border: none;
@@ -23,9 +23,9 @@ div div.title button.btn_post {
   font-size: 18px;
   line-height: 1;
 }
-div div.title button.btn_post svg {
+div div.container button.btn_post svg {
   margin-bottom: 5px;
 }
-div div.title button.btn_post:hover {
-  background: hsl(224, 94%, 41%);
+div div.container button.btn_post:hover, div div.container button.btn_post:active {
+  background: hsl(224, 94%, 41%) !important;
 }/*# sourceMappingURL=teacher-announcements.module.css.map */

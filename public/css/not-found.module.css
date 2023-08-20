@@ -21,8 +21,8 @@ div.container div.content button.btn_back {
 div.container div.content button.btn_back svg {
   margin-bottom: 5px;
 }
-div.container div.content button.btn_back:hover {
-  background-color: hsl(0, 0%, 22%);
+div.container div.content button.btn_back:hover, div.container div.content button.btn_back:active {
+  background-color: hsl(0, 0%, 22%) !important;
 }
 div.container div.content a {
   display: block;
@@ -33,6 +33,6 @@ div.container div.content a {
 div.container div.content a svg {
   margin-bottom: 5px;
 }
-div.container div.content a:hover {
-  background-color: hsl(0, 0%, 22%);
+div.container div.content a:hover, div.container div.content a:active {
+  background-color: hsl(0, 0%, 22%) !important;
 }/*# sourceMappingURL=not-found.module.css.map */

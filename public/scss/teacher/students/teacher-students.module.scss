@@ -7,7 +7,7 @@ div {
         align-items: center;
 
         & h1 {
-            font-size: 24px;
+            font-size: clamp(1.125rem, 0.674vw + 0.961rem, 1.5rem);
             font-weight: bold;
             margin: 0;
 
@@ -20,7 +20,9 @@ div {
     & div.container {
         & div.table_header {
             display: flex;
+            flex-wrap: wrap;
             gap: 15px;
+            justify-content: flex-end;
 
             &>div {
                 max-width: 400px !important;
@@ -39,8 +41,9 @@ div {
                     margin-bottom: 5px;
                 }
 
-                &:hover {
-                    background: hsl(224, 94%, 41%);
+                &:hover,
+                &:active {
+                    background: hsl(224, 94%, 41%) !important;
                 }
             }
         }

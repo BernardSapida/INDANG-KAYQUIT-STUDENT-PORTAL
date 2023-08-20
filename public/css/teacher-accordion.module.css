@@ -9,6 +9,6 @@ button.btn_add {
 button.btn_add svg {
   margin-bottom: 5px;
 }
-button.btn_add:hover {
-  background: hsl(224, 94%, 41%);
+button.btn_add:hover, button.btn_add:active {
+  background: hsl(224, 94%, 41%) !important;
 }/*# sourceMappingURL=teacher-accordion.module.css.map */

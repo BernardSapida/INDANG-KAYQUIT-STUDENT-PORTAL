@@ -41,8 +41,11 @@ aside.aside_navigation ul li.active {
 aside.aside_navigation ul li.active a {
   color: white;
 }
-aside.aside_navigation ul li:hover {
-  background-color: rgba(233, 233, 233, 0.5);
+aside.aside_navigation ul li.active:hover, aside.aside_navigation ul li.active:active {
+  background-color: hsl(224, 94%, 21%) !important;
+}
+aside.aside_navigation ul li:hover, aside.aside_navigation ul li:active {
+  background-color: rgba(233, 233, 233, 0.5) !important;
 }
 aside.active {
   width: 300px;

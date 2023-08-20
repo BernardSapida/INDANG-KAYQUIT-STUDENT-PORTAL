@@ -6,8 +6,9 @@
     font-size: 18px;
     line-height: 1;
 
-    &:hover {
-        background: hsl(224, 94%, 41%);
+    &:hover,
+    &:active {
+        background: hsl(224, 94%, 41%) !important;
     }
 }
 

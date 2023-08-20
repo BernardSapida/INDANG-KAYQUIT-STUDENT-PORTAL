@@ -9,7 +9,7 @@ div {
         gap: 20px;
 
         & h1 {
-            font-size: 24px;
+            font-size: clamp(1.125rem, 0.674vw + 0.961rem, 1.5rem);
             font-weight: bold;
             margin: 0;
 

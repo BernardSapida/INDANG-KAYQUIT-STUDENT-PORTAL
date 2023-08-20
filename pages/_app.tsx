@@ -33,7 +33,7 @@ export default function App({
         <meta property="og:image" content="Website Image" />
       </Head>
       <NextNProgress
-        color="linear-gradient(to right, hsl(224, 94%, 41%), hsl(224, 94%, 21%))"
+        color="linear-gradient(to right, hsl(224, 100%, 75%), hsl(224, 100%, 60%))"
         options={{ showSpinner: false }}
       />
       <Header showNavigation={showNavigation} setShowNavigation={setShowNavigation} />

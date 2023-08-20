@@ -9,6 +9,6 @@ button.btn_post {
 button.btn_post svg {
   margin-bottom: 5px;
 }
-button.btn_post:hover {
-  background: hsl(224, 94%, 41%);
+button.btn_post:hover, button.btn_post:active {
+  background: hsl(224, 94%, 41%) !important;
 }/*# sourceMappingURL=teacher-modal.module.css.map */

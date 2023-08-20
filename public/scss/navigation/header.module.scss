@@ -19,7 +19,7 @@ header.header {
             cursor: pointer;
 
             &:hover {
-                color: hsl(224, 94%, 41%);
+                color: hsl(224, 94%, 41%) !important;
             }
         }
     }

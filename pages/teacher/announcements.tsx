@@ -12,8 +12,8 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 
 // React-Icons
-import { BsFillSendFill } from 'react-icons/bs';
-import { FaGraduationCap } from 'react-icons/fa';
+import { AiOutlinePlus } from 'react-icons/ai';
+import { IoMdNotifications } from 'react-icons/io';
 
 // Components
 import Event from "@/components/teacher/announcements/Event";
@@ -56,13 +56,12 @@ function Announcements() {
     return (
         <div className="mb-5">
             <div className={`${style.title}`}>
-                <h1><FaGraduationCap /> Class Announcement(s) {getAcademicYear()}</h1>
-                <Button type="button" className={`d-block ms-auto ${style.btn_post}`} onClick={() => setModalShow(true)}>
-                    <BsFillSendFill /> New Announcement
-                </Button>
+                <h1><IoMdNotifications /> Announcement(s) {getAcademicYear()}</h1>
             </div>
             <div className={`${style.container}`}>
-                {/* Components / Contents Goes here */}
+                <Button type="button" className={`d-block ms-auto mb-3 ${style.btn_post}`} onClick={() => setModalShow(true)}>
+                    <AiOutlinePlus /> New Announcement
+                </Button>
                 <Event />
                 <Event />
                 <Event />

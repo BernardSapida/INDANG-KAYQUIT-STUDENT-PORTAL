@@ -25,8 +25,9 @@ div.container {
                 margin-bottom: 5px;
             }
 
-            &:hover {
-                background-color: hsl(0, 0%, 22%);
+            &:hover,
+            &:active {
+                background-color: hsl(0, 0%, 22%) !important;
             }
         }
 
@@ -40,8 +41,9 @@ div.container {
                 margin-bottom: 5px;
             }
 
-            &:hover {
-                background-color: hsl(0, 0%, 22%);
+            &:hover,
+            &:active {
+                background-color: hsl(0, 0%, 22%) !important;
             }
         }
     }

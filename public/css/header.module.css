@@ -19,7 +19,7 @@ header.header nav div svg {
   cursor: pointer;
 }
 header.header nav div svg:hover {
-  color: hsl(224, 94%, 41%);
+  color: hsl(224, 94%, 41%) !important;
 }
 header.header img {
   margin-left: 20px;

@@ -1,28 +1,29 @@
-// Next Auth Modules
-import { getSession, signIn } from "next-auth/react";
-
-// Next Modules
+// Next
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-// React Modules
+// Next-Auth
+import { getSession, signIn } from "next-auth/react";
+
+// React
 import { useState, useEffect } from "react";
 
-// Formik Modules
+// Formik
 import { Formik } from "formik";
 
-// React Bootstrap Components
+// React-Bootstrap
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-// Components
-import Field from "@/components/form/InputField";
+// React-Ripples
+import Ripples from 'react-ripples'
 
 // Helpers
 import { initialValues, validationSchema } from "@/helpers/signin/Form";
 
-// Utilities
-import { Alert } from "@/utils/alert/swal";
+// Components
+import Field from "@/components/form/InputField";
+import Error from "@/components/error/Error";
 
 // CSS
 import style from "@/public/css/button-provider.module.css";
@@ -30,6 +31,7 @@ import style from "@/public/css/button-provider.module.css";
 export default function SigninForm() {
     const [loading, setLoading] = useState<boolean>(false);
     const [isLogin, setIsLogin] = useState<boolean>(false);
+    const [error, setError] = useState<string>("");
     const router = useRouter();
 
     useEffect(() => {
@@ -54,8 +56,7 @@ export default function SigninForm() {
     }, [isLogin])
 
     const handleSubmit = async (
-        values: { email: string; password: string },
-        { resetForm }: { resetForm: any }
+        values: { email: string; password: string }
     ) => {
         setLoading(true);
         const { email, password } = values;
@@ -67,59 +68,52 @@ export default function SigninForm() {
         });
 
         if (!response?.ok) {
-            const error = JSON.parse(response?.error!);
-            Alert("error", "Incorrect Credential", error.message);
+            setError(JSON.parse(response?.error!));
             setLoading(false);
             return null;
         }
 
         setIsLogin(true);
-
-        // if (data?.user.role == "teacher") {
-        //     return router.push("/teacher/dashboard");
-        // }
-
-        // if (data?.user.role == "student") {
-        //     return router.push("/student/dashboard");
-        // }
     };
 
     return (
-        <Formik
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-            onSubmit={handleSubmit}
-        >
-            {({ handleSubmit, handleChange, values }) => (
-                <Form className={`${style.login_form}`} onSubmit={handleSubmit}>
-                    <Field
-                        type="text"
-                        name="email"
-                        label="Email Address"
-                        handleChange={handleChange}
-                        value={values.email}
-                        loading={loading}
-                    />
-                    <Field
-                        type="password"
-                        name="password"
-                        label="Password"
-                        handleChange={handleChange}
-                        value={values.password}
-                        loading={loading}
-                    />
-                    <div className="d-flex justify-content-between mb-3">
-                        <div className="w-100">
-                            <Link className="text-end" href="/forgot_password">Forgot password?</Link>
+        <>
+            <Error errMessage={error} />
+            <Formik
+                initialValues={initialValues}
+                validationSchema={validationSchema}
+                onSubmit={handleSubmit}
+            >
+                {({ handleSubmit, handleChange, values }) => (
+                    <Form className={`${style.login_form}`} onSubmit={handleSubmit}>
+                        <Field
+                            type="text"
+                            name="email"
+                            label="Email Address"
+                            handleChange={handleChange}
+                            value={values.email}
+                            loading={loading}
+                        />
+                        <Field
+                            type="password"
+                            name="password"
+                            label="Password"
+                            handleChange={handleChange}
+                            value={values.password}
+                            loading={loading}
+                        />
+                        <div className="d-flex justify-content-between mb-3">
+                            <div className="w-100">
+                                <Link className="text-end" href="/forgot_password">Forgot password?</Link>
+                            </div>
                         </div>
-                    </div>
-                    <div className="d-grid gap-2">
-                        <Button type="submit" className={`${style.signin_btn}`}>
-                            Login
-                        </Button>
-                    </div>
-                </Form>
-            )}
-        </Formik>
+                        <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="d-grid gap-2 rounded">
+                            <Button type="submit" className={`${style.signin_btn}`}>
+                                Login
+                            </Button>
+                        </Ripples>
+                    </Form>
+                )}
+            </Formik></>
     );
 }

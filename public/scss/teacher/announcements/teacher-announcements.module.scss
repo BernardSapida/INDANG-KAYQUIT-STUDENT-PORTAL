@@ -9,7 +9,7 @@ div {
         gap: 20px;
 
         & h1 {
-            font-size: 24px;
+            font-size: clamp(1.125rem, 0.674vw + 0.961rem, 1.5rem);
             font-weight: bold;
             margin: 0;
 
@@ -17,7 +17,9 @@ div {
                 margin-bottom: 5px;
             }
         }
+    }
 
+    & div.container {
         & button.btn_post {
             height: 40px;
             background: hsl(224, 94%, 21%);
@@ -30,8 +32,9 @@ div {
                 margin-bottom: 5px;
             }
 
-            &:hover {
-                background: hsl(224, 94%, 41%);
+            &:hover,
+            &:active {
+                background: hsl(224, 94%, 41%) !important;
             }
         }
     }
