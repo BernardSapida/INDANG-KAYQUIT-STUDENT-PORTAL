@@ -52,6 +52,7 @@ export const getServerSideProps: GetServerSideProps = async (
 
 function Students() {
     const [modalShow, setModalShow] = useState(false);
+    const [student, setStudent] = useState({});
 
     return (
         <div className="mb-5">
@@ -71,9 +72,9 @@ function Students() {
                         />
                     </InputGroup>
                 </div>
-                <TableList setModalShow={setModalShow} />
+                <TableList setModalShow={setModalShow} setStudent={setStudent} />
             </div>
-            <ModalForm modalShow={modalShow} setModalShow={setModalShow} />
+            <ModalForm modalShow={modalShow} setModalShow={setModalShow} student={student} />
         </div>
     );
 }

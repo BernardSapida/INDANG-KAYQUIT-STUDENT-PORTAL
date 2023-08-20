@@ -11,6 +11,9 @@ import { Dispatch, SetStateAction, useState } from "react";
 // Sweet Alert Modules
 import Swal from "sweetalert2";
 
+// React-Ripples
+import Ripples from 'react-ripples'
+
 // React-Icons
 import { BsSave } from 'react-icons/bs';
 import { MdGrade } from 'react-icons/md';
@@ -21,70 +24,13 @@ import style from "@/public/css/teacher-modal.module.css";
 function ModalForm({
     modalShow,
     setModalShow,
+    student
 }: {
     modalShow: boolean;
     setModalShow: Dispatch<SetStateAction<boolean>>;
+    student: Record<string, any>
 }) {
     const [loading, setLoading] = useState<boolean>(false);
-
-    const data = [
-        {
-            subjectName: "English",
-            firstQuarter: 85,
-            secondQuarter: 88,
-            thirdQuarter: 90,
-            fourthQuarter: 92
-        },
-        {
-            subjectName: "Math",
-            firstQuarter: 90,
-            secondQuarter: 88,
-            thirdQuarter: 85,
-            fourthQuarter: 88
-        },
-        {
-            subjectName: "Science",
-            firstQuarter: 78,
-            secondQuarter: 80,
-            thirdQuarter: 82,
-            fourthQuarter: 85
-        },
-        {
-            subjectName: "Physical Education (PE)",
-            firstQuarter: 78,
-            secondQuarter: 90,
-            thirdQuarter: 82,
-            fourthQuarter: 85
-        },
-        {
-            subjectName: "Music",
-            firstQuarter: 78,
-            secondQuarter: 80,
-            thirdQuarter: 82,
-            fourthQuarter: 85
-        },
-        {
-            subjectName: "Social Studies",
-            firstQuarter: 78,
-            secondQuarter: 80,
-            thirdQuarter: 82,
-            fourthQuarter: 85
-        },
-        {
-            subjectName: "Computer Science",
-            firstQuarter: 78,
-            secondQuarter: 80,
-            thirdQuarter: 82,
-            fourthQuarter: 85
-        },
-        {
-            subjectName: "Library",
-            firstQuarter: 78,
-            secondQuarter: 80,
-            thirdQuarter: 82,
-            fourthQuarter: 85
-        }
-    ];
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
@@ -108,8 +54,11 @@ function ModalForm({
             }
         });
 
-        // Replace student grade with this
+        // Save to database
         let res = Object.values(formValues);
+        console.log(res)
+
+        setTimeout(() => setLoading(false), 2000);
     };
 
     return (
@@ -129,8 +78,8 @@ function ModalForm({
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <p className="m-0"><strong>Student Name:</strong> Bernard Sapida</p>
-                    <p className="m-0"><strong>Grade & Section:</strong> 6 - Peace</p>
+                    <p className="m-0"><strong>Student Name:</strong> {student.fullname}</p>
+                    <p className="m-0"><strong>Grade & Section:</strong> {student.gradeAndSection}</p>
 
                     <Form onSubmit={handleSubmit} id="gradesForm">
                         <Table className='text-center mt-3' bordered striped responsive>
@@ -148,8 +97,8 @@ function ModalForm({
                             </thead>
                             <tbody className="align-middle">
                                 {
-                                    data.map((d, key) => (
-                                        <tr>
+                                    student.grades?.map((d: Record<string, any>, key: number) => (
+                                        <tr key={key}>
                                             <td>{d.subjectName}</td>
                                             <td>
                                                 <Form.Control
@@ -195,9 +144,20 @@ function ModalForm({
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button type="submit" className={`d-block ms-auto ${style.btn_post}`} form="gradesForm">
-                        <BsSave /> Save
-                    </Button>
+                    <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="d-grid rounded">
+                        <Button
+                            type="submit"
+                            className={`d-block ms-auto ${style.btn_post}`}
+                            form="gradesForm"
+                            disabled={loading}
+                        >
+                            {
+                                loading ? (<><Spinner animation="grow" size="sm" /> Saving...</>) :
+                                    (<><BsSave /> Save</>)
+                            }
+
+                        </Button>
+                    </Ripples>
                 </Modal.Footer>
             </>
         </Modal>

@@ -1,19 +1,22 @@
-// Next Modules
+// Next
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import dynamic from "next/dynamic";
 
-// Next-Auth Modules
+// Next-Auth
 import { getSession } from "next-auth/react";
 
-// React Modules
+// React
 import { useState } from "react";
 
-// React Bootstrap Components
+// React Bootstrap
 import Button from "react-bootstrap/Button";
 
 // React-Icons
 import { AiOutlinePlus } from 'react-icons/ai';
 import { IoMdNotifications } from 'react-icons/io';
+
+// React-Ripples
+import Ripples from 'react-ripples'
 
 // Components
 import Event from "@/components/teacher/announcements/Event";
@@ -50,7 +53,7 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Announcements() {
+function Announcements({ user }: { user: any }) {
     const [modalShow, setModalShow] = useState(false);
 
     return (
@@ -59,14 +62,16 @@ function Announcements() {
                 <h1><IoMdNotifications /> Announcement(s) {getAcademicYear()}</h1>
             </div>
             <div className={`${style.container}`}>
-                <Button type="button" className={`d-block ms-auto mb-3 ${style.btn_post}`} onClick={() => setModalShow(true)}>
-                    <AiOutlinePlus /> New Announcement
-                </Button>
+                <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="d-grid rounded">
+                    <Button type="button" className={`d-block ms-auto mb-3 ${style.btn_post}`} onClick={() => setModalShow(true)}>
+                        <AiOutlinePlus /> New Announcement
+                    </Button>
+                </Ripples>
                 <Event />
                 <Event />
                 <Event />
             </div>
-            <ModalForm modalShow={modalShow} setModalShow={setModalShow} />
+            <ModalForm modalShow={modalShow} setModalShow={setModalShow} teacher={user} />
         </div>
     );
 }

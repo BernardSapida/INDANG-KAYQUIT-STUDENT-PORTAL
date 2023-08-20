@@ -5,9 +5,6 @@ db.students.insertOne({
         sex: "Male",
         religion: "Christianity",
         civilStatus: "Single",
-        nationality: "American",
-        ethnicity: "Caucasian",
-        citizenship: "USA"
     },
     enrollmentDetails: {
         currentGradeLevel: 10,

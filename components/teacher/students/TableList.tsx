@@ -1,13 +1,26 @@
 // React Modules
-import { useState, useEffect } from "react";
+import { Dispatch, SetStateAction, useState, useEffect } from "react";
 
 // React Bootstrap Components
 import Spinner from "react-bootstrap/Spinner";
+import { Button } from "react-bootstrap";
 
 // React Data Table Component
 import DataTable from "react-data-table-component";
 
-function TableList() {
+// React-Ripples
+import Ripples from 'react-ripples'
+
+// React-Icons
+import { FaEdit } from 'react-icons/fa';
+
+function TableList({
+    setStudent,
+    setModalShow
+}: {
+    setStudent: Dispatch<SetStateAction<{}>>;
+    setModalShow: Dispatch<SetStateAction<boolean>>;
+}) {
     const [tableLoading, setLoadingTable] = useState<boolean>(false);
     const table_columns = [
         {
@@ -17,7 +30,7 @@ function TableList() {
         },
         {
             name: "Grade & Section",
-            selector: (row: Record<any, any>) => row.gradeAndSection,
+            selector: (row: Record<any, any>) => `${row.gradeLevel} - ${row.section}`,
             sortable: true,
         },
         {
@@ -27,140 +40,78 @@ function TableList() {
         {
             name: "Student Number",
             selector: (row: Record<any, any>) => row.studentNumber,
+        },
+        {
+            name: "Actions",
+            button: true,
+            cell: (row: Record<any, any>) => (
+                <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="d-grid rounded">
+                    <Button
+                        size="sm"
+                        variant="dark"
+                        onClick={() => {
+                            setStudent(row);
+                            setModalShow(true);
+                        }}
+                    >
+                        <FaEdit className="mb-1" /> Edit
+                    </Button>
+                </Ripples>
+
+            ),
         }
     ];
     const data = [
         {
-            fullname: "Agatha Sapida",
-            gradeAndSection: "6 - Peace",
+            fullname: "Bernard Sapida",
+            sex: "male",
+            birthdate: "2002-12-17",
+            religion: "roman_catholicism",
+            civilStatus: "single",
+            gradeLevel: "6",
+            section: "Peace",
             studentLRN: "12345678910",
-            studentNumber: "202302168"
+            studentNumber: "202308493",
+            academicYear: "2023",
+            address: "Imus, Cavite",
+            contactNumber: "09472126029",
+            guardian: "Shyvana R. Dragonite",
+            kayquitEmailAccount: "bernard.sapida@kayquit.edu.ph",
+            temporaryPassword: "K1xa041ke"
         },
         {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
+            fullname: "Charlie Sapida",
+            sex: "male",
+            birthdate: "2002-12-17",
+            religion: "roman_catholicism",
+            civilStatus: "single",
+            gradeLevel: "6",
+            section: "Peace",
             studentLRN: "12345678910",
-            studentNumber: "202302168"
+            studentNumber: "202308493",
+            academicYear: "2023",
+            address: "Imus, Cavite",
+            contactNumber: "09472126029",
+            guardian: "Shyvana R. Dragonite",
+            kayquitEmailAccount: "bernard.sapida@kayquit.edu.ph",
+            temporaryPassword: "K1xa041ke"
         },
         {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
+            fullname: "Coby Sapida",
+            sex: "male",
+            birthdate: "2002-12-17",
+            religion: "roman_catholicism",
+            civilStatus: "single",
+            gradeLevel: "6",
+            section: "Peace",
             studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202302168"
+            studentNumber: "202308493",
+            academicYear: "2023",
+            address: "Imus, Cavite",
+            contactNumber: "09472126029",
+            guardian: "Shyvana R. Dragonite",
+            kayquitEmailAccount: "bernard.sapida@kayquit.edu.ph",
+            temporaryPassword: "K1xa041ke"
         }
     ];
 

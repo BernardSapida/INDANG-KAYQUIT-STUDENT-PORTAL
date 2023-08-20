@@ -19,7 +19,7 @@ export default function Field({
     type: string;
     name: string;
     label: string;
-    value: string | undefined;
+    value?: string;
     handleChange: {
         (e: ChangeEvent<any>): void;
         <T = string | ChangeEvent<any>>(field: T): T extends ChangeEvent<any>

@@ -5,14 +5,21 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 
 // React Bootstrap Components
-import Form from "react-bootstrap/Form";
+import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 
 // Formik Modules
 import { Formik } from "formik";
 
 // Components
 import Field from "@/components/form/InputField";
+
+// React-Icons
+import { FaExchangeAlt } from 'react-icons/fa';
+
+// React-Ripples
+import Ripples from 'react-ripples'
 
 // Helpers
 import { initialValues, validationSchema } from "@/helpers/teacher/password/Form";
@@ -33,6 +40,10 @@ function ChangePassword() {
     ) => {
         setLoading(true);
         const { currentPassword, newPassword, confirmPassword } = values;
+        console.log(values)
+        resetForm();
+
+        setTimeout(() => setLoading(false), 2000);
     };
 
     return (
@@ -48,7 +59,7 @@ function ChangePassword() {
                         name="currentPassword"
                         label="Current Password"
                         handleChange={handleChange}
-                        value={undefined}
+                        value={values.currentPassword}
                         loading={loading}
                     />
                     <Field
@@ -56,7 +67,7 @@ function ChangePassword() {
                         name="newPassword"
                         label="New Password"
                         handleChange={handleChange}
-                        value={undefined}
+                        value={values.newPassword}
                         loading={loading}
                     />
                     <Field
@@ -64,12 +75,22 @@ function ChangePassword() {
                         name="confirmPassword"
                         label="Confirm Password"
                         handleChange={handleChange}
-                        value={undefined}
+                        value={values.confirmPassword}
                         loading={loading}
                     />
-                    <Button type="submit" className={`d-block ms-auto ${style.submit_btn}`}>
-                        Change Password
-                    </Button>
+                    <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="d-grid rounded">
+                        <Button
+                            type="submit"
+                            className={`d-block ms-auto ${style.submit_btn}`}
+                            disabled={loading}
+                        >
+                            {
+                                loading ? (<><Spinner animation="grow" size="sm" /> Updating...</>) :
+                                    (<><FaExchangeAlt /> Change Password</>)
+                            }
+
+                        </Button>
+                    </Ripples>
                 </Form>
             )}
         </Formik>

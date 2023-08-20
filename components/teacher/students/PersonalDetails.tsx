@@ -16,6 +16,7 @@ import Field from "@/components/form/InputField";
 function PersonalDetails({
     values,
     handleChange,
+    student,
     loading,
 }: {
     values: Record<string, any>;
@@ -25,6 +26,7 @@ function PersonalDetails({
             ? void
             : (e: string | ChangeEvent<any>) => void;
     };
+    student?: Record<string, any>
     loading: boolean;
 }) {
     return (

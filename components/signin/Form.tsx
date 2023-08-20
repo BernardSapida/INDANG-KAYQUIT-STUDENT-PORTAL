@@ -107,7 +107,7 @@ export default function SigninForm() {
                                 <Link className="text-end" href="/forgot_password">Forgot password?</Link>
                             </div>
                         </div>
-                        <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="d-grid gap-2 rounded">
+                        <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="d-grid rounded">
                             <Button type="submit" className={`${style.signin_btn}`}>
                                 Login
                             </Button>

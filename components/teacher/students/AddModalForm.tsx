@@ -13,6 +13,9 @@ import { Formik, ErrorMessage } from "formik";
 // Sweet Alert Modules
 import Swal from "sweetalert2";
 
+// React-Ripples
+import Ripples from 'react-ripples'
+
 // React-Icons
 import { BsFillPeopleFill, BsPersonFillAdd } from 'react-icons/bs';
 
@@ -36,7 +39,6 @@ function ModalForm({
     setModalShow: Dispatch<SetStateAction<boolean>>;
 }) {
     const [loading, setLoading] = useState<boolean>(false);
-
     const handleSubmit = async (
         values: {
             fullname: string;
@@ -75,6 +77,37 @@ function ModalForm({
             temporaryPassword,
         } = values;
         setLoading(true);
+        const StudentInformation = {
+            personalDetails: {
+                fullname: values.fullname,
+                birthdate: values.birthdate,
+                sex: values.sex,
+                religion: values.religion,
+                civilStatus: values.civilStatus
+            },
+            enrollmentDetails: {
+                currentGradeLevel: values.gradeLevel,
+                currentSection: values.section,
+                lrn: values.studentLRN,
+                studentNumber: values.studentNumber
+            },
+            contactDetails: {
+                address: values.address,
+                guardian: values.guardian,
+                contactNumber: values.contactNumber,
+            },
+            kayquitGoogleAccount: {
+                kayquitAccount: values.kayquitEmailAccount,
+                defaultPassword: values.temporaryPassword,
+                password: values.temporaryPassword,
+            },
+        }
+
+        // Save to database
+        console.log(StudentInformation)
+
+
+        setTimeout(() => setLoading(false), 2000);
     };
 
     return (
@@ -109,9 +142,20 @@ function ModalForm({
                             </Form>
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button type="submit" form="modalForm" className={`d-block ms-auto ${style.btn_post}`} onClick={() => setModalShow(true)}>
-                                <BsPersonFillAdd /> Add new student
-                            </Button>
+                            <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="rounded">
+                                <Button
+                                    type="submit"
+                                    className={`${style.btn_post}`}
+                                    form="modalForm"
+                                    onClick={() => setModalShow(true)}
+                                    disabled={loading}
+                                >
+                                    {
+                                        loading ? (<><Spinner animation="grow" size="sm" /> Adding...</>) :
+                                            (<><BsPersonFillAdd /> Add new student</>)
+                                    }
+                                </Button>
+                            </Ripples>
                         </Modal.Footer>
                     </>
                 )}

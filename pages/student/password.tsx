@@ -8,10 +8,10 @@ import { getSession } from "next-auth/react";
 import { MdPassword } from 'react-icons/md';
 
 // CSS
-import style from "@/public/css/student-password.module.css";
+import style from "@/public/css/teacher-password.module.css";
 
 // Components
-import ChangePassword from "@/components/student/password/ChangePassword";
+import ChangePassword from "@/components/teacher/password/ChangePassword";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -20,7 +20,7 @@ export const getServerSideProps: GetServerSideProps = async (
         const { req } = context;
         const session = await getSession({ req: req });
 
-        if (!session || session.user.role != "student") {
+        if (!session || session.user.role != "teacher") {
             return { notFound: true }
         }
 

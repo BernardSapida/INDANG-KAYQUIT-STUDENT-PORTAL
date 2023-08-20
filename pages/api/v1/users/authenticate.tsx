@@ -26,7 +26,7 @@ export default async function handler(
     // console.log(data.length)
     res.json({
       id: 123,
-      role: "teacher", // teacher or user
+      role: "student", // teacher or user
       email: email,
       password: password,
     });

@@ -14,6 +14,9 @@ import { Formik } from "formik";
 import { BsFillSendFill } from 'react-icons/bs';
 import { MdNotificationsActive } from 'react-icons/md';
 
+// React-Ripples
+import Ripples from 'react-ripples'
+
 // Helpers
 import { initialValues, validationSchema } from "@/helpers/teacher/announcements/Form";
 
@@ -27,9 +30,11 @@ import style from "@/public/css/teacher-modal.module.css";
 function ModalForm({
     modalShow,
     setModalShow,
+    teacher
 }: {
     modalShow: boolean;
     setModalShow: Dispatch<SetStateAction<boolean>>;
+    teacher: any;
 }) {
     const [loading, setLoading] = useState<boolean>(false);
 
@@ -38,7 +43,24 @@ function ModalForm({
         { resetForm }: { resetForm: any }
     ) => {
         const { title, description } = values;
+        const res = {
+            gradeLevel: teacher.gradeLevel,
+            section: teacher.section,
+            academicYear: teacher.academicYear,
+            adviserEmail: teacher.email,
+            announcement: values
+        }
+
         setLoading(true);
+
+        // Save to db
+        console.log(res)
+
+        if ("success") {
+            resetForm();
+        }
+
+        setTimeout(() => setLoading(false), 2000);
     };
 
     return (
@@ -83,9 +105,20 @@ function ModalForm({
                             </Form>
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button type="submit" form="modalForm" className={`d-block ms-auto ${style.btn_post}`} onClick={() => setModalShow(true)}>
-                                <BsFillSendFill /> Post Announcement
-                            </Button>
+                            <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="d-grid rounded">
+                                <Button
+                                    type="submit"
+                                    form="modalForm"
+                                    className={`d-block ms-auto ${style.btn_post}`}
+                                    onClick={() => setModalShow(true)}
+                                    disabled={loading}
+                                >
+                                    {
+                                        loading ? (<><Spinner animation="grow" size="sm" /> Posting...</>) :
+                                            (<><BsFillSendFill /> Post Announcement</>)
+                                    }
+                                </Button>
+                            </Ripples>
                         </Modal.Footer>
                     </>
                 )}

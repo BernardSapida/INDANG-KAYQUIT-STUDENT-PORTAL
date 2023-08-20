@@ -6,6 +6,7 @@ import { useState } from "react";
 
 // React Bootstrap Components
 import FloatingLabel from "react-bootstrap/FloatingLabel";
+import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -15,6 +16,11 @@ import Col from "react-bootstrap/Col";
 import { Formik } from "formik";
 import { ErrorMessage } from "formik";
 
+// React-Icons
+import { BiSolidReport } from 'react-icons/bi';
+
+// React-Ripples
+import Ripples from 'react-ripples'
 
 // Helpers
 import { initialValues, validationSchema } from "@/helpers/teacher/reports/Form";
@@ -41,6 +47,8 @@ function ReportForm() {
     ) => {
         setLoading(true);
         const { report, gradeLevel, section, academicYear, sortBy, sortOrder } = values;
+        console.log(values)
+        setTimeout(() => setLoading(false), 2000);
     };
 
     return (
@@ -151,9 +159,19 @@ function ReportForm() {
                             </FloatingLabel>
                         </Col>
                     </Row>
-                    <Button type="submit" className={`d-block ms-auto ${style.submit_btn}`}>
-                        Generate Report
-                    </Button>
+                    <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="d-grid rounded">
+                        <Button
+                            type="submit"
+                            className={`d-block ms-auto ${style.submit_btn}`}
+                            disabled={loading}
+                        >
+                            {
+                                loading ? (<><Spinner animation="grow" size="sm" /> Updating...</>) :
+                                    (<><BiSolidReport className="mb-1" />Generate Report</>)
+                            }
+
+                        </Button>
+                    </Ripples>
                 </Form>
             )}
         </Formik>

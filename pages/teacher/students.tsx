@@ -13,6 +13,9 @@ import { InputGroup } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+// React-Ripples
+import Ripples from 'react-ripples'
+
 // React-Icons
 import { AiOutlineUnorderedList } from 'react-icons/ai';
 import { AiOutlineSearch, AiOutlinePlus } from "react-icons/ai";
@@ -21,7 +24,10 @@ import { AiOutlineSearch, AiOutlinePlus } from "react-icons/ai";
 const TableList = dynamic(() => import("@/components/teacher/students/TableList"), {
     ssr: false,
 });
-const ModalForm = dynamic(() => import("@/components/teacher/students/ModalForm"), {
+const AddModalForm = dynamic(() => import("@/components/teacher/students/AddModalForm"), {
+    ssr: false,
+});
+const EditModalForm = dynamic(() => import("@/components/teacher/students/EditModalForm"), {
     ssr: false,
 });
 
@@ -52,7 +58,9 @@ export const getServerSideProps: GetServerSideProps = async (
 };
 
 function Students() {
-    const [modalShow, setModalShow] = useState(false);
+    const [addModalShow, setAddModalShow] = useState(false);
+    const [editModalShow, setEditModalShow] = useState(false);
+    const [student, setStudent] = useState({});
 
     return (
         <div className="mb-5">
@@ -61,9 +69,16 @@ function Students() {
             </div>
             <div className={`${style.container}`}>
                 <div className={`${style.table_header}`}>
-                    <Button type="button" className={`${style.btn_add}`} onClick={() => setModalShow(true)}>
-                        <AiOutlinePlus /> Add Student
-                    </Button>
+                    <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="rounded">
+                        <Button
+                            type="submit"
+                            className={`${style.btn_add}`}
+                            form="gradesForm"
+                            onClick={() => setAddModalShow(true)}
+                        >
+                            <AiOutlinePlus /> Add Student
+                        </Button>
+                    </Ripples>
                     <InputGroup className="ms-auto mb-3">
                         <InputGroup.Text><AiOutlineSearch /></InputGroup.Text>
                         <Form.Control
@@ -75,9 +90,10 @@ function Students() {
                         />
                     </InputGroup>
                 </div>
-                <TableList />
+                <TableList setModalShow={setEditModalShow} setStudent={setStudent} />
             </div>
-            <ModalForm modalShow={modalShow} setModalShow={setModalShow} />
+            <AddModalForm modalShow={addModalShow} setModalShow={setAddModalShow} />
+            <EditModalForm modalShow={editModalShow} setModalShow={setEditModalShow} student={student} />
         </div>
     );
 }
