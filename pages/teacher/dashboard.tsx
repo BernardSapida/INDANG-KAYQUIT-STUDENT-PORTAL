@@ -21,7 +21,7 @@ export const getServerSideProps: GetServerSideProps = async (
         const { req } = context;
         const session = await getSession({ req: req });
 
-        if (!session) {
+        if (!session || session.user.role != "teacher") {
             return { notFound: true }
         }
 

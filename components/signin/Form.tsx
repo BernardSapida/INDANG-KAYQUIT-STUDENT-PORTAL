@@ -42,10 +42,9 @@ export default function SigninForm() {
             const user = await getUserSession();
 
             if (user?.role === "teacher" && isLogin) {
-                console.log("Here")
-                router.push("/student/dashboard");
-            } else if (user?.role === "student" && isLogin) {
                 router.push("/teacher/dashboard");
+            } else if (user?.role === "student" && isLogin) {
+                router.push("/student/dashboard");
             } else {
                 router.push("/");
             }

@@ -92,7 +92,7 @@ function SideNavigation({
             show: session?.user.role == "teacher",
         },
         {
-            name: "My Grades",
+            name: "Student Grades",
             path: "/teacher/grades",
             icon: <MdGrade />,
             show: session?.user.role == "teacher",
