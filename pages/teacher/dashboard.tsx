@@ -22,15 +22,8 @@ export const getServerSideProps: GetServerSideProps = async (
         const session = await getSession({ req: req });
 
         if (!session) {
-            return {
-                props: {},
-                redirect: {
-                    destination: "/",
-                },
-            };
+            return { notFound: true }
         }
-
-        console.log(session.user)
 
         return {
             props: {
@@ -39,9 +32,7 @@ export const getServerSideProps: GetServerSideProps = async (
         };
     } catch (error) {
         return {
-            props: {
-                error: "Error",
-            },
+            props: { error: "Error" },
         };
     }
 };

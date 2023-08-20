@@ -1,6 +1,3 @@
-// Next Modules
-import Link from "next/link";
-
 // React-Icons
 import { FaGraduationCap } from 'react-icons/fa';
 

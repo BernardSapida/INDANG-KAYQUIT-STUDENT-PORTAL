@@ -1,8 +1,12 @@
+// Next Modules
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
+import dynamic from "next/dynamic";
+
+// Next-Auth Modules
+import { getSession } from "next-auth/react";
+
 // React Modules
 import { useState } from "react";
-
-// Next Modules
-import dynamic from "next/dynamic";
 
 // React Bootstrap Components
 import { InputGroup } from "react-bootstrap";
@@ -23,6 +27,29 @@ const ModalForm = dynamic(() => import("@/components/teacher/students/ModalForm"
 
 // CSS
 import style from "@/public/css/teacher-students.module.css";
+
+export const getServerSideProps: GetServerSideProps = async (
+    context: GetServerSidePropsContext
+) => {
+    try {
+        const { req } = context;
+        const session = await getSession({ req: req });
+
+        if (!session) {
+            return { notFound: true }
+        }
+
+        return {
+            props: {
+                user: session.user,
+            },
+        };
+    } catch (error) {
+        return {
+            props: { error: "Error" },
+        };
+    }
+};
 
 function Students() {
     const [modalShow, setModalShow] = useState(false);

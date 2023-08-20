@@ -1,5 +1,9 @@
 // Next Modules
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import Link from "next/link";
+
+// Next-Auth Modules
+import { getSession } from "next-auth/react";
 
 // React-Icons
 import { FaGraduationCap } from 'react-icons/fa';
@@ -10,6 +14,29 @@ import { FaGraduationCap } from 'react-icons/fa';
 // CSS
 import style from "@/public/css/student-grades.module.css";
 import AccordionDropdown from "@/components/student/grades/Accordion";
+
+export const getServerSideProps: GetServerSideProps = async (
+    context: GetServerSidePropsContext
+) => {
+    try {
+        const { req } = context;
+        const session = await getSession({ req: req });
+
+        if (!session) {
+            return { notFound: true }
+        }
+
+        return {
+            props: {
+                user: session.user,
+            },
+        };
+    } catch (error) {
+        return {
+            props: { error: "Error" },
+        };
+    }
+};
 
 function Grades() {
     const data = [

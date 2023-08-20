@@ -4,6 +4,7 @@ import NextAuth, { getServerSession } from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import axios from "axios";
 import { JWT } from "next-auth/jwt";
+import { getSession } from "next-auth/react";
 
 declare module "next-auth" {
   interface Session extends DefaultSession {
@@ -41,7 +42,6 @@ export const authOptions: NextAuthOptions = {
         session.user.id = user?.id;
         session.user.role = user?.role;
         session.user.email = user?.email;
-        session.user.password = user?.password;
       }
 
       return session;
@@ -81,7 +81,7 @@ export const authOptions: NextAuthOptions = {
     })
   ],
   pages: {
-    signIn: "/auth/signin",
+    // signIn: "/teacher/dashboard",
     signOut: "/auth/signin",
   },
   secret: process.env.NEXTAUTH_SECRET,

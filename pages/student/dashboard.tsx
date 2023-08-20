@@ -8,7 +8,6 @@ import { getSession } from "next-auth/react";
 import Cards from "@/components/student/dashboard/Cards";
 import News from "@/components/student/dashboard/news";
 
-
 // CSS
 import style from "@/public/css/student-dashboard.module.css";
 
@@ -23,12 +22,7 @@ export const getServerSideProps: GetServerSideProps = async (
         const session = await getSession({ req: req });
 
         if (!session) {
-            return {
-                props: {},
-                redirect: {
-                    destination: "/",
-                },
-            };
+            return { notFound: true }
         }
 
         return {
@@ -38,9 +32,7 @@ export const getServerSideProps: GetServerSideProps = async (
         };
     } catch (error) {
         return {
-            props: {
-                error: "Error",
-            },
+            props: { error: "Error" },
         };
     }
 };

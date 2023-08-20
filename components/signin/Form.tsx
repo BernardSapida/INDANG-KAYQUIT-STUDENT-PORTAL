@@ -1,12 +1,12 @@
 // Next Auth Modules
-import { signIn, useSession } from "next-auth/react";
+import { getSession, signIn } from "next-auth/react";
 
 // Next Modules
 import { useRouter } from "next/router";
 import Link from "next/link";
 
 // React Modules
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Formik Modules
 import { Formik } from "formik";
@@ -29,8 +29,30 @@ import style from "@/public/css/button-provider.module.css";
 
 export default function SigninForm() {
     const [loading, setLoading] = useState<boolean>(false);
-    const { data } = useSession();
+    const [isLogin, setIsLogin] = useState<boolean>(false);
     const router = useRouter();
+
+    useEffect(() => {
+        const getUserSession = async () => {
+            const session = await getSession();
+            return session?.user;
+        };
+
+        const checkUserRoleAndRedirect = async () => {
+            const user = await getUserSession();
+
+            if (user?.role === "teacher" && isLogin) {
+                console.log("Here")
+                router.push("/student/dashboard");
+            } else if (user?.role === "student" && isLogin) {
+                router.push("/teacher/dashboard");
+            } else {
+                router.push("/");
+            }
+        };
+
+        checkUserRoleAndRedirect();
+    }, [isLogin])
 
     const handleSubmit = async (
         values: { email: string; password: string },
@@ -52,13 +74,15 @@ export default function SigninForm() {
             return null;
         }
 
-        if (data?.user.role == "teacher") {
-            return router.push("/teacher/dashboard");
-        }
+        setIsLogin(true);
 
-        if (data?.user.role == "student") {
-            return router.push("/student/dashboard");
-        }
+        // if (data?.user.role == "teacher") {
+        //     return router.push("/teacher/dashboard");
+        // }
+
+        // if (data?.user.role == "student") {
+        //     return router.push("/student/dashboard");
+        // }
     };
 
     return (

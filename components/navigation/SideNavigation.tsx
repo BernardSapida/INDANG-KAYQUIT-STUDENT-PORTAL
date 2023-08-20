@@ -145,10 +145,8 @@ function SideNavigation({
             <ul>
                 {
                     links.map((l, key) => (
-                        <li key={key} className={`${l.path === router.route && style.active}`}>
-                            {
-                                l.show && <Link href={l.path} onClick={() => setShowNavigation(!showNavigation)}>{l.icon} {l.name}</Link>
-                            }
+                        l.show && <li key={key} className={`${l.path === router.route && style.active}`}>
+                            <Link href={l.path} onClick={() => setShowNavigation(!showNavigation)}>{l.icon} {l.name}</Link>
                         </li>
                     ))
                 }

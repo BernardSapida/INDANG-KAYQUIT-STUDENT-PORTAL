@@ -1,5 +1,9 @@
 // Next Modules
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import Link from "next/link";
+
+// Next-Auth Modules
+import { getSession } from "next-auth/react";
 
 // React-Icons
 import { FaGraduationCap } from 'react-icons/fa';
@@ -12,6 +16,29 @@ import KayquitGoogleAccount from "@/components/student/profile/KayquitGoogleAcco
 
 // CSS
 import style from "@/public/css/student-profile.module.css";
+
+export const getServerSideProps: GetServerSideProps = async (
+    context: GetServerSidePropsContext
+) => {
+    try {
+        const { req } = context;
+        const session = await getSession({ req: req });
+
+        if (!session) {
+            return { notFound: true }
+        }
+
+        return {
+            props: {
+                user: session.user,
+            },
+        };
+    } catch (error) {
+        return {
+            props: { error: "Error" },
+        };
+    }
+};
 
 function Profile() {
     return (

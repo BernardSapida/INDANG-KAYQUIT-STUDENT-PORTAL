@@ -10,7 +10,7 @@ export default async function handler(
     const db = client.db("sample_airbnb");
 
     const buildings = await db.collection("listingsAndReviews").find({}).limit(2).toArray();
-    console.log(buildings.length)
+    // console.log(buildings.length)
     res.json(buildings);
   } catch (e) {
     console.error(e);
