@@ -104,7 +104,7 @@ function ModalForm({
         }
 
         // Save to database
-        console.log(StudentInformation)
+        // console.log(StudentInformation)
 
 
         setTimeout(() => setLoading(false), 2000);

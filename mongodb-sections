@@ -1,0 +1,4759 @@
+db.sections.insertMany([
+    {
+        gradeLevel: "Kinder",
+        name: "Akasya",
+        academicYear: "2018-2019",
+        subjects: [
+            {
+                subjectName: "English",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 1"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "Kinder",
+        name: "Narra",
+        academicYear: "2018-2019",
+        subjects: [
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Math",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 2"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "1",
+        name: "Akasya",
+        academicYear: "2018-2019",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "MAPEH", time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "English", time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Math", time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Filipino", time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "MTB", time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Araling Panlipunan", time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 3"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "1",
+        name: "Narra",
+        academicYear: "2018-2019",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 4"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "2",
+        name: "Akasya",
+        academicYear: "2018-2019",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 5"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "2",
+        name: "Narra",
+        academicYear: "2018-2019",
+        subjects: [
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 6"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "3",
+        name: "Akasya",
+        academicYear: "2018-2019",
+        subjects: [
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 7"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "3",
+        name: "Narra",
+        academicYear: "2018-2019",
+        subjects: [
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Math",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 8"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "4",
+        name: "Akasya",
+        academicYear: "2018-2019",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 9"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "4",
+        name: "Narra",
+        academicYear: "2018-2019",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "MTB",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 10"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "5",
+        name: "Akasya",
+        academicYear: "2018-2019",
+        subjects: [
+            {
+                subjectName: "Math",
+                subjectName: "English",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "MTB",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 11"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "5",
+        name: "Narra",
+        academicYear: "2018-2019",
+        subjects: [
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "English",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 12"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "6",
+        name: "Akasya",
+        academicYear: "2018-2019",
+        subjects: [
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Science",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 13"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "6",
+        name: "Narra",
+        academicYear: "2018-2019",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "English",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 14"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "Kinder",
+        name: "Akasya",
+        academicYear: "2019-2020",
+        subjects: [
+            {
+                subjectName: "English",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 1"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "Kinder",
+        name: "Narra",
+        academicYear: "2019-2020",
+        subjects: [
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Math",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 2"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "1",
+        name: "Akasya",
+        academicYear: "2019-2020",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "MAPEH", time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "English", time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Math", time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Filipino", time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "MTB", time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Araling Panlipunan", time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 3"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "1",
+        name: "Narra",
+        academicYear: "2019-2020",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 4"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "2",
+        name: "Akasya",
+        academicYear: "2019-2020",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 5"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "2",
+        name: "Narra",
+        academicYear: "2019-2020",
+        subjects: [
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 6"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "3",
+        name: "Akasya",
+        academicYear: "2019-2020",
+        subjects: [
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 7"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "3",
+        name: "Narra",
+        academicYear: "2019-2020",
+        subjects: [
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Math",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 8"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "4",
+        name: "Akasya",
+        academicYear: "2019-2020",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 9"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "4",
+        name: "Narra",
+        academicYear: "2019-2020",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "MTB",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 10"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "5",
+        name: "Akasya",
+        academicYear: "2019-2020",
+        subjects: [
+            {
+                subjectName: "Math",
+                subjectName: "English",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "MTB",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 11"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "5",
+        name: "Narra",
+        academicYear: "2019-2020",
+        subjects: [
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "English",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 12"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "6",
+        name: "Akasya",
+        academicYear: "2019-2020",
+        subjects: [
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Science",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 13"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "6",
+        name: "Narra",
+        academicYear: "2019-2020",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "English",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 14"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    }, {
+        gradeLevel: "Kinder",
+        name: "Akasya",
+        academicYear: "2020-2021",
+        subjects: [
+            {
+                subjectName: "English",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 1"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "Kinder",
+        name: "Narra",
+        academicYear: "2020-2021",
+        subjects: [
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Math",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 2"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "1",
+        name: "Akasya",
+        academicYear: "2020-2021",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "MAPEH", time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "English", time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Math", time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Filipino", time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "MTB", time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Araling Panlipunan", time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 3"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "1",
+        name: "Narra",
+        academicYear: "2020-2021",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 4"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "2",
+        name: "Akasya",
+        academicYear: "2020-2021",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 5"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "2",
+        name: "Narra",
+        academicYear: "2020-2021",
+        subjects: [
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 6"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "3",
+        name: "Akasya",
+        academicYear: "2020-2021",
+        subjects: [
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 7"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "3",
+        name: "Narra",
+        academicYear: "2020-2021",
+        subjects: [
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Math",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 8"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "4",
+        name: "Akasya",
+        academicYear: "2020-2021",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 9"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "4",
+        name: "Narra",
+        academicYear: "2020-2021",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "MTB",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 10"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "5",
+        name: "Akasya",
+        academicYear: "2020-2021",
+        subjects: [
+            {
+                subjectName: "Math",
+                subjectName: "English",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "MTB",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 11"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "5",
+        name: "Narra",
+        academicYear: "2020-2021",
+        subjects: [
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "English",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 12"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "6",
+        name: "Akasya",
+        academicYear: "2020-2021",
+        subjects: [
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Science",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 13"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "6",
+        name: "Narra",
+        academicYear: "2020-2021",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "English",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 14"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "Kinder",
+        name: "Akasya",
+        academicYear: "2021-2022",
+        subjects: [
+            {
+                subjectName: "English",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 1"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "Kinder",
+        name: "Narra",
+        academicYear: "2021-2022",
+        subjects: [
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Math",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 2"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "1",
+        name: "Akasya",
+        academicYear: "2021-2022",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "MAPEH", time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "English", time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Math", time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Filipino", time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "MTB", time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Araling Panlipunan", time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 3"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "1",
+        name: "Narra",
+        academicYear: "2021-2022",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 4"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "2",
+        name: "Akasya",
+        academicYear: "2021-2022",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 5"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "2",
+        name: "Narra",
+        academicYear: "2021-2022",
+        subjects: [
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 6"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "3",
+        name: "Akasya",
+        academicYear: "2021-2022",
+        subjects: [
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 7"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "3",
+        name: "Narra",
+        academicYear: "2021-2022",
+        subjects: [
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Math",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 8"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "4",
+        name: "Akasya",
+        academicYear: "2021-2022",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 9"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "4",
+        name: "Narra",
+        academicYear: "2021-2022",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "MTB",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 10"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "5",
+        name: "Akasya",
+        academicYear: "2021-2022",
+        subjects: [
+            {
+                subjectName: "Math",
+                subjectName: "English",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "MTB",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 11"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "5",
+        name: "Narra",
+        academicYear: "2021-2022",
+        subjects: [
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "English",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 12"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "6",
+        name: "Akasya",
+        academicYear: "2021-2022",
+        subjects: [
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Science",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 13"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "6",
+        name: "Narra",
+        academicYear: "2021-2022",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "English",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 14"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "Kinder",
+        name: "Akasya",
+        academicYear: "2022-2023",
+        subjects: [
+            {
+                subjectName: "English",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 1"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "Kinder",
+        name: "Narra",
+        academicYear: "2022-2023",
+        subjects: [
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Math",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 2"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "1",
+        name: "Akasya",
+        academicYear: "2022-2023",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "MAPEH", time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "English", time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Math", time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Filipino", time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "MTB", time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Araling Panlipunan", time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 3"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "1",
+        name: "Narra",
+        academicYear: "2022-2023",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 4"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "2",
+        name: "Akasya",
+        academicYear: "2022-2023",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 5"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "2",
+        name: "Narra",
+        academicYear: "2022-2023",
+        subjects: [
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 6"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "3",
+        name: "Akasya",
+        academicYear: "2022-2023",
+        subjects: [
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 7"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "3",
+        name: "Narra",
+        academicYear: "2022-2023",
+        subjects: [
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Math",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 8"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "4",
+        name: "Akasya",
+        academicYear: "2022-2023",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 9"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "4",
+        name: "Narra",
+        academicYear: "2022-2023",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "MTB",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 10"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "5",
+        name: "Akasya",
+        academicYear: "2022-2023",
+        subjects: [
+            {
+                subjectName: "Math",
+                subjectName: "English",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "MTB",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 11"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "5",
+        name: "Narra",
+        academicYear: "2022-2023",
+        subjects: [
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "English",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 12"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "6",
+        name: "Akasya",
+        academicYear: "2022-2023",
+        subjects: [
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Science",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 13"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "6",
+        name: "Narra",
+        academicYear: "2022-2023",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "English",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 14"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "Kinder",
+        name: "Akasya",
+        academicYear: "2023-2024",
+        subjects: [
+            {
+                subjectName: "English",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 1"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 1"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "Kinder",
+        name: "Narra",
+        academicYear: "2023-2024",
+        subjects: [
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Math",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 2"
+            },
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 2"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "1",
+        name: "Akasya",
+        academicYear: "2023-2024",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "MAPEH", time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "English", time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Math", time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Filipino", time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "MTB", time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "Araling Panlipunan", time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 3"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 3"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "1",
+        name: "Narra",
+        academicYear: "2023-2024",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 4"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 4"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "2",
+        name: "Akasya",
+        academicYear: "2023-2024",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 5"
+            },
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 5"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "2",
+        name: "Narra",
+        academicYear: "2023-2024",
+        subjects: [
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 6"
+            },
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 6"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "3",
+        name: "Akasya",
+        academicYear: "2023-2024",
+        subjects: [
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 7"
+            },
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 7"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "3",
+        name: "Narra",
+        academicYear: "2023-2024",
+        subjects: [
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "ESP",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 8"
+            },
+            {
+                subjectName: "Math",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 8"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "4",
+        name: "Akasya",
+        academicYear: "2023-2024",
+        subjects: [
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Filipino",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "MTB",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Math",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Science",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 9"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 9"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "4",
+        name: "Narra",
+        academicYear: "2023-2024",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "MTB",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "English",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 10"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 10"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "5",
+        name: "Akasya",
+        academicYear: "2023-2024",
+        subjects: [
+            {
+                subjectName: "Math",
+                subjectName: "English",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "MTB",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 11"
+            },
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 11"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "5",
+        name: "Narra",
+        academicYear: "2023-2024",
+        subjects: [
+            {
+                subjectName: "Filipino",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "English",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Science",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 12"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 12"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "6",
+        name: "Akasya",
+        academicYear: "2023-2024",
+        subjects: [
+            {
+                subjectName: "Araling Panlipunan",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "ESP",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Science",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "English",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 13"
+            },
+            {
+                subjectName: "MTB",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 13"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
+        gradeLevel: "6",
+        name: "Narra",
+        academicYear: "2023-2024",
+        subjects: [
+            {
+                subjectName: "Science",
+                time: "8:00 AM - 8:45 AM",
+                day: "Monday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Araling Panlipunan",
+                time: "9:00 AM - 9:45 AM",
+                day: "Monday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "English",
+                time: "10:00 AM - 10:45 AM",
+                day: "Tuesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Math",
+                time: "11:00 AM - 11:45 AM",
+                day: "Tuesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "MTB",
+                time: "9:00 AM - 9:45 AM",
+                day: "Wednesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "MAPEH",
+                time: "11:00 AM - 11:45 AM",
+                day: "Wednesday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "Filipino",
+                time: "11:00 AM - 11:45 AM",
+                day: "Thursday",
+                room: "Room - 14"
+            },
+            {
+                subjectName: "ESP",
+                time: "8:00 AM - 8:45 AM",
+                day: "Friday",
+                room: "Room - 14"
+            }
+        ],
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+]);

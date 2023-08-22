@@ -47,7 +47,7 @@ function ReportForm() {
     ) => {
         setLoading(true);
         const { report, gradeLevel, section, academicYear, sortBy, sortOrder } = values;
-        console.log(values)
+        // console.log(values)
         setTimeout(() => setLoading(false), 2000);
     };
 

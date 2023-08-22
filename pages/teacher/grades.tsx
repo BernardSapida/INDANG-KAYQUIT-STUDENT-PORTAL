@@ -1,3 +1,6 @@
+// Axios
+import axios from "axios";
+
 // Next Modules
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import dynamic from "next/dynamic";
@@ -6,7 +9,7 @@ import dynamic from "next/dynamic";
 import { getSession } from "next-auth/react";
 
 // React Modules
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // React Bootstrap Components
 import { InputGroup } from "react-bootstrap";
@@ -38,9 +41,14 @@ export const getServerSideProps: GetServerSideProps = async (
             return { notFound: true }
         }
 
+        const studentList = await axios.get(
+            `${process.env.NEXTAUTH_URL}/api/v1/teacher/get/student-grades`
+        );
+
         return {
             props: {
                 user: session.user,
+                studentList: studentList.data
             },
         };
     } catch (error) {
@@ -50,9 +58,16 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Students() {
+function Students({
+    user,
+    studentList
+}: {
+    user: Record<string, any>;
+    studentList: any;
+}) {
     const [modalShow, setModalShow] = useState(false);
     const [student, setStudent] = useState({});
+    const [grade, setGrade] = useState([]);
 
     return (
         <div className="mb-5">
@@ -72,9 +87,14 @@ function Students() {
                         />
                     </InputGroup>
                 </div>
-                <TableList setModalShow={setModalShow} setStudent={setStudent} />
+                <TableList studentList={studentList} setModalShow={setModalShow} setStudent={setStudent} />
             </div>
-            <ModalForm modalShow={modalShow} setModalShow={setModalShow} student={student} />
+            <ModalForm
+                student={student}
+                setStudent={setStudent}
+                modalShow={modalShow}
+                setModalShow={setModalShow}
+            />
         </div>
     );
 }

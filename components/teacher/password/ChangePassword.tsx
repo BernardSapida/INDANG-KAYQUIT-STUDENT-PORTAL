@@ -40,7 +40,7 @@ function ChangePassword() {
     ) => {
         setLoading(true);
         const { currentPassword, newPassword, confirmPassword } = values;
-        console.log(values)
+        // console.log(values)
         resetForm();
 
         setTimeout(() => setLoading(false), 2000);

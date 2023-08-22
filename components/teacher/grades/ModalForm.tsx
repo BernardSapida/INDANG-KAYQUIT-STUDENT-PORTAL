@@ -1,3 +1,6 @@
+// Axios
+import axios from "axios";
+
 // React Bootstrap Components
 import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
@@ -6,7 +9,7 @@ import Table from "react-bootstrap/Table";
 import Form from "react-bootstrap/Form";
 
 // React Modules
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction, useState, useRef } from "react";
 
 // Sweet Alert Modules
 import Swal from "sweetalert2";
@@ -18,22 +21,32 @@ import Ripples from 'react-ripples'
 import { BsSave } from 'react-icons/bs';
 import { MdGrade } from 'react-icons/md';
 
+// UID
+import { nanoid } from 'nanoid';
+
 // CSS
 import style from "@/public/css/teacher-modal.module.css";
+import { FloatingLabel } from "react-bootstrap";
 
 function ModalForm({
+    student,
+    setStudent,
     modalShow,
-    setModalShow,
-    student
+    setModalShow
 }: {
+    student: Record<string, any>;
     modalShow: boolean;
+    setStudent: Dispatch<SetStateAction<{}>>;
     setModalShow: Dispatch<SetStateAction<boolean>>;
-    student: Record<string, any>
 }) {
     const [loading, setLoading] = useState<boolean>(false);
+    const [grades, setGrades] = useState<any[]>([]);
+    const [rows, setRows] = useState<any[]>([]);
+    const sectionId = useRef("");
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
+
         setLoading(true);
 
         const formDataObject = new FormData(e.target);
@@ -42,8 +55,6 @@ function ModalForm({
 
         formDataObject.forEach((value, key) => {
             let [subjectName, quarter] = key.split(".");
-            // formValues[key] = value;
-            // console.log(subjectName, quarter, Number(value))
 
             if (formValues[subjectName] != undefined) {
                 formValues[subjectName][quarter] = Number(value);
@@ -54,18 +65,63 @@ function ModalForm({
             }
         });
 
+        let output = Object.values(formValues);
+
+
+        let newClass = student.classes.map((c: any) => {
+            if (c.sectionDetails._id == sectionId.current) {
+                c.grades = output;
+            }
+
+            return c;
+        })
+
+        student.classes = newClass;
+        setStudent(JSON.parse(JSON.stringify(student)));
+
+        syncTable();
+
         // Save to database
-        let res = Object.values(formValues);
-        console.log(res)
+        // console.log(student.kayquitAccount.email, sectionId, output);
+        updateGrade(output);
 
         setTimeout(() => setLoading(false), 2000);
     };
+
+    const updateGrade = async (output: any[]) => {
+        const res = await axios.post(
+            `/api/v1/teacher/update/student-grades`,
+            {
+                email: student.kayquitAccount.email,
+                sectionId: sectionId.current,
+                grades: output
+            }
+        );
+
+        console.log(res)
+    }
+
+    const syncTable = () => {
+        let newGrades = student.classes.filter((c: Record<string, any>) => {
+            return c.sectionDetails._id === sectionId.current;
+        })[0]?.grades;
+
+        console.log(newGrades)
+
+        setGrades(newGrades);
+    }
+
+    const changeAcademicYear = (e: any) => {
+        sectionId.current = e.target.value;
+        syncTable();
+    }
 
     return (
         <Modal
             show={modalShow}
             onHide={() => {
                 setModalShow(false);
+                setGrades([]);
             }}
             backdrop="static"
             size="lg"
@@ -78,69 +134,79 @@ function ModalForm({
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <p className="m-0"><strong>Student Name:</strong> {student.fullname}</p>
-                    <p className="m-0"><strong>Grade & Section:</strong> {student.gradeAndSection}</p>
-
+                    <p><strong>Student Name:</strong> {student.personalDetails?.fullname}</p>
+                    <p><strong>Student LRN:</strong> {student.enrollmentDetails?.lrn}</p>
+                    <p><strong>Student Number:</strong> {student.enrollmentDetails?.studentNumber}</p>
+                    <FloatingLabel className="w-100" label={"Grade & Section"} onChange={changeAcademicYear}>
+                        <Form.Select>
+                            <option value="">--- Choose grade & section ---</option>
+                            {student.classes?.map((c: Record<string, any>, key: number) => (
+                                <option key={key} value={`${c.sectionDetails._id}`}>{`${c.sectionDetails.gradeLevel} - ${c.sectionDetails.name}`}</option>
+                            ))}
+                        </Form.Select>
+                    </FloatingLabel>
                     <Form onSubmit={handleSubmit} id="gradesForm">
-                        <Table className='text-center mt-3' bordered striped responsive>
-                            <thead className="align-middle">
-                                <tr>
-                                    <th className="bg-dark text-light" rowSpan={2}>Subject Name</th>
-                                    <th className="bg-dark text-light" colSpan={4}>Quarter</th>
-                                </tr>
-                                <tr>
-                                    <th className="bg-dark text-light">1st</th>
-                                    <th className="bg-dark text-light">2nd</th>
-                                    <th className="bg-dark text-light">3rd</th>
-                                    <th className="bg-dark text-light">4th</th>
-                                </tr>
-                            </thead>
-                            <tbody className="align-middle">
-                                {
-                                    student.grades?.map((d: Record<string, any>, key: number) => (
-                                        <tr key={key}>
-                                            <td>{d.subjectName}</td>
-                                            <td>
-                                                <Form.Control
-                                                    type="number"
-                                                    name={`${d.subjectName}.firstQuarter`}
-                                                    defaultValue={d.firstQuarter}
-                                                    placeholder="0"
-                                                    style={{ width: 90, margin: "auto", textAlign: "center" }}
-                                                />
-                                            </td>
-                                            <td>
-                                                <Form.Control
-                                                    type="number"
-                                                    name={`${d.subjectName}.secondQuarter`}
-                                                    defaultValue={d.secondQuarter}
-                                                    placeholder="0"
-                                                    style={{ width: 90, margin: "auto", textAlign: "center" }}
-                                                />
-                                            </td>
-                                            <td>
-                                                <Form.Control
-                                                    type="number"
-                                                    name={`${d.subjectName}.thirdQuarter`}
-                                                    defaultValue={d.thirdQuarter}
-                                                    placeholder="0"
-                                                    style={{ width: 90, margin: "auto", textAlign: "center" }}
-                                                />
-                                            </td>
-                                            <td>
-                                                <Form.Control
-                                                    type="number"
-                                                    name={`${d.subjectName}.fourthQuarter`}
-                                                    defaultValue={d.fourthQuarter}
-                                                    placeholder="0"
-                                                    style={{ width: 90, margin: "auto", textAlign: "center" }}
-                                                />
-                                            </td>
-                                        </tr>
-                                    ))
-                                }
-                            </tbody>
-                        </Table >
+                        {grades?.length ?
+                            (<Table className='text-center mt-3' bordered striped responsive>
+                                <thead className="align-middle">
+                                    <tr>
+                                        <th className="bg-dark text-light" rowSpan={2}>Subject Name</th>
+                                        <th className="bg-dark text-light" colSpan={4}>Quarter</th>
+                                    </tr>
+                                    <tr>
+                                        <th className="bg-dark text-light">1st</th>
+                                        <th className="bg-dark text-light">2nd</th>
+                                        <th className="bg-dark text-light">3rd</th>
+                                        <th className="bg-dark text-light">4th</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="align-middle">
+                                    {
+                                        grades?.map((d: Record<string, any>) => (
+                                            <tr key={nanoid()}>
+                                                <td>{d.subjectName}</td>
+                                                <td>
+                                                    <Form.Control
+                                                        type="number"
+                                                        name={`${d.subjectName}.firstQuarter`}
+                                                        defaultValue={d.firstQuarter}
+                                                        placeholder="0"
+                                                        style={{ width: 90, margin: "auto", textAlign: "center" }}
+                                                    />
+                                                </td>
+                                                <td>
+                                                    <Form.Control
+                                                        type="number"
+                                                        name={`${d.subjectName}.secondQuarter`}
+                                                        defaultValue={d.secondQuarter}
+                                                        placeholder="0"
+                                                        style={{ width: 90, margin: "auto", textAlign: "center" }}
+                                                    />
+                                                </td>
+                                                <td>
+                                                    <Form.Control
+                                                        type="number"
+                                                        name={`${d.subjectName}.thirdQuarter`}
+                                                        defaultValue={d.thirdQuarter}
+                                                        placeholder="0"
+                                                        style={{ width: 90, margin: "auto", textAlign: "center" }}
+                                                    />
+                                                </td>
+                                                <td>
+                                                    <Form.Control
+                                                        type="number"
+                                                        name={`${d.subjectName}.fourthQuarter`}
+                                                        defaultValue={d.fourthQuarter}
+                                                        placeholder="0"
+                                                        style={{ width: 90, margin: "auto", textAlign: "center" }}
+                                                    />
+                                                </td>
+                                            </tr>
+                                        ))
+                                    }
+                                </tbody>
+                            </Table >) : <></>
+                        }
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>

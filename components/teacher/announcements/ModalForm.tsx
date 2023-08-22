@@ -54,7 +54,7 @@ function ModalForm({
         setLoading(true);
 
         // Save to db
-        console.log(res)
+        // console.log(res)
 
         if ("success") {
             resetForm();

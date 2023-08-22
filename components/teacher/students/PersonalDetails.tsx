@@ -52,8 +52,8 @@ function PersonalDetails({
                             disabled={loading}
                         >
                             <option value="">--- Choose sex --- </option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
                         </Form.Select>
                         <ErrorMessage
                             name="sex"
@@ -81,27 +81,27 @@ function PersonalDetails({
                             disabled={loading}
                         >
                             <option value="">--- Choose your religion ---</option>
-                            <option value="agnosticism">Agnosticism</option>
-                            <option value="atheism">Atheism</option>
-                            <option value="bahai">Bahá'í Faith</option>
-                            <option value="buddhism">Buddhism</option>
-                            <option value="christianity">Christianity</option>
-                            <option value="confucianism">Confucianism</option>
-                            <option value="hinduism">Hinduism</option>
-                            <option value="humanism">Humanism</option>
-                            <option value="indigenous">Indigenous and Tribal Religions</option>
-                            <option value="islam">Islam</option>
-                            <option value="jainism">Jainism</option>
-                            <option value="judaism">Judaism</option>
-                            <option value="newage">New Age spirituality</option>
-                            <option value="rastafarianism">Rastafarianism</option>
-                            <option value="roman_catholicism">Roman Catholicism</option>
-                            <option value="scientology">Scientology</option>
-                            <option value="shintoism">Shintoism</option>
-                            <option value="sikhism">Sikhism</option>
-                            <option value="taoism">Taoism</option>
-                            <option value="wicca">Wicca and Neopaganism</option>
-                            <option value="zoroastrianism">Zoroastrianism</option>
+                            <option value="Agnosticism">Agnosticism</option>
+                            <option value="Atheism">Atheism</option>
+                            <option value="Bahai">Bahá'í Faith</option>
+                            <option value="Buddhism">Buddhism</option>
+                            <option value="Christianity">Christianity</option>
+                            <option value="Confucianism">Confucianism</option>
+                            <option value="Hinduism">Hinduism</option>
+                            <option value="Humanism">Humanism</option>
+                            <option value="Indigenous">Indigenous and Tribal Religions</option>
+                            <option value="Islam">Islam</option>
+                            <option value="Jainism">Jainism</option>
+                            <option value="Judaism">Judaism</option>
+                            <option value="Newage">New Age spirituality</option>
+                            <option value="Rastafarianism">Rastafarianism</option>
+                            <option value="Roman_catholicism">Roman Catholicism</option>
+                            <option value="Scientology">Scientology</option>
+                            <option value="Shintoism">Shintoism</option>
+                            <option value="Sikhism">Sikhism</option>
+                            <option value="Taoism">Taoism</option>
+                            <option value="Wicca">Wicca and Neopaganism</option>
+                            <option value="Zoroastrianism">Zoroastrianism</option>
                         </Form.Select>
                         <ErrorMessage
                             name="religion"
@@ -119,12 +119,12 @@ function PersonalDetails({
                             disabled={loading}
                         >
                             <option value="">--- Choose your status ---</option>
-                            <option value="single">Single</option>
-                            <option value="married">Married</option>
-                            <option value="divorced">Divorced</option>
-                            <option value="widowed">Widowed</option>
-                            <option value="separated">Separated</option>
-                            <option value="civil_union">Civil Union</option>
+                            <option value="Single">Single</option>
+                            <option value="Married">Married</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Widowed">Widowed</option>
+                            <option value="Separated">Separated</option>
+                            <option value="Civil_union">Civil Union</option>
                         </Form.Select>
                         <ErrorMessage
                             name="civilStatus"

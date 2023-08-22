@@ -21,7 +21,8 @@ import { MdSubject, MdNotificationsActive, MdGrade, MdPassword } from 'react-ico
 import style from "@/public/css/side-navigation.module.css";
 
 function SideNavigation({
-    showNavigation, setShowNavigation
+    showNavigation,
+    setShowNavigation
 }: {
     showNavigation: boolean,
     setShowNavigation: Dispatch<SetStateAction<boolean>>
@@ -145,7 +146,7 @@ function SideNavigation({
             <ul>
                 {
                     links.map((l, key) => (
-                        l.show && <li key={key} className={`${l.path === router.route && style.active}`}>
+                        l.show && <li key={l.path} className={`${l.path === router.route && style.active}`}>
                             <Link href={l.path} onClick={() => setShowNavigation(!showNavigation)}>{l.icon} {l.name}</Link>
                         </li>
                     ))

@@ -18,9 +18,11 @@ import { FaEdit } from 'react-icons/fa';
 import style from "@/public/css/teacher-grades.module.css";
 
 function TableList({
+    studentList,
     setStudent,
     setModalShow
 }: {
+    studentList: any[],
     setStudent: Dispatch<SetStateAction<{}>>;
     setModalShow: Dispatch<SetStateAction<boolean>>;
 }) {
@@ -28,21 +30,16 @@ function TableList({
     const table_columns = [
         {
             name: "Full Name",
-            selector: (row: Record<any, any>) => row.fullname,
-            sortable: true,
-        },
-        {
-            name: "Grade & Section",
-            selector: (row: Record<any, any>) => row.gradeAndSection,
+            selector: (row: Record<any, any>) => row.personalDetails.fullname,
             sortable: true,
         },
         {
             name: "Student LRN",
-            selector: (row: Record<any, any>) => row.lrn,
+            selector: (row: Record<any, any>) => row.enrollmentDetails.lrn,
         },
         {
             name: "Student Number",
-            selector: (row: Record<any, any>) => row.studentNumber,
+            selector: (row: Record<any, any>) => row.enrollmentDetails.studentNumber,
         },
         {
             name: "Actions",
@@ -67,1412 +64,764 @@ function TableList({
 
     const data = [
         {
-            fullname: "Agatha Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
+            personalDetails: {
+                fullname: 'Bernard Sapida',
+                birthdate: '2013-05-09',
+                sex: 'Male',
+                religion: 'Christianity',
+                civilStatus: 'Single'
+            },
+            enrollmentDetails: {
+                currentGradeLevel: 5,
+                currentSection: 'Akasya',
+                lrn: '202102231',
+                academicYear: '2019-2020',
+                studentNumber: '202309942000'
+            },
+            class: [
                 {
-                    subjectName: "English",
-                    firstQuarter: 99,
-                    secondQuarter: 99,
-                    thirdQuarter: 99,
-                    fourthQuarter: 99
+                    section: {
+                        gradeLevel: 1,
+                        name: "Akasya",
+                        academicYear: "2018-2019",
+                        subjects: [
+                            {
+                                subjectName: "English",
+                                time: "8:00 AM - 8:45 AM",
+                                day: "Monday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Math",
+                                time: "9:00 AM - 9:45 AM",
+                                day: "Monday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Filipino",
+                                time: "10:00 AM - 10:45 AM",
+                                day: "Tuesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "MTB",
+                                time: "11:00 AM - 11:45 AM",
+                                day: "Tuesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Araling Panlipunan",
+                                time: "9:00 AM - 9:45 AM",
+                                day: "Wednesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "ESP",
+                                time: " 11:00 AM - 11:45 AM",
+                                day: "Wednesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Science",
+                                time: " 11:00 AM - 11:45 AM",
+                                day: "Thursday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "MAPEH",
+                                time: "8:00 AM - 8:45 AM",
+                                day: "Friday",
+                                room: "Room A"
+                            }
+                        ],
+                    },
+                    grades: [
+                        {
+                            subjectName: 'English',
+                            firstQuarter: 99,
+                            secondQuarter: 85,
+                            thirdQuarter: 82,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'Math',
+                            firstQuarter: 78,
+                            secondQuarter: 89,
+                            thirdQuarter: 76,
+                            fourthQuarter: 86
+                        },
+                        {
+                            subjectName: 'Filipino',
+                            firstQuarter: 83,
+                            secondQuarter: 94,
+                            thirdQuarter: 96,
+                            fourthQuarter: 88
+                        },
+                        {
+                            subjectName: 'MTB',
+                            firstQuarter: 86,
+                            secondQuarter: 96,
+                            thirdQuarter: 79,
+                            fourthQuarter: 84
+                        },
+                        {
+                            subjectName: 'Araling Panlipunan',
+                            firstQuarter: 82,
+                            secondQuarter: 86,
+                            thirdQuarter: 96,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'ESP',
+                            firstQuarter: 94,
+                            secondQuarter: 87,
+                            thirdQuarter: 92,
+                            fourthQuarter: 77
+                        },
+                        {
+                            subjectName: 'Science',
+                            firstQuarter: 85,
+                            secondQuarter: 96,
+                            thirdQuarter: 95,
+                            fourthQuarter: 94
+                        },
+                        {
+                            subjectName: 'MAPEH',
+                            firstQuarter: 78,
+                            secondQuarter: 97,
+                            thirdQuarter: 86,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'Intermediate',
+                            firstQuarter: 79,
+                            secondQuarter: 86,
+                            thirdQuarter: 81,
+                            fourthQuarter: 86
+                        }
+                    ]
                 },
                 {
-                    subjectName: "Math",
-                    firstQuarter: 99,
-                    secondQuarter: 99,
-                    thirdQuarter: 99,
-                    fourthQuarter: 99
+                    section: {
+                        gradeLevel: 2,
+                        name: "Narra",
+                        academicYear: "2019-2020",
+                        subjects: [
+                            {
+                                subjectName: "English",
+                                time: "8:00 AM - 8:45 AM",
+                                day: "Monday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Math",
+                                time: "9:00 AM - 9:45 AM",
+                                day: "Monday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Filipino",
+                                time: "10:00 AM - 10:45 AM",
+                                day: "Tuesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "MTB",
+                                time: "11:00 AM - 11:45 AM",
+                                day: "Tuesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Araling Panlipunan",
+                                time: "9:00 AM - 9:45 AM",
+                                day: "Wednesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "ESP",
+                                time: " 11:00 AM - 11:45 AM",
+                                day: "Wednesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Science",
+                                time: " 11:00 AM - 11:45 AM",
+                                day: "Thursday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "MAPEH",
+                                time: "8:00 AM - 8:45 AM",
+                                day: "Friday",
+                                room: "Room A"
+                            }
+                        ],
+                    },
+                    grades: [
+                        {
+                            subjectName: 'English',
+                            firstQuarter: 88,
+                            secondQuarter: 85,
+                            thirdQuarter: 82,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'Math',
+                            firstQuarter: 78,
+                            secondQuarter: 89,
+                            thirdQuarter: 76,
+                            fourthQuarter: 86
+                        },
+                        {
+                            subjectName: 'Filipino',
+                            firstQuarter: 83,
+                            secondQuarter: 94,
+                            thirdQuarter: 96,
+                            fourthQuarter: 88
+                        },
+                        {
+                            subjectName: 'MTB',
+                            firstQuarter: 86,
+                            secondQuarter: 96,
+                            thirdQuarter: 79,
+                            fourthQuarter: 84
+                        },
+                        {
+                            subjectName: 'Araling Panlipunan',
+                            firstQuarter: 82,
+                            secondQuarter: 86,
+                            thirdQuarter: 96,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'ESP',
+                            firstQuarter: 94,
+                            secondQuarter: 87,
+                            thirdQuarter: 92,
+                            fourthQuarter: 77
+                        },
+                        {
+                            subjectName: 'Science',
+                            firstQuarter: 85,
+                            secondQuarter: 96,
+                            thirdQuarter: 95,
+                            fourthQuarter: 94
+                        },
+                        {
+                            subjectName: 'MAPEH',
+                            firstQuarter: 78,
+                            secondQuarter: 97,
+                            thirdQuarter: 86,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'Intermediate',
+                            firstQuarter: 79,
+                            secondQuarter: 86,
+                            thirdQuarter: 81,
+                            fourthQuarter: 86
+                        }
+                    ]
                 },
                 {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
+                    section: {
+                        gradeLevel: 3,
+                        name: "Akasya",
+                        academicYear: "2020-2021",
+                        subjects: [
+                            {
+                                subjectName: "English",
+                                time: "8:00 AM - 8:45 AM",
+                                day: "Monday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Math",
+                                time: "9:00 AM - 9:45 AM",
+                                day: "Monday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Filipino",
+                                time: "10:00 AM - 10:45 AM",
+                                day: "Tuesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "MTB",
+                                time: "11:00 AM - 11:45 AM",
+                                day: "Tuesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Araling Panlipunan",
+                                time: "9:00 AM - 9:45 AM",
+                                day: "Wednesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "ESP",
+                                time: " 11:00 AM - 11:45 AM",
+                                day: "Wednesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Science",
+                                time: " 11:00 AM - 11:45 AM",
+                                day: "Thursday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "MAPEH",
+                                time: "8:00 AM - 8:45 AM",
+                                day: "Friday",
+                                room: "Room A"
+                            }
+                        ],
+                    },
+                    grades: [
+                        {
+                            subjectName: 'English',
+                            firstQuarter: 77,
+                            secondQuarter: 85,
+                            thirdQuarter: 82,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'Math',
+                            firstQuarter: 78,
+                            secondQuarter: 89,
+                            thirdQuarter: 76,
+                            fourthQuarter: 86
+                        },
+                        {
+                            subjectName: 'Filipino',
+                            firstQuarter: 83,
+                            secondQuarter: 94,
+                            thirdQuarter: 96,
+                            fourthQuarter: 88
+                        },
+                        {
+                            subjectName: 'MTB',
+                            firstQuarter: 86,
+                            secondQuarter: 96,
+                            thirdQuarter: 79,
+                            fourthQuarter: 84
+                        },
+                        {
+                            subjectName: 'Araling Panlipunan',
+                            firstQuarter: 82,
+                            secondQuarter: 86,
+                            thirdQuarter: 96,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'ESP',
+                            firstQuarter: 94,
+                            secondQuarter: 87,
+                            thirdQuarter: 92,
+                            fourthQuarter: 77
+                        },
+                        {
+                            subjectName: 'Science',
+                            firstQuarter: 85,
+                            secondQuarter: 96,
+                            thirdQuarter: 95,
+                            fourthQuarter: 94
+                        },
+                        {
+                            subjectName: 'MAPEH',
+                            firstQuarter: 78,
+                            secondQuarter: 97,
+                            thirdQuarter: 86,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'Intermediate',
+                            firstQuarter: 79,
+                            secondQuarter: 86,
+                            thirdQuarter: 81,
+                            fourthQuarter: 86
+                        }
+                    ]
                 },
                 {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
+                    section: {
+                        gradeLevel: 4,
+                        name: "Narra",
+                        academicYear: "2021-2022",
+                        subjects: [
+                            {
+                                subjectName: "English",
+                                time: "8:00 AM - 8:45 AM",
+                                day: "Monday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Math",
+                                time: "9:00 AM - 9:45 AM",
+                                day: "Monday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Filipino",
+                                time: "10:00 AM - 10:45 AM",
+                                day: "Tuesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "MTB",
+                                time: "11:00 AM - 11:45 AM",
+                                day: "Tuesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Araling Panlipunan",
+                                time: "9:00 AM - 9:45 AM",
+                                day: "Wednesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "ESP",
+                                time: " 11:00 AM - 11:45 AM",
+                                day: "Wednesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Science",
+                                time: " 11:00 AM - 11:45 AM",
+                                day: "Thursday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "MAPEH",
+                                time: "8:00 AM - 8:45 AM",
+                                day: "Friday",
+                                room: "Room A"
+                            }
+                        ],
+                    },
+                    grades: [
+                        {
+                            subjectName: 'English',
+                            firstQuarter: 76,
+                            secondQuarter: 85,
+                            thirdQuarter: 82,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'Math',
+                            firstQuarter: 78,
+                            secondQuarter: 89,
+                            thirdQuarter: 76,
+                            fourthQuarter: 86
+                        },
+                        {
+                            subjectName: 'Filipino',
+                            firstQuarter: 83,
+                            secondQuarter: 94,
+                            thirdQuarter: 96,
+                            fourthQuarter: 88
+                        },
+                        {
+                            subjectName: 'MTB',
+                            firstQuarter: 86,
+                            secondQuarter: 96,
+                            thirdQuarter: 79,
+                            fourthQuarter: 84
+                        },
+                        {
+                            subjectName: 'Araling Panlipunan',
+                            firstQuarter: 82,
+                            secondQuarter: 86,
+                            thirdQuarter: 96,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'ESP',
+                            firstQuarter: 94,
+                            secondQuarter: 87,
+                            thirdQuarter: 92,
+                            fourthQuarter: 77
+                        },
+                        {
+                            subjectName: 'Science',
+                            firstQuarter: 85,
+                            secondQuarter: 96,
+                            thirdQuarter: 95,
+                            fourthQuarter: 94
+                        },
+                        {
+                            subjectName: 'MAPEH',
+                            firstQuarter: 78,
+                            secondQuarter: 97,
+                            thirdQuarter: 86,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'Intermediate',
+                            firstQuarter: 79,
+                            secondQuarter: 86,
+                            thirdQuarter: 81,
+                            fourthQuarter: 86
+                        }
+                    ]
                 },
                 {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
+                    section: {
+                        gradeLevel: 5,
+                        name: "Akasya",
+                        academicYear: "2022-2023",
+                        subjects: [
+                            {
+                                subjectName: "English",
+                                time: "8:00 AM - 8:45 AM",
+                                day: "Monday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Math",
+                                time: "9:00 AM - 9:45 AM",
+                                day: "Monday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Filipino",
+                                time: "10:00 AM - 10:45 AM",
+                                day: "Tuesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "MTB",
+                                time: "11:00 AM - 11:45 AM",
+                                day: "Tuesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Araling Panlipunan",
+                                time: "9:00 AM - 9:45 AM",
+                                day: "Wednesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "ESP",
+                                time: " 11:00 AM - 11:45 AM",
+                                day: "Wednesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Science",
+                                time: " 11:00 AM - 11:45 AM",
+                                day: "Thursday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "MAPEH",
+                                time: "8:00 AM - 8:45 AM",
+                                day: "Friday",
+                                room: "Room A"
+                            }
+                        ],
+                    },
+                    grades: [
+                        {
+                            subjectName: 'English',
+                            firstQuarter: 95,
+                            secondQuarter: 85,
+                            thirdQuarter: 82,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'Math',
+                            firstQuarter: 78,
+                            secondQuarter: 89,
+                            thirdQuarter: 76,
+                            fourthQuarter: 86
+                        },
+                        {
+                            subjectName: 'Filipino',
+                            firstQuarter: 83,
+                            secondQuarter: 94,
+                            thirdQuarter: 96,
+                            fourthQuarter: 88
+                        },
+                        {
+                            subjectName: 'MTB',
+                            firstQuarter: 86,
+                            secondQuarter: 96,
+                            thirdQuarter: 79,
+                            fourthQuarter: 84
+                        },
+                        {
+                            subjectName: 'Araling Panlipunan',
+                            firstQuarter: 82,
+                            secondQuarter: 86,
+                            thirdQuarter: 96,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'ESP',
+                            firstQuarter: 94,
+                            secondQuarter: 87,
+                            thirdQuarter: 92,
+                            fourthQuarter: 77
+                        },
+                        {
+                            subjectName: 'Science',
+                            firstQuarter: 85,
+                            secondQuarter: 96,
+                            thirdQuarter: 95,
+                            fourthQuarter: 94
+                        },
+                        {
+                            subjectName: 'MAPEH',
+                            firstQuarter: 78,
+                            secondQuarter: 97,
+                            thirdQuarter: 86,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'Intermediate',
+                            firstQuarter: 79,
+                            secondQuarter: 86,
+                            thirdQuarter: 81,
+                            fourthQuarter: 86
+                        }
+                    ]
                 },
                 {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
+                    section: {
+                        gradeLevel: 6,
+                        name: "Narra",
+                        academicYear: "2023-2024",
+                        subjects: [
+                            {
+                                subjectName: "English",
+                                time: "8:00 AM - 8:45 AM",
+                                day: "Monday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Math",
+                                time: "9:00 AM - 9:45 AM",
+                                day: "Monday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Filipino",
+                                time: "10:00 AM - 10:45 AM",
+                                day: "Tuesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "MTB",
+                                time: "11:00 AM - 11:45 AM",
+                                day: "Tuesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Araling Panlipunan",
+                                time: "9:00 AM - 9:45 AM",
+                                day: "Wednesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "ESP",
+                                time: " 11:00 AM - 11:45 AM",
+                                day: "Wednesday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "Science",
+                                time: " 11:00 AM - 11:45 AM",
+                                day: "Thursday",
+                                room: "Room A"
+                            },
+                            {
+                                subjectName: "MAPEH",
+                                time: "8:00 AM - 8:45 AM",
+                                day: "Friday",
+                                room: "Room A"
+                            }
+                        ],
+                    },
+                    grades: [
+                        {
+                            subjectName: 'English',
+                            firstQuarter: 85,
+                            secondQuarter: 85,
+                            thirdQuarter: 82,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'Math',
+                            firstQuarter: 78,
+                            secondQuarter: 89,
+                            thirdQuarter: 76,
+                            fourthQuarter: 86
+                        },
+                        {
+                            subjectName: 'Filipino',
+                            firstQuarter: 83,
+                            secondQuarter: 94,
+                            thirdQuarter: 96,
+                            fourthQuarter: 88
+                        },
+                        {
+                            subjectName: 'MTB',
+                            firstQuarter: 86,
+                            secondQuarter: 96,
+                            thirdQuarter: 79,
+                            fourthQuarter: 84
+                        },
+                        {
+                            subjectName: 'Araling Panlipunan',
+                            firstQuarter: 82,
+                            secondQuarter: 86,
+                            thirdQuarter: 96,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'ESP',
+                            firstQuarter: 94,
+                            secondQuarter: 87,
+                            thirdQuarter: 92,
+                            fourthQuarter: 77
+                        },
+                        {
+                            subjectName: 'Science',
+                            firstQuarter: 85,
+                            secondQuarter: 96,
+                            thirdQuarter: 95,
+                            fourthQuarter: 94
+                        },
+                        {
+                            subjectName: 'MAPEH',
+                            firstQuarter: 78,
+                            secondQuarter: 97,
+                            thirdQuarter: 86,
+                            fourthQuarter: 96
+                        },
+                        {
+                            subjectName: 'Intermediate',
+                            firstQuarter: 79,
+                            secondQuarter: 86,
+                            thirdQuarter: 81,
+                            fourthQuarter: 86
+                        }
+                    ]
                 }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            fullname: "Bernard Sapida",
-            gradeAndSection: "6 - Peace",
-            lrn: "12345678910",
-            studentNumber: "202302168",
-            grades: [
-                {
-                    subjectName: "English",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "Math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 90,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Social Studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
+            ],
+            contactDetails: {
+                address: 'Imus, Cavite',
+                guardian: 'Christian R. Sapida',
+                contactNumber: '09474556173'
+            },
+            kayquitAccount: {
+                email: 'bernard.sapida@kayquit.edu.ph',
+                defaultPassword: '@Password123',
+                password: '@Password123'
+            },
         }
     ];
 
@@ -1502,7 +851,7 @@ function TableList({
                 },
             }}
             columns={table_columns}
-            data={data}
+            data={studentList}
             pagination
             persistTableHead
             responsive={true}

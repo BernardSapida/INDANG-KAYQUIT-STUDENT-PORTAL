@@ -30,6 +30,7 @@ function EnrollmentDetails({
     };
     loading: boolean;
 }) {
+    // console.log(values)
     return (
         <div>
             <p className="fw-bold">Enrollment Details</p>
@@ -66,12 +67,8 @@ function EnrollmentDetails({
                             disabled={loading}
                         >
                             <option value="">--- Choose section --- </option>
-                            <option value="Peace">Peace</option>
-                            <option value="Faith">Faith</option>
-                            <option value="Love">Love</option>
-                            <option value="Hope">Hope</option>
-                            <option value="Justice">Justice</option>
-                            <option value="Joy">Joy</option>
+                            <option value="Narra">Narra</option>
+                            <option value="Akasya">Akasya</option>
                         </Form.Select>
                         <ErrorMessage
                             name="section"
@@ -109,11 +106,11 @@ function EnrollmentDetails({
                             disabled={loading}
                         >
                             <option value="">--- Choose academic year --- </option>
-                            <option value="2019">2019 - 2020</option>
-                            <option value="2020">2020 - 2021</option>
-                            <option value="2021">2021 - 2022</option>
-                            <option value="2022">2022 - 2023</option>
-                            <option value="2023">2023 - 2024</option>
+                            <option value="2019-2020">2019 - 2020</option>
+                            <option value="2020-2021">2020 - 2021</option>
+                            <option value="2021-2022">2021 - 2022</option>
+                            <option value="2022-2023">2022 - 2023</option>
+                            <option value="2023-2024">2023 - 2024</option>
                         </Form.Select>
                         <ErrorMessage
                             name="academicYear"

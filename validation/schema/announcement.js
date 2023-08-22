@@ -32,16 +32,6 @@ db.createCollection("announcements", {
                     bsonType: "date",
                     description: "Update date is required."
                 }
-            },
-            errorMessage: {
-                required: {
-                    gradeLevel: "Grade level is required.",
-                    section: "Section is required.",
-                    academicYear: "Academic year is required.",
-                    announcements: "Announcements are required.",
-                    createdAt: "Creation date is required.",
-                    updatedAt: "Update date is required."
-                }
             }
         }
     }

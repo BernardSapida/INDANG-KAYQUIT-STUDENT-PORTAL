@@ -10,49 +10,37 @@
         "currentGradeLevel": "int",
         "currentSection": "string",
         "lrn": "string",
-        "studentNumber": "int"
-    },
-    "schoolSchedule": {
         "academicYear": "string",
-        "section": "string",
-        "subject": [
-            {
-                "subjectName": "string",
-                "time": "string",
-                "day": "string",
-                "room": "string"
-            },
-            {
-                "subjectName": "string",
-                "time": "string",
-                "day": "string",
-                "room": "string"
-            }
-        ],
-        "grades": [
-            {
-                "subjectName": "string",
-                "firstQuarter": "number",
-                "secondQuarter": "number",
-                "thirdQuarter": "number",
-                "fourthQuarter": "number"
-            },
-            {
-                "subjectName": "string",
-                "firstQuarter": "number",
-                "secondQuarter": "number",
-                "thirdQuarter": "number",
-                "fourthQuarter": "number"
-            }
-        ]
+        "studentNumber": "string"
     },
+    "classSchedules": [
+        {
+            "section": "ObjectId",
+            "grades": [
+                {
+                    "subjectName": "string",
+                    "firstQuarter": "number",
+                    "secondQuarter": "number",
+                    "thirdQuarter": "number",
+                    "fourthQuarter": "number"
+                },
+                {
+                    "subjectName": "string",
+                    "firstQuarter": "number",
+                    "secondQuarter": "number",
+                    "thirdQuarter": "number",
+                    "fourthQuarter": "number"
+                }
+            ]
+        }
+    ],
     "contactDetails": {
         "address": "string",
         "guardian": "string",
         "contactNumber": "string"
     },
-    "kayquitGoogleAccount": {
-        "kayquitAccount": "string",
+    "kayquitAccount": {
+        "email": "string",
         "defaultPassword": "string",
         "password": "string"
     },

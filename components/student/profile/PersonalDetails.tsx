@@ -22,10 +22,10 @@ function PersonalDetails() {
                 </Col>
                 <Col sm={12} md={6}>
                     <FloatingLabel className="mb-3 w-100" label={"Sex"}>
-                        <Form.Select disabled={true}>
+                        <Form.Select value="Male" disabled={true}>
                             <option value="">--- Choose sex ---</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
                         </Form.Select>
                     </FloatingLabel>
                 </Col>

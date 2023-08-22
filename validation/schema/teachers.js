@@ -82,10 +82,10 @@ db.createCollection("teachers", {
                         }
                     }
                 },
-                kayquitGoogleAccount: {
+                kayquitAccount: {
                     bsonType: "object",
                     required: [
-                        "kayquitAccount",
+                        "email",
                         "defaultPassword",
                         "password"
                     ],

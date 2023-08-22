@@ -1,0 +1,6272 @@
+[{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fa6"
+  },
+  "gradeLevel": "Kinder",
+  "name": "Akasya",
+  "academicYear": "2017-2018",
+  "subjects": [
+    {
+      "subjectName": "English",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 1"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fa7"
+  },
+  "gradeLevel": "Kinder",
+  "name": "Narra",
+  "academicYear": "2017-2018",
+  "subjects": [
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Math",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 2"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fa8"
+  },
+  "gradeLevel": "1",
+  "name": "Akasya",
+  "academicYear": "2017-2018",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 3"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fa9"
+  },
+  "gradeLevel": "1",
+  "name": "Narra",
+  "academicYear": "2017-2018",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 4"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363faa"
+  },
+  "gradeLevel": "2",
+  "name": "Akasya",
+  "academicYear": "2017-2018",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 5"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fab"
+  },
+  "gradeLevel": "2",
+  "name": "Narra",
+  "academicYear": "2017-2018",
+  "subjects": [
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 6"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fac"
+  },
+  "gradeLevel": "3",
+  "name": "Akasya",
+  "academicYear": "2017-2018",
+  "subjects": [
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 7"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fad"
+  },
+  "gradeLevel": "3",
+  "name": "Narra",
+  "academicYear": "2017-2018",
+  "subjects": [
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Math",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 8"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fae"
+  },
+  "gradeLevel": "4",
+  "name": "Akasya",
+  "academicYear": "2017-2018",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 9"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363faf"
+  },
+  "gradeLevel": "4",
+  "name": "Narra",
+  "academicYear": "2017-2018",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 10"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fb0"
+  },
+  "gradeLevel": "5",
+  "name": "Akasya",
+  "academicYear": "2017-2018",
+  "subjects": [
+    {
+      "subjectName": "English",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 11"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fb1"
+  },
+  "gradeLevel": "5",
+  "name": "Narra",
+  "academicYear": "2017-2018",
+  "subjects": [
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 12"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fb2"
+  },
+  "gradeLevel": "6",
+  "name": "Akasya",
+  "academicYear": "2017-2018",
+  "subjects": [
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Science",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 13"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fb3"
+  },
+  "gradeLevel": "6",
+  "name": "Narra",
+  "academicYear": "2017-2018",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 14"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fb4"
+  },
+  "gradeLevel": "Kinder",
+  "name": "Akasya",
+  "academicYear": "2018-2019",
+  "subjects": [
+    {
+      "subjectName": "English",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 1"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fb5"
+  },
+  "gradeLevel": "Kinder",
+  "name": "Narra",
+  "academicYear": "2018-2019",
+  "subjects": [
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Math",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 2"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fb6"
+  },
+  "gradeLevel": "1",
+  "name": "Akasya",
+  "academicYear": "2018-2019",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 3"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fb7"
+  },
+  "gradeLevel": "1",
+  "name": "Narra",
+  "academicYear": "2018-2019",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 4"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fb8"
+  },
+  "gradeLevel": "2",
+  "name": "Akasya",
+  "academicYear": "2018-2019",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 5"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fb9"
+  },
+  "gradeLevel": "2",
+  "name": "Narra",
+  "academicYear": "2018-2019",
+  "subjects": [
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 6"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fba"
+  },
+  "gradeLevel": "3",
+  "name": "Akasya",
+  "academicYear": "2018-2019",
+  "subjects": [
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 7"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fbb"
+  },
+  "gradeLevel": "3",
+  "name": "Narra",
+  "academicYear": "2018-2019",
+  "subjects": [
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Math",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 8"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fbc"
+  },
+  "gradeLevel": "4",
+  "name": "Akasya",
+  "academicYear": "2018-2019",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 9"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fbd"
+  },
+  "gradeLevel": "4",
+  "name": "Narra",
+  "academicYear": "2018-2019",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 10"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fbe"
+  },
+  "gradeLevel": "5",
+  "name": "Akasya",
+  "academicYear": "2018-2019",
+  "subjects": [
+    {
+      "subjectName": "English",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 11"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fbf"
+  },
+  "gradeLevel": "5",
+  "name": "Narra",
+  "academicYear": "2018-2019",
+  "subjects": [
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 12"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fc0"
+  },
+  "gradeLevel": "6",
+  "name": "Akasya",
+  "academicYear": "2018-2019",
+  "subjects": [
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Science",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 13"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fc1"
+  },
+  "gradeLevel": "6",
+  "name": "Narra",
+  "academicYear": "2018-2019",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 14"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fc2"
+  },
+  "gradeLevel": "Kinder",
+  "name": "Akasya",
+  "academicYear": "2019-2020",
+  "subjects": [
+    {
+      "subjectName": "English",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 1"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fc3"
+  },
+  "gradeLevel": "Kinder",
+  "name": "Narra",
+  "academicYear": "2019-2020",
+  "subjects": [
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Math",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 2"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fc4"
+  },
+  "gradeLevel": "1",
+  "name": "Akasya",
+  "academicYear": "2019-2020",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 3"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fc5"
+  },
+  "gradeLevel": "1",
+  "name": "Narra",
+  "academicYear": "2019-2020",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 4"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fc6"
+  },
+  "gradeLevel": "2",
+  "name": "Akasya",
+  "academicYear": "2019-2020",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 5"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fc7"
+  },
+  "gradeLevel": "2",
+  "name": "Narra",
+  "academicYear": "2019-2020",
+  "subjects": [
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 6"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fc8"
+  },
+  "gradeLevel": "3",
+  "name": "Akasya",
+  "academicYear": "2019-2020",
+  "subjects": [
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 7"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fc9"
+  },
+  "gradeLevel": "3",
+  "name": "Narra",
+  "academicYear": "2019-2020",
+  "subjects": [
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Math",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 8"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fca"
+  },
+  "gradeLevel": "4",
+  "name": "Akasya",
+  "academicYear": "2019-2020",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 9"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fcb"
+  },
+  "gradeLevel": "4",
+  "name": "Narra",
+  "academicYear": "2019-2020",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 10"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fcc"
+  },
+  "gradeLevel": "5",
+  "name": "Akasya",
+  "academicYear": "2019-2020",
+  "subjects": [
+    {
+      "subjectName": "English",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 11"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fcd"
+  },
+  "gradeLevel": "5",
+  "name": "Narra",
+  "academicYear": "2019-2020",
+  "subjects": [
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 12"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fce"
+  },
+  "gradeLevel": "6",
+  "name": "Akasya",
+  "academicYear": "2019-2020",
+  "subjects": [
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Science",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 13"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fcf"
+  },
+  "gradeLevel": "6",
+  "name": "Narra",
+  "academicYear": "2019-2020",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 14"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fd0"
+  },
+  "gradeLevel": "Kinder",
+  "name": "Akasya",
+  "academicYear": "2020-2021",
+  "subjects": [
+    {
+      "subjectName": "English",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 1"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fd1"
+  },
+  "gradeLevel": "Kinder",
+  "name": "Narra",
+  "academicYear": "2020-2021",
+  "subjects": [
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Math",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 2"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fd2"
+  },
+  "gradeLevel": "1",
+  "name": "Akasya",
+  "academicYear": "2020-2021",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 3"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fd3"
+  },
+  "gradeLevel": "1",
+  "name": "Narra",
+  "academicYear": "2020-2021",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 4"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fd4"
+  },
+  "gradeLevel": "2",
+  "name": "Akasya",
+  "academicYear": "2020-2021",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 5"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fd5"
+  },
+  "gradeLevel": "2",
+  "name": "Narra",
+  "academicYear": "2020-2021",
+  "subjects": [
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 6"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fd6"
+  },
+  "gradeLevel": "3",
+  "name": "Akasya",
+  "academicYear": "2020-2021",
+  "subjects": [
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 7"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fd7"
+  },
+  "gradeLevel": "3",
+  "name": "Narra",
+  "academicYear": "2020-2021",
+  "subjects": [
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Math",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 8"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fd8"
+  },
+  "gradeLevel": "4",
+  "name": "Akasya",
+  "academicYear": "2020-2021",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 9"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fd9"
+  },
+  "gradeLevel": "4",
+  "name": "Narra",
+  "academicYear": "2020-2021",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 10"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fda"
+  },
+  "gradeLevel": "5",
+  "name": "Akasya",
+  "academicYear": "2020-2021",
+  "subjects": [
+    {
+      "subjectName": "English",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 11"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fdb"
+  },
+  "gradeLevel": "5",
+  "name": "Narra",
+  "academicYear": "2020-2021",
+  "subjects": [
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 12"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fdc"
+  },
+  "gradeLevel": "6",
+  "name": "Akasya",
+  "academicYear": "2020-2021",
+  "subjects": [
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Science",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 13"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fdd"
+  },
+  "gradeLevel": "6",
+  "name": "Narra",
+  "academicYear": "2020-2021",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 14"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fde"
+  },
+  "gradeLevel": "Kinder",
+  "name": "Akasya",
+  "academicYear": "2021-2022",
+  "subjects": [
+    {
+      "subjectName": "English",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 1"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fdf"
+  },
+  "gradeLevel": "Kinder",
+  "name": "Narra",
+  "academicYear": "2021-2022",
+  "subjects": [
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Math",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 2"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fe0"
+  },
+  "gradeLevel": "1",
+  "name": "Akasya",
+  "academicYear": "2021-2022",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 3"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fe1"
+  },
+  "gradeLevel": "1",
+  "name": "Narra",
+  "academicYear": "2021-2022",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 4"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fe2"
+  },
+  "gradeLevel": "2",
+  "name": "Akasya",
+  "academicYear": "2021-2022",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 5"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fe3"
+  },
+  "gradeLevel": "2",
+  "name": "Narra",
+  "academicYear": "2021-2022",
+  "subjects": [
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 6"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fe4"
+  },
+  "gradeLevel": "3",
+  "name": "Akasya",
+  "academicYear": "2021-2022",
+  "subjects": [
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 7"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fe5"
+  },
+  "gradeLevel": "3",
+  "name": "Narra",
+  "academicYear": "2021-2022",
+  "subjects": [
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Math",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 8"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fe6"
+  },
+  "gradeLevel": "4",
+  "name": "Akasya",
+  "academicYear": "2021-2022",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 9"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fe7"
+  },
+  "gradeLevel": "4",
+  "name": "Narra",
+  "academicYear": "2021-2022",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 10"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fe8"
+  },
+  "gradeLevel": "5",
+  "name": "Akasya",
+  "academicYear": "2021-2022",
+  "subjects": [
+    {
+      "subjectName": "English",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 11"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fe9"
+  },
+  "gradeLevel": "5",
+  "name": "Narra",
+  "academicYear": "2021-2022",
+  "subjects": [
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 12"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fea"
+  },
+  "gradeLevel": "6",
+  "name": "Akasya",
+  "academicYear": "2021-2022",
+  "subjects": [
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Science",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 13"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363feb"
+  },
+  "gradeLevel": "6",
+  "name": "Narra",
+  "academicYear": "2021-2022",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 14"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fec"
+  },
+  "gradeLevel": "Kinder",
+  "name": "Akasya",
+  "academicYear": "2022-2023",
+  "subjects": [
+    {
+      "subjectName": "English",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 1"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fed"
+  },
+  "gradeLevel": "Kinder",
+  "name": "Narra",
+  "academicYear": "2022-2023",
+  "subjects": [
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Math",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 2"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fee"
+  },
+  "gradeLevel": "1",
+  "name": "Akasya",
+  "academicYear": "2022-2023",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 3"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fef"
+  },
+  "gradeLevel": "1",
+  "name": "Narra",
+  "academicYear": "2022-2023",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 4"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363ff0"
+  },
+  "gradeLevel": "2",
+  "name": "Akasya",
+  "academicYear": "2022-2023",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 5"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363ff1"
+  },
+  "gradeLevel": "2",
+  "name": "Narra",
+  "academicYear": "2022-2023",
+  "subjects": [
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 6"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363ff2"
+  },
+  "gradeLevel": "3",
+  "name": "Akasya",
+  "academicYear": "2022-2023",
+  "subjects": [
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 7"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363ff3"
+  },
+  "gradeLevel": "3",
+  "name": "Narra",
+  "academicYear": "2022-2023",
+  "subjects": [
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Math",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 8"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363ff4"
+  },
+  "gradeLevel": "4",
+  "name": "Akasya",
+  "academicYear": "2022-2023",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 9"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363ff5"
+  },
+  "gradeLevel": "4",
+  "name": "Narra",
+  "academicYear": "2022-2023",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 10"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363ff6"
+  },
+  "gradeLevel": "5",
+  "name": "Akasya",
+  "academicYear": "2022-2023",
+  "subjects": [
+    {
+      "subjectName": "English",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 11"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363ff7"
+  },
+  "gradeLevel": "5",
+  "name": "Narra",
+  "academicYear": "2022-2023",
+  "subjects": [
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 12"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363ff8"
+  },
+  "gradeLevel": "6",
+  "name": "Akasya",
+  "academicYear": "2022-2023",
+  "subjects": [
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Science",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 13"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363ff9"
+  },
+  "gradeLevel": "6",
+  "name": "Narra",
+  "academicYear": "2022-2023",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 14"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363ffa"
+  },
+  "gradeLevel": "Kinder",
+  "name": "Akasya",
+  "academicYear": "2023-2024",
+  "subjects": [
+    {
+      "subjectName": "English",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 1"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 1"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363ffb"
+  },
+  "gradeLevel": "Kinder",
+  "name": "Narra",
+  "academicYear": "2023-2024",
+  "subjects": [
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Math",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 2"
+    },
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 2"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363ffc"
+  },
+  "gradeLevel": "1",
+  "name": "Akasya",
+  "academicYear": "2023-2024",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 3"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 3"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363ffd"
+  },
+  "gradeLevel": "1",
+  "name": "Narra",
+  "academicYear": "2023-2024",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 4"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 4"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363ffe"
+  },
+  "gradeLevel": "2",
+  "name": "Akasya",
+  "academicYear": "2023-2024",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 5"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 5"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb363fff"
+  },
+  "gradeLevel": "2",
+  "name": "Narra",
+  "academicYear": "2023-2024",
+  "subjects": [
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 6"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 6"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb364000"
+  },
+  "gradeLevel": "3",
+  "name": "Akasya",
+  "academicYear": "2023-2024",
+  "subjects": [
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 7"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 7"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb364001"
+  },
+  "gradeLevel": "3",
+  "name": "Narra",
+  "academicYear": "2023-2024",
+  "subjects": [
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 8"
+    },
+    {
+      "subjectName": "Math",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 8"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.680Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.680Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb364002"
+  },
+  "gradeLevel": "4",
+  "name": "Akasya",
+  "academicYear": "2023-2024",
+  "subjects": [
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Math",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Science",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 9"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 9"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.680Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.680Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb364003"
+  },
+  "gradeLevel": "4",
+  "name": "Narra",
+  "academicYear": "2023-2024",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "English",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 10"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 10"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.680Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.680Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb364004"
+  },
+  "gradeLevel": "5",
+  "name": "Akasya",
+  "academicYear": "2023-2024",
+  "subjects": [
+    {
+      "subjectName": "English",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 11"
+    },
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 11"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.680Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.680Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb364005"
+  },
+  "gradeLevel": "5",
+  "name": "Narra",
+  "academicYear": "2023-2024",
+  "subjects": [
+    {
+      "subjectName": "Filipino",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Science",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 12"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 12"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.680Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.680Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb364006"
+  },
+  "gradeLevel": "6",
+  "name": "Akasya",
+  "academicYear": "2023-2024",
+  "subjects": [
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Science",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "English",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 13"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 13"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.680Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.680Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e4ae628a6ca6fdbb364007"
+  },
+  "gradeLevel": "6",
+  "name": "Narra",
+  "academicYear": "2023-2024",
+  "subjects": [
+    {
+      "subjectName": "Science",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Monday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Araling Panlipunan",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Monday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "English",
+      "time": "10:00 AM - 10:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Math",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Tuesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "MTB",
+      "time": "9:00 AM - 9:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "MAPEH",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Wednesday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "Filipino",
+      "time": "11:00 AM - 11:45 AM",
+      "day": "Thursday",
+      "room": "Room - 14"
+    },
+    {
+      "subjectName": "ESP",
+      "time": "8:00 AM - 8:45 AM",
+      "day": "Friday",
+      "room": "Room - 14"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-08-22T12:47:30.680Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-22T12:47:30.680Z"
+  }
+}]

@@ -33,15 +33,15 @@ function KayquitGoogleAccount({
                 name="kayquitEmailAccount"
                 label="Kayquit Email Account"
                 handleChange={handleChange}
-                value={values.kayquitEmailAccount}
+                value={values.kayquitAccount}
                 loading={loading}
             />
             <Field
-                type="text"
+                type="password"
                 name="temporaryPassword"
                 label="Temporary Password"
                 handleChange={handleChange}
-                value={values.temporaryPassword}
+                value={values.defaultPassword}
                 loading={loading}
             />
         </div>

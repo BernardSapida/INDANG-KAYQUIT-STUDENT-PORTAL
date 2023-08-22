@@ -1,3 +1,6 @@
+// Axios
+import axios from "axios";
+
 // Next Modules
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import dynamic from "next/dynamic";
@@ -45,9 +48,14 @@ export const getServerSideProps: GetServerSideProps = async (
             return { notFound: true }
         }
 
+        const studentList = await axios.get(
+            `${process.env.NEXTAUTH_URL}/api/v1/students/list`
+        );
+
         return {
             props: {
                 user: session.user,
+                studentList: studentList.data
             },
         };
     } catch (error) {
@@ -57,7 +65,13 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Students() {
+function Students({
+    user,
+    studentList
+}: {
+    user: Record<string, any>;
+    studentList: any;
+}) {
     const [addModalShow, setAddModalShow] = useState(false);
     const [editModalShow, setEditModalShow] = useState(false);
     const [student, setStudent] = useState({});
@@ -90,7 +104,7 @@ function Students() {
                         />
                     </InputGroup>
                 </div>
-                <TableList setModalShow={setEditModalShow} setStudent={setStudent} />
+                <TableList setModalShow={setEditModalShow} studentList={studentList} setStudent={setStudent} />
             </div>
             <AddModalForm modalShow={addModalShow} setModalShow={setAddModalShow} />
             <EditModalForm modalShow={editModalShow} setModalShow={setEditModalShow} student={student} />

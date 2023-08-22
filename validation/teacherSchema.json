@@ -15,8 +15,8 @@
         "address": "String",
         "contactNumber": "String"
     },
-    "kayquitGoogleAccount": {
-        "kayquitAccount": "String",
+    "kayquitAccount": {
+        "email": "String",
         "defaultPassword": "String",
         "password": "String"
     },

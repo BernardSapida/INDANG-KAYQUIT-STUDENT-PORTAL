@@ -15,9 +15,11 @@ import Ripples from 'react-ripples'
 import { FaEdit } from 'react-icons/fa';
 
 function TableList({
+    studentList,
     setStudent,
     setModalShow
 }: {
+    studentList: any[];
     setStudent: Dispatch<SetStateAction<{}>>;
     setModalShow: Dispatch<SetStateAction<boolean>>;
 }) {
@@ -25,21 +27,21 @@ function TableList({
     const table_columns = [
         {
             name: "Full Name",
-            selector: (row: Record<any, any>) => row.fullname,
+            selector: (row: Record<any, any>) => row.personalDetails?.fullname,
             sortable: true,
         },
         {
             name: "Grade & Section",
-            selector: (row: Record<any, any>) => `${row.gradeLevel} - ${row.section}`,
+            selector: (row: Record<any, any>) => `${row.enrollmentDetails.currentGradeLevel} - ${row.enrollmentDetails.currentSection}`,
             sortable: true,
         },
         {
             name: "Student LRN",
-            selector: (row: Record<any, any>) => row.studentLRN,
+            selector: (row: Record<any, any>) => row.enrollmentDetails.lrn,
         },
         {
             name: "Student Number",
-            selector: (row: Record<any, any>) => row.studentNumber,
+            selector: (row: Record<any, any>) => row.enrollmentDetails.studentNumber,
         },
         {
             name: "Actions",
@@ -134,7 +136,7 @@ function TableList({
                 }
             }}
             columns={table_columns}
-            data={data}
+            data={studentList}
             pagination
             persistTableHead
             responsive={true}

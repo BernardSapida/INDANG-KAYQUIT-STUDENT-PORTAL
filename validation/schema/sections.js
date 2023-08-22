@@ -1,56 +1,29 @@
 db.createCollection("sections",
-{
-    validator: {
-        $jsonSchema: {
-            bsonType: "object",
-            required: [
-                "gradeLevel",
-                "section",
-                "academicYear",
-                "adviserName",
-                "adviserEmail",
-                "students",
-                "createdAt",
-                "updatedAt"
-            ],
-            properties: {
-                gradeLevel: {
-                    bsonType: "int",
-                    description: "Grade level is required."
-                },
-                section: {
-                    bsonType: "string",
-                    description: "Section is required."
-                },
-                academicYear: {
-                    bsonType: "int",
-                    description: "Academic year is required."
-                },
-                adviserName: {
-                    bsonType: "string",
-                    description: "Adviser name is required."
-                },
-                adviserEmail: {
-                    bsonType: "string",
-                    description: "Adviser email is required."
-                },
-                students: {
-                    bsonType: "array",
-                    description: "Students array is required.",
-                    items: {
-                        bsonType: "objectId",
-                        description: "Each item in 'students' array must be a valid ObjectId."
-                    }
-                },
-                createdAt: {
-                    bsonType: "date",
-                    description: "Creation date is required."
-                },
-                updatedAt: {
-                    bsonType: "date",
-                    description: "Update date is required."
+    {
+        validator: {
+            $jsonSchema: {
+                bsonType: "object",
+                required: ["gradeLevel", "name", "academicYear", "subjects"],
+                properties: {
+                    gradeLevel: { bsonType: "string" },
+                    name: { bsonType: "string" },
+                    academicYear: { bsonType: "string", pattern: "^[0-9]{4}-[0-9]{4}$" },
+                    subjects: {
+                        bsonType: "array",
+                        items: {
+                            bsonType: "object",
+                            required: ["subjectName", "time", "day", "room"],
+                            properties: {
+                                subjectName: { bsonType: "string" },
+                                time: { bsonType: "string" },
+                                day: { bsonType: "string" },
+                                room: { bsonType: "string" }
+                            }
+                        }
+                    },
+                    createdAt: { bsonType: "date" },
+                    updatedAt: { bsonType: "date" }
                 }
             }
         }
-    }
-});
+    });

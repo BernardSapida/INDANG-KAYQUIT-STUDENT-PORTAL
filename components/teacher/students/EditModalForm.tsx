@@ -58,8 +58,8 @@ function ModalForm({
             address: string;
             contactNumber: string;
             guardian: string;
-            kayquitEmailAccount: string;
-            temporaryPassword: string;
+            kayquitAccount: string;
+            defaultPassword: string;
         },
         { resetForm }: { resetForm: any }
     ) => {
@@ -77,8 +77,8 @@ function ModalForm({
             address,
             contactNumber,
             guardian,
-            kayquitEmailAccount,
-            temporaryPassword,
+            kayquitAccount,
+            defaultPassword,
         } = values;
 
         setLoading(true);
@@ -101,16 +101,14 @@ function ModalForm({
                 guardian: values.guardian,
                 contactNumber: values.contactNumber,
             },
-            kayquitGoogleAccount: {
-                kayquitAccount: values.kayquitEmailAccount,
-                defaultPassword: values.temporaryPassword,
-                password: values.temporaryPassword,
+            kayquitAccount: {
+                email: values.kayquitAccount,
+                defaultPassword: values.defaultPassword,
             },
         }
 
         // Save to database
         console.log(StudentInformation)
-
 
         setTimeout(() => setLoading(false), 2000);
     };
@@ -129,21 +127,21 @@ function ModalForm({
             <Formik
                 // initialValues={initialValues}
                 initialValues={{
-                    fullname: student.fullname,
-                    sex: student.sex,
-                    birthdate: student.birthdate,
-                    religion: student.religion,
-                    civilStatus: student.civilStatus,
-                    gradeLevel: student.gradeLevel,
-                    section: student.section,
-                    studentLRN: student.studentLRN,
-                    studentNumber: student.studentNumber,
-                    academicYear: student.academicYear,
-                    address: student.address,
-                    contactNumber: student.contactNumber,
-                    guardian: student.guardian,
-                    kayquitEmailAccount: student.kayquitEmailAccount,
-                    temporaryPassword: student.temporaryPassword,
+                    fullname: student.personalDetails?.fullname,
+                    sex: student.personalDetails?.sex,
+                    birthdate: student.personalDetails?.birthdate,
+                    religion: student.personalDetails?.religion,
+                    civilStatus: student.personalDetails?.civilStatus,
+                    gradeLevel: student.enrollmentDetails?.currentGradeLevel,
+                    section: student.enrollmentDetails?.currentSection,
+                    studentLRN: student.enrollmentDetails?.lrn,
+                    studentNumber: student.enrollmentDetails?.studentNumber,
+                    academicYear: student.enrollmentDetails?.academicYear,
+                    address: student.contactDetails?.address,
+                    contactNumber: student.contactDetails?.contactNumber,
+                    guardian: student.contactDetails?.guardian,
+                    kayquitAccount: student.kayquitAccount?.email,
+                    defaultPassword: student.kayquitAccount?.defaultPassword,
                 }}
                 validationSchema={validationSchema}
                 onSubmit={handleSubmit}
