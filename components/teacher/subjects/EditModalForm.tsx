@@ -17,21 +17,28 @@ import { AiOutlinePlus } from 'react-icons/ai';
 import { BsFillSendFill, BsTrash } from 'react-icons/bs';
 import { PiNotebookBold } from 'react-icons/pi';
 
+// Components
+import Error from "@/components/error/Error";
+
 // CSS
 import style from "@/public/css/teacher-subjects.module.css";
 
-function ModalForm({
+function AddModalForm({
+    sectionInfo,
     modalShow,
     setModalShow,
 }: {
+    sectionInfo: Record<string, any>;
     modalShow: boolean;
     setModalShow: Dispatch<SetStateAction<boolean>>;
 }) {
+    const [showError, setShowError] = useState<boolean>(false);
+    const [tableRows, setTableRows] = useState<any[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
-    const [inputFields, setInputFields] = useState<any[]>([]);
+    const [error, setError] = useState<string>("");
     let fieldId = useRef(1);
 
-    useEffect(() => addRow(), []);
+    useEffect(() => populateRows(), [sectionInfo]);
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
@@ -43,6 +50,11 @@ function ModalForm({
 
         formDataObject.forEach((value, key) => {
             let [fieldName, fieldNumber] = key.split(".");
+
+            if (value === "") {
+                setShowError(true);
+                setError("All fields are required!")
+            }
 
             if (formValues[fieldNumber] != undefined) {
                 formValues[fieldNumber][fieldName] = value;
@@ -60,15 +72,72 @@ function ModalForm({
         }
 
         // Replace schoolSchedule element with this
-        // console.log(res)
+        console.log(res)
     };
 
     const removeRow = (position: number) => {
-        setInputFields(beforeFields => [...beforeFields.filter(f => f.key != position)]);
-    }
+        setTableRows(beforeFields => [...beforeFields.filter(f => f.key != position)]);
+    };
+
+    const populateRows = () => {
+        let rows: any[] = [];
+        // console.log("Section Info")
+
+        sectionInfo.subjects?.filter((subject: Record<string, any>, key: number) => {
+            const newFieldId = fieldId.current++;
+
+            rows.push(
+                <tr key={newFieldId}>
+                    <td>
+                        <Form.Control
+                            type="text"
+                            name={`subjectName.field${newFieldId}`}
+                            defaultValue={subject.subjectName}
+                            placeholder="Subject"
+                            style={{ width: 150, margin: "auto", textAlign: "center" }}
+                        />
+                    </td>
+                    <td>
+                        <Form.Control
+                            type="text"
+                            name={`time.field${newFieldId}`}
+                            defaultValue={subject.time}
+                            placeholder="Time"
+                            style={{ width: 150, margin: "auto", textAlign: "center" }}
+                        />
+                    </td>
+                    <td>
+                        <Form.Control
+                            type="text"
+                            name={`day.field${newFieldId}`}
+                            defaultValue={subject.day}
+                            placeholder="Day"
+                            style={{ width: 150, margin: "auto", textAlign: "center" }}
+                        />
+                    </td>
+                    <td>
+                        <Form.Control
+                            type="text"
+                            name={`room.field${newFieldId}`}
+                            defaultValue={subject.room}
+                            placeholder="Room"
+                            style={{ width: 150, margin: "auto", textAlign: "center" }}
+                        />
+                    </td>
+                    <td>
+                        <Button type="button" variant="danger" className={`d-block`} onClick={() => removeRow(newFieldId)}>
+                            <BsTrash className="mb-1" />
+                        </Button>
+                    </td>
+                </tr>
+            )
+        })
+
+        setTableRows(rows);
+    };
 
     const addRow = () => {
-        setInputFields(beforeFields => {
+        setTableRows(beforeFields => {
             const newFieldId = fieldId.current++;
 
             return [...beforeFields,
@@ -119,6 +188,7 @@ function ModalForm({
             show={modalShow}
             onHide={() => {
                 setModalShow(false);
+                setShowError(false);
             }}
             backdrop="static"
             centered
@@ -132,10 +202,11 @@ function ModalForm({
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
+                    <Error errMessage={error} showError={showError} />
                     <Form onSubmit={handleSubmit} id="gradesForm">
                         <FloatingLabel className="mb-3 w-100" label={"Grade Level"}>
-                            <Form.Select name="gradeLevel">
-                                <option value="">--- Choose grade level ---</option>
+                            <Form.Select name="gradeLevel" defaultValue={sectionInfo.gradeLevel}>
+                                <option value={""}>--- Choose grade level ---</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -145,7 +216,7 @@ function ModalForm({
                             </Form.Select>
                         </FloatingLabel>
                         <FloatingLabel className="mb-3 w-100" label={"Section"}>
-                            <Form.Select name="section">
+                            <Form.Select name="section" defaultValue={sectionInfo.section}>
                                 <option value="">--- Choose section ---</option>
                                 <option value="Peace">Peace</option>
                                 <option value="Faith">Faith</option>
@@ -156,7 +227,7 @@ function ModalForm({
                             </Form.Select>
                         </FloatingLabel>
                         <FloatingLabel className="w-100" label={"Academic Year"}>
-                            <Form.Select name="academicYear">
+                            <Form.Select name="academicYear" defaultValue={sectionInfo.academicYear}>
                                 <option value="">--- Choose academic year ---</option>
                                 <option value="2019-2020">2019-2020</option>
                                 <option value="2020-2021">2020-2021</option>
@@ -177,7 +248,7 @@ function ModalForm({
                                 </tr>
                             </thead>
                             <tbody className="align-middle">
-                                {inputFields}
+                                {tableRows}
                             </tbody>
                         </Table >
                     </Form>
@@ -196,4 +267,4 @@ function ModalForm({
     );
 }
 
-export default ModalForm;
+export default AddModalForm;

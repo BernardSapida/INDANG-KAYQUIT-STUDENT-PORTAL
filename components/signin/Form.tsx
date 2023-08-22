@@ -29,6 +29,7 @@ import Error from "@/components/error/Error";
 import style from "@/public/css/button-provider.module.css";
 
 export default function SigninForm() {
+    const [showError, setShowError] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);
     const [isLogin, setIsLogin] = useState<boolean>(false);
     const [error, setError] = useState<string>("");
@@ -68,6 +69,7 @@ export default function SigninForm() {
         });
 
         if (!response?.ok) {
+            setShowError(true);
             setError(JSON.parse(response?.error!));
             setLoading(false);
             return null;
@@ -78,7 +80,7 @@ export default function SigninForm() {
 
     return (
         <>
-            <Error errMessage={error} />
+            <Error errMessage={error} showError={showError} />
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}

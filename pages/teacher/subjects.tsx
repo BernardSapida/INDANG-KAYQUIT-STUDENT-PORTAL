@@ -17,7 +17,10 @@ import { AiOutlinePlus } from 'react-icons/ai';
 
 // Components
 import AccordionDropdown from "@/components/teacher/subjects/Accordion";
-const ModalForm = dynamic(() => import("@/components/teacher/subjects/ModalForm"), {
+const AddModalForm = dynamic(() => import("@/components/teacher/subjects/AddModalForm"), {
+    ssr: false,
+});
+const EditModalForm = dynamic(() => import("@/components/teacher/subjects/EditModalForm"), {
     ssr: false,
 });
 
@@ -48,11 +51,14 @@ export const getServerSideProps: GetServerSideProps = async (
 };
 
 function Subjects() {
-    const [modalShow, setModalShow] = useState(false);
+    const [addmodalShow, setAddModalShow] = useState(false);
+    const [editModalShow, setEditModalShow] = useState(false);
+    const [sectionInfo, setSectionInfo] = useState({});
     const data = [
         {
             academicYear: "2021-2022",
-            section: "5 - Faith",
+            gradeLevel: 5,
+            section: "Faith",
             subjects: [
                 {
                     subjectName: "English",
@@ -164,7 +170,8 @@ function Subjects() {
         },
         {
             academicYear: "2022-2023",
-            section: "6 - Peace",
+            gradeLevel: 6,
+            section: "Peace",
             subjects: [
                 {
                     subjectName: "english",
@@ -283,22 +290,27 @@ function Subjects() {
 
             </div>
             <div className={`${style.container}`}>
-                <Button type="button" className={`d-block ms-auto mb-3 ${style.btn_add}`} onClick={() => setModalShow(true)}>
+                <Button type="button" className={`d-block ms-auto mb-3 ${style.btn_add}`} onClick={() => setAddModalShow(true)}>
                     <AiOutlinePlus /> Add subject
                 </Button>
                 {
                     data.map((d, key) => (
                         <AccordionDropdown
                             key={key}
-                            academicYear={d.academicYear}
-                            section={d.section}
-                            subjects={d.subjects}
+                            sectionInfo={d}
+                            setSectionInfo={setSectionInfo}
+                            setModalShow={setEditModalShow}
                             uniqueKey={key.toString()}
                         />
                     ))
                 }
             </div>
-            <ModalForm modalShow={modalShow} setModalShow={setModalShow} />
+            <AddModalForm modalShow={addmodalShow} setModalShow={setAddModalShow} />
+            <EditModalForm
+                sectionInfo={sectionInfo}
+                modalShow={editModalShow}
+                setModalShow={setEditModalShow}
+            />
         </div>
     );
 }

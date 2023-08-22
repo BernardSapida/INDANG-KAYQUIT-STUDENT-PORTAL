@@ -23,6 +23,7 @@ function PersonalDetails() {
                 <Col sm={12} md={6}>
                     <FloatingLabel className="mb-3 w-100" label={"Sex"}>
                         <Form.Select disabled={true}>
+                            <option value="">--- Choose sex ---</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                         </Form.Select>
@@ -41,7 +42,7 @@ function PersonalDetails() {
                 <Col sm={12} md={6}>
                     <FloatingLabel className="mb-3 w-100" label={"Religion"}>
                         <Form.Select value="roman_catholicism" disabled={true}>
-                            <option value="">--- Choose your religion ---</option>
+                            <option value="">--- Choose religion ---</option>
                             <option value="agnosticism">Agnosticism</option>
                             <option value="atheism">Atheism</option>
                             <option value="bahai">Bahá'í Faith</option>
@@ -69,7 +70,7 @@ function PersonalDetails() {
                 <Col sm={12} md={6}>
                     <FloatingLabel className="mb-3 w-100" label={"Civil Status"}>
                         <Form.Select value="single" disabled={true}>
-                            <option value="">--- Choose your status ---</option>
+                            <option value="">--- Choose civil status ---</option>
                             <option value="single">Single</option>
                             <option value="married">Married</option>
                             <option value="divorced">Divorced</option>
