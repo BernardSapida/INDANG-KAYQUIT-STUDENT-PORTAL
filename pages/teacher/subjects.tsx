@@ -286,7 +286,7 @@ function Subjects() {
     return (
         <div className="mb-5">
             <div className={`${style.title}`}>
-                <h1><MdSubject /> Sections & Subjects</h1>
+                <h1><MdSubject /> Subjects</h1>
 
             </div>
             <div className={`${style.container}`}>

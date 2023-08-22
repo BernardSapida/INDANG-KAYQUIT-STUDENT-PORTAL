@@ -80,7 +80,7 @@ function SideNavigation({
             show: session?.user.role == "teacher",
         },
         {
-            name: "Section & Subjects",
+            name: "Subjects",
             path: "/teacher/subjects",
             icon: <MdSubject />,
             show: session?.user.role == "teacher",
@@ -98,7 +98,7 @@ function SideNavigation({
             show: session?.user.role == "teacher",
         },
         {
-            name: "My Students",
+            name: "Students",
             path: "/teacher/students",
             icon: <IoIosPeople />,
             show: session?.user.role == "teacher",
