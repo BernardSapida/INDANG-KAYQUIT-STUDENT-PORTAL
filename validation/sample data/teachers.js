@@ -5,9 +5,6 @@ db.teachers.insertOne({
         sex: "Male",
         religion: "Christianity",
         civilStatus: "Single",
-        nationality: "American",
-        ethnicity: "Caucasian",
-        citizenship: "USA"
     },
     sectionHandle: {
         currentGradeLevel: 10,
@@ -21,7 +18,7 @@ db.teachers.insertOne({
     kayquitGoogleAccount: {
         kayquitAccount: "johndoe@example.com",
         defaultPassword: "password123",
-        password: "securePassword"
+        password: "password123"
     },
     createdAt: new Date(),
     updatedAt: new Date()

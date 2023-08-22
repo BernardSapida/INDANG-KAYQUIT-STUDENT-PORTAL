@@ -3,13 +3,16 @@
     "section": "String",
     "academicYear": "NumberInt",
     "announcements": [
-        "ObjectId('64daf5091b26561da8aaf7fb')",
-        "ObjectId('64daf5091b26561da8aaf7f1')",
-        "ObjectId('64daf5091b26561da8aaf7f2')",
-        "ObjectId('64daf5091b26561da8aaf7f3')",
-        "ObjectId('64daf5091b26561da8aaf7f4')",
-        "ObjectId('64daf5091b26561da8aaf7f5')",
-        "ObjectId('64daf5091b26561da8aaf7f6')"
+        {
+            "title": "Announcement Title",
+            "description": "Announcement Description",
+            "createdAt": "date"
+        },
+        {
+            "title": "Announcement Title",
+            "description": "Announcement Description",
+            "createdAt": "date"
+        }
     ],
     "createdAt": "date",
     "updatedAt": "date"

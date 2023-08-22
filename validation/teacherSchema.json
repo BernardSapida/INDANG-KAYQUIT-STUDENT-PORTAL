@@ -4,15 +4,12 @@
         "birthdate": "String",
         "sex": "String",
         "religion": "String",
-        "civilStatus": "String",
-        "nationality": "String",
-        "ethnicity": "String",
-        "citizenship": "String"
+        "civilStatus": "String"
     },
     "sectionHandle": {
-        "currentGradeLevel": "NumberInt",
+        "currentGradeLevel": "number",
         "currentSection": "string",
-        "academicYear": "NumberInt"
+        "academicYear": "number"
     },
     "contactDetails": {
         "address": "String",

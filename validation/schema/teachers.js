@@ -19,9 +19,6 @@ db.createCollection("teachers", {
                         "sex",
                         "religion",
                         "civilStatus",
-                        "nationality",
-                        "ethnicity",
-                        "citizenship"
                     ],
                     properties: {
                         fullname: {
@@ -43,18 +40,6 @@ db.createCollection("teachers", {
                         civilStatus: {
                             bsonType: "string",
                             description: "Civil status is required."
-                        },
-                        nationality: {
-                            bsonType: "string",
-                            description: "Nationality is required."
-                        },
-                        ethnicity: {
-                            bsonType: "string",
-                            description: "Ethnicity is required."
-                        },
-                        citizenship: {
-                            bsonType: "string",
-                            description: "Citizenship is required."
                         }
                     }
                 },

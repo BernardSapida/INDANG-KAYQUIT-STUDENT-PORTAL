@@ -4,10 +4,7 @@
         "birthdate": "date",
         "sex": "string",
         "religion": "string",
-        "civilStatus": "string",
-        "nationality": "string",
-        "ethnicity": "string",
-        "citizenship": "string"
+        "civilStatus": "string"
     },
     "enrollmentDetails": {
         "currentGradeLevel": "int",
@@ -15,17 +12,39 @@
         "lrn": "string",
         "studentNumber": "int"
     },
-    "grades": {
-        "academicYear": {
-            "year-year": {
-                "subject": {
-                    "firstQuarter": "int",
-                    "secondQuarter": "int",
-                    "thirdQuarter": "int",
-                    "fourtQuarter": "int"
-                }
+    "schoolSchedule": {
+        "academicYear": "string",
+        "section": "string",
+        "subject": [
+            {
+                "subjectName": "string",
+                "time": "string",
+                "day": "string",
+                "room": "string"
+            },
+            {
+                "subjectName": "string",
+                "time": "string",
+                "day": "string",
+                "room": "string"
             }
-        }
+        ],
+        "grades": [
+            {
+                "subjectName": "string",
+                "firstQuarter": "number",
+                "secondQuarter": "number",
+                "thirdQuarter": "number",
+                "fourthQuarter": "number"
+            },
+            {
+                "subjectName": "string",
+                "firstQuarter": "number",
+                "secondQuarter": "number",
+                "thirdQuarter": "number",
+                "fourthQuarter": "number"
+            }
+        ]
     },
     "contactDetails": {
         "address": "string",

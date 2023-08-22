@@ -5,7 +5,7 @@ db.createCollection("students", {
             required: [
                 "personalDetails",
                 "enrollmentDetails",
-                "grades",
+                "schoolSchedule",
                 "contactDetails",
                 "kayquitGoogleAccount",
                 "createdAt",
@@ -14,23 +14,14 @@ db.createCollection("students", {
             properties: {
                 personalDetails: {
                     bsonType: "object",
-                    required: [
-                        "fullname",
-                        "birthdate",
-                        "sex",
-                        "religion",
-                        "civilStatus",
-                        "nationality",
-                        "ethnicity",
-                        "citizenship"
-                    ],
+                    required: ["fullname", "birthdate", "sex", "religion", "civilStatus"],
                     properties: {
                         fullname: {
                             bsonType: "string",
                             description: "Full name is required."
                         },
                         birthdate: {
-                            bsonType: "string",
+                            bsonType: "date",
                             description: "Birthdate is required."
                         },
                         sex: {
@@ -44,18 +35,6 @@ db.createCollection("students", {
                         civilStatus: {
                             bsonType: "string",
                             description: "Civil status is required."
-                        },
-                        nationality: {
-                            bsonType: "string",
-                            description: "Nationality is required."
-                        },
-                        ethnicity: {
-                            bsonType: "string",
-                            description: "Ethnicity is required."
-                        },
-                        citizenship: {
-                            bsonType: "string",
-                            description: "Citizenship is required."
                         }
                     }
                 },
@@ -86,29 +65,73 @@ db.createCollection("students", {
                         }
                     }
                 },
-                grades: {
+                schoolSchedule: {
                     bsonType: "object",
-                    required: ["academicYear"],
+                    required: ["academicYear", "section", "subject", "grades"],
                     properties: {
                         academicYear: {
-                            bsonType: "object",
-                            additionalProperties: {
+                            bsonType: "string",
+                            description: "Academic year is required."
+                        },
+                        section: {
+                            bsonType: "string",
+                            description: "Section is required."
+                        },
+                        subject: {
+                            bsonType: "array",
+                            items: {
                                 bsonType: "object",
+                                required: ["subjectName", "time", "day", "room"],
                                 properties: {
+                                    subjectName: {
+                                        bsonType: "string",
+                                        description: "Subject name is required."
+                                    },
+                                    time: {
+                                        bsonType: "string",
+                                        description: "Time is required."
+                                    },
+                                    day: {
+                                        bsonType: "string",
+                                        description: "Day is required."
+                                    },
+                                    room: {
+                                        bsonType: "string",
+                                        description: "Room is required."
+                                    }
+                                }
+                            }
+                        },
+                        grades: {
+                            bsonType: "array",
+                            items: {
+                                bsonType: "object",
+                                required: [
+                                    "subjectName",
+                                    "firstQuarter",
+                                    "secondQuarter",
+                                    "thirdQuarter",
+                                    "fourthQuarter"
+                                ],
+                                properties: {
+                                    subjectName: {
+                                        bsonType: "string",
+                                        description: "Subject name is required."
+                                    },
                                     firstQuarter: {
-                                        bsonType: "int",
+                                        bsonType: "number",
                                         description: "First quarter grade is required."
                                     },
                                     secondQuarter: {
-                                        bsonType: "int",
+                                        bsonType: "number",
                                         description: "Second quarter grade is required."
                                     },
                                     thirdQuarter: {
-                                        bsonType: "int",
+                                        bsonType: "number",
                                         description: "Third quarter grade is required."
                                     },
                                     fourthQuarter: {
-                                        bsonType: "int",
+                                        bsonType: "number",
                                         description: "Fourth quarter grade is required."
                                     }
                                 }
@@ -159,6 +182,17 @@ db.createCollection("students", {
                 updatedAt: {
                     bsonType: "date",
                     description: "Update date is required."
+                }
+            },
+            errorMessage: {
+                required: {
+                    personalDetails: "Personal details are required.",
+                    enrollmentDetails: "Enrollment details are required.",
+                    schoolSchedule: "School schedule is required.",
+                    contactDetails: "Contact details are required.",
+                    kayquitGoogleAccount: "Kayquit Google account details are required.",
+                    createdAt: "Creation date is required.",
+                    updatedAt: "Update date is required."
                 }
             }
         }
