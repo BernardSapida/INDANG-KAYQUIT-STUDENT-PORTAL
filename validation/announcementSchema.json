@@ -1,7 +1,7 @@
 {
-    "gradeLevel": "NumberInt",
+    "gradeLevel": "String",
     "section": "String",
-    "academicYear": "NumberInt",
+    "academicYear": "String",
     "announcements": [
         {
             "title": "Announcement Title",

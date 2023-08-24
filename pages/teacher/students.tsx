@@ -49,7 +49,7 @@ export const getServerSideProps: GetServerSideProps = async (
         }
 
         const studentList = await axios.get(
-            `${process.env.NEXTAUTH_URL}/api/v1/students/list`
+            `${process.env.NEXTAUTH_URL}/api/v1/teacher/get/student-list`
         );
 
         return {

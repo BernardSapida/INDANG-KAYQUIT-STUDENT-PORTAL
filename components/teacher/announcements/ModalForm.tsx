@@ -1,3 +1,5 @@
+import axios from "axios";
+
 // React Bootstrap Components
 import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
@@ -23,6 +25,7 @@ import { initialValues, validationSchema } from "@/helpers/teacher/announcements
 // Components
 import Field from "@/components/form/InputField";
 import TextAreaField from "@/components/form/TextAreaField";
+import Announcement from "@/components/teacher/announcements/Announcement";
 
 // CSS
 import style from "@/public/css/teacher-modal.module.css";
@@ -30,10 +33,12 @@ import style from "@/public/css/teacher-modal.module.css";
 function ModalForm({
     modalShow,
     setModalShow,
+    setCards,
     teacher
 }: {
     modalShow: boolean;
     setModalShow: Dispatch<SetStateAction<boolean>>;
+    setCards: Dispatch<SetStateAction<any[]>>;
     teacher: any;
 }) {
     const [loading, setLoading] = useState<boolean>(false);
@@ -42,26 +47,39 @@ function ModalForm({
         values: { title: string; description: string },
         { resetForm }: { resetForm: any }
     ) => {
-        const { title, description } = values;
-        const res = {
-            gradeLevel: teacher.gradeLevel,
-            section: teacher.section,
-            academicYear: teacher.academicYear,
-            adviserEmail: teacher.email,
-            announcement: values
-        }
-
         setLoading(true);
 
+        const { title, description } = values;
+        const output = {
+            gradeLevel: "6",
+            section: "Narra",
+            academicYear: "2023-2024",
+            adviserEmail: teacher.email,
+            title,
+            description
+        }
+
         // Save to db
-        // console.log(res)
+        postAnnouncement(output);
 
         if ("success") {
             resetForm();
+            setCards((beforeCard: any[]) => {
+                return [...beforeCard, <Announcement title={title} description={description} createdAt={new Date().toString()} />]
+            });
         }
 
         setTimeout(() => setLoading(false), 2000);
     };
+
+    const postAnnouncement = async (output: Record<string, any>) => {
+        const res = await axios.post(
+            `/api/v1/teacher/post/announcement`,
+            output
+        );
+
+        console.log(res);
+    }
 
     return (
         <Modal

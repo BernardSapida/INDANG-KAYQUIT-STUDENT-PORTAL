@@ -25,9 +25,7 @@ export const getServerSideProps: GetServerSideProps = async (
         }
 
         return {
-            props: {
-                user: session.user,
-            },
+            props: { user: session.user },
         };
     } catch (error) {
         return {
@@ -36,7 +34,7 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Password() {
+function Reports({ user }: { user: Record<string, any> }) {
     return (
         <div className="mb-5">
             <div className={`${style.title}`}>
@@ -50,4 +48,4 @@ function Password() {
     );
 }
 
-export default Password;
+export default Reports;

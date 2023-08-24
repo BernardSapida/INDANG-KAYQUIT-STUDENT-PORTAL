@@ -11,7 +11,7 @@ function ContactDetails() {
                     type={"text"}
                     name={"gradeLevel"}
                     value={"The Istana Subdivision Malagasang 1-F, City of Imus, Cavite"}
-                    placeholder={"Enter your grade level"}
+                    placeholder={"Enter grade level"}
                     disabled={true}
                 />
             </FloatingLabel>
@@ -20,7 +20,7 @@ function ContactDetails() {
                     type={"text"}
                     name={"contactNumber"}
                     value={"09225319276"}
-                    placeholder={"Enter your contact number"}
+                    placeholder={"Enter contact number"}
                     disabled={true}
                 />
             </FloatingLabel>

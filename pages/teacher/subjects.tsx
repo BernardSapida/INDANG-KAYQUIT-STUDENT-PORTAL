@@ -1,3 +1,6 @@
+// Axios
+import axios from "axios";
+
 // Next Modules
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import dynamic from "next/dynamic";
@@ -6,7 +9,7 @@ import dynamic from "next/dynamic";
 import { getSession } from "next-auth/react";
 
 // React Modules
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // React Bootstrap Components
 import Button from "react-bootstrap/Button";
@@ -38,9 +41,14 @@ export const getServerSideProps: GetServerSideProps = async (
             return { notFound: true }
         }
 
+        const sectionsList = await axios.get(
+            `${process.env.NEXTAUTH_URL}/api/v1/teacher/get/section-list`
+        );
+
         return {
             props: {
                 user: session.user,
+                sectionsList: sectionsList.data
             },
         };
     } catch (error) {
@@ -50,10 +58,17 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Subjects() {
+function Subjects({
+    user,
+    sectionsList
+}: {
+    user: string
+    sectionsList: any[]
+}) {
     const [addmodalShow, setAddModalShow] = useState(false);
     const [editModalShow, setEditModalShow] = useState(false);
     const [sectionInfo, setSectionInfo] = useState({});
+    const [sections, setSections] = useState<any[]>([]);
     const data = [
         {
             academicYear: "2021-2022",
@@ -283,18 +298,23 @@ function Subjects() {
         }
     ];
 
+    useEffect(() => {
+        setSections(sectionsList);
+    }, [sectionsList])
+
+    console.log(sections);
+
     return (
         <div className="mb-5">
             <div className={`${style.title}`}>
                 <h1><MdSubject /> Subjects</h1>
-
             </div>
             <div className={`${style.container}`}>
                 <Button type="button" className={`d-block ms-auto mb-3 ${style.btn_add}`} onClick={() => setAddModalShow(true)}>
                     <AiOutlinePlus /> Add subject
                 </Button>
                 {
-                    data.map((d, key) => (
+                    sections.map((d, key) => (
                         <AccordionDropdown
                             key={key}
                             sectionInfo={d}
@@ -305,11 +325,13 @@ function Subjects() {
                     ))
                 }
             </div>
-            <AddModalForm modalShow={addmodalShow} setModalShow={setAddModalShow} />
+            <AddModalForm modalShow={addmodalShow} setModalShow={setAddModalShow} setSections={setSections} />
             <EditModalForm
                 sectionInfo={sectionInfo}
                 modalShow={editModalShow}
                 setModalShow={setEditModalShow}
+                sections={sections}
+                setSections={setSections}
             />
         </div>
     );

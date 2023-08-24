@@ -31,7 +31,7 @@ function AccordionDropdown({
     setModalShow: Dispatch<SetStateAction<boolean>>;
     uniqueKey: string
 }) {
-    const { academicYear, gradeLevel, section, subjects } = sectionInfo;
+    const { academicYear, gradeLevel, name, subjects } = sectionInfo;
 
     const showModal = () => {
         setSectionInfo(sectionInfo);
@@ -43,7 +43,7 @@ function AccordionDropdown({
             <Accordion className='mb-3'>
                 <Accordion.Item eventKey={uniqueKey}>
                     <Accordion.Header>
-                        <strong>Academic Year: {academicYear} | {gradeLevel} - {section}</strong>
+                        <strong>Academic Year: {academicYear} | {gradeLevel} - {name}</strong>
                     </Accordion.Header>
                     <Accordion.Body>
                         <Button type="button" className={`d-block ms-auto mb-2 ${style.btn_add}`} onClick={showModal}>

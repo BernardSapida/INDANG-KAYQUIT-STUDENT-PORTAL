@@ -1,0 +1,41 @@
+{
+    "_id": new ObjectId("64e451168a6ca6fdbb363de1"),
+    "personalDetails": {
+        "fullname": "Bernard Sapida",
+        "birthdate": "2013-05-09",
+        "sex": "Male",
+        "religion": "Christianity",
+        "civilStatus": "Single"
+    },
+    "enrollmentDetails": {
+        "currentGradeLevel": "5",
+        "currentSection": "Akasya",
+        "lrn": "202102231",
+        "academicYear": "2019-2020",
+        "studentNumber": "202309942000"
+    },
+    "classes": [
+        "section": new ObjectId("64e4ae628a6ca6fdbb363fa7"),
+        "grades": [
+            {
+                "subjectName": "English",
+                "firstQuarter": 99,
+                "secondQuarter": 99,
+                "thirdQuarter": 98,
+                "fourthQuarter": 99
+            }
+        ]
+    ],
+    "contactDetails": {
+        "address": "Imus, Cavite",
+        "guardian": "Shyvana Dragonite",
+        "contactNumber": "09478193497"
+    },
+    "kayquitAccount": {
+        "email": "bernard.sapida@kayquit.edu.ph",
+        "defaultPassword": "@Password123",
+        "password": "@Password321"
+    },
+    "createdAt": new Date(),
+    "updatedAt": new Date()
+}

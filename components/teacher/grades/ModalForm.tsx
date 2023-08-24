@@ -82,7 +82,6 @@ function ModalForm({
         syncTable();
 
         // Save to database
-        // console.log(student.kayquitAccount.email, sectionId, output);
         updateGrade(output);
 
         setTimeout(() => setLoading(false), 2000);

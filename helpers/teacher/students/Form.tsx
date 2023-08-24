@@ -14,7 +14,7 @@ export const initialValues = {
     address: "",
     contactNumber: "",
     guardian: "",
-    kayquitAccount: "",
+    email: "",
     defaultPassword: ""
 };
 
@@ -32,6 +32,6 @@ export const validationSchema = Yup.object({
     address: Yup.string().required("Address is required"),
     contactNumber: Yup.string().required("Contact Number is required"),
     guardian: Yup.string().required("Guardian is required"),
-    kayquitAccount: Yup.string().required("Kayquit Email Account is required"),
+    email: Yup.string().required("Kayquit email account is required"),
     defaultPassword: Yup.string().required("Temporary Password is required"),
 });

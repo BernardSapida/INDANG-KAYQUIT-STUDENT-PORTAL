@@ -1,19 +1,17 @@
-// Next Modules
+import axios from "axios";
+
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 
-// Next-Auth Modules
 import { getSession } from "next-auth/react";
 
-// React-Icons
-import { FaGraduationCap } from 'react-icons/fa';
+import { IoMdNotifications } from 'react-icons/io';
 
-// Components
 import Event from "@/components/student/announcements/Event";
 
-// Utilities
 import { getAcademicYear } from "@/utils/date/date";
 
-// CSS
+import Announcement from "@/components/teacher/announcements/Announcement";
+
 import style from "@/public/css/student-announcements.module.css";
 
 export const getServerSideProps: GetServerSideProps = async (
@@ -27,9 +25,19 @@ export const getServerSideProps: GetServerSideProps = async (
             return { notFound: true }
         }
 
+        const announcementList = await axios.post(
+            `${process.env.NEXTAUTH_URL}/api/v1/teacher/get/announcements`,
+            {
+                gradeLevel: "6",
+                section: "Narra",
+                academicYear: "2023-2024",
+            }
+        );
+
         return {
             props: {
                 user: session.user,
+                announcementList: announcementList.data
             },
         };
     } catch (error) {
@@ -39,17 +47,18 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Announcements() {
+function Announcements({ user, announcementList }: { user: any, announcementList: Record<string, any> }) {
     return (
         <div className="mb-5">
             <div className={`${style.title}`}>
-                <h1><FaGraduationCap /> Class Announcement(s) {getAcademicYear()}</h1>
+                <h1><IoMdNotifications /> Class Announcement(s) {getAcademicYear()}</h1>
             </div>
             <div className={`${style.container}`}>
-                {/* Components / Contents Goes here */}
-                <Event />
-                <Event />
-                <Event />
+                {
+                    announcementList.announcements?.map((a: Record<string, any>, key: number) => (
+                        <Announcement key={key} title={a.title} description={a.description} createdAt={a.createdAt} />
+                    ))
+                }
             </div>
         </div>
     );

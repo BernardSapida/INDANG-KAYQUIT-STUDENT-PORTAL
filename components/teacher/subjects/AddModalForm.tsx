@@ -1,3 +1,5 @@
+import axios from "axios";
+
 // React Bootstrap Components
 import { FloatingLabel } from "react-bootstrap";
 import Spinner from "react-bootstrap/Spinner";
@@ -26,9 +28,11 @@ import style from "@/public/css/teacher-subjects.module.css";
 function AddModalForm({
     modalShow,
     setModalShow,
+    setSections,
 }: {
     modalShow: boolean;
     setModalShow: Dispatch<SetStateAction<boolean>>;
+    setSections: Dispatch<SetStateAction<any[]>>;
 }) {
     const [showError, setShowError] = useState<boolean>(false);
     const [tableRows, setTableRows] = useState<any[]>([]);
@@ -38,7 +42,7 @@ function AddModalForm({
 
     useEffect(() => addRow(), []);
 
-    const handleSubmit = (e: any) => {
+    const handleSubmit = async (e: any) => {
         e.preventDefault();
         setLoading(true);
 
@@ -63,15 +67,64 @@ function AddModalForm({
         });
 
         let arr = Object.values(formValues);
-        let res = {
-            academicYear: arr[0].academicYear,
-            section: `${arr[0].gradeLevel} - ${arr[0].section}`,
-            subjects: [...arr.slice(1)]
+        let academicYear = arr[0].academicYear;
+        let name = arr[0].section;
+        let gradeLevel = arr[0].gradeLevel;
+        let subjects = [...arr.slice(1)];
+
+        let output = {
+            academicYear: academicYear,
+            name: name,
+            gradeLevel: gradeLevel,
+            subjects: subjects,
+            grades: getGrades(subjects)
         }
 
         // Replace schoolSchedule element with this
-        // console.log(res)
-    };
+        let sectionId = await postSection(output);
+
+        // Update sections state by appending new section
+        setSections(prevSections => (
+            [...prevSections, {
+                _id: sectionId,
+                gradeLevel: gradeLevel,
+                name: name,
+                academicYear: academicYear,
+                subjects: subjects,
+                updatedAt: new Date(),
+                createdAt: new Date()
+            }]
+        ))
+        // Update sectionState
+    }
+
+    const getGrades = (subjects: any[]) => {
+        let grades: any[] = [];
+
+        subjects.filter(subject => {
+            let gradeCollection = {
+                subjectName: subject.subjectName,
+                firstQuarter: 0,
+                secondQuarter: 0,
+                thirdQuarter: 0,
+                fourthQuarter: 0,
+            }
+
+            grades.push(gradeCollection);
+        })
+
+        console.log(grades)
+        return grades;
+    }
+
+    const postSection = async (output: Record<string, any>) => {
+        const res = await axios.post(
+            `/api/v1/teacher/post/section`,
+            output
+        );
+
+        return res.data.sectionId;
+    }
 
     const removeRow = (position: number) => {
         setTableRows(beforeFields => [...beforeFields.filter(f => f.key != position)]);
@@ -150,6 +203,7 @@ function AddModalForm({
                         <FloatingLabel className="mb-3 w-100" label={"Grade Level"}>
                             <Form.Select name="gradeLevel">
                                 <option value="">--- Choose grade level ---</option>
+                                <option value="Kinder">Kinder</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -161,23 +215,21 @@ function AddModalForm({
                         <FloatingLabel className="mb-3 w-100" label={"Section"}>
                             <Form.Select name="section">
                                 <option value="">--- Choose section ---</option>
-                                <option value="Peace">Peace</option>
-                                <option value="Faith">Faith</option>
-                                <option value="Love">Love</option>
-                                <option value="Hope">Hope</option>
-                                <option value="Justice">Justice</option>
-                                <option value="Joy">Joy</option>
+                                <option value="Akasya">Akasya</option>
+                                <option value="Narra">Narra</option>
                             </Form.Select>
                         </FloatingLabel>
                         <FloatingLabel className="w-100" label={"Academic Year"}>
                             <Form.Select name="academicYear">
                                 <option value="">--- Choose academic year ---</option>
+                                <option value="">--- Choose academic year ---</option>
+                                <option value="2017-2018">2017-2018</option>
+                                <option value="2019-2020">2018-2019</option>
                                 <option value="2019-2020">2019-2020</option>
                                 <option value="2020-2021">2020-2021</option>
                                 <option value="2021-2022">2021-2022</option>
                                 <option value="2022-2023">2022-2023</option>
                                 <option value="2023-2024">2023-2024</option>
-                                <option value="2024-2025">2024-2025</option>
                             </Form.Select>
                         </FloatingLabel>
                         <Table className='text-center mt-3' bordered striped responsive>

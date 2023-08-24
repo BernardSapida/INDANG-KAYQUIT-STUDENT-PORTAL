@@ -45,7 +45,7 @@ export default async function handler(
       },
       {
         $project: {
-          _id: 0,
+          _id: 1,
           "personalDetails": 1,
           "contactDetails": 1,
           "enrollmentDetails": 1,
@@ -54,8 +54,7 @@ export default async function handler(
         },
       }
     ]).toArray();
-    // const data = await db.collection("students").find({}).skip(10).limit(10).toArray();
-    // console.log(data.length)
+
     res.json(data);
   } catch (e) {
     console.error(e);

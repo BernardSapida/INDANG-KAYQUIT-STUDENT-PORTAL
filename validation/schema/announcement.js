@@ -5,34 +5,49 @@ db.createCollection("announcements", {
             required: ["gradeLevel", "section", "academicYear", "announcements", "createdAt", "updatedAt"],
             properties: {
                 gradeLevel: {
-                    bsonType: "int",
-                    description: "Grade level is required."
+                    bsonType: "string",
+                    description: "Grade level of the class"
                 },
                 section: {
                     bsonType: "string",
-                    description: "Section is required."
+                    description: "Section of the class"
                 },
                 academicYear: {
-                    bsonType: "int",
-                    description: "Academic year is required."
+                    bsonType: "string",
+                    description: "Academic year of the class"
                 },
                 announcements: {
                     bsonType: "array",
-                    description: "Announcements array is required.",
+                    description: "Array of announcements",
                     items: {
-                        bsonType: "objectId",
-                        description: "Announcement object IDs are required."
+                        bsonType: "object",
+                        required: ["title", "description", "createdAt"],
+                        properties: {
+                            title: {
+                                bsonType: "string",
+                                description: "Announcement title"
+                            },
+                            description: {
+                                bsonType: "string",
+                                description: "Announcement description"
+                            },
+                            createdAt: {
+                                bsonType: "date",
+                                description: "Creation date of the announcement"
+                            }
+                        }
                     }
                 },
                 createdAt: {
                     bsonType: "date",
-                    description: "Creation date is required."
+                    description: "Creation date of the document"
                 },
                 updatedAt: {
                     bsonType: "date",
-                    description: "Update date is required."
+                    description: "Last update date of the document"
                 }
             }
         }
     }
+
 });

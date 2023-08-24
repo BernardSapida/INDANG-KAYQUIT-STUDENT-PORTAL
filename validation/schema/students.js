@@ -6,7 +6,6 @@ db.createCollection("students", {
             properties: {
                 personalDetails: {
                     bsonType: "object",
-                    required: ["fullname", "birthdate", "sex", "religion", "civilStatus"],
                     properties: {
                         fullname: { bsonType: "string" },
                         birthdate: { bsonType: "string" },
@@ -19,7 +18,7 @@ db.createCollection("students", {
                     bsonType: "object",
                     required: ["currentGradeLevel", "currentSection", "lrn", "academicYear", "studentNumber"],
                     properties: {
-                        currentGradeLevel: { bsonType: "int" },
+                        currentGradeLevel: { bsonType: "string" },
                         currentSection: { bsonType: "string" },
                         lrn: { bsonType: "string" },
                         academicYear: { bsonType: "string" },
@@ -52,6 +51,7 @@ db.createCollection("students", {
                 },
                 contactDetails: {
                     bsonType: "object",
+                    required: ["address", "guardian", "contactNumber"],
                     properties: {
                         address: { bsonType: "string" },
                         guardian: { bsonType: "string" },
@@ -60,6 +60,7 @@ db.createCollection("students", {
                 },
                 kayquitAccount: {
                     bsonType: "object",
+                    required: ["email", "defaultPassword", "password"],
                     properties: {
                         email: { bsonType: "string" },
                         defaultPassword: { bsonType: "string" },

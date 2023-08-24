@@ -14,16 +14,16 @@ function KayquitGoogleAccount() {
                     type={"text"}
                     name={"gradeLevel"}
                     value={"bernard.sapida@kayquit.edu.ph"}
-                    placeholder={"Enter your kayquit email account"}
+                    placeholder={"Enter kayquit email account"}
                     disabled={true}
                 />
             </FloatingLabel>
-            <FloatingLabel className="mb-3 w-100" label={"Temporary Password"}>
+            <FloatingLabel className="mb-3 w-100" label={"Default Password"}>
                 <Form.Control
                     type={"text"}
-                    name={"temporaryPassword"}
+                    name={"defaultPassword"}
                     value={"kayquit849216"}
-                    placeholder={"Enter your temporary password"}
+                    placeholder={"Enter default password"}
                     disabled={true}
                 />
             </FloatingLabel>

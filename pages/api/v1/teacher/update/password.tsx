@@ -17,31 +17,29 @@ export default async function handler(
         const client = await clientPromise;
         const db = client.db("student_portal");
 
-        const { email, sectionId, grades } = req.body;
+        const {
+            email,
+            currentPassword,
+            newPassword,
+            confirmPassword
+        } = req.body;
 
-        console.log(email, sectionId, grades)
-
-
-        console.log({
-            email: email,
-            sectionId: sectionId,
-            grades: grades
-        })
+        // Current Password validation
+        console.log(email, newPassword)
 
         const data = await db.collection("students").updateOne(
             {
                 "kayquitAccount.email": { $eq: email },
-                "classes.section": { $eq: new ObjectId(sectionId) },
             },
             {
                 $set: {
-                    "classes.$.grades": grades
+                    "kayquitAccount.password": newPassword
                 }
             }
         );
-        // const data = await db.collection("students").find({}).skip(10).limit(10).toArray();
+
         console.log(data)
-        res.json(data);
+        res.status(200).json(data);
     } catch (e) {
         console.error(e);
     }

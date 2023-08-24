@@ -22,13 +22,11 @@ export default async function handler(
       `${process.env.NEXTAUTH_URL}/api/v1/test`
     );
 
-    // const data = await db.collection("").find({}).limit(2).toArray();
-    // console.log(data.length)
     res.json({
       id: 123,
-      role: "teacher", // teacher or user
-      email: email,
-      password: password,
+      role: "teacher", // teacher or student
+      email: "bernard.sapdia@kayquit.edu.ph"
+      // email: email
     });
   } catch (e) {
     console.error(e);

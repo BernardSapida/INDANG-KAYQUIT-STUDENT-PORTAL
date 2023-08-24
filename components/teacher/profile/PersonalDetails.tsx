@@ -15,7 +15,7 @@ function PersonalDetails() {
                             type={"text"}
                             name={"fullname"}
                             value={"Bernard Sapida"}
-                            placeholder={"Enter your fullname"}
+                            placeholder={"Enter fullname"}
                             disabled={true}
                         />
                     </FloatingLabel>

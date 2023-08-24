@@ -1,18 +1,16 @@
-// Next Modules
+import { useState } from "react";
+
 import { SessionProvider } from "next-auth/react";
 import NextNProgress from "nextjs-progressbar";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
-// Navigations
-import Header from "@/components/navigation/Header";
 import SideNavigation from "@/components/navigation/SideNavigation";
+import Header from "@/components/navigation/Header";
+import Footer from "@/components/footer/Footer";
 
-// CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/public/css/main.css";
-import Footer from "@/components/footer/Footer";
-import { useState } from "react";
 
 export default function App({
   Component,

@@ -11,7 +11,7 @@ import { MdPassword } from 'react-icons/md';
 import style from "@/public/css/teacher-password.module.css";
 
 // Components
-import ChangePassword from "@/components/teacher/password/ChangePassword";
+import ChangePassword from "@/components/student/password/ChangePassword";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -20,7 +20,7 @@ export const getServerSideProps: GetServerSideProps = async (
         const { req } = context;
         const session = await getSession({ req: req });
 
-        if (!session || session.user.role != "teacher") {
+        if (!session || session.user.role != "student") {
             return { notFound: true }
         }
 
@@ -36,7 +36,11 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Password() {
+function Password({
+    user
+}: {
+    user: Record<string, any>
+}) {
     return (
         <div className="mb-5">
             <div className={`${style.title}`}>
@@ -44,7 +48,7 @@ function Password() {
             </div>
             <div className={`${style.container}`}>
                 <p className="fw-bold">Password</p>
-                <ChangePassword />
+                <ChangePassword user={user} />
             </div>
         </div>
     );

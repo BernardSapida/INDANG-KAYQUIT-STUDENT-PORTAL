@@ -36,7 +36,11 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Password() {
+function Password({
+    user
+}: {
+    user: Record<string, any>
+}) {
     return (
         <div className="mb-5">
             <div className={`${style.title}`}>
@@ -44,7 +48,7 @@ function Password() {
             </div>
             <div className={`${style.container}`}>
                 <p className="fw-bold">Password</p>
-                <ChangePassword />
+                <ChangePassword user={user} />
             </div>
         </div>
     );

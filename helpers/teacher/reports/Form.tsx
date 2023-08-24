@@ -1,12 +1,10 @@
 import * as Yup from "yup";
 
 export const initialValues = {
-    report: "",
-    gradeLevel: "",
-    section: "",
-    academicYear: "",
-    sortBy: "",
-    sortOrder: ""
+    report: "Student Report Card",
+    gradeLevel: "5",
+    section: "Akasya",
+    academicYear: "2022-2023",
 };
 
 export const validationSchema = Yup.object({
@@ -14,6 +12,4 @@ export const validationSchema = Yup.object({
     gradeLevel: Yup.string().required("Grade level is required"),
     section: Yup.string().required("Section is required"),
     academicYear: Yup.string().required("Academic year is required"),
-    sortBy: Yup.string().required("Sort by is required"),
-    sortOrder: Yup.string().required("Sort order is required"),
 });

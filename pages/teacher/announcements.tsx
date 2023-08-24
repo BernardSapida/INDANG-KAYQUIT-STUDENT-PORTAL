@@ -1,3 +1,5 @@
+import axios from "axios";
+
 // Next
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import dynamic from "next/dynamic";
@@ -6,7 +8,7 @@ import dynamic from "next/dynamic";
 import { getSession } from "next-auth/react";
 
 // React
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // React Bootstrap
 import Button from "react-bootstrap/Button";
@@ -18,8 +20,7 @@ import { IoMdNotifications } from 'react-icons/io';
 // React-Ripples
 import Ripples from 'react-ripples'
 
-// Components
-import Event from "@/components/teacher/announcements/Event";
+import Announcement from "@/components/teacher/announcements/Announcement";
 const ModalForm = dynamic(() => import("@/components/teacher/announcements/ModalForm"), {
     ssr: false,
 });
@@ -41,9 +42,19 @@ export const getServerSideProps: GetServerSideProps = async (
             return { notFound: true }
         }
 
+        const announcementList = await axios.post(
+            `${process.env.NEXTAUTH_URL}/api/v1/teacher/get/announcements`,
+            {
+                gradeLevel: "6",
+                section: "Narra",
+                academicYear: "2023-2024",
+            }
+        );
+
         return {
             props: {
                 user: session.user,
+                announcementList: announcementList.data
             },
         };
     } catch (error) {
@@ -53,8 +64,16 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Announcements({ user }: { user: any }) {
+function Announcements({ user, announcementList }: { user: any, announcementList: Record<string, any> }) {
     const [modalShow, setModalShow] = useState(false);
+    const [cards, setCards] = useState<any[]>([]);
+
+    useEffect(() => {
+        let res = announcementList.announcements.map((a: Record<string, any>, key: number) => (
+            <Announcement title={a.title} description={a.description} createdAt={a.createdAt} />
+        ));
+        setCards(res);
+    }, []);
 
     return (
         <div className="mb-5">
@@ -63,15 +82,13 @@ function Announcements({ user }: { user: any }) {
             </div>
             <div className={`${style.container}`}>
                 <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="d-grid rounded">
-                    <Button type="button" className={`d-block ms-auto mb-3 ${style.btn_post}`} onClick={() => setModalShow(true)}>
+                    <Button type="button" className={`d-block ms-auto mb-4 ${style.btn_post}`} onClick={() => setModalShow(true)}>
                         <AiOutlinePlus /> New Announcement
                     </Button>
                 </Ripples>
-                <Event />
-                <Event />
-                <Event />
+                {cards}
             </div>
-            <ModalForm modalShow={modalShow} setModalShow={setModalShow} teacher={user} />
+            <ModalForm modalShow={modalShow} setModalShow={setModalShow} setCards={setCards} teacher={user} />
         </div>
     );
 }

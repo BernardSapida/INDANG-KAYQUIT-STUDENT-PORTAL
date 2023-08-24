@@ -1,3 +1,5 @@
+import axios from "axios";
+
 // React Bootstrap Components
 import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
@@ -58,7 +60,7 @@ function ModalForm({
             address: string;
             contactNumber: string;
             guardian: string;
-            kayquitAccount: string;
+            email: string;
             defaultPassword: string;
         },
         { resetForm }: { resetForm: any }
@@ -77,7 +79,7 @@ function ModalForm({
             address,
             contactNumber,
             guardian,
-            kayquitAccount,
+            email,
             defaultPassword,
         } = values;
 
@@ -94,7 +96,8 @@ function ModalForm({
                 currentGradeLevel: values.gradeLevel,
                 currentSection: values.section,
                 lrn: values.studentLRN,
-                studentNumber: values.studentNumber
+                studentNumber: values.studentNumber,
+                academicYear: values.academicYear
             },
             contactDetails: {
                 address: values.address,
@@ -102,16 +105,29 @@ function ModalForm({
                 contactNumber: values.contactNumber,
             },
             kayquitAccount: {
-                email: values.kayquitAccount,
+                email: values.email,
                 defaultPassword: values.defaultPassword,
+                password: student.kayquitAccount.password
             },
         }
 
         // Save to database
-        console.log(StudentInformation)
+        updateInformation(StudentInformation)
 
         setTimeout(() => setLoading(false), 2000);
     };
+
+    const updateInformation = async (studentInformation: Record<string, any>) => {
+        const res = await axios.post(
+            `/api/v1/teacher/update/student-information`,
+            {
+                _id: student._id,
+                studentInformation
+            }
+        );
+
+        console.log(res);
+    }
 
     return (
         <Modal
@@ -140,7 +156,7 @@ function ModalForm({
                     address: student.contactDetails?.address,
                     contactNumber: student.contactDetails?.contactNumber,
                     guardian: student.contactDetails?.guardian,
-                    kayquitAccount: student.kayquitAccount?.email,
+                    email: student.kayquitAccount?.email,
                     defaultPassword: student.kayquitAccount?.defaultPassword,
                 }}
                 validationSchema={validationSchema}

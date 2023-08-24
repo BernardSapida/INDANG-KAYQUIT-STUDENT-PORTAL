@@ -16,21 +16,7 @@ export default async function handler(
         const client = await clientPromise;
         const db = client.db("student_portal");
 
-        const { searchTerms } = req.body;
-        let searchTerm = "";
-        let category = ""; // Grades, PersonalInformation, 
-        let searchQuery = {}
-
-        if (searchTerm) {
-            searchQuery = {
-                $or: [
-                    { "personalDetails.fullname": { $regex: searchTerm, $options: "i" } },
-                    { "enrollmentDetails.lrn": { $regex: searchTerm, $options: "i" } },
-                    { "enrollmentDetails.studentNumber": { $regex: searchTerm, $options: "i" } },
-                    { "combinedGradeSection": { $regex: searchTerm, $options: "i" } }
-                ]
-            }
-        }
+        const { email } = req.body;
 
         const data = await db.collection("students").aggregate([
             {
@@ -66,30 +52,26 @@ export default async function handler(
                 }
             },
             {
-                $addFields: {
-                    combinedGradeSection: {
-                        $concat: [{ $toString: "$enrollmentDetails.currentGradeLevel" }, " - ", "$enrollmentDetails.currentSection"]
-                    }
-                }
-            },
-            {
-                $match: searchQuery
+                $match: { "kayquitAccount.email": email }
             },
             {
                 $project: {
                     _id: 0,
-                    "personalDetails.fullname": 1,
-                    "enrollmentDetails": {
-                        "lrn": 1,
-                        "studentNumber": 1
-                    },
-                    "classes": 1,
-                    "kayquitAccount.email": 1,
+                    "classes": {
+                        "grades": 1,
+                        "sectionDetails": {
+                            "gradeLevel": 1,
+                            "name": 1,
+                            "academicYear": 1
+                        }
+                    }
                 },
             }
         ]).toArray();
 
-        res.json(data);
+        console.log(email);
+        console.log(data);
+        res.json(data[0].classes);
     } catch (e) {
         console.error(e);
     }

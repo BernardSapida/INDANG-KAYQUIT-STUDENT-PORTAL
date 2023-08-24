@@ -1,13 +1,6 @@
 // React Modules
 import { ChangeEvent } from "react";
 
-// Next Modules
-import Link from "next/link";
-
-// React Bootstrap Components
-import FloatingLabel from "react-bootstrap/FloatingLabel";
-import Form from "react-bootstrap/Form";
-
 // Components
 import Field from "@/components/form/InputField";
 
@@ -30,15 +23,15 @@ function KayquitGoogleAccount({
             <p className="fw-bold">Kayquit Google Account</p>
             <Field
                 type="text"
-                name="kayquitEmailAccount"
+                name="email"
                 label="Kayquit Email Account"
                 handleChange={handleChange}
-                value={values.kayquitAccount}
+                value={values.email}
                 loading={loading}
             />
             <Field
                 type="password"
-                name="temporaryPassword"
+                name="defaultPassword"
                 label="Temporary Password"
                 handleChange={handleChange}
                 value={values.defaultPassword}

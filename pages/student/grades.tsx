@@ -1,17 +1,13 @@
-// Next Modules
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import Link from "next/link";
 
-// Next-Auth Modules
 import { getSession } from "next-auth/react";
 
-// React-Icons
 import { FaGraduationCap } from 'react-icons/fa';
 
-// Components
 
+import axios from "axios";
 
-// CSS
 import style from "@/public/css/student-grades.module.css";
 import AccordionDropdown from "@/components/student/grades/Accordion";
 
@@ -26,9 +22,17 @@ export const getServerSideProps: GetServerSideProps = async (
             return { notFound: true }
         }
 
+        const grades = await axios.post(
+            `${process.env.NEXTAUTH_URL}/api/v1/student/get/grades`,
+            {
+                email: session.user.email
+            }
+        );
+
         return {
             props: {
                 user: session.user,
+                classes: grades.data
             },
         };
     } catch (error) {
@@ -38,7 +42,13 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Grades() {
+function Grades({
+    user,
+    classes
+}: {
+    user: Record<string, any>,
+    classes: any[]
+}) {
     const data = [
         {
             academicYear: "2021-2022",
@@ -266,6 +276,8 @@ function Grades() {
         }
     ];
 
+    console.log(classes)
+
     return (
         <div className="mb-5">
             <div className={`${style.title}`}>
@@ -273,12 +285,11 @@ function Grades() {
             </div>
             <div className={`${style.container}`}>
                 {
-                    data.map((d, key) => (
+                    classes.map((c, key) => (
                         <AccordionDropdown
                             key={key}
-                            academicYear={d.academicYear}
-                            section={d.section}
-                            grades={d.grades}
+                            sectionDetails={c.sectionDetails}
+                            grades={c.grades}
                             uniqueKey={key.toString()}
                         />
                     ))
