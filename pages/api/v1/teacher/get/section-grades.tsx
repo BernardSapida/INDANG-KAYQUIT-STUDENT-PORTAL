@@ -17,7 +17,7 @@ export default async function handler(
         const client = await clientPromise;
         const db = client.db("student_portal");
 
-        const { gradeLevel, section, academicYear, sortBy, sortOrder } = req.body;
+        const { gradeLevel, section, academicYear } = req.body;
 
         const dataSection = await db.collection("sections").findOne({
             "gradeLevel": gradeLevel,
@@ -123,7 +123,7 @@ export default async function handler(
             },
             {
                 $sort: {
-                    "Fullname": Number(sortOrder)
+                    "Fullname": 1
                 }
             }
         ]).toArray();
