@@ -6,10 +6,11 @@ import { getSession } from "next-auth/react";
 
 // Components
 import Cards from "@/components/student/dashboard/Cards";
-import News from "@/components/student/dashboard/News";
 
 // CSS
 import style from "@/public/css/student-dashboard.module.css";
+
+import News from "@/components/student/dashboard/News";
 
 // Utilities
 import { getGreeting } from "@/utils/greetings";
