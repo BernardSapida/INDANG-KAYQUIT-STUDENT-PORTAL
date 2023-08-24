@@ -4,9 +4,6 @@ import Link from "next/link";
 // React-Icons
 import { TbSpeakerphone } from 'react-icons/tb';
 
-// Utilities
-import { getAcademicYear } from "@/utils/date/date";
-
 // CSS
 import style from "@/public/css/student-news.module.css";
 
