@@ -6,7 +6,7 @@ import { getSession } from "next-auth/react";
 
 // Components
 import Cards from "@/components/student/dashboard/Cards";
-import News from "@/components/student/dashboard/News";
+import News from "@/components/student/dashboard/Newss";
 
 // CSS
 import style from "@/public/css/student-dashboard.module.css";
