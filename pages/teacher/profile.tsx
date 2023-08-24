@@ -8,7 +8,7 @@ import { getSession } from "next-auth/react";
 import { FaGraduationCap } from 'react-icons/fa';
 
 // Components
-import PersonalDetails from "@/components/student/profile/PersonalDetails";
+import PersonalDetails from "@/components/teacher/profile/PersonalDetails";
 import SectionHandle from "@/components/teacher/profile/SectionHandle";
 import ContactDetails from "@/components/teacher/profile/ContactDetails";
 import KayquitGoogleAccount from "@/components/teacher/profile/KayquitGoogleAccount";
