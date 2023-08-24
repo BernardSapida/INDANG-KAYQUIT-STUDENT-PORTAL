@@ -80,7 +80,7 @@ function PersonalDetails({
                             value={values.religion}
                             disabled={loading}
                         >
-                            <option value="">--- Choose your religion ---</option>
+                            <option value="">--- Choose religion ---</option>
                             <option value="Agnosticism">Agnosticism</option>
                             <option value="Atheism">Atheism</option>
                             <option value="Bahai">Bahá'í Faith</option>
@@ -118,7 +118,7 @@ function PersonalDetails({
                             value={values.civilStatus}
                             disabled={loading}
                         >
-                            <option value="">--- Choose your status ---</option>
+                            <option value="">--- Choose civil status ---</option>
                             <option value="Single">Single</option>
                             <option value="Married">Married</option>
                             <option value="Divorced">Divorced</option>

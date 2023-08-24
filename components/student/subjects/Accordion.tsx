@@ -1,14 +1,21 @@
-
 // React Bootstrap Components
 import Accordion from 'react-bootstrap/Accordion';
 import Table from 'react-bootstrap/Table';
 
-function AccordionDropdown({ academicYear, section, subjects, uniqueKey }: { academicYear: string, section: string, subjects: any[], uniqueKey: string }) {
+import { Section } from '@/types/global';
+
+function AccordionDropdown({
+    section,
+    uniqueKey
+}: {
+    section: Section,
+    uniqueKey: string
+}) {
     return (
         <Accordion className='mb-3'>
             <Accordion.Item eventKey={uniqueKey}>
                 <Accordion.Header>
-                    <strong>Academic Year: {academicYear} | {section}</strong>
+                    <strong>Academic Year: {section.sectionDetails.academicYear} | {section.sectionDetails.gradeLevel} - {section.sectionDetails.name}</strong>
                 </Accordion.Header>
                 <Accordion.Body>
                     <Table className='text-center' bordered striped responsive>
@@ -22,7 +29,7 @@ function AccordionDropdown({ academicYear, section, subjects, uniqueKey }: { aca
                         </thead>
                         <tbody>
                             {
-                                subjects.map((d, key) => (
+                                section.sectionDetails.subjects?.map((d: Record<string, any>, key: number) => (
                                     <tr key={key}>
                                         <td>{d.subjectName}</td>
                                         <td>{d.time}</td>

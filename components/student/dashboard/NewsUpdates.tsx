@@ -16,13 +16,13 @@ function NewsUpdates() {
             <div className={`${style.topic}`}>
                 <p className={`${style.title}`}>Class Announcemnent(s)</p>
                 <div className={`${style.descriptions}`}>
-                    <p>• Teachers have the capability to share class-related updates based on the designated class timetable. Take a moment to visit <Link href="#">this link</Link> and verify if any announcements have been posted for your specific class.</p>
+                    <p>• Teachers have the capability to share class-related updates based on the designated class timetable. Take a moment to visit <Link href="/student/announcements">this link</Link> and verify if any announcements have been posted for your specific class.</p>
                 </div>
             </div>
             <div className={`${style.topic}`}>
                 <p className={`${style.title}`}>Student Information</p>
                 <div className={`${style.descriptions}`}>
-                    <p>• Feel free to access <Link href="#">this link</Link> to explore the details included in the student profile information.</p>
+                    <p>• Feel free to access <Link href="/student/profile">this link</Link> to explore the details included in the student profile information.</p>
                 </div>
             </div>
             <div className={`${style.topic}`}>

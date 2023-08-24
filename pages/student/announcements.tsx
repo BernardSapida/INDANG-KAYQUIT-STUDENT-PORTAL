@@ -12,7 +12,12 @@ import { getAcademicYear } from "@/utils/date/date";
 
 import Announcement from "@/components/teacher/announcements/Announcement";
 
+import { fetchAnnouncements } from "@/helpers/student/Announcements";
+
 import style from "@/public/css/student-announcements.module.css";
+import { fetchStudentProfile } from "@/helpers/student/Profile";
+
+import { Announcements, ClassAnnouncement, Student } from "@/types/global";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -25,20 +30,11 @@ export const getServerSideProps: GetServerSideProps = async (
             return { notFound: true }
         }
 
-        const announcementList = await axios.post(
-            `${process.env.NEXTAUTH_URL}/api/v1/teacher/get/announcements`,
-            {
-                gradeLevel: "6",
-                section: "Narra",
-                academicYear: "2023-2024",
-            }
-        );
+        const { enrollmentDetails: { currentGradeLevel, currentSection, academicYear } }: Student = await fetchStudentProfile(session.user.email);
+        const announcement = await fetchAnnouncements(currentGradeLevel, currentSection, academicYear);
 
         return {
-            props: {
-                user: session.user,
-                announcementList: announcementList.data
-            },
+            props: { announcement: announcement }
         };
     } catch (error) {
         return {
@@ -47,7 +43,7 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Announcements({ user, announcementList }: { user: any, announcementList: Record<string, any> }) {
+function Announcements({ announcement }: { announcement: ClassAnnouncement }) {
     return (
         <div className="mb-5">
             <div className={`${style.title}`}>
@@ -55,8 +51,8 @@ function Announcements({ user, announcementList }: { user: any, announcementList
             </div>
             <div className={`${style.container}`}>
                 {
-                    announcementList.announcements?.map((a: Record<string, any>, key: number) => (
-                        <Announcement key={key} title={a.title} description={a.description} createdAt={a.createdAt} />
+                    announcement.announcements?.map((announcements: Announcements, key: number) => (
+                        <Announcement key={key} title={announcements.title} description={announcements.description} createdAt={announcements.createdAt} />
                     ))
                 }
             </div>

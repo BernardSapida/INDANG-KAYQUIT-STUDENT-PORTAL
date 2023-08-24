@@ -6,8 +6,9 @@ import Col from "react-bootstrap/Col";
 
 // Utilities
 import { getAcademicYear } from "@/utils/date/date";
+import { EnrollmentDetails } from "@/types/global";
 
-function EnrollmentDetails() {
+function EnrollmentDetails({ enrollmentDetails }: { enrollmentDetails: EnrollmentDetails }) {
     return (
         <div>
             <p className="fw-bold">Enrollment Details</p>
@@ -15,10 +16,10 @@ function EnrollmentDetails() {
                 <Col sm={12} md={6}>
                     <FloatingLabel className="mb-3 w-100" label={"Grade Level"}>
                         <Form.Control
-                            type={"number"}
+                            type={"text"}
                             name={"gradeLevel"}
-                            value={6}
-                            placeholder={"Enter your grade level"}
+                            defaultValue={enrollmentDetails?.currentGradeLevel}
+                            placeholder={"Enter grade level"}
                             disabled={true}
                         />
                     </FloatingLabel>
@@ -28,8 +29,8 @@ function EnrollmentDetails() {
                         <Form.Control
                             type={"text"}
                             name={"section"}
-                            value={"Peace"}
-                            placeholder={"Enter your section"}
+                            defaultValue={enrollmentDetails?.currentSection}
+                            placeholder={"Enter section"}
                             disabled={true}
                         />
                     </FloatingLabel>
@@ -38,7 +39,7 @@ function EnrollmentDetails() {
             <FloatingLabel className="mb-3 w-100" label={"Student LRN"}>
                 <Form.Control
                     type={"text"}
-                    name={"studentLRN"}
+                    defaultValue={enrollmentDetails?.lrn}
                     value={"12345678910"}
                     disabled={true}
                 />
@@ -49,7 +50,7 @@ function EnrollmentDetails() {
                         <Form.Control
                             type={"text"}
                             name={"studentNumber"}
-                            value={"202309183"}
+                            defaultValue={enrollmentDetails?.studentNumber}
                             disabled={true}
                         />
                     </FloatingLabel>

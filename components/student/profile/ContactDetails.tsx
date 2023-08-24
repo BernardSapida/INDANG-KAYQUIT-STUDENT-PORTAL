@@ -2,7 +2,9 @@
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 
-function ContactDetails() {
+import { contactDetails } from "@/types/global";
+
+function ContactDetails({ contactDetails }: { contactDetails: contactDetails }) {
     return (
         <div>
             <p className="fw-bold">Contact Details</p>
@@ -10,8 +12,8 @@ function ContactDetails() {
                 <Form.Control
                     type={"text"}
                     name={"gradeLevel"}
-                    value={"The Istana Subdivision Malagasang 1-F, City of Imus, Cavite"}
-                    placeholder={"Enter your grade level"}
+                    defaultValue={contactDetails.address}
+                    placeholder={"Enter grade level"}
                     disabled={true}
                 />
             </FloatingLabel>
@@ -19,8 +21,8 @@ function ContactDetails() {
                 <Form.Control
                     type={"text"}
                     name={"guardian"}
-                    value={"Shyvana R. Dragonite"}
-                    placeholder={"Enter your guardian"}
+                    defaultValue={contactDetails.guardian}
+                    placeholder={"Enter guardian name"}
                     disabled={true}
                 />
             </FloatingLabel>
@@ -28,8 +30,8 @@ function ContactDetails() {
                 <Form.Control
                     type={"text"}
                     name={"contactNumber"}
-                    value={"09225319276"}
-                    placeholder={"Enter your contact number"}
+                    defaultValue={contactDetails.contactNumber}
+                    placeholder={"Enter contact number"}
                     disabled={true}
                 />
             </FloatingLabel>

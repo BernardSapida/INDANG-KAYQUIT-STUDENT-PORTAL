@@ -1,20 +1,11 @@
 /*
-    First Quarter: Oct 5 - Nov 28 (2 Months)
-    Second Quarter: Dec 1 - Feb 6 (2 Months)
-    Third Quarter: Feb 15 - Apr 10 (2 Months)
-    Fourt Quarter: Apr 12 - June 5 (2 Months)
+    Aug 29 - Oct 29
+    Oct 29 - Dec 29
+    Dec 29 - Feb 29
+    Feb 29 - April 29
 
-    Teacher "Students": Student Creation (GradeLevel, Section, AcademicYear)
-    Needed:
-        - Schedules
-        - Grades
-
-    Teacher "Subjects": Subject Creation (GradeLevel, Section, AcademicYear)
-    Generate:
-        - Schedules
-        - Grades
-
-    Teacher "Student Grades": ClassSchedules[ {} ]
+    Student:
+        Classmates page
 
 
     2017-2018

@@ -5,7 +5,9 @@ import Link from "next/link";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 
-function KayquitGoogleAccount() {
+import { KayquitAccount } from "@/types/global";
+
+function KayquitAccount({ kayquitAccount }: { kayquitAccount: KayquitAccount }) {
     return (
         <div>
             <p className="fw-bold">Kayquit Google Account</p>
@@ -13,7 +15,7 @@ function KayquitGoogleAccount() {
                 <Form.Control
                     type={"text"}
                     name={"gradeLevel"}
-                    value={"bernard.sapida@kayquit.edu.ph"}
+                    defaultValue={kayquitAccount.email}
                     placeholder={"Enter kayquit email account"}
                     disabled={true}
                 />
@@ -22,14 +24,14 @@ function KayquitGoogleAccount() {
                 <Form.Control
                     type={"text"}
                     name={"defaultPassword"}
-                    value={"kayquit849216"}
+                    defaultValue={kayquitAccount.defaultPassword}
                     placeholder={"Enter default password"}
                     disabled={true}
                 />
             </FloatingLabel>
-            <p>You will have to change your password when you login for the first time. To change your password <Link href="/teacher/password" style={{ color: "hsl(165, 100%, 39%)" }}>click here</Link>.</p>
+            <p>You will have to change your password when you login for the first time. To change your password <Link href="/student/password" style={{ color: "hsl(165, 100%, 39%)" }}>click here</Link>.</p>
         </div>
     );
 }
 
-export default KayquitGoogleAccount;
+export default KayquitAccount;

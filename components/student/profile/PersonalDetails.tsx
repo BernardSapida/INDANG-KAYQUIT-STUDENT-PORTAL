@@ -4,7 +4,9 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-function PersonalDetails() {
+import { PersonalDetails } from "@/types/global";
+
+function PersonalDetails({ personalDetails }: { personalDetails: PersonalDetails }) {
     return (
         <div>
             <p className="fw-bold">Personal Details</p>
@@ -14,15 +16,15 @@ function PersonalDetails() {
                         <Form.Control
                             type={"text"}
                             name={"fullname"}
-                            value={"Bernard Sapida"}
-                            placeholder={"Enter your fullname"}
+                            defaultValue={personalDetails?.fullname}
+                            placeholder={"Enter fullname"}
                             disabled={true}
                         />
                     </FloatingLabel>
                 </Col>
                 <Col sm={12} md={6}>
                     <FloatingLabel className="mb-3 w-100" label={"Sex"}>
-                        <Form.Select value="Male" disabled={true}>
+                        <Form.Select defaultValue={personalDetails?.sex} disabled={true}>
                             <option value="">--- Choose sex ---</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
@@ -34,14 +36,14 @@ function PersonalDetails() {
                 <Form.Control
                     type={"date"}
                     name={"birthdate"}
-                    value={"2002-12-17"}
+                    defaultValue={personalDetails?.birthdate}
                     disabled={true}
                 />
             </FloatingLabel>
             <Row>
                 <Col sm={12} md={6}>
                     <FloatingLabel className="mb-3 w-100" label={"Religion"}>
-                        <Form.Select value="roman_catholicism" disabled={true}>
+                        <Form.Select defaultValue={personalDetails?.religion} disabled={true}>
                             <option value="">--- Choose religion ---</option>
                             <option value="agnosticism">Agnosticism</option>
                             <option value="atheism">Atheism</option>
@@ -69,7 +71,7 @@ function PersonalDetails() {
                 </Col>
                 <Col sm={12} md={6}>
                     <FloatingLabel className="mb-3 w-100" label={"Civil Status"}>
-                        <Form.Select value="single" disabled={true}>
+                        <Form.Select defaultValue={personalDetails?.civilStatus} disabled={true}>
                             <option value="">--- Choose civil status ---</option>
                             <option value="single">Single</option>
                             <option value="married">Married</option>

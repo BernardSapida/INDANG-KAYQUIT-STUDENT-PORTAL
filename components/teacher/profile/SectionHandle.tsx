@@ -14,7 +14,7 @@ function SectionHandle() {
                     type={"number"}
                     name={"gradeLevel"}
                     value={6}
-                    placeholder={"Enter your grade level"}
+                    placeholder={"Enter grade level"}
                     disabled={true}
                 />
             </FloatingLabel>
@@ -23,14 +23,14 @@ function SectionHandle() {
                     type={"text"}
                     name={"section"}
                     value={"Peace"}
-                    placeholder={"Enter your section"}
+                    placeholder={"Enter section"}
                     disabled={true}
                 />
             </FloatingLabel>
             <FloatingLabel className="mb-3 w-100" label={"Academic Year"}>
                 <Form.Control
                     type={"text"}
-                    name={"studentNumber"}
+                    name={"academicYear"}
                     value={getAcademicYear()}
                     disabled={true}
                 />

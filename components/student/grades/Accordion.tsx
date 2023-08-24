@@ -1,15 +1,16 @@
 // React Bootstrap Components
+import { Grade, SubjectDetails } from '@/types/global';
 import Accordion from 'react-bootstrap/Accordion';
 import Table from 'react-bootstrap/Table';
 
 function AccordionDropdown(
     {
-        sectionDetails,
+        subjectDetails,
         grades,
         uniqueKey
     }: {
-        sectionDetails: Record<string, any>,
-        grades: any[],
+        subjectDetails: SubjectDetails,
+        grades: Grade[],
         uniqueKey: string
     }
 ) {
@@ -32,7 +33,7 @@ function AccordionDropdown(
         <Accordion className='mb-3'>
             <Accordion.Item eventKey={uniqueKey}>
                 <Accordion.Header>
-                    <strong>Academic Year: {sectionDetails.academicYear} | {sectionDetails.gradeLevel} - {sectionDetails.name}</strong>
+                    <strong>Academic Year: {subjectDetails.academicYear} | {subjectDetails.gradeLevel} - {subjectDetails.name}</strong>
                 </Accordion.Header>
                 <Accordion.Body>
                     <Table className='text-center' bordered striped responsive>

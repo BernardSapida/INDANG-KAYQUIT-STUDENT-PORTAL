@@ -70,10 +70,9 @@ export default function SigninForm() {
 
         if (response?.ok) return setIsLogin(true);
 
-        setShowError(true);
         setError(JSON.parse(response?.error!));
+        setShowError(true);
         setLoading(false);
-        return null;
     };
 
     return (
