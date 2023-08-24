@@ -7,7 +7,7 @@ import { TbSpeakerphone } from 'react-icons/tb';
 // CSS
 import style from "@/public/css/student-news.module.css";
 
-function NewsAndUpdates() {
+function News() {
     return (
         <div className={`${style.container}`}>
             <div className={`${style.title}`}>
@@ -35,4 +35,4 @@ function NewsAndUpdates() {
     );
 }
 
-export default NewsAndUpdates;
+export default News;

@@ -6,7 +6,6 @@ import { getSession } from "next-auth/react";
 
 // Components
 import Cards from "@/components/teacher/dashboard/Cards";
-import NewsAndUpdates from "@/components/student/dashboard/NewsAndUpdates";
 
 
 // CSS
@@ -14,6 +13,7 @@ import style from "@/public/css/teacher-dashboard.module.css";
 
 // Utilities
 import { getGreeting } from "@/utils/greetings";
+import News from "@/components/teacher/dashboard/News";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -46,7 +46,7 @@ function Dashboard() {
                 {/* Components / Contents Goes here */}
                 <Cards />
             </div>
-            <NewsAndUpdates />
+            <News />
         </div>
     );
 }
