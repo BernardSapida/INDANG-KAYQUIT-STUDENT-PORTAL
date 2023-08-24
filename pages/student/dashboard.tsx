@@ -10,7 +10,7 @@ import Cards from "@/components/student/dashboard/Cards";
 // CSS
 import style from "@/public/css/student-dashboard.module.css";
 
-import News from "@/components/student/dashboard/News";
+import NewsUpdates from "@/components/student/dashboard/NewsUpdates";
 
 // Utilities
 import { getGreeting } from "@/utils/greetings";
@@ -46,7 +46,7 @@ function Dashboard() {
                 {/* Components / Contents Goes here */}
                 <Cards />
             </div>
-            <News />
+            <NewsUpdates />
         </div>
     );
 }

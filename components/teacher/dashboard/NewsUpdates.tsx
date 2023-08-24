@@ -5,9 +5,9 @@ import Link from "next/link";
 import { TbSpeakerphone } from 'react-icons/tb';
 
 // CSS
-import style from "@/public/css/student-news.module.css";
+import style from "@/public/css/teacher-news.module.css";
 
-function News() {
+function NewsUpdates() {
     return (
         <div className={`${style.container}`}>
             <div className={`${style.title}`}>
@@ -20,19 +20,19 @@ function News() {
                 </div>
             </div>
             <div className={`${style.topic}`}>
-                <p className={`${style.title}`}>Student Information</p>
+                <p className={`${style.title}`}>Teacher Information</p>
                 <div className={`${style.descriptions}`}>
-                    <p>• Feel free to access <Link href="#">this link</Link> to explore the details included in the student profile information.</p>
+                    <p>• Feel free to access <Link href="#">this link</Link> to explore the details included in the teacher profile information.</p>
                 </div>
             </div>
             <div className={`${style.topic}`}>
-                <p className={`${style.title}`}>Classmates</p>
+                <p className={`${style.title}`}>Students</p>
                 <div className={`${style.descriptions}`}>
-                    <p>• Visit <Link href="#">this link</Link> to easily access the list of fellow students who will be sharing your classroom in the upcoming section.</p>
+                    <p>• Visit <Link href="#">this link</Link> to easily access the list of students who will be sharing your classroom in the upcoming section.</p>
                 </div>
             </div>
         </div >
     );
 }
 
-export default News;
+export default NewsUpdates;
