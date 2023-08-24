@@ -125,8 +125,6 @@ function ModalForm({
                 studentInformation
             }
         );
-
-        console.log(res);
     }
 
     return (

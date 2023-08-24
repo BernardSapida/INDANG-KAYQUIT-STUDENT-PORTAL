@@ -26,12 +26,12 @@ export default async function handler(
         });
 
         const sectionId = dataSection?._id;
-        console.log(sectionId);
-
         const data = await db.collection("students").aggregate([
             {
                 $match: {
-                    "classes.section": { $eq: new ObjectId(sectionId) },
+                    "classes.section": {
+                        $eq: new ObjectId(sectionId)
+                    },
                 }
             },
             {
@@ -127,8 +127,6 @@ export default async function handler(
                 }
             }
         ]).toArray();
-
-        console.log(data)
 
         res.json(data);
     } catch (e) {

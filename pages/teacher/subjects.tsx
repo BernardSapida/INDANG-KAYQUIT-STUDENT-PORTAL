@@ -302,8 +302,6 @@ function Subjects({
         setSections(sectionsList);
     }, [sectionsList])
 
-    console.log(sections);
-
     return (
         <div className="mb-5">
             <div className={`${style.title}`}>

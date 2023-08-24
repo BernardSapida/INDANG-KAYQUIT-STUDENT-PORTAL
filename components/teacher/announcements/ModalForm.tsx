@@ -77,8 +77,6 @@ function ModalForm({
             `/api/v1/teacher/post/announcement`,
             output
         );
-
-        console.log(res);
     }
 
     return (

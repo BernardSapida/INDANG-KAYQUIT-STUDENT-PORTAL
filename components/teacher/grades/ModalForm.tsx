@@ -96,16 +96,12 @@ function ModalForm({
                 grades: output
             }
         );
-
-        console.log(res)
     }
 
     const syncTable = () => {
         let newGrades = student.classes.filter((c: Record<string, any>) => {
             return c.sectionDetails._id === sectionId.current;
         })[0]?.grades;
-
-        console.log(newGrades)
 
         setGrades(newGrades);
     }

@@ -69,8 +69,6 @@ export default async function handler(
             }
         ]).toArray();
 
-        console.log(email);
-        console.log(data);
         res.json(data[0].classes);
     } catch (e) {
         console.error(e);

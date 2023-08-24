@@ -113,7 +113,6 @@ function AddModalForm({
             grades.push(gradeCollection);
         })
 
-        console.log(grades)
         return grades;
     }
 

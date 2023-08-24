@@ -30,7 +30,6 @@ function EnrollmentDetails({
     };
     loading: boolean;
 }) {
-    // console.log(values)
     return (
         <div>
             <p className="fw-bold">Enrollment Details</p>

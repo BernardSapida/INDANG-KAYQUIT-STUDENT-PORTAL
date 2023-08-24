@@ -68,19 +68,19 @@ export default function SigninForm() {
             password: password,
         });
 
-        if (!response?.ok) {
-            setShowError(true);
-            setError(JSON.parse(response?.error!));
-            setLoading(false);
-            return null;
-        }
+        if (response?.ok) return setIsLogin(true);
 
-        setIsLogin(true);
+        setShowError(true);
+        setError(JSON.parse(response?.error!));
+        setLoading(false);
+        return null;
     };
 
     return (
         <>
-            <Error errMessage={error} showError={showError} />
+            <div className="mx-4">
+                <Error errMessage={error} showError={showError} />
+            </div>
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}

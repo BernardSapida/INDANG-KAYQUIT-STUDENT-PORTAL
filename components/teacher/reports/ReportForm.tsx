@@ -46,7 +46,7 @@ function ReportForm() {
         },
         { resetForm }: { resetForm: any }
     ) => {
-        // setLoading(true);
+        setLoading(true);
         const { report, gradeLevel, section, academicYear } = values;
 
         if (report === "Student List") {
@@ -55,7 +55,6 @@ function ReportForm() {
                 values
             );
 
-            // console.log(sectionStudents.data)
             generateExcel(sectionStudents.data, `Student List (${gradeLevel} - ${section})`, report)
         }
 
@@ -65,13 +64,11 @@ function ReportForm() {
                 values
             );
 
-            // console.log(sectionStudents.data)
 
             generateExcel(sectionStudents.data, `Student Report Card (${gradeLevel} - ${section})`, report)
         }
 
-        // console.log(values)
-        // setTimeout(() => setLoading(false), 1000);
+        setLoading(false)
     };
 
     return (

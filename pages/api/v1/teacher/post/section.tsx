@@ -27,7 +27,6 @@ export default async function handler(
             updatedAt: new Date(),
         });
         const sectionId = data.insertedId;
-        console.log(sectionId)
 
         const student = await db.collection("students").updateMany(
             {
@@ -59,7 +58,6 @@ export default async function handler(
                 }
             ]
         );
-        console.log(student)
 
         res.json({ sectionId: sectionId });
     } catch (e) {

@@ -90,8 +90,6 @@ function AddModalForm({
         }
 
         // Replace schoolSchedule element with this
-        // console.log(sectionInfo)
-        console.log(output);
         await updateSection(output);
 
         // Update Subjects in specified section
@@ -104,9 +102,6 @@ function AddModalForm({
                 return section
             })
         ))
-        // console.log(sections);
-
-        // Update sectionState
     };
 
     const getGrades = (subjects: any[]) => {
@@ -124,19 +119,14 @@ function AddModalForm({
             grades.push(gradeCollection);
         })
 
-        // console.log(grades)
         return grades;
     }
 
     const getAddedAndRemovedSubjects = (grades: any[]): any[] => {
         let oldSubsCollection: Record<string, any> = {};
-        // let newSubjects = grades.map((subject: Record<string, any>) => subject.subjectName);
 
         // Populate oldSubsCollection with subject names
         sectionInfo.subjects.map((subject: Record<string, any>) => oldSubsCollection[subject.subjectName] = 1);
-
-        // console.log(sectionInfo.subjects, grades)
-        // console.log(oldSubsCollection, newSubjects)
 
         let addedSubjects = grades.filter((grade: Record<string, any>) => {
             if (!oldSubsCollection[grade.subjectName]) {
@@ -146,8 +136,7 @@ function AddModalForm({
             }
         });
         let removedSubjects = Object.keys(oldSubsCollection);
-        // console.log(addedSubjects);
-        // console.log(removedSubjects);
+
         return [addedSubjects, removedSubjects]
     }
 

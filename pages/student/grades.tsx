@@ -276,8 +276,6 @@ function Grades({
         }
     ];
 
-    console.log(classes)
-
     return (
         <div className="mb-5">
             <div className={`${style.title}`}>

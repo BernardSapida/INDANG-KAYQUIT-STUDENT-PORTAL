@@ -64,24 +64,23 @@ export const authOptions: NextAuthOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        const authResponse = await axios.post(
+        const response = await axios.post(
           `${process.env.NEXTAUTH_URL}/api/v1/users/authenticate`,
           {
             email: credentials?.email,
             password: credentials?.password,
           }
         );
+        const auth = response.data;
+        const user = auth.data;
 
-        const user = authResponse.data || null;
+        if (!auth?.isAuthorized) throw new Error(JSON.stringify(auth.message));
 
-        if (!user) throw new Error(JSON.stringify(authResponse.data));
-
-        return { ...user };
+        return user;
       },
     })
   ],
   pages: {
-    // signIn: "/teacher/dashboard",
     signOut: "/auth/signin",
   },
   secret: process.env.NEXTAUTH_SECRET,

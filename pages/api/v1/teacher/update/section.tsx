@@ -37,10 +37,6 @@ export default async function handler(
             removedSubjects: string[]
         } = req.body;
 
-        console.log("UPDATING...")
-        console.log(addedSubjects.length > 0)
-        console.log(removedSubjects.length > 0)
-
         const data = await db.collection("sections").updateMany(
             {
                 $and: [
@@ -57,7 +53,6 @@ export default async function handler(
             }
         );
 
-        console.log(data)
 
         if (removedSubjects.length > 0) {
             const update1 = await db.collection("students").updateMany(
@@ -77,10 +72,6 @@ export default async function handler(
                     arrayFilters: [{ "class.section": new ObjectId(sectionId) }]
                 }
             );
-
-            console.log("Removed!");
-            console.log(removedSubjects);
-            console.log(update1);
         }
 
         if (addedSubjects.length > 0) {
@@ -104,14 +95,7 @@ export default async function handler(
                     arrayFilters: [{ "class.section": new ObjectId(sectionId) }]
                 }
             );
-
-            console.log("Added!");
-            console.log(grades);
-            console.log(update2);
         }
-
-
-        // console.log(student)
 
         // Push new schedules of students
         // Create a grades also

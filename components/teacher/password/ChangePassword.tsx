@@ -46,7 +46,6 @@ function ChangePassword({
     ) => {
         setLoading(true);
         const { currentPassword, newPassword, confirmPassword } = values;
-        // console.log(values)
 
         await updatePassword(currentPassword, newPassword, confirmPassword);
 
