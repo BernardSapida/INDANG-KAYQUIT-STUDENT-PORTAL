@@ -54,8 +54,8 @@ function ModalForm({
             address: string;
             contactNumber: string;
             guardian: string;
-            kayquitEmailAccount: string;
-            temporaryPassword: string;
+            email: string;
+            defaultPassword: string;
         },
         { resetForm }: { resetForm: any }
     ) => {
@@ -73,8 +73,8 @@ function ModalForm({
             address,
             contactNumber,
             guardian,
-            kayquitEmailAccount,
-            temporaryPassword,
+            email,
+            defaultPassword,
         } = values;
         setLoading(true);
         const StudentInformation = {
@@ -97,15 +97,14 @@ function ModalForm({
                 contactNumber: values.contactNumber,
             },
             kayquitGoogleAccount: {
-                kayquitAccount: values.kayquitEmailAccount,
-                defaultPassword: values.temporaryPassword,
-                password: values.temporaryPassword,
+                email: values.email,
+                defaultPassword: values.defaultPassword,
+                password: values.defaultPassword,
             },
         }
 
         // Save to database
         // console.log(StudentInformation)
-
 
         setTimeout(() => setLoading(false), 2000);
     };
