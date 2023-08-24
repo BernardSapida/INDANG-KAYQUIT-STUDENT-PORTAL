@@ -6,7 +6,8 @@ import { getSession } from "next-auth/react";
 
 // Components
 import Cards from "@/components/teacher/dashboard/Cards";
-import News from "@/components/teacher/dashboard/News";
+import NewsAndUpdates from "@/components/student/dashboard/NewsAndUpdates";
+
 
 // CSS
 import style from "@/public/css/teacher-dashboard.module.css";
@@ -45,7 +46,7 @@ function Dashboard() {
                 {/* Components / Contents Goes here */}
                 <Cards />
             </div>
-            <News />
+            <NewsAndUpdates />
         </div>
     );
 }
