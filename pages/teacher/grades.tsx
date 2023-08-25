@@ -20,10 +20,10 @@ import { MdGrade } from 'react-icons/md';
 import { AiOutlineSearch } from "react-icons/ai";
 
 // Components
-const TableList = dynamic(() => import("@/components/teacher/grades/TableList"), {
+const TableList = dynamic(() => import("@/components/grades/teacher/TableList"), {
     ssr: false,
 });
-const ModalForm = dynamic(() => import("@/components/teacher/grades/ModalForm"), {
+const ModalForm = dynamic(() => import("@/components/grades/teacher/ModalForm"), {
     ssr: false,
 });
 

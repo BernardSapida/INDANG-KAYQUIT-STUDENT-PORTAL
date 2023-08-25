@@ -74,10 +74,10 @@ export interface KayquitAccount {
 }
 
 export interface ClassAnnouncement {
-    gradeLevel: string,
-    section: string,
-    academicYear: string,
-    announcements: Announcements[]
+    gradeLevel?: string,
+    section?: string,
+    academicYear?: string,
+    announcements?: Announcements[]
 }
 
 export interface Announcements {
@@ -96,4 +96,41 @@ export interface Grade {
     secondQuarter: number,
     thirdQuarter: number,
     fourthQuarter: number,
+}
+
+export interface Password {
+    defaultPassword: string;
+    password: string;
+}
+
+export interface AuthResult {
+    status: number,
+    isAuthorized: boolean,
+    data?: {
+        email: string,
+        role: string,
+    },
+    message: string
+}
+
+export interface Response {
+    status: number,
+    isSuccess: boolean,
+    message?: string
+}
+
+export interface GradeResponse extends Response {
+    data: { sectionDetails?: SubjectDetails, grades?: Grade[] },
+}
+
+export interface ProfileResponse extends Response {
+    data: Student,
+}
+
+export interface AnnouncementResponse extends Response {
+    data: ClassAnnouncement,
+}
+
+export interface SubjectResponse extends Response {
+    data?: Section[],
 }

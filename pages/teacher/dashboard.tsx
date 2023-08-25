@@ -5,8 +5,8 @@ import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import { getSession } from "next-auth/react";
 
 // Components
-import Cards from "@/components/teacher/dashboard/Cards";
-import NewsUpdates from "@/components/teacher/dashboard/NewsUpdates";
+import Cards from "@/components/dashboard/Cards";
+import NewsUpdates from "@/components/dashboard/teacher/NewsUpdates";
 
 // CSS
 import style from "@/public/css/teacher-dashboard.module.css";

@@ -25,7 +25,7 @@ import { initialValues, validationSchema } from "@/helpers/teacher/announcements
 // Components
 import Field from "@/components/form/InputField";
 import TextAreaField from "@/components/form/TextAreaField";
-import Announcement from "@/components/teacher/announcements/Announcement";
+import Announcement from "@/components/announcements/Announcement";
 
 // CSS
 import style from "@/public/css/teacher-modal.module.css";

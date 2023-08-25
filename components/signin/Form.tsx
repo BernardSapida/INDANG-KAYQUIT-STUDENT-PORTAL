@@ -68,6 +68,7 @@ export default function SigninForm() {
             password: password,
         });
 
+        console.log(response);
         if (response?.ok) return setIsLogin(true);
 
         setError(JSON.parse(response?.error!));

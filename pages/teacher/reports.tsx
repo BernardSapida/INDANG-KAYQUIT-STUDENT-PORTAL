@@ -11,7 +11,7 @@ import { HiOutlineDocumentReport } from 'react-icons/hi';
 import style from "@/public/css/teacher-password.module.css";
 
 // Components
-import ReportForm from "@/components/teacher/reports/ReportForm";
+import ReportForm from "@/components/reports/ReportForm";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext

@@ -23,10 +23,10 @@ import { BsFillPeopleFill, BsPersonFillAdd } from 'react-icons/bs';
 import { initialValues, validationSchema } from "@/helpers/teacher/students/Form";
 
 // Components
-import PersonalDetails from "@/components/teacher/students/PersonalDetails";
-import EnrollmentDetails from "@/components/teacher/students/EnrollmentDetails";
-import ContactDetails from "@/components/teacher/students/ContactDetails";
-import KayquitGoogleAccount from "@/components/teacher/students/KayquitGoogleAccount";
+import PersonalDetails from "@/components/students/PersonalDetails";
+import EnrollmentDetails from "@/components/students/EnrollmentDetails";
+import ContactDetails from "@/components/students/ContactDetails";
+import KayquitGoogleAccount from "@/components/students/KayquitGoogleAccount";
 
 // CSS
 import style from "@/public/css/teacher-modal.module.css";

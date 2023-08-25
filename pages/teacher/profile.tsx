@@ -8,10 +8,10 @@ import { getSession } from "next-auth/react";
 import { FaGraduationCap } from 'react-icons/fa';
 
 // Components
-import PersonalDetails from "@/components/teacher/profile/PersonalDetails";
-import SectionHandle from "@/components/teacher/profile/SectionHandle";
-import ContactDetails from "@/components/teacher/profile/ContactDetails";
-import KayquitGoogleAccount from "@/components/teacher/profile/KayquitGoogleAccount";
+import PersonalDetails from "@/components/profile/teacher/PersonalDetails";
+import SectionHandle from "@/components/profile/teacher/SectionHandle";
+import ContactDetails from "@/components/profile/teacher/ContactDetails";
+import KayquitGoogleAccount from "@/components/profile/teacher/KayquitGoogleAccount";
 
 // CSS
 import style from "@/public/css/teacher-profile.module.css";
@@ -28,9 +28,7 @@ export const getServerSideProps: GetServerSideProps = async (
         }
 
         return {
-            props: {
-                user: session.user,
-            },
+            props: { user: session.user },
         };
     } catch (error) {
         return {

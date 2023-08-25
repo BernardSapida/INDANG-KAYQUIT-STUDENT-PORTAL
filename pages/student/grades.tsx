@@ -4,11 +4,8 @@ import { getSession } from "next-auth/react";
 
 import { FaGraduationCap } from 'react-icons/fa';
 
-
-import axios from "axios";
-
 import style from "@/public/css/student-grades.module.css";
-import AccordionDropdown from "@/components/student/grades/Accordion";
+import AccordionDropdown from "@/components/grades/student/Accordion";
 
 import { fetchStudentGrade } from "@/helpers/student/Grades";
 import { SubjectDetails, Grade } from "@/types/global";
@@ -24,10 +21,10 @@ export const getServerSideProps: GetServerSideProps = async (
             return { notFound: true }
         }
 
-        const classes = await fetchStudentGrade(session.user.email);
+        const studentGradeResponse = await fetchStudentGrade(session.user.email);
 
         return {
-            props: { classes: classes },
+            props: { classes: studentGradeResponse.data },
         };
     } catch (error) {
         return {

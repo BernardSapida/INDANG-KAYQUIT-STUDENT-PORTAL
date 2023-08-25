@@ -2,48 +2,43 @@ import clientPromise from "@/lib/mongodb";
 
 import bcrypt from 'bcrypt';
 
-interface Password {
-    defaultPassword: string;
-    password: string;
-}
-
-interface AuthResult {
-    isAuthorized: boolean;
-    data?: {
-        email: string;
-        role: string;
-    },
-    message?: string;
-}
+import { AuthResult, Password } from "@/types/global";
 
 export const authenticateUser = async (email: string, password: string): Promise<AuthResult> => {
     const role = isTeacherOrStudentDomain(email);
 
-    if (!role) return { isAuthorized: false, message: "Email address is invalid" };
+    if (!role) return { status: 400, isAuthorized: false, message: "Email address is invalid" };
 
-    const user = await getPasswords(email, password, role);
-    const matchedPassword = await bcrypt.compare(password, user.password);
-    const matchedDefaultPassword = await bcrypt.compare(password, user.defaultPassword);
+    const user = await getPasswords(email, role);
+
+    if (user?.password == undefined && user?.defaultPassword == undefined) {
+        return { status: 400, isAuthorized: false, message: "Email address didn't exist" };
+    }
+
+    const matchedPassword = await bcrypt.compare(password, user?.password);
+    const matchedDefaultPassword = password === user?.defaultPassword;
 
     if (matchedPassword || matchedDefaultPassword) {
         return {
+            status: 200,
             isAuthorized: true,
             data: {
                 email: email,
                 role: role
-            }
+            },
+            message: "Successfully authenticated"
         };
     }
 
-    return { isAuthorized: false, message: "Password is incorrect" };
+    return { status: 401, isAuthorized: false, message: "Password is incorrect" };
 }
 
-const getPasswords = async (email: string, password: string, role: string): Promise<Password> => {
+const getPasswords = async (email: string, role: string): Promise<Password> => {
     const client = await clientPromise;
     const db = client.db("student_portal");
 
     // Get the passwords from the database
-    const res = await db.collection(`${role}s`).aggregate([
+    const response = await db.collection(`${role}s`).aggregate([
         {
             $match: { "kayquitAccount.email": email }
         },
@@ -63,12 +58,12 @@ const getPasswords = async (email: string, password: string, role: string): Prom
         { $limit: 1 }
     ]).toArray();
 
-    const data: Password = {
-        defaultPassword: res[0]?.defaultPassword,
-        password: res[0]?.password
+    const result: Password = {
+        defaultPassword: response[0]?.defaultPassword,
+        password: response[0]?.password
     }
 
-    return data;
+    return result;
 }
 
 const isTeacherOrStudentDomain = (email: string): string | null => {

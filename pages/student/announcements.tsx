@@ -6,18 +6,16 @@ import { getSession } from "next-auth/react";
 
 import { IoMdNotifications } from 'react-icons/io';
 
-import Event from "@/components/student/announcements/Event";
-
 import { getAcademicYear } from "@/utils/date/date";
 
-import Announcement from "@/components/teacher/announcements/Announcement";
+import Announcement from "@/components/announcements/Announcement";
 
 import { fetchAnnouncements } from "@/helpers/student/Announcements";
 
 import style from "@/public/css/student-announcements.module.css";
 import { fetchStudentProfile } from "@/helpers/student/Profile";
 
-import { Announcements, ClassAnnouncement, Student } from "@/types/global";
+import { Announcements, ClassAnnouncement, ProfileResponse, Student } from "@/types/global";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -30,11 +28,12 @@ export const getServerSideProps: GetServerSideProps = async (
             return { notFound: true }
         }
 
-        const { enrollmentDetails: { currentGradeLevel, currentSection, academicYear } }: Student = await fetchStudentProfile(session.user.email);
-        const announcement = await fetchAnnouncements(currentGradeLevel, currentSection, academicYear);
+        const studentProfileResponse: ProfileResponse = await fetchStudentProfile(session.user.email);
+        const { enrollmentDetails: { currentGradeLevel, currentSection, academicYear } }: Student = studentProfileResponse.data;
+        const announcementsResponse = await fetchAnnouncements(currentGradeLevel, currentSection, academicYear);
 
         return {
-            props: { announcement: announcement }
+            props: { announcement: announcementsResponse.data }
         };
     } catch (error) {
         return {

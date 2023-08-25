@@ -20,8 +20,8 @@ import { IoMdNotifications } from 'react-icons/io';
 // React-Ripples
 import Ripples from 'react-ripples'
 
-import Announcement from "@/components/teacher/announcements/Announcement";
-const ModalForm = dynamic(() => import("@/components/teacher/announcements/ModalForm"), {
+import Announcement from "@/components/announcements/Announcement";
+const ModalForm = dynamic(() => import("@/components/announcements/ModalForm"), {
     ssr: false,
 });
 

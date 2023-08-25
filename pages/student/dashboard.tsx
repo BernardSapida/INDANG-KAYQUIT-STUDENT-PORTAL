@@ -1,18 +1,13 @@
-// Next Modules
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 
-// Next-Auth Modules
 import { getSession } from "next-auth/react";
 
-// Components
-import Cards from "@/components/student/dashboard/Cards";
+import Cards from "@/components/dashboard/Cards";
 
-// CSS
 import style from "@/public/css/student-dashboard.module.css";
 
-import NewsUpdates from "@/components/student/dashboard/NewsUpdates";
+import NewsUpdates from "@/components/dashboard/student/NewsUpdates";
 
-// Utilities
 import { getGreeting } from "@/utils/greetings";
 
 export const getServerSideProps: GetServerSideProps = async (

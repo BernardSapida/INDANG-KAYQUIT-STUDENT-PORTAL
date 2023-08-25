@@ -9,10 +9,10 @@ import { getSession } from "next-auth/react";
 import { FaGraduationCap } from 'react-icons/fa';
 
 // Components
-import PersonalDetails from "@/components/student/profile/PersonalDetails";
-import EnrollmentDetails from "@/components/student/profile/EnrollmentDetails";
-import ContactDetails from "@/components/student/profile/ContactDetails";
-import KayquitAccount from "@/components/student/profile/KayquitAccount";
+import PersonalDetails from "@/components/profile/student/PersonalDetails";
+import EnrollmentDetails from "@/components/profile/student/EnrollmentDetails";
+import ContactDetails from "@/components/profile/student/ContactDetails";
+import KayquitAccount from "@/components/profile/student/KayquitAccount";
 
 import { fetchStudentProfile } from "@/helpers/student/Profile";
 
@@ -32,10 +32,10 @@ export const getServerSideProps: GetServerSideProps = async (
             return { notFound: true }
         }
 
-        const student = await fetchStudentProfile(session.user.email);
+        const studentProfileResponse = await fetchStudentProfile(session.user.email);
 
         return {
-            props: { student: student },
+            props: { student: studentProfileResponse.data },
         };
     } catch (error) {
         return {

@@ -4,9 +4,7 @@ import { getSession } from "next-auth/react";
 
 import { MdSubject } from 'react-icons/md';
 
-import axios from "axios";
-
-import AccordionDropdown from "@/components/student/subjects/Accordion";
+import AccordionDropdown from "@/components/subjects/student/Accordion";
 
 import style from "@/public/css/student-subjects.module.css";
 import { Section, StudentClasses } from "@/types/global";
@@ -23,10 +21,10 @@ export const getServerSideProps: GetServerSideProps = async (
             return { notFound: true }
         }
 
-        const student = await fetchStudentSubjects(session.user.email);
+        const SubjectResponse = await fetchStudentSubjects(session.user.email);
 
         return {
-            props: { student: student },
+            props: { student: SubjectResponse.data },
         };
     } catch (error) {
         return {

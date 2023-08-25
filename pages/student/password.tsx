@@ -1,17 +1,13 @@
-// Next Modules
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 
-// Next-Auth Modules
 import { getSession } from "next-auth/react";
 
-// React-Icons
 import { MdPassword } from 'react-icons/md';
 
-// CSS
 import style from "@/public/css/teacher-password.module.css";
 
-// Components
 import ChangePassword from "@/components/student/password/ChangePassword";
+
 import { User } from "@/types/global";
 
 export const getServerSideProps: GetServerSideProps = async (

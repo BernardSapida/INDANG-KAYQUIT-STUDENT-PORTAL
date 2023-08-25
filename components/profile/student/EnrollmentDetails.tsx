@@ -40,7 +40,6 @@ function EnrollmentDetails({ enrollmentDetails }: { enrollmentDetails: Enrollmen
                 <Form.Control
                     type={"text"}
                     defaultValue={enrollmentDetails?.lrn}
-                    value={"12345678910"}
                     disabled={true}
                 />
             </FloatingLabel>
@@ -60,7 +59,7 @@ function EnrollmentDetails({ enrollmentDetails }: { enrollmentDetails: Enrollmen
                         <Form.Control
                             type={"text"}
                             name={"studentNumber"}
-                            value={getAcademicYear()}
+                            defaultValue={getAcademicYear()}
                             disabled={true}
                         />
                     </FloatingLabel>

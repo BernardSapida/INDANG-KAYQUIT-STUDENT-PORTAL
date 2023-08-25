@@ -19,11 +19,11 @@ import { MdSubject } from 'react-icons/md';
 import { AiOutlinePlus } from 'react-icons/ai';
 
 // Components
-import AccordionDropdown from "@/components/teacher/subjects/Accordion";
-const AddModalForm = dynamic(() => import("@/components/teacher/subjects/AddModalForm"), {
+import AccordionDropdown from "@/components/subjects/teacher/Accordion";
+const AddModalForm = dynamic(() => import("@/components/subjects/teacher/AddModalForm"), {
     ssr: false,
 });
-const EditModalForm = dynamic(() => import("@/components/teacher/subjects/EditModalForm"), {
+const EditModalForm = dynamic(() => import("@/components/subjects/teacher/EditModalForm"), {
     ssr: false,
 });
 

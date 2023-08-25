@@ -24,13 +24,13 @@ import { AiOutlineUnorderedList } from 'react-icons/ai';
 import { AiOutlineSearch, AiOutlinePlus } from "react-icons/ai";
 
 // Components
-const TableList = dynamic(() => import("@/components/teacher/students/TableList"), {
+const TableList = dynamic(() => import("@/components/students/TableList"), {
     ssr: false,
 });
-const AddModalForm = dynamic(() => import("@/components/teacher/students/AddModalForm"), {
+const AddModalForm = dynamic(() => import("@/components/students/AddModalForm"), {
     ssr: false,
 });
-const EditModalForm = dynamic(() => import("@/components/teacher/students/EditModalForm"), {
+const EditModalForm = dynamic(() => import("@/components/students/EditModalForm"), {
     ssr: false,
 });
 

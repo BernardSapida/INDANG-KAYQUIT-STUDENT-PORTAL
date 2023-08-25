@@ -11,7 +11,7 @@ import { MdPassword } from 'react-icons/md';
 import style from "@/public/css/teacher-password.module.css";
 
 // Components
-import ChangePassword from "@/components/teacher/password/ChangePassword";
+import ChangePassword from "@/components/password/ChangePassword";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext

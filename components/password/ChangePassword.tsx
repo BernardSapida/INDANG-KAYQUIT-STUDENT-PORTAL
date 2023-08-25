@@ -1,3 +1,4 @@
+import axios from "axios";
 
 // Next Modules
 import { useRouter } from "next/router";
@@ -25,15 +26,14 @@ import Ripples from 'react-ripples'
 // Helpers
 import { initialValues, validationSchema } from "@/helpers/teacher/password/Form";
 
-// Utilities
-import { Alert } from "@/utils/alert/swal";
-
 // CSS
 import style from "@/public/css/teacher-change-password.module.css";
-import { User } from "@/types/global";
-import { updatePassword } from "@/helpers/student/Password";
 
-function ChangePassword({ user }: { user: User }) {
+function ChangePassword({
+    user
+}: {
+    user: Record<string, any>
+}) {
     const [loading, setLoading] = useState<boolean>(false);
     const router = useRouter();
 
@@ -44,11 +44,24 @@ function ChangePassword({ user }: { user: User }) {
         setLoading(true);
         const { currentPassword, newPassword, confirmPassword } = values;
 
-        let response = await updatePassword(user.email, currentPassword, newPassword, confirmPassword);
+        const passwordResponse = await updatePassword(currentPassword, newPassword, confirmPassword);
 
         resetForm();
-        setLoading(false);
+
+        setTimeout(() => setLoading(false), 2000);
     };
+
+    const updatePassword = async (currentPassword: string, newPassword: string, confirmPassword: string) => {
+        const res = await axios.post(
+            `/api/v1/teacher/update/password`,
+            {
+                email: user.email,
+                currentPassword: currentPassword,
+                newPassword: newPassword,
+                confirmPassword: confirmPassword
+            }
+        );
+    }
 
     return (
         <Formik
