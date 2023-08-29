@@ -29,6 +29,7 @@ import Announcement from "@/components/announcements/Announcement";
 
 // CSS
 import style from "@/public/css/teacher-modal.module.css";
+import { User } from "@/types/global";
 
 function ModalForm({
     modalShow,
@@ -38,8 +39,14 @@ function ModalForm({
 }: {
     modalShow: boolean;
     setModalShow: Dispatch<SetStateAction<boolean>>;
-    setCards: Dispatch<SetStateAction<any[]>>;
-    teacher: any;
+    setCards: Dispatch<SetStateAction<JSX.Element[]>>;
+    teacher: {
+        email: string,
+        role: string,
+        currentGradeLevel: string,
+        currentSection: string,
+        academicYear: string
+    };
 }) {
     const [loading, setLoading] = useState<boolean>(false);
 
@@ -51,29 +58,35 @@ function ModalForm({
 
         const { title, description } = values;
         const output = {
-            gradeLevel: "6",
-            section: "Narra",
-            academicYear: "2023-2024",
+            gradeLevel: teacher.currentGradeLevel,
+            section: teacher.currentSection,
+            academicYear: teacher.academicYear,
             adviserEmail: teacher.email,
             title,
             description
         }
 
         // Save to db
-        postAnnouncement(output);
+        await postAnnouncement(output);
 
-        if ("success") {
-            resetForm();
-            setCards((beforeCard: any[]) => {
-                return [...beforeCard, <Announcement title={title} description={description} createdAt={new Date().toString()} />]
-            });
-        }
+        resetForm();
+        setCards((beforeCard: JSX.Element[]) => {
+            return [
+                ...beforeCard,
+                <Announcement
+                    key={beforeCard.length++}
+                    title={title}
+                    description={description}
+                    createdAt={new Date().toString()}
+                />
+            ]
+        });
 
         setTimeout(() => setLoading(false), 2000);
     };
 
     const postAnnouncement = async (output: Record<string, any>) => {
-        const res = await axios.post(
+        const response = await axios.post(
             `/api/v1/teacher/post/announcement`,
             output
         );

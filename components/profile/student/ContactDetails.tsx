@@ -2,9 +2,9 @@
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 
-import { contactDetails } from "@/types/global";
+import { ContactDetails } from "@/types/global";
 
-function ContactDetails({ contactDetails }: { contactDetails: contactDetails }) {
+function ContactDetails({ contactDetails }: { contactDetails: ContactDetails }) {
     return (
         <div>
             <p className="fw-bold">Contact Details</p>

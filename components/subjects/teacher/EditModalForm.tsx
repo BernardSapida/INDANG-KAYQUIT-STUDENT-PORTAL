@@ -2,46 +2,47 @@ import axios from "axios";
 
 // React Bootstrap Components
 import { FloatingLabel } from "react-bootstrap";
-import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Table from "react-bootstrap/Table";
 import Form from "react-bootstrap/Form";
 
 // React Modules
-import { Dispatch, MutableRefObject, SetStateAction, useEffect, useRef, useState } from "react";
-
-// Sweet Alert Modules
-import Swal from "sweetalert2";
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 
 // React-Icons
 import { AiOutlinePlus } from 'react-icons/ai';
 import { BsFillSendFill, BsTrash } from 'react-icons/bs';
 import { BiSolidEdit } from 'react-icons/bi';
 
+import { Grade, Section, Subject } from "@/types/global";
+
 // Components
-import Error from "@/components/error/Error";
+import Error from "@/components/alerts/error/Error";
 
 // CSS
 import style from "@/public/css/teacher-subjects.module.css";
+import Success from "@/components/alerts/success/Error";
 
-function AddModalForm({
+function EditModalForm({
     sectionInfo,
     modalShow,
     setModalShow,
     sections,
     setSections
 }: {
-    sectionInfo: Record<string, any>;
+    sectionInfo: Section | Record<string, any>;
     modalShow: boolean;
     setModalShow: Dispatch<SetStateAction<boolean>>;
-    sections: any[];
-    setSections: Dispatch<SetStateAction<any[]>>;
+    sections: Section[];
+    setSections: Dispatch<SetStateAction<Section[]>>;
 }) {
-    const [showError, setShowError] = useState<boolean>(false);
     const [tableRows, setTableRows] = useState<any[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string>("");
+    const [showError, setShowError] = useState<boolean>(false);
+    const [successMessage, setSuccessMessage] = useState<string>("");
+    const [showSuccess, setShowSuccess] = useState<boolean>(false);
     let fieldId = useRef(1);
 
     useEffect(() => populateRows(), [sectionInfo, modalShow]);
@@ -49,66 +50,78 @@ function AddModalForm({
     const handleSubmit = async (e: any) => {
         e.preventDefault();
         setLoading(true);
+        setShowError(false);
+        setError("");
 
-        const formDataObject = new FormData(e.target);
+        try {
+            const formDataObject = new FormData(e.target);
+            const formValues: Record<string, any> = {};
+            let haveEmptyFields: boolean = false;
 
-        const formValues: Record<string, any> = {};
+            formDataObject.forEach((value, key) => {
+                const [fieldName, fieldNumber] = key.split(".");
 
-        formDataObject.forEach((value, key) => {
-            let [fieldName, fieldNumber] = key.split(".");
+                if (value === "") haveEmptyFields = true;
 
-            if (value === "") {
-                setShowError(true);
-                setError("All fields are required!")
-            }
-
-            if (formValues[fieldNumber] != undefined) {
-                formValues[fieldNumber][fieldName] = value;
-            } else {
-                formValues[fieldNumber] = {};
-                formValues[fieldNumber][fieldName] = value;
-            }
-        });
-
-        let arr = Object.values(formValues);
-        let academicYear = sectionInfo.academicYear;
-        let name = sectionInfo.name;
-        let gradeLevel = sectionInfo.gradeLevel;
-        let subjects = arr;
-        let grades: any[] = getGrades(subjects);
-        let [addedSubjects, removedSubjects] = getAddedAndRemovedSubjects(grades);
-
-        let output = {
-            sectionId: sectionInfo._id,
-            gradeLevel: gradeLevel,
-            name: name,
-            academicYear: academicYear,
-            subjects: subjects,
-            grades: grades,
-            addedSubjects,
-            removedSubjects
-        }
-
-        // Replace schoolSchedule element with this
-        await updateSection(output);
-
-        // Update Subjects in specified section
-        setSections(prevSections => (
-            sections.map(section => {
-                if (section._id == sectionInfo._id) {
-                    section.subjects = subjects;
+                if (formValues[fieldNumber] != undefined) {
+                    formValues[fieldNumber][fieldName] = value;
+                } else {
+                    formValues[fieldNumber] = {};
+                    formValues[fieldNumber][fieldName] = value;
                 }
+            });
 
-                return section
-            })
-        ))
+            if (haveEmptyFields) {
+                setShowError(true);
+                setError("All fields are required!");
+                return;
+            }
+
+            const arr = Object.values(formValues);
+            const academicYear = sectionInfo.academicYear;
+            const name = sectionInfo.name;
+            const gradeLevel = sectionInfo.gradeLevel;
+            const subjects = arr;
+            const grades: Grade[] = getGrades(subjects);
+            const [addedSubjects, removedSubjects] = getAddedAndRemovedSubjects(grades);
+
+            const output = {
+                sectionId: sectionInfo._id,
+                gradeLevel: gradeLevel,
+                name: name,
+                academicYear: academicYear,
+                subjects: subjects,
+                addedSubjects,
+                removedSubjects
+            }
+
+            // Update section in database
+            await updateSection(output);
+
+            // Update Subjects in specified section
+            setSections(() => (
+                sections.map(section => {
+                    if (section._id == sectionInfo._id) {
+                        section.subjects = subjects;
+                    }
+
+                    return section
+                })
+            ));
+
+            setSuccessMessage("Successfully updated section");
+            setShowSuccess(true);
+            setTimeout(() => setShowSuccess(false), 5000);
+        } catch (error) {
+            console.error(error);
+        }
     };
 
-    const getGrades = (subjects: any[]) => {
-        let grades: any[] = [];
+    const getGrades = (subjects: Subject[]): Grade[] => {
+        const grades: Grade[] = [];
 
         subjects.filter(subject => {
-            let gradeCollection = {
+            const gradeCollection = {
                 subjectName: subject.subjectName,
                 firstQuarter: 0,
                 secondQuarter: 0,
@@ -122,29 +135,33 @@ function AddModalForm({
         return grades;
     }
 
-    const getAddedAndRemovedSubjects = (grades: any[]): any[] => {
-        let oldSubsCollection: Record<string, any> = {};
+    const getAddedAndRemovedSubjects = (grades: Grade[]): [Grade[], string[]] => {
+        const oldSubsCollection: Record<string, any> = {};
 
         // Populate oldSubsCollection with subject names
         sectionInfo.subjects.map((subject: Record<string, any>) => oldSubsCollection[subject.subjectName] = 1);
 
-        let addedSubjects = grades.filter((grade: Record<string, any>) => {
+        const addedSubjects = grades.filter((grade: Record<string, any>) => {
             if (!oldSubsCollection[grade.subjectName]) {
                 return true
             } else {
                 delete oldSubsCollection[grade.subjectName]
             }
         });
-        let removedSubjects = Object.keys(oldSubsCollection);
+        const removedSubjects = Object.keys(oldSubsCollection);
 
         return [addedSubjects, removedSubjects]
     }
 
     const updateSection = async (output: Record<string, any>) => {
-        const res = await axios.post(
-            `/api/v1/teacher/update/section`,
+        const response = await axios.post(
+            `/api/v1/teacher/update/subjects`,
             output
         );
+
+        console.log("Response:")
+        console.log(response)
+        return response;
     }
 
     const removeRow = (position: number) => {
@@ -273,6 +290,7 @@ function AddModalForm({
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
+                    <Success successMessage={successMessage} showSuccess={showSuccess} />
                     <Error errMessage={error} showError={showError} />
                     <Form onSubmit={handleSubmit} id="gradesForm">
                         <FloatingLabel className="mb-3 w-100" label={"Grade Level"}>
@@ -336,4 +354,4 @@ function AddModalForm({
     );
 }
 
-export default AddModalForm;
+export default EditModalForm;

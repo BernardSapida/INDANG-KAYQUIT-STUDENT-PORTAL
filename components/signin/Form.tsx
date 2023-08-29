@@ -23,7 +23,7 @@ import { initialValues, validationSchema } from "@/helpers/signin/Form";
 
 // Components
 import Field from "@/components/form/InputField";
-import Error from "@/components/error/Error";
+import Error from "@/components/alerts/error/Error";
 
 // CSS
 import style from "@/public/css/button-provider.module.css";
@@ -59,21 +59,24 @@ export default function SigninForm() {
     const handleSubmit = async (
         values: { email: string; password: string }
     ) => {
-        setLoading(true);
-        const { email, password } = values;
+        try {
+            setLoading(true);
+            const { email, password } = values;
 
-        const response = await signIn("credentials", {
-            redirect: false,
-            email: email,
-            password: password,
-        });
+            const response = await signIn("credentials", {
+                redirect: false,
+                email: email,
+                password: password,
+            });
 
-        console.log(response);
-        if (response?.ok) return setIsLogin(true);
+            if (response?.ok) return setIsLogin(true);
 
-        setError(JSON.parse(response?.error!));
-        setShowError(true);
-        setLoading(false);
+            setError(JSON.parse(response?.error!));
+            setShowError(true);
+            setLoading(false);
+        } catch (error) {
+            setLoading(false);
+        }
     };
 
     return (

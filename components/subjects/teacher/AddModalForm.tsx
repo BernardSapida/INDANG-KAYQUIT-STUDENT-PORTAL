@@ -20,7 +20,7 @@ import { BsFillSendFill, BsTrash } from 'react-icons/bs';
 import { PiNotebookBold } from 'react-icons/pi';
 
 // Components
-import Error from "@/components/error/Error";
+import Error from "@/components/alerts/error/Error";
 
 // CSS
 import style from "@/public/css/teacher-subjects.module.css";

@@ -27,6 +27,7 @@ import { nanoid } from 'nanoid';
 // CSS
 import style from "@/public/css/teacher-modal.module.css";
 import { FloatingLabel } from "react-bootstrap";
+import { Classes, Grade, Student } from "@/types/global";
 
 function ModalForm({
     student,
@@ -34,15 +35,14 @@ function ModalForm({
     modalShow,
     setModalShow
 }: {
-    student: Record<string, any>;
+    student: Student | Record<string, any>;
+    setStudent: Dispatch<SetStateAction<Student | Record<string, any>>>;
     modalShow: boolean;
-    setStudent: Dispatch<SetStateAction<{}>>;
     setModalShow: Dispatch<SetStateAction<boolean>>;
 }) {
     const [loading, setLoading] = useState<boolean>(false);
-    const [grades, setGrades] = useState<any[]>([]);
-    const [rows, setRows] = useState<any[]>([]);
-    const sectionId = useRef("");
+    const [grades, setGrades] = useState<Grade[]>([]);
+    const sectionId = useRef<string>("");
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
@@ -50,7 +50,6 @@ function ModalForm({
         setLoading(true);
 
         const formDataObject = new FormData(e.target);
-
         const formValues: Record<string, any> = {};
 
         formDataObject.forEach((value, key) => {
@@ -65,12 +64,11 @@ function ModalForm({
             }
         });
 
-        let output = Object.values(formValues);
+        let studentGrade = Object.values(formValues);
 
-
-        let newClass = student.classes.map((c: any) => {
+        let newClass = student.classes.map((c: Classes) => {
             if (c.sectionDetails._id == sectionId.current) {
-                c.grades = output;
+                c.grades = studentGrade;
             }
 
             return c;
@@ -82,24 +80,24 @@ function ModalForm({
         syncTable();
 
         // Save to database
-        updateGrade(output);
+        updateGrade(studentGrade);
 
-        setTimeout(() => setLoading(false), 2000);
+        setLoading(false);
     };
 
-    const updateGrade = async (output: any[]) => {
+    const updateGrade = async (studentGrade: Grade[]) => {
         const res = await axios.post(
             `/api/v1/teacher/update/student-grades`,
             {
                 email: student.kayquitAccount.email,
                 sectionId: sectionId.current,
-                grades: output
+                grades: studentGrade
             }
         );
     }
 
     const syncTable = () => {
-        let newGrades = student.classes.filter((c: Record<string, any>) => {
+        let newGrades = student.classes.filter((c: Classes) => {
             return c.sectionDetails._id === sectionId.current;
         })[0]?.grades;
 
@@ -135,7 +133,7 @@ function ModalForm({
                     <FloatingLabel className="w-100" label={"Grade & Section"} onChange={changeAcademicYear}>
                         <Form.Select>
                             <option value="">--- Choose grade & section ---</option>
-                            {student.classes?.map((c: Record<string, any>, key: number) => (
+                            {student.classes?.map((c: Classes, key: number) => (
                                 <option key={key} value={`${c.sectionDetails._id}`}>{`${c.sectionDetails.gradeLevel} - ${c.sectionDetails.name}`}</option>
                             ))}
                         </Form.Select>
@@ -157,14 +155,14 @@ function ModalForm({
                                 </thead>
                                 <tbody className="align-middle">
                                     {
-                                        grades?.map((d: Record<string, any>) => (
+                                        grades?.map((g: Grade) => (
                                             <tr key={nanoid()}>
-                                                <td>{d.subjectName}</td>
+                                                <td>{g.subjectName}</td>
                                                 <td>
                                                     <Form.Control
                                                         type="number"
-                                                        name={`${d.subjectName}.firstQuarter`}
-                                                        defaultValue={d.firstQuarter}
+                                                        name={`${g.subjectName}.firstQuarter`}
+                                                        defaultValue={g.firstQuarter}
                                                         placeholder="0"
                                                         style={{ width: 90, margin: "auto", textAlign: "center" }}
                                                     />
@@ -172,8 +170,8 @@ function ModalForm({
                                                 <td>
                                                     <Form.Control
                                                         type="number"
-                                                        name={`${d.subjectName}.secondQuarter`}
-                                                        defaultValue={d.secondQuarter}
+                                                        name={`${g.subjectName}.secondQuarter`}
+                                                        defaultValue={g.secondQuarter}
                                                         placeholder="0"
                                                         style={{ width: 90, margin: "auto", textAlign: "center" }}
                                                     />
@@ -181,8 +179,8 @@ function ModalForm({
                                                 <td>
                                                     <Form.Control
                                                         type="number"
-                                                        name={`${d.subjectName}.thirdQuarter`}
-                                                        defaultValue={d.thirdQuarter}
+                                                        name={`${g.subjectName}.thirdQuarter`}
+                                                        defaultValue={g.thirdQuarter}
                                                         placeholder="0"
                                                         style={{ width: 90, margin: "auto", textAlign: "center" }}
                                                     />
@@ -190,8 +188,8 @@ function ModalForm({
                                                 <td>
                                                     <Form.Control
                                                         type="number"
-                                                        name={`${d.subjectName}.fourthQuarter`}
-                                                        defaultValue={d.fourthQuarter}
+                                                        name={`${g.subjectName}.fourthQuarter`}
+                                                        defaultValue={g.fourthQuarter}
                                                         placeholder="0"
                                                         style={{ width: 90, margin: "auto", textAlign: "center" }}
                                                     />

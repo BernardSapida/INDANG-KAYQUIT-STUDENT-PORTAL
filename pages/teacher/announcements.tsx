@@ -30,6 +30,9 @@ import { getAcademicYear } from "@/utils/date/date";
 
 // CSS
 import style from "@/public/css/teacher-announcements.module.css";
+import { fetchTeacherProfile } from "@/helpers/teacher/Profile";
+import { Announcements, ClassAnnouncement, Teacher, User } from "@/types/global";
+import { fetchAnnouncements } from "@/helpers/teacher/Announcements";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -42,19 +45,17 @@ export const getServerSideProps: GetServerSideProps = async (
             return { notFound: true }
         }
 
-        const announcementList = await axios.post(
-            `${process.env.NEXTAUTH_URL}/api/v1/teacher/get/announcements`,
-            {
-                gradeLevel: "6",
-                section: "Narra",
-                academicYear: "2023-2024",
-            }
-        );
+        const teacherProfileResponse = await fetchTeacherProfile(session.user.email);
+        const { sectionHandle: { currentGradeLevel, currentSection, academicYear } }: Teacher = teacherProfileResponse.data!;
+        const announcementsResponse = await fetchAnnouncements(currentGradeLevel, currentSection, academicYear);
 
         return {
             props: {
-                user: session.user,
-                announcementList: announcementList.data
+                teacher: {
+                    ...session.user,
+                    ...teacherProfileResponse.data?.sectionHandle
+                },
+                announcement: announcementsResponse.data
             },
         };
     } catch (error) {
@@ -64,15 +65,29 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Announcements({ user, announcementList }: { user: any, announcementList: Record<string, any> }) {
+function Announcements(
+    { teacher, announcement }:
+        {
+            teacher: {
+                email: string,
+                role: string,
+                currentGradeLevel: string,
+                currentSection: string,
+                academicYear: string
+            },
+            announcement: ClassAnnouncement
+        }
+) {
     const [modalShow, setModalShow] = useState(false);
-    const [cards, setCards] = useState<any[]>([]);
+    const [cards, setCards] = useState<JSX.Element[]>([]);
+
+    console.log(teacher)
 
     useEffect(() => {
-        let res = announcementList.announcements.map((a: Record<string, any>, key: number) => (
-            <Announcement title={a.title} description={a.description} createdAt={a.createdAt} />
+        const res = announcement.announcements?.map((announcements: Announcements, key: number) => (
+            <Announcement key={key} title={announcements.title} description={announcements.description} createdAt={announcements.createdAt} />
         ));
-        setCards(res);
+        setCards(res!);
     }, []);
 
     return (
@@ -88,7 +103,7 @@ function Announcements({ user, announcementList }: { user: any, announcementList
                 </Ripples>
                 {cards}
             </div>
-            <ModalForm modalShow={modalShow} setModalShow={setModalShow} setCards={setCards} teacher={user} />
+            <ModalForm modalShow={modalShow} setModalShow={setModalShow} setCards={setCards} teacher={teacher} />
         </div>
     );
 }

@@ -11,10 +11,13 @@ import { FaGraduationCap } from 'react-icons/fa';
 import PersonalDetails from "@/components/profile/teacher/PersonalDetails";
 import SectionHandle from "@/components/profile/teacher/SectionHandle";
 import ContactDetails from "@/components/profile/teacher/ContactDetails";
-import KayquitGoogleAccount from "@/components/profile/teacher/KayquitGoogleAccount";
+import KayquitAccount from "@/components/profile/teacher/KayquitAccount";
+
+import { fetchTeacherProfile } from "@/helpers/teacher/Profile";
 
 // CSS
 import style from "@/public/css/teacher-profile.module.css";
+import { Teacher } from "@/types/global";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -27,8 +30,10 @@ export const getServerSideProps: GetServerSideProps = async (
             return { notFound: true }
         }
 
+        const studentProfileResponse = await fetchTeacherProfile(session.user.email);
+
         return {
-            props: { user: session.user },
+            props: { teacher: studentProfileResponse.data },
         };
     } catch (error) {
         return {
@@ -37,17 +42,17 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Profile() {
+function Profile({ teacher }: { teacher: Teacher }) {
     return (
         <div className="mb-5">
             <div className={`${style.title}`}>
                 <h1><FaGraduationCap /> Teacher Profile</h1>
             </div>
             <div className={`${style.container}`}>
-                <PersonalDetails />
-                <SectionHandle />
-                <ContactDetails />
-                <KayquitGoogleAccount />
+                <PersonalDetails personalDetails={teacher.personalDetails} />
+                <SectionHandle sectionHandle={teacher.sectionHandle} />
+                <ContactDetails contactDetails={teacher.contactDetails} />
+                <KayquitAccount kayquitAccount={teacher.kayquitAccount} />
             </div>
         </div>
     );

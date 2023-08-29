@@ -6,7 +6,7 @@ import { MdPassword } from 'react-icons/md';
 
 import style from "@/public/css/teacher-password.module.css";
 
-import ChangePassword from "@/components/student/password/ChangePassword";
+import ChangePassword from "@/components/password/ChangePassword";
 
 import { User } from "@/types/global";
 

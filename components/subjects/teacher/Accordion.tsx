@@ -1,6 +1,3 @@
-// Next Modules
-import dynamic from "next/dynamic";
-
 // React
 import { Dispatch, SetStateAction, useState } from 'react';
 
@@ -12,13 +9,9 @@ import Table from 'react-bootstrap/Table';
 // React-Icons
 import { FaEdit } from 'react-icons/fa';
 
-// Components
-const EditModalForm = dynamic(() => import("@/components/teacher/subjects/EditModalForm"), {
-    ssr: false,
-});
-
 // CSS
 import style from "@/public/css/teacher-accordion.module.css";
+import { Section, Subject } from '@/types/global';
 
 function AccordionDropdown({
     sectionInfo,
@@ -26,8 +19,8 @@ function AccordionDropdown({
     setModalShow,
     uniqueKey
 }: {
-    sectionInfo: Record<string, any>,
-    setSectionInfo: Dispatch<SetStateAction<{}>>;
+    sectionInfo: Section,
+    setSectionInfo: Dispatch<SetStateAction<Section | Record<string, any>>>;
     setModalShow: Dispatch<SetStateAction<boolean>>;
     uniqueKey: string
 }) {
@@ -60,7 +53,7 @@ function AccordionDropdown({
                             </thead>
                             <tbody>
                                 {
-                                    sectionInfo.subjects.map((d: Record<string, any>, key: number) => (
+                                    sectionInfo.subjects.map((d: Subject, key: number) => (
                                         <tr key={key}>
                                             <td>{d.subjectName}</td>
                                             <td>{d.time}</td>

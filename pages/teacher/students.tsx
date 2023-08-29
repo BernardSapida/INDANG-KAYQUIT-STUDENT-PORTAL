@@ -36,6 +36,7 @@ const EditModalForm = dynamic(() => import("@/components/students/EditModalForm"
 
 // CSS
 import style from "@/public/css/teacher-students.module.css";
+import { Student } from "@/types/global";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -53,10 +54,7 @@ export const getServerSideProps: GetServerSideProps = async (
         );
 
         return {
-            props: {
-                user: session.user,
-                studentList: studentList.data
-            },
+            props: { studentList: studentList.data }
         };
     } catch (error) {
         return {
@@ -65,16 +63,10 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Students({
-    user,
-    studentList
-}: {
-    user: Record<string, any>;
-    studentList: any;
-}) {
-    const [addModalShow, setAddModalShow] = useState(false);
-    const [editModalShow, setEditModalShow] = useState(false);
-    const [student, setStudent] = useState({});
+function Students({ studentList }: { studentList: any }) {
+    const [addModalShow, setAddModalShow] = useState<boolean>(false);
+    const [editModalShow, setEditModalShow] = useState<boolean>(false);
+    const [student, setStudent] = useState<Student | Record<string, any>>({});
 
     return (
         <div className="mb-5">

@@ -26,16 +26,18 @@ export interface StudentClasses {
 }
 
 export interface Student {
+    _id?: string,
     personalDetails: PersonalDetails,
     enrollmentDetails: EnrollmentDetails,
-    contactDetails: contactDetails,
-    kayquitAccount: KayquitAccount
+    contactDetails: ContactDetails,
+    kayquitAccount: KayquitAccount,
+    classes?: Classes
 }
 
 export interface Teacher {
     personalDetails: PersonalDetails,
     sectionHandle: SectionHandle,
-    contactDetails: contactDetails,
+    contactDetails: ContactDetails,
     kayquitAccount: KayquitAccount
 }
 
@@ -48,8 +50,8 @@ export interface PersonalDetails {
 }
 
 export interface SectionHandle {
-    gradeLevel: string,
-    section: string,
+    currentGradeLevel: string,
+    currentSection: string,
     academicYear: string,
 }
 
@@ -61,7 +63,7 @@ export interface EnrollmentDetails {
     academicYear: string,
 }
 
-export interface contactDetails {
+export interface ContactDetails {
     address: string,
     guardian: string,
     contactNumber: string,
@@ -71,6 +73,22 @@ export interface KayquitAccount {
     email: string,
     defaultPassword: string,
     password: string,
+}
+
+export interface Classes {
+    section: string,
+    grades: Grade[],
+    sectionDetails?: any
+}
+
+export interface ClassDetails {
+    _id: string,
+    gradeLevel: string,
+    name: string,
+    academicYear: string,
+    subjects: Subject[],
+    updatedAt: string,
+    createdAt: string
 }
 
 export interface ClassAnnouncement {
@@ -124,7 +142,11 @@ export interface GradeResponse extends Response {
 }
 
 export interface ProfileResponse extends Response {
-    data: Student,
+    data?: Student,
+}
+
+export interface TeacherProfileResponse extends Response {
+    data?: Teacher,
 }
 
 export interface AnnouncementResponse extends Response {
@@ -134,3 +156,25 @@ export interface AnnouncementResponse extends Response {
 export interface SubjectResponse extends Response {
     data?: Section[],
 }
+
+export interface PasswordResponse extends Response {
+    data?: KayquitAccount,
+}
+
+export interface Subject {
+    subjectName: string,
+    time: string,
+    day: string,
+    room: string,
+}
+
+export interface Section {
+    _id?: string,
+    gradeLevel: string,
+    name: string,
+    academicYear: string,
+    subjects: Subject[],
+    createdAt: string,
+    updatedAt: string,
+}
+

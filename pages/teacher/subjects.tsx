@@ -18,6 +18,8 @@ import Button from "react-bootstrap/Button";
 import { MdSubject } from 'react-icons/md';
 import { AiOutlinePlus } from 'react-icons/ai';
 
+import { Section } from "@/types/global";
+
 // Components
 import AccordionDropdown from "@/components/subjects/teacher/Accordion";
 const AddModalForm = dynamic(() => import("@/components/subjects/teacher/AddModalForm"), {
@@ -29,6 +31,7 @@ const EditModalForm = dynamic(() => import("@/components/subjects/teacher/EditMo
 
 // CSS
 import style from "@/public/css/teacher-subjects.module.css";
+
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -63,240 +66,12 @@ function Subjects({
     sectionsList
 }: {
     user: string
-    sectionsList: any[]
+    sectionsList: Section[]
 }) {
     const [addmodalShow, setAddModalShow] = useState(false);
     const [editModalShow, setEditModalShow] = useState(false);
-    const [sectionInfo, setSectionInfo] = useState({});
-    const [sections, setSections] = useState<any[]>([]);
-    const data = [
-        {
-            academicYear: "2021-2022",
-            gradeLevel: 5,
-            section: "Faith",
-            subjects: [
-                {
-                    subjectName: "English",
-                    time: "8:00 AM - 8:45 AM",
-                    day: "Monday",
-                    room: "Classroom 1A"
-                },
-                {
-                    subjectName: "Math",
-                    time: "9:00 AM - 9:45 AM",
-                    day: "Monday",
-                    room: "Classroom 1A"
-                },
-                {
-                    subjectName: "Science",
-                    time: "10:00 AM - 10:45 AM",
-                    day: "Tuesday",
-                    room: "Science Lab"
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    time: "11:00 AM - 11:45 AM",
-                    day: "Tuesday",
-                    room: "Gymnasium"
-                },
-                {
-                    subjectName: "Music",
-                    time: "9:00 AM - 9:45 AM",
-                    day: "Wednesday",
-                    room: "Music Room"
-                },
-                {
-                    subjectName: "Social Studies",
-                    time: " 11:00 AM - 11:45 AM",
-                    day: "Wednesday",
-                    room: "Classroom 1A"
-                },
-                {
-                    subjectName: "Computer Science",
-                    time: " 11:00 AM - 11:45 AM",
-                    day: "Thursday",
-                    room: "Computer Lab"
-                },
-                {
-                    subjectName: "Library",
-                    time: "8:00 AM - 8:45 AM",
-                    day: "Friday",
-                    room: "Library"
-                }
-            ],
-            grades: [
-                {
-                    subjectName: "english",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "physical education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "social studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        },
-        {
-            academicYear: "2022-2023",
-            gradeLevel: 6,
-            section: "Peace",
-            subjects: [
-                {
-                    subjectName: "english",
-                    time: "8:00 AM - 8:45 AM",
-                    day: "Monday",
-                    room: "Classroom 1A"
-                },
-                {
-                    subjectName: "math",
-                    time: "9:00 AM - 9:45 AM",
-                    day: "Monday",
-                    room: "Classroom 1A"
-                },
-                {
-                    subjectName: "science",
-                    time: "10:00 AM - 10:45 AM",
-                    day: "Tuesday",
-                    room: "Science Lab"
-                },
-                {
-                    subjectName: "Physical Education (PE)",
-                    time: "11:00 AM - 11:45 AM",
-                    day: "Tuesday",
-                    room: "Gymnasium"
-                },
-                {
-                    subjectName: "Music",
-                    time: "9:00 AM - 9:45 AM",
-                    day: "Wednesday",
-                    room: "Music Room"
-                },
-                {
-                    subjectName: "Social Studies",
-                    time: " 11:00 AM - 11:45 AM",
-                    day: "Wednesday",
-                    room: "Classroom 1A"
-                },
-                {
-                    subjectName: "Computer Science",
-                    time: " 11:00 AM - 11:45 AM",
-                    day: "Thursday",
-                    room: "Computer Lab"
-                },
-                {
-                    subjectName: "Library",
-                    time: "8:00 AM - 8:45 AM",
-                    day: "Friday",
-                    room: "Library"
-                }
-            ],
-            grades: [
-                {
-                    subjectName: "english",
-                    firstQuarter: 85,
-                    secondQuarter: 88,
-                    thirdQuarter: 90,
-                    fourthQuarter: 92
-                },
-                {
-                    subjectName: "math",
-                    firstQuarter: 90,
-                    secondQuarter: 88,
-                    thirdQuarter: 85,
-                    fourthQuarter: 88
-                },
-                {
-                    subjectName: "science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "physical education (PE)",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "music",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "social studies",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Computer Science",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                },
-                {
-                    subjectName: "Library",
-                    firstQuarter: 78,
-                    secondQuarter: 80,
-                    thirdQuarter: 82,
-                    fourthQuarter: 85
-                }
-            ]
-        }
-    ];
+    const [sectionInfo, setSectionInfo] = useState<Section | Record<string, any>>({});
+    const [sections, setSections] = useState<Section[]>([]);
 
     useEffect(() => {
         setSections(sectionsList);

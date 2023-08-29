@@ -5,7 +5,9 @@ import Form from "react-bootstrap/Form";
 // Utilities
 import { getAcademicYear } from "@/utils/date/date";
 
-function SectionHandle() {
+import { SectionHandle } from "@/types/global";
+
+function SectionHandle({ sectionHandle }: { sectionHandle: SectionHandle }) {
     return (
         <div>
             <p className="fw-bold">Section Handle</p>
@@ -13,7 +15,7 @@ function SectionHandle() {
                 <Form.Control
                     type={"number"}
                     name={"gradeLevel"}
-                    value={6}
+                    defaultValue={sectionHandle.currentGradeLevel}
                     placeholder={"Enter grade level"}
                     disabled={true}
                 />
@@ -22,7 +24,7 @@ function SectionHandle() {
                 <Form.Control
                     type={"text"}
                     name={"section"}
-                    value={"Peace"}
+                    defaultValue={sectionHandle.currentSection}
                     placeholder={"Enter section"}
                     disabled={true}
                 />

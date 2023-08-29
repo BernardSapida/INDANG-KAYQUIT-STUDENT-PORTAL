@@ -29,7 +29,7 @@ export const getServerSideProps: GetServerSideProps = async (
         }
 
         const studentProfileResponse: ProfileResponse = await fetchStudentProfile(session.user.email);
-        const { enrollmentDetails: { currentGradeLevel, currentSection, academicYear } }: Student = studentProfileResponse.data;
+        const { enrollmentDetails: { currentGradeLevel, currentSection, academicYear } }: Student = studentProfileResponse.data!;
         const announcementsResponse = await fetchAnnouncements(currentGradeLevel, currentSection, academicYear);
 
         return {

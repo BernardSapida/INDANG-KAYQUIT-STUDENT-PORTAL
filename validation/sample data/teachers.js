@@ -1,24 +1,24 @@
 db.teachers.insertOne({
     personalDetails: {
-        fullname: "John Doe",
-        birthdate: "1995-01-15",
+        fullname: "Bernard Sapida",
+        birthdate: "2002-12-17",
         sex: "Male",
         religion: "Christianity",
         civilStatus: "Single",
     },
     sectionHandle: {
-        currentGradeLevel: 10,
-        currentSection: "A",
-        academicYear: 2023
+        currentGradeLevel: "6",
+        currentSection: "Narra",
+        academicYear: "2023-2024"
     },
     contactDetails: {
         address: "123 Main St, City",
-        contactNumber: "555-123-4567"
+        contactNumber: "09472126029"
     },
-    kayquitGoogleAccount: {
-        kayquitAccount: "johndoe@example.com",
+    kayquitAccount: {
+        email: "bernard.sapida@teacher.kayquit.edu.ph",
         defaultPassword: "password123",
-        password: "password123"
+        password: "$2b$10$t1q6HnTmeyAH2PA3fqx/7unhUe.mrJhXXcWkPtW6/uTgDeqRA7Hzm"
     },
     createdAt: new Date(),
     updatedAt: new Date()

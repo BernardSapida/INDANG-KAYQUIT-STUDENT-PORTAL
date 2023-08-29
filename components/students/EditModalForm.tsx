@@ -26,13 +26,14 @@ import { initialValues, validationSchema } from "@/helpers/teacher/students/Form
 import Ripples from 'react-ripples'
 
 // Components
-import PersonalDetails from "@/components/teacher/students/PersonalDetails";
-import EnrollmentDetails from "@/components/teacher/students/EnrollmentDetails";
-import ContactDetails from "@/components/teacher/students/ContactDetails";
-import KayquitGoogleAccount from "@/components/teacher/students/KayquitGoogleAccount";
+import PersonalDetails from "@/components/students/PersonalDetails";
+import EnrollmentDetails from "@/components/students/EnrollmentDetails";
+import ContactDetails from "@/components/students/ContactDetails";
+import KayquitGoogleAccount from "@/components/students/KayquitGoogleAccount";
 
 // CSS
 import style from "@/public/css/teacher-modal.module.css";
+import { Student } from "@/types/global";
 
 function ModalForm({
     modalShow,
@@ -41,7 +42,7 @@ function ModalForm({
 }: {
     modalShow: boolean;
     setModalShow: Dispatch<SetStateAction<boolean>>;
-    student: Record<string, any>
+    student: Student | Record<string, any>;
 }) {
     const [loading, setLoading] = useState<boolean>(false);
 
@@ -65,26 +66,9 @@ function ModalForm({
         },
         { resetForm }: { resetForm: any }
     ) => {
-        const {
-            fullname,
-            sex,
-            birthdate,
-            religion,
-            civilStatus,
-            gradeLevel,
-            section,
-            studentLRN,
-            studentNumber,
-            academicYear,
-            address,
-            contactNumber,
-            guardian,
-            email,
-            defaultPassword,
-        } = values;
 
         setLoading(true);
-        const StudentInformation = {
+        const StudentInformation: Student = {
             personalDetails: {
                 fullname: values.fullname,
                 birthdate: values.birthdate,
@@ -117,8 +101,8 @@ function ModalForm({
         setTimeout(() => setLoading(false), 2000);
     };
 
-    const updateInformation = async (studentInformation: Record<string, any>) => {
-        const res = await axios.post(
+    const updateInformation = async (studentInformation: Student) => {
+        const response = await axios.post(
             `/api/v1/teacher/update/student-information`,
             {
                 _id: student._id,

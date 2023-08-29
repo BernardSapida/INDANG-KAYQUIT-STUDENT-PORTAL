@@ -26,7 +26,7 @@ export default async function handler(
 
         // Current Password validation
 
-        const data = await db.collection("students").updateOne(
+        const data = await db.collection("teachers").updateOne(
             {
                 "kayquitAccount.email": { $eq: email },
             },

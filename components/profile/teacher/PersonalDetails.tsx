@@ -4,7 +4,9 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-function PersonalDetails() {
+import { PersonalDetails } from "@/types/global";
+
+function PersonalDetails({ personalDetails }: { personalDetails: PersonalDetails }) {
     return (
         <div>
             <p className="fw-bold">Personal Details</p>
@@ -22,10 +24,10 @@ function PersonalDetails() {
                 </Col>
                 <Col sm={12} md={6}>
                     <FloatingLabel className="mb-3 w-100" label={"Sex"}>
-                        <Form.Select disabled={true}>
-                            <option value="">--- Choose sex ---</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
+                        <Form.Select defaultValue={personalDetails?.sex} disabled={true}>
+                            <option value="">--- Choose sex {personalDetails?.sex} ---</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
                         </Form.Select>
                     </FloatingLabel>
                 </Col>

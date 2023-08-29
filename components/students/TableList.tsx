@@ -13,46 +13,47 @@ import Ripples from 'react-ripples'
 
 // React-Icons
 import { FaEdit } from 'react-icons/fa';
+import { Student } from "@/types/global";
 
 function TableList({
     studentList,
     setStudent,
     setModalShow
 }: {
-    studentList: any[];
-    setStudent: Dispatch<SetStateAction<{}>>;
+    studentList: Student[];
+    setStudent: Dispatch<SetStateAction<Student | Record<string, any>>>;
     setModalShow: Dispatch<SetStateAction<boolean>>;
 }) {
     const [tableLoading, setLoadingTable] = useState<boolean>(false);
     const table_columns = [
         {
             name: "Full Name",
-            selector: (row: Record<any, any>) => row.personalDetails?.fullname,
+            selector: (student: Student) => student.personalDetails?.fullname,
             sortable: true,
         },
         {
             name: "Grade & Section",
-            selector: (row: Record<any, any>) => `${row.enrollmentDetails.currentGradeLevel} - ${row.enrollmentDetails.currentSection}`,
+            selector: (student: Student) => `${student.enrollmentDetails.currentGradeLevel} - ${student.enrollmentDetails.currentSection}`,
             sortable: true,
         },
         {
             name: "Student LRN",
-            selector: (row: Record<any, any>) => row.enrollmentDetails.lrn,
+            selector: (student: Student) => student.enrollmentDetails.lrn,
         },
         {
             name: "Student Number",
-            selector: (row: Record<any, any>) => row.enrollmentDetails.studentNumber,
+            selector: (student: Student) => student.enrollmentDetails.studentNumber,
         },
         {
             name: "Actions",
             button: true,
-            cell: (row: Record<any, any>) => (
+            cell: (student: Student) => (
                 <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="d-grid rounded">
                     <Button
                         size="sm"
                         variant="dark"
                         onClick={() => {
-                            setStudent(row);
+                            setStudent(student);
                             setModalShow(true);
                         }}
                     >
@@ -61,59 +62,6 @@ function TableList({
                 </Ripples>
 
             ),
-        }
-    ];
-    const data = [
-        {
-            fullname: "Bernard Sapida",
-            sex: "male",
-            birthdate: "2002-12-17",
-            religion: "roman_catholicism",
-            civilStatus: "single",
-            gradeLevel: "6",
-            section: "Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202308493",
-            academicYear: "2023",
-            address: "Imus, Cavite",
-            contactNumber: "09472126029",
-            guardian: "Shyvana R. Dragonite",
-            kayquitEmailAccount: "bernard.sapida@kayquit.edu.ph",
-            temporaryPassword: "K1xa041ke"
-        },
-        {
-            fullname: "Charlie Sapida",
-            sex: "male",
-            birthdate: "2002-12-17",
-            religion: "roman_catholicism",
-            civilStatus: "single",
-            gradeLevel: "6",
-            section: "Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202308493",
-            academicYear: "2023",
-            address: "Imus, Cavite",
-            contactNumber: "09472126029",
-            guardian: "Shyvana R. Dragonite",
-            kayquitEmailAccount: "bernard.sapida@kayquit.edu.ph",
-            temporaryPassword: "K1xa041ke"
-        },
-        {
-            fullname: "Coby Sapida",
-            sex: "male",
-            birthdate: "2002-12-17",
-            religion: "roman_catholicism",
-            civilStatus: "single",
-            gradeLevel: "6",
-            section: "Peace",
-            studentLRN: "12345678910",
-            studentNumber: "202308493",
-            academicYear: "2023",
-            address: "Imus, Cavite",
-            contactNumber: "09472126029",
-            guardian: "Shyvana R. Dragonite",
-            kayquitEmailAccount: "bernard.sapida@kayquit.edu.ph",
-            temporaryPassword: "K1xa041ke"
         }
     ];
 

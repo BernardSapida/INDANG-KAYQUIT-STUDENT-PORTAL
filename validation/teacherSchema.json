@@ -7,9 +7,9 @@
         "civilStatus": "String"
     },
     "sectionHandle": {
-        "currentGradeLevel": "number",
+        "currentGradeLevel": "string",
         "currentSection": "string",
-        "academicYear": "number"
+        "academicYear": "string"
     },
     "contactDetails": {
         "address": "String",

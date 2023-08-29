@@ -1,7 +1,8 @@
 /**
- * ? Connect to database
- * ? Teachers - Students Reports
- * ? Students
-
- Subjects:
+    Teacher Side:
+        Sections (Filtered by academic year)
+        Student Grade Validation
+        Add new Student w/ validation
+        Edit student validation
+        Change Password Validation
 */

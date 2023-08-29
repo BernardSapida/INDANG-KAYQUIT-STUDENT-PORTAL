@@ -76,7 +76,9 @@ function ModalForm({
             email,
             defaultPassword,
         } = values;
+
         setLoading(true);
+
         const StudentInformation = {
             personalDetails: {
                 fullname: values.fullname,
