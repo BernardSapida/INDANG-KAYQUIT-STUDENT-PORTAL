@@ -61,7 +61,12 @@ export const getServerSideProps: GetServerSideProps = async (
 
 function Students({ studentList }: { studentList: Student[] }) {
     const [modalShow, setModalShow] = useState<boolean>(false);
-    const [student, setStudent] = useState<Student | Record<string, any>>({});
+    const [student, setStudent] = useState<Student>(studentList[0]);
+    const [students, setStudents] = useState<Student[]>([]);
+
+    useEffect(() => setStudents(studentList), [studentList]);
+
+    console.log(studentList)
 
     return (
         <div className="mb-5">
@@ -81,11 +86,15 @@ function Students({ studentList }: { studentList: Student[] }) {
                         />
                     </InputGroup>
                 </div>
-                <TableList studentList={studentList} setModalShow={setModalShow} setStudent={setStudent} />
+                <TableList
+                    studentList={studentList}
+                    setModalShow={setModalShow}
+                    setStudent={setStudent}
+                />
             </div>
             <ModalForm
                 student={student}
-                setStudent={setStudent}
+                setStudents={setStudents}
                 modalShow={modalShow}
                 setModalShow={setModalShow}
             />

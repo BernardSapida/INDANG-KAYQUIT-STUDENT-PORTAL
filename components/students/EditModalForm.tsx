@@ -34,15 +34,18 @@ import KayquitGoogleAccount from "@/components/students/KayquitGoogleAccount";
 // CSS
 import style from "@/public/css/teacher-modal.module.css";
 import { Student } from "@/types/global";
+import { Alert } from "@/utils/alert/Alert";
 
 function ModalForm({
     modalShow,
     setModalShow,
+    setStudents,
     student
 }: {
     modalShow: boolean;
     setModalShow: Dispatch<SetStateAction<boolean>>;
-    student: Student | Record<string, any>;
+    setStudents: Dispatch<SetStateAction<Student[]>>;
+    student: Student;
 }) {
     const [loading, setLoading] = useState<boolean>(false);
 
@@ -66,39 +69,65 @@ function ModalForm({
         },
         { resetForm }: { resetForm: any }
     ) => {
+        try {
+            setLoading(true);
+            const studentInfo: Student = {
+                personalDetails: {
+                    fullname: values.fullname,
+                    birthdate: values.birthdate,
+                    sex: values.sex,
+                    religion: values.religion,
+                    civilStatus: values.civilStatus
+                },
+                enrollmentDetails: {
+                    currentGradeLevel: values.gradeLevel,
+                    currentSection: values.section,
+                    lrn: values.studentLRN,
+                    studentNumber: values.studentNumber,
+                    academicYear: values.academicYear
+                },
+                contactDetails: {
+                    address: values.address,
+                    guardian: values.guardian,
+                    contactNumber: values.contactNumber,
+                },
+                kayquitAccount: {
+                    email: values.email,
+                    defaultPassword: values.defaultPassword,
+                    password: student.kayquitAccount.password
+                },
+            }
 
-        setLoading(true);
-        const StudentInformation: Student = {
-            personalDetails: {
-                fullname: values.fullname,
-                birthdate: values.birthdate,
-                sex: values.sex,
-                religion: values.religion,
-                civilStatus: values.civilStatus
-            },
-            enrollmentDetails: {
-                currentGradeLevel: values.gradeLevel,
-                currentSection: values.section,
-                lrn: values.studentLRN,
-                studentNumber: values.studentNumber,
-                academicYear: values.academicYear
-            },
-            contactDetails: {
-                address: values.address,
-                guardian: values.guardian,
-                contactNumber: values.contactNumber,
-            },
-            kayquitAccount: {
-                email: values.email,
-                defaultPassword: values.defaultPassword,
-                password: student.kayquitAccount.password
-            },
+            // Save to database
+            await updateInformation(studentInfo)
+
+            setStudents((prevStudents: Student[]) => (
+                prevStudents.map((currentStudent: Student) => {
+                    if (student._id == currentStudent._id) {
+                        currentStudent = studentInfo;
+                    }
+
+                    return currentStudent;
+                })
+            ));
+
+            setLoading(false);
+
+            Alert(
+                "Success!",
+                "Student profile successfully updated",
+                "success",
+                "Thank you!"
+            );
+        } catch (error) {
+            Alert(
+                "There was an error",
+                "Please contact the administrator",
+                "error"
+            );
+
+            console.log(error);
         }
-
-        // Save to database
-        updateInformation(StudentInformation)
-
-        setTimeout(() => setLoading(false), 2000);
     };
 
     const updateInformation = async (studentInformation: Student) => {

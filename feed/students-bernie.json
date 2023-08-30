@@ -1,0 +1,1436 @@
+[
+  {
+    "_id": {
+      "$oid": "64e451168a6ca6fdbb363de1"
+    },
+    "personalDetails": {
+      "fullname": "Jullianne Cabagay",
+      "birthdate": "2013-05-09",
+      "sex": "Female",
+      "religion": "Christianity",
+      "civilStatus": "Single"
+    },
+    "enrollmentDetails": {
+      "currentGradeLevel": "6",
+      "currentSection": "Narra",
+      "lrn": "202102231",
+      "studentNumber": "202309942000",
+      "academicYear": "2023-2024"
+    },
+    "classes": [
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363fa7"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 99,
+            "secondQuarter": 99,
+            "thirdQuarter": 98,
+            "fourthQuarter": 99
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 85,
+            "secondQuarter": 75,
+            "thirdQuarter": 91,
+            "fourthQuarter": 93
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 87,
+            "secondQuarter": 90,
+            "thirdQuarter": 94,
+            "fourthQuarter": 87
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 89,
+            "secondQuarter": 95,
+            "thirdQuarter": 89,
+            "fourthQuarter": 79
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 85,
+            "secondQuarter": 98,
+            "thirdQuarter": 85,
+            "fourthQuarter": 86
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 82,
+            "secondQuarter": 98,
+            "thirdQuarter": 75,
+            "fourthQuarter": 99
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 84,
+            "secondQuarter": 85,
+            "thirdQuarter": 84,
+            "fourthQuarter": 91
+          },
+          {
+            "subjectName": "Mapeh",
+            "firstQuarter": 90,
+            "secondQuarter": 90,
+            "thirdQuarter": 90,
+            "fourthQuarter": 0
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 90,
+            "secondQuarter": 90,
+            "thirdQuarter": 90,
+            "fourthQuarter": 0
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363fb6"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 97,
+            "secondQuarter": 88,
+            "thirdQuarter": 78,
+            "fourthQuarter": 84
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 97,
+            "secondQuarter": 81,
+            "thirdQuarter": 89,
+            "fourthQuarter": 82
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 76,
+            "secondQuarter": 99,
+            "thirdQuarter": 87,
+            "fourthQuarter": 95
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 87,
+            "secondQuarter": 98,
+            "thirdQuarter": 95,
+            "fourthQuarter": 98
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 84,
+            "secondQuarter": 82,
+            "thirdQuarter": 77,
+            "fourthQuarter": 85
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 78,
+            "secondQuarter": 93,
+            "thirdQuarter": 90,
+            "fourthQuarter": 85
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 83,
+            "secondQuarter": 80,
+            "thirdQuarter": 88,
+            "fourthQuarter": 98
+          },
+          {
+            "subjectName": "MAPEH",
+            "firstQuarter": 81,
+            "secondQuarter": 80,
+            "thirdQuarter": 76,
+            "fourthQuarter": 84
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 99,
+            "secondQuarter": 80,
+            "thirdQuarter": 94,
+            "fourthQuarter": 89
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363fc7"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 78,
+            "secondQuarter": 96,
+            "thirdQuarter": 90,
+            "fourthQuarter": 97
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 86,
+            "secondQuarter": 99,
+            "thirdQuarter": 88,
+            "fourthQuarter": 88
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 80,
+            "secondQuarter": 95,
+            "thirdQuarter": 78,
+            "fourthQuarter": 95
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 85,
+            "secondQuarter": 83,
+            "thirdQuarter": 86,
+            "fourthQuarter": 83
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 82,
+            "secondQuarter": 83,
+            "thirdQuarter": 88,
+            "fourthQuarter": 93
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 77,
+            "secondQuarter": 90,
+            "thirdQuarter": 84,
+            "fourthQuarter": 91
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 75,
+            "secondQuarter": 99,
+            "thirdQuarter": 98,
+            "fourthQuarter": 87
+          },
+          {
+            "subjectName": "MAPEH",
+            "firstQuarter": 87,
+            "secondQuarter": 98,
+            "thirdQuarter": 77,
+            "fourthQuarter": 87
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 92,
+            "secondQuarter": 78,
+            "thirdQuarter": 78,
+            "fourthQuarter": 93
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363fd6"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 84,
+            "secondQuarter": 92,
+            "thirdQuarter": 84,
+            "fourthQuarter": 84
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 92,
+            "secondQuarter": 95,
+            "thirdQuarter": 98,
+            "fourthQuarter": 84
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 90,
+            "secondQuarter": 87,
+            "thirdQuarter": 89,
+            "fourthQuarter": 76
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 90,
+            "secondQuarter": 93,
+            "thirdQuarter": 79,
+            "fourthQuarter": 76
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 85,
+            "secondQuarter": 82,
+            "thirdQuarter": 89,
+            "fourthQuarter": 89
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 87,
+            "secondQuarter": 88,
+            "thirdQuarter": 92,
+            "fourthQuarter": 97
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 87,
+            "secondQuarter": 97,
+            "thirdQuarter": 85,
+            "fourthQuarter": 93
+          },
+          {
+            "subjectName": "MAPEH",
+            "firstQuarter": 76,
+            "secondQuarter": 79,
+            "thirdQuarter": 96,
+            "fourthQuarter": 76
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 93,
+            "secondQuarter": 81,
+            "thirdQuarter": 90,
+            "fourthQuarter": 86
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363fe7"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 75,
+            "secondQuarter": 92,
+            "thirdQuarter": 75,
+            "fourthQuarter": 82
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 77,
+            "secondQuarter": 90,
+            "thirdQuarter": 77,
+            "fourthQuarter": 81
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 78,
+            "secondQuarter": 98,
+            "thirdQuarter": 84,
+            "fourthQuarter": 92
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 84,
+            "secondQuarter": 88,
+            "thirdQuarter": 81,
+            "fourthQuarter": 90
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 93,
+            "secondQuarter": 99,
+            "thirdQuarter": 77,
+            "fourthQuarter": 91
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 98,
+            "secondQuarter": 85,
+            "thirdQuarter": 77,
+            "fourthQuarter": 86
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 81,
+            "secondQuarter": 88,
+            "thirdQuarter": 79,
+            "fourthQuarter": 90
+          },
+          {
+            "subjectName": "MAPEH",
+            "firstQuarter": 84,
+            "secondQuarter": 92,
+            "thirdQuarter": 90,
+            "fourthQuarter": 96
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 80,
+            "secondQuarter": 78,
+            "thirdQuarter": 89,
+            "fourthQuarter": 96
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363ff6"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 80,
+            "secondQuarter": 83,
+            "thirdQuarter": 84,
+            "fourthQuarter": 77
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 85,
+            "secondQuarter": 90,
+            "thirdQuarter": 93,
+            "fourthQuarter": 83
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 79,
+            "secondQuarter": 78,
+            "thirdQuarter": 99,
+            "fourthQuarter": 81
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 77,
+            "secondQuarter": 83,
+            "thirdQuarter": 89,
+            "fourthQuarter": 76
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 75,
+            "secondQuarter": 83,
+            "thirdQuarter": 85,
+            "fourthQuarter": 86
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 92,
+            "secondQuarter": 95,
+            "thirdQuarter": 94,
+            "fourthQuarter": 84
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 97,
+            "secondQuarter": 98,
+            "thirdQuarter": 78,
+            "fourthQuarter": 93
+          },
+          {
+            "subjectName": "MAPEH",
+            "firstQuarter": 87,
+            "secondQuarter": 78,
+            "thirdQuarter": 93,
+            "fourthQuarter": 90
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 83,
+            "secondQuarter": 96,
+            "thirdQuarter": 94,
+            "fourthQuarter": 86
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb364007"
+        },
+        "grades": [
+          {
+            "subjectName": "Computer Science",
+            "firstQuarter": 0,
+            "secondQuarter": 0,
+            "thirdQuarter": 0,
+            "fourthQuarter": 0
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 0,
+            "secondQuarter": 0,
+            "thirdQuarter": 0,
+            "fourthQuarter": 0
+          }
+        ]
+      }
+    ],
+    "contactDetails": {
+      "address": "Imus, Cavite",
+      "guardian": "Shyvana Dragonite",
+      "contactNumber": "09478193497"
+    },
+    "kayquitAccount": {
+      "email": "jullianne.sapida@kayquit.edu.ph",
+      "defaultPassword": "@Password123",
+      "password": "$2b$10$t1q6HnTmeyAH2PA3fqx/7unhUe.mrJhXXcWkPtW6/uTgDeqRA7Hzm"
+    },
+    "createdAt": {
+      "$date": "2023-08-23T12:13:24.529Z"
+    },
+    "updatedAt": {
+      "$date": "2023-08-23T12:13:24.529Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64e5f7f32dd718605acbe00b"
+    },
+    "personalDetails": {
+      "fullname": "Kylie Sapida",
+      "birthdate": "2013-05-09",
+      "sex": "Female",
+      "religion": "Christianity",
+      "civilStatus": "Single"
+    },
+    "enrollmentDetails": {
+      "currentGradeLevel": "6",
+      "currentSection": "Narra",
+      "lrn": "202102231",
+      "studentNumber": "202309942000",
+      "academicYear": "2023-2024"
+    },
+    "classes": [
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363fa7"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 99,
+            "secondQuarter": 99,
+            "thirdQuarter": 98,
+            "fourthQuarter": 99
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 85,
+            "secondQuarter": 75,
+            "thirdQuarter": 91,
+            "fourthQuarter": 93
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 87,
+            "secondQuarter": 90,
+            "thirdQuarter": 94,
+            "fourthQuarter": 87
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 89,
+            "secondQuarter": 95,
+            "thirdQuarter": 89,
+            "fourthQuarter": 79
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 85,
+            "secondQuarter": 98,
+            "thirdQuarter": 85,
+            "fourthQuarter": 86
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 82,
+            "secondQuarter": 98,
+            "thirdQuarter": 75,
+            "fourthQuarter": 99
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 84,
+            "secondQuarter": 85,
+            "thirdQuarter": 84,
+            "fourthQuarter": 91
+          },
+          {
+            "subjectName": "Mapeh",
+            "firstQuarter": 0,
+            "secondQuarter": 0,
+            "thirdQuarter": 0,
+            "fourthQuarter": 0
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 0,
+            "secondQuarter": 0,
+            "thirdQuarter": 0,
+            "fourthQuarter": 0
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363fb6"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 97,
+            "secondQuarter": 88,
+            "thirdQuarter": 78,
+            "fourthQuarter": 84
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 97,
+            "secondQuarter": 81,
+            "thirdQuarter": 89,
+            "fourthQuarter": 82
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 76,
+            "secondQuarter": 99,
+            "thirdQuarter": 87,
+            "fourthQuarter": 95
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 87,
+            "secondQuarter": 98,
+            "thirdQuarter": 95,
+            "fourthQuarter": 98
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 84,
+            "secondQuarter": 82,
+            "thirdQuarter": 77,
+            "fourthQuarter": 85
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 78,
+            "secondQuarter": 93,
+            "thirdQuarter": 90,
+            "fourthQuarter": 85
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 83,
+            "secondQuarter": 80,
+            "thirdQuarter": 88,
+            "fourthQuarter": 98
+          },
+          {
+            "subjectName": "MAPEH",
+            "firstQuarter": 81,
+            "secondQuarter": 80,
+            "thirdQuarter": 76,
+            "fourthQuarter": 84
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 99,
+            "secondQuarter": 80,
+            "thirdQuarter": 94,
+            "fourthQuarter": 89
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363fc7"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 78,
+            "secondQuarter": 96,
+            "thirdQuarter": 90,
+            "fourthQuarter": 97
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 86,
+            "secondQuarter": 99,
+            "thirdQuarter": 88,
+            "fourthQuarter": 88
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 80,
+            "secondQuarter": 95,
+            "thirdQuarter": 78,
+            "fourthQuarter": 95
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 85,
+            "secondQuarter": 83,
+            "thirdQuarter": 86,
+            "fourthQuarter": 83
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 82,
+            "secondQuarter": 83,
+            "thirdQuarter": 88,
+            "fourthQuarter": 93
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 77,
+            "secondQuarter": 90,
+            "thirdQuarter": 84,
+            "fourthQuarter": 91
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 75,
+            "secondQuarter": 99,
+            "thirdQuarter": 98,
+            "fourthQuarter": 87
+          },
+          {
+            "subjectName": "MAPEH",
+            "firstQuarter": 87,
+            "secondQuarter": 98,
+            "thirdQuarter": 77,
+            "fourthQuarter": 87
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 92,
+            "secondQuarter": 78,
+            "thirdQuarter": 78,
+            "fourthQuarter": 93
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363fd6"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 84,
+            "secondQuarter": 92,
+            "thirdQuarter": 84,
+            "fourthQuarter": 84
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 92,
+            "secondQuarter": 95,
+            "thirdQuarter": 98,
+            "fourthQuarter": 84
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 90,
+            "secondQuarter": 87,
+            "thirdQuarter": 89,
+            "fourthQuarter": 76
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 90,
+            "secondQuarter": 93,
+            "thirdQuarter": 79,
+            "fourthQuarter": 76
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 85,
+            "secondQuarter": 82,
+            "thirdQuarter": 89,
+            "fourthQuarter": 89
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 87,
+            "secondQuarter": 88,
+            "thirdQuarter": 92,
+            "fourthQuarter": 97
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 87,
+            "secondQuarter": 97,
+            "thirdQuarter": 85,
+            "fourthQuarter": 93
+          },
+          {
+            "subjectName": "MAPEH",
+            "firstQuarter": 76,
+            "secondQuarter": 79,
+            "thirdQuarter": 96,
+            "fourthQuarter": 76
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 93,
+            "secondQuarter": 81,
+            "thirdQuarter": 90,
+            "fourthQuarter": 86
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363fe7"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 99,
+            "secondQuarter": 92,
+            "thirdQuarter": 75,
+            "fourthQuarter": 82
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 77,
+            "secondQuarter": 90,
+            "thirdQuarter": 77,
+            "fourthQuarter": 81
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 78,
+            "secondQuarter": 98,
+            "thirdQuarter": 84,
+            "fourthQuarter": 92
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 84,
+            "secondQuarter": 88,
+            "thirdQuarter": 81,
+            "fourthQuarter": 90
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 93,
+            "secondQuarter": 99,
+            "thirdQuarter": 77,
+            "fourthQuarter": 91
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 98,
+            "secondQuarter": 85,
+            "thirdQuarter": 77,
+            "fourthQuarter": 86
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 81,
+            "secondQuarter": 88,
+            "thirdQuarter": 79,
+            "fourthQuarter": 90
+          },
+          {
+            "subjectName": "MAPEH",
+            "firstQuarter": 84,
+            "secondQuarter": 92,
+            "thirdQuarter": 90,
+            "fourthQuarter": 96
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 80,
+            "secondQuarter": 78,
+            "thirdQuarter": 89,
+            "fourthQuarter": 96
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363ff6"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 80,
+            "secondQuarter": 83,
+            "thirdQuarter": 84,
+            "fourthQuarter": 77
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 85,
+            "secondQuarter": 90,
+            "thirdQuarter": 93,
+            "fourthQuarter": 83
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 79,
+            "secondQuarter": 78,
+            "thirdQuarter": 99,
+            "fourthQuarter": 81
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 77,
+            "secondQuarter": 83,
+            "thirdQuarter": 89,
+            "fourthQuarter": 76
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 75,
+            "secondQuarter": 83,
+            "thirdQuarter": 85,
+            "fourthQuarter": 86
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 92,
+            "secondQuarter": 95,
+            "thirdQuarter": 94,
+            "fourthQuarter": 84
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 97,
+            "secondQuarter": 98,
+            "thirdQuarter": 78,
+            "fourthQuarter": 93
+          },
+          {
+            "subjectName": "MAPEH",
+            "firstQuarter": 87,
+            "secondQuarter": 78,
+            "thirdQuarter": 93,
+            "fourthQuarter": 90
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 83,
+            "secondQuarter": 96,
+            "thirdQuarter": 94,
+            "fourthQuarter": 86
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb364007"
+        },
+        "grades": [
+          {
+            "subjectName": "Computer Science",
+            "firstQuarter": 0,
+            "secondQuarter": 0,
+            "thirdQuarter": 0,
+            "fourthQuarter": 0
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 0,
+            "secondQuarter": 0,
+            "thirdQuarter": 0,
+            "fourthQuarter": 0
+          }
+        ]
+      }
+    ],
+    "contactDetails": {
+      "address": "Imus, Cavite",
+      "guardian": "Shyvana Dragonite",
+      "contactNumber": "09478193497"
+    },
+    "kayquitAccount": {
+      "email": "kylie.sapida@kayquit.edu.ph",
+      "defaultPassword": "@Password123",
+      "password": "$2b$10$t1q6HnTmeyAH2PA3fqx/7unhUe.mrJhXXcWkPtW6/uTgDeqRA7Hzm"
+    },
+    "createdAt": {
+      "$date": "2023-08-23T12:13:39.028Z"
+    },
+    "updatedAt": {
+      "$date": "2023-08-23T12:13:39.028Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64e5f8c62dd718605acbe00c"
+    },
+    "personalDetails": {
+      "fullname": "Bernard Sapida",
+      "birthdate": "2013-05-09",
+      "sex": "Female",
+      "religion": "Christianity",
+      "civilStatus": "Single"
+    },
+    "enrollmentDetails": {
+      "currentGradeLevel": "6",
+      "currentSection": "Narra",
+      "lrn": "202102231",
+      "studentNumber": "202309942000",
+      "academicYear": "2023-2024"
+    },
+    "classes": [
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363fa7"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 97,
+            "secondQuarter": 88,
+            "thirdQuarter": 71,
+            "fourthQuarter": 84
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 97,
+            "secondQuarter": 81,
+            "thirdQuarter": 89,
+            "fourthQuarter": 82
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 76,
+            "secondQuarter": 99,
+            "thirdQuarter": 87,
+            "fourthQuarter": 95
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 87,
+            "secondQuarter": 98,
+            "thirdQuarter": 95,
+            "fourthQuarter": 98
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 84,
+            "secondQuarter": 82,
+            "thirdQuarter": 77,
+            "fourthQuarter": 85
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 78,
+            "secondQuarter": 93,
+            "thirdQuarter": 90,
+            "fourthQuarter": 85
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 83,
+            "secondQuarter": 80,
+            "thirdQuarter": 88,
+            "fourthQuarter": 98
+          },
+          {
+            "subjectName": "MAPEH",
+            "firstQuarter": 81,
+            "secondQuarter": 80,
+            "thirdQuarter": 76,
+            "fourthQuarter": 84
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 99,
+            "secondQuarter": 80,
+            "thirdQuarter": 94,
+            "fourthQuarter": 89
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363fb6"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 97,
+            "secondQuarter": 88,
+            "thirdQuarter": 71,
+            "fourthQuarter": 84
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 97,
+            "secondQuarter": 81,
+            "thirdQuarter": 89,
+            "fourthQuarter": 82
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 76,
+            "secondQuarter": 99,
+            "thirdQuarter": 87,
+            "fourthQuarter": 95
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 87,
+            "secondQuarter": 98,
+            "thirdQuarter": 95,
+            "fourthQuarter": 98
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 84,
+            "secondQuarter": 82,
+            "thirdQuarter": 77,
+            "fourthQuarter": 85
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 78,
+            "secondQuarter": 93,
+            "thirdQuarter": 90,
+            "fourthQuarter": 85
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 83,
+            "secondQuarter": 80,
+            "thirdQuarter": 88,
+            "fourthQuarter": 98
+          },
+          {
+            "subjectName": "MAPEH",
+            "firstQuarter": 81,
+            "secondQuarter": 80,
+            "thirdQuarter": 76,
+            "fourthQuarter": 84
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 99,
+            "secondQuarter": 80,
+            "thirdQuarter": 94,
+            "fourthQuarter": 89
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363fc7"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 78,
+            "secondQuarter": 96,
+            "thirdQuarter": 90,
+            "fourthQuarter": 97
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 86,
+            "secondQuarter": 99,
+            "thirdQuarter": 88,
+            "fourthQuarter": 88
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 80,
+            "secondQuarter": 95,
+            "thirdQuarter": 78,
+            "fourthQuarter": 95
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 85,
+            "secondQuarter": 83,
+            "thirdQuarter": 86,
+            "fourthQuarter": 83
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 82,
+            "secondQuarter": 83,
+            "thirdQuarter": 88,
+            "fourthQuarter": 93
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 77,
+            "secondQuarter": 90,
+            "thirdQuarter": 84,
+            "fourthQuarter": 91
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 75,
+            "secondQuarter": 99,
+            "thirdQuarter": 98,
+            "fourthQuarter": 87
+          },
+          {
+            "subjectName": "MAPEH",
+            "firstQuarter": 87,
+            "secondQuarter": 98,
+            "thirdQuarter": 77,
+            "fourthQuarter": 87
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 92,
+            "secondQuarter": 78,
+            "thirdQuarter": 78,
+            "fourthQuarter": 93
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363fd6"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 84,
+            "secondQuarter": 92,
+            "thirdQuarter": 84,
+            "fourthQuarter": 84
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 92,
+            "secondQuarter": 95,
+            "thirdQuarter": 98,
+            "fourthQuarter": 84
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 90,
+            "secondQuarter": 87,
+            "thirdQuarter": 89,
+            "fourthQuarter": 76
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 90,
+            "secondQuarter": 93,
+            "thirdQuarter": 79,
+            "fourthQuarter": 76
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 85,
+            "secondQuarter": 82,
+            "thirdQuarter": 89,
+            "fourthQuarter": 89
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 87,
+            "secondQuarter": 88,
+            "thirdQuarter": 92,
+            "fourthQuarter": 97
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 87,
+            "secondQuarter": 97,
+            "thirdQuarter": 85,
+            "fourthQuarter": 93
+          },
+          {
+            "subjectName": "MAPEH",
+            "firstQuarter": 76,
+            "secondQuarter": 79,
+            "thirdQuarter": 96,
+            "fourthQuarter": 76
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 93,
+            "secondQuarter": 81,
+            "thirdQuarter": 90,
+            "fourthQuarter": 86
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363fe7"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 75,
+            "secondQuarter": 99,
+            "thirdQuarter": 75,
+            "fourthQuarter": 82
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 77,
+            "secondQuarter": 90,
+            "thirdQuarter": 77,
+            "fourthQuarter": 81
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 78,
+            "secondQuarter": 98,
+            "thirdQuarter": 84,
+            "fourthQuarter": 92
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 84,
+            "secondQuarter": 88,
+            "thirdQuarter": 81,
+            "fourthQuarter": 90
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 93,
+            "secondQuarter": 99,
+            "thirdQuarter": 77,
+            "fourthQuarter": 91
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 98,
+            "secondQuarter": 85,
+            "thirdQuarter": 77,
+            "fourthQuarter": 86
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 81,
+            "secondQuarter": 88,
+            "thirdQuarter": 79,
+            "fourthQuarter": 90
+          },
+          {
+            "subjectName": "MAPEH",
+            "firstQuarter": 84,
+            "secondQuarter": 92,
+            "thirdQuarter": 90,
+            "fourthQuarter": 96
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 80,
+            "secondQuarter": 78,
+            "thirdQuarter": 89,
+            "fourthQuarter": 96
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb363ff6"
+        },
+        "grades": [
+          {
+            "subjectName": "English",
+            "firstQuarter": 80,
+            "secondQuarter": 83,
+            "thirdQuarter": 84,
+            "fourthQuarter": 77
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 85,
+            "secondQuarter": 90,
+            "thirdQuarter": 93,
+            "fourthQuarter": 83
+          },
+          {
+            "subjectName": "Filipino",
+            "firstQuarter": 79,
+            "secondQuarter": 78,
+            "thirdQuarter": 99,
+            "fourthQuarter": 81
+          },
+          {
+            "subjectName": "MTB",
+            "firstQuarter": 77,
+            "secondQuarter": 83,
+            "thirdQuarter": 89,
+            "fourthQuarter": 76
+          },
+          {
+            "subjectName": "Araling Panlipunan",
+            "firstQuarter": 75,
+            "secondQuarter": 83,
+            "thirdQuarter": 85,
+            "fourthQuarter": 86
+          },
+          {
+            "subjectName": "ESP",
+            "firstQuarter": 92,
+            "secondQuarter": 95,
+            "thirdQuarter": 94,
+            "fourthQuarter": 84
+          },
+          {
+            "subjectName": "Science",
+            "firstQuarter": 97,
+            "secondQuarter": 98,
+            "thirdQuarter": 78,
+            "fourthQuarter": 93
+          },
+          {
+            "subjectName": "MAPEH",
+            "firstQuarter": 87,
+            "secondQuarter": 78,
+            "thirdQuarter": 93,
+            "fourthQuarter": 90
+          },
+          {
+            "subjectName": "Intermediate",
+            "firstQuarter": 83,
+            "secondQuarter": 96,
+            "thirdQuarter": 94,
+            "fourthQuarter": 86
+          }
+        ]
+      },
+      {
+        "section": {
+          "$oid": "64e4ae628a6ca6fdbb364007"
+        },
+        "grades": [
+          {
+            "subjectName": "Computer Science",
+            "firstQuarter": 98,
+            "secondQuarter": 98,
+            "thirdQuarter": 98,
+            "fourthQuarter": 98
+          },
+          {
+            "subjectName": "Math",
+            "firstQuarter": 98,
+            "secondQuarter": 98,
+            "thirdQuarter": 98,
+            "fourthQuarter": 97
+          }
+        ]
+      }
+    ],
+    "contactDetails": {
+      "address": "Imus, Cavite",
+      "guardian": "Shyvana Dragonite",
+      "contactNumber": "09478193497"
+    },
+    "kayquitAccount": {
+      "email": "bernard.sapida@kayquit.edu.ph",
+      "defaultPassword": "@Password123",
+      "password": "$2b$10$fa7OIUv3CRdP6.qn1sD.N.jIr.Jvj5kCZkuj1pA6HYBorzKU6jmJK"
+    },
+    "createdAt": {
+      "$date": "2023-08-23T12:17:10.049Z"
+    },
+    "updatedAt": {
+      "$date": "2023-08-23T12:17:10.049Z"
+    }
+  }
+]

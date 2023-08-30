@@ -45,17 +45,19 @@ function AddModalForm({
     const handleSubmit = async (e: any) => {
         e.preventDefault();
         setLoading(true);
+        setShowError(false);
+        setError("");
 
         const formDataObject = new FormData(e.target);
-
         const formValues: Record<string, any> = {};
+        let haveEmptyFields: boolean = false;
 
         formDataObject.forEach((value, key) => {
             let [fieldName, fieldNumber] = key.split(".");
 
             if (value === "") {
-                setShowError(true);
-                setError("All fields are required!")
+                haveEmptyFields = true;
+                return null;
             }
 
             if (formValues[fieldNumber] != undefined) {
@@ -65,6 +67,12 @@ function AddModalForm({
                 formValues[fieldNumber][fieldName] = value;
             }
         });
+
+        if (haveEmptyFields) {
+            setShowError(true);
+            setError("All fields are required!")
+            return;
+        }
 
         let arr = Object.values(formValues);
         let academicYear = arr[0].academicYear;

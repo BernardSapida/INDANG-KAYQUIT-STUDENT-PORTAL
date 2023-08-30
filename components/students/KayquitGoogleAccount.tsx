@@ -20,7 +20,7 @@ function KayquitGoogleAccount({
 }) {
     return (
         <div>
-            <p className="fw-bold">Kayquit Google Account</p>
+            <p className="fw-bold">Kayquit Email Account</p>
             <Field
                 type="text"
                 name="email"
@@ -32,7 +32,7 @@ function KayquitGoogleAccount({
             <Field
                 type="password"
                 name="defaultPassword"
-                label="Temporary Password"
+                label="Default Password"
                 handleChange={handleChange}
                 value={values.defaultPassword}
                 loading={loading}

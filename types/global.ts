@@ -1,3 +1,5 @@
+import { ObjectId } from "mongodb"
+
 export interface User {
     email: string,
     role: string
@@ -26,12 +28,12 @@ export interface StudentClasses {
 }
 
 export interface Student {
-    _id?: string,
+    _id?: ObjectId,
     personalDetails: PersonalDetails,
     enrollmentDetails: EnrollmentDetails,
     contactDetails: ContactDetails,
     kayquitAccount: KayquitAccount,
-    classes?: Classes
+    classes?: Classes[],
 }
 
 export interface Teacher {
@@ -178,3 +180,11 @@ export interface Section {
     updatedAt: string,
 }
 
+export interface StudentResponse extends Response {
+    data?: InsertOneResult,
+}
+
+export interface InsertOneResult {
+    acknowledged: boolean,
+    insertedId: ObjectId,
+}

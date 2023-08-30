@@ -39,14 +39,9 @@ export default async function handler(
         }
 
         if (addedSubjects.length > 0) {
-            await addSubjectsInSection(sectionId, gradeLevel, name, academicYear, removedSubjects);
+            await addSubjectsInSection(sectionId, gradeLevel, name, academicYear, addedSubjects);
         }
 
-        // Push new schedules of students
-        // Create a grades also
-        // With the same gradeLevel, section, academicYear
-
-        // res.json(data);
         res.status(200).json({
             status: 200,
             message: "Successfully updated section"

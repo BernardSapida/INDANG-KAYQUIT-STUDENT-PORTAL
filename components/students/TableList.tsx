@@ -21,7 +21,7 @@ function TableList({
     setModalShow
 }: {
     studentList: Student[];
-    setStudent: Dispatch<SetStateAction<Student | Record<string, any>>>;
+    setStudent: Dispatch<SetStateAction<Student>>;
     setModalShow: Dispatch<SetStateAction<boolean>>;
 }) {
     const [tableLoading, setLoadingTable] = useState<boolean>(false);

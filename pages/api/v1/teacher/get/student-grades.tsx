@@ -77,7 +77,7 @@ export default async function handler(
             },
             {
                 $project: {
-                    _id: 0,
+                    _id: 1,
                     "personalDetails.fullname": 1,
                     "enrollmentDetails": {
                         "lrn": 1,

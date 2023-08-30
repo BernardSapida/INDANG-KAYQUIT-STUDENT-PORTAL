@@ -10,7 +10,7 @@ import { KayquitAccount } from "@/types/global";
 function KayquitAccount({ kayquitAccount }: { kayquitAccount: KayquitAccount }) {
     return (
         <div>
-            <p className="fw-bold">Kayquit Google Account</p>
+            <p className="fw-bold">Kayquit Email Account</p>
             <FloatingLabel className="mb-3 w-100" label={"Kayquit Email Account"}>
                 <Form.Control
                     type={"text"}

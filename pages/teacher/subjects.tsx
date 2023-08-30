@@ -73,9 +73,7 @@ function Subjects({
     const [sectionInfo, setSectionInfo] = useState<Section | Record<string, any>>({});
     const [sections, setSections] = useState<Section[]>([]);
 
-    useEffect(() => {
-        setSections(sectionsList);
-    }, [sectionsList])
+    useEffect(() => setSections(sectionsList), [sectionsList]);
 
     return (
         <div className="mb-5">
@@ -103,7 +101,6 @@ function Subjects({
                 sectionInfo={sectionInfo}
                 modalShow={editModalShow}
                 setModalShow={setEditModalShow}
-                sections={sections}
                 setSections={setSections}
             />
         </div>

@@ -22,19 +22,18 @@ import Error from "@/components/alerts/error/Error";
 
 // CSS
 import style from "@/public/css/teacher-subjects.module.css";
-import Success from "@/components/alerts/success/Error";
+import Success from "@/components/alerts/success/Success";
+import { Alert } from "@/utils/alert/Alert";
 
 function EditModalForm({
     sectionInfo,
     modalShow,
     setModalShow,
-    sections,
     setSections
 }: {
     sectionInfo: Section | Record<string, any>;
     modalShow: boolean;
     setModalShow: Dispatch<SetStateAction<boolean>>;
-    sections: Section[];
     setSections: Dispatch<SetStateAction<Section[]>>;
 }) {
     const [tableRows, setTableRows] = useState<any[]>([]);
@@ -48,12 +47,10 @@ function EditModalForm({
     useEffect(() => populateRows(), [sectionInfo, modalShow]);
 
     const handleSubmit = async (e: any) => {
-        e.preventDefault();
-        setLoading(true);
-        setShowError(false);
-        setError("");
-
         try {
+            e.preventDefault();
+            setLoading(true);
+
             const formDataObject = new FormData(e.target);
             const formValues: Record<string, any> = {};
             let haveEmptyFields: boolean = false;
@@ -61,7 +58,10 @@ function EditModalForm({
             formDataObject.forEach((value, key) => {
                 const [fieldName, fieldNumber] = key.split(".");
 
-                if (value === "") haveEmptyFields = true;
+                if (value === "") {
+                    haveEmptyFields = true;
+                    return null;
+                }
 
                 if (formValues[fieldNumber] != undefined) {
                     formValues[fieldNumber][fieldName] = value;
@@ -72,9 +72,13 @@ function EditModalForm({
             });
 
             if (haveEmptyFields) {
-                setShowError(true);
-                setError("All fields are required!");
-                return;
+                setLoading(false);
+                Alert(
+                    "Failed to submit",
+                    "Make sure there are no fields empty!",
+                    "error"
+                );
+                return null;
             }
 
             const arr = Object.values(formValues);
@@ -84,7 +88,6 @@ function EditModalForm({
             const subjects = arr;
             const grades: Grade[] = getGrades(subjects);
             const [addedSubjects, removedSubjects] = getAddedAndRemovedSubjects(grades);
-
             const output = {
                 sectionId: sectionInfo._id,
                 gradeLevel: gradeLevel,
@@ -99,8 +102,8 @@ function EditModalForm({
             await updateSection(output);
 
             // Update Subjects in specified section
-            setSections(() => (
-                sections.map(section => {
+            setSections((prevSections) => (
+                prevSections.map(section => {
                     if (section._id == sectionInfo._id) {
                         section.subjects = subjects;
                     }
@@ -109,10 +112,18 @@ function EditModalForm({
                 })
             ));
 
-            setSuccessMessage("Successfully updated section");
-            setShowSuccess(true);
-            setTimeout(() => setShowSuccess(false), 5000);
+            Alert(
+                "Success!",
+                "Section's subjects successfully submitted",
+                "success",
+                "Thank you!"
+            );
         } catch (error) {
+            Alert(
+                "There was an error",
+                "Please contact the administrator",
+                "error"
+            );
             console.error(error);
         }
     };
@@ -159,8 +170,6 @@ function EditModalForm({
             output
         );
 
-        console.log("Response:")
-        console.log(response)
         return response;
     }
 

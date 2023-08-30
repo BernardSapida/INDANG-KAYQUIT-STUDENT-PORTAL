@@ -1,8 +1,31 @@
 /**
     Teacher Side:
-        Sections (Filtered by academic year)
-        Student Grade Validation
-        Add new Student w/ validation
-        Edit student validation
+        Sections (Filtered by academic year) last
+        Filter table search
+
+        Add/Edit Populate section subjects to new added student
+            Get section subjects
+            Store it in classes
+            submit the form
+
+        Edit Student Profile:
+            Fetch Student's Sections
+                if Grade Level Exist (Diff Section)
+                then:
+                    Get new section id
+                    assign it to student.classes.section
+                
+                else:
+                then: (New Academic School Year)
+                    Get section subjects by grade level, section, and academic year
+                    Transform section subjects to student grades per subjects
+                    Add section & grades to student.classes
+
+        Add Student Profile:
+                do: (New Academic School Year)
+                    Get section subjects by grade level, section, and academic year
+                    Transform section subjects to student grades per subjects
+                    Add section & grades to student.classes
+
         Change Password Validation
 */

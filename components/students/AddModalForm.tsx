@@ -30,12 +30,18 @@ import KayquitGoogleAccount from "@/components/students/KayquitGoogleAccount";
 
 // CSS
 import style from "@/public/css/teacher-modal.module.css";
+import { Student, StudentResponse } from "@/types/global";
+import axios from "axios";
+import { InsertOneResult } from "mongodb";
+import { Alert } from "@/utils/alert/Alert";
 
 function ModalForm({
     modalShow,
-    setModalShow,
+    setStudents,
+    setModalShow
 }: {
     modalShow: boolean;
+    setStudents: Dispatch<SetStateAction<Student[]>>;
     setModalShow: Dispatch<SetStateAction<boolean>>;
 }) {
     const [loading, setLoading] = useState<boolean>(false);
@@ -59,57 +65,72 @@ function ModalForm({
         },
         { resetForm }: { resetForm: any }
     ) => {
-        const {
-            fullname,
-            sex,
-            birthdate,
-            religion,
-            civilStatus,
-            gradeLevel,
-            section,
-            studentLRN,
-            studentNumber,
-            academicYear,
-            address,
-            contactNumber,
-            guardian,
-            email,
-            defaultPassword,
-        } = values;
+        try {
+            // setLoading(true);
 
-        setLoading(true);
+            const studentInfo: Student = {
+                personalDetails: {
+                    fullname: values.fullname,
+                    birthdate: values.birthdate,
+                    sex: values.sex,
+                    religion: values.religion,
+                    civilStatus: values.civilStatus
+                },
+                enrollmentDetails: {
+                    currentGradeLevel: values.gradeLevel,
+                    currentSection: values.section,
+                    lrn: values.studentLRN,
+                    studentNumber: values.studentNumber,
+                    academicYear: values.academicYear
+                },
+                classes: [],
+                contactDetails: {
+                    address: values.address,
+                    guardian: values.guardian,
+                    contactNumber: values.contactNumber,
+                },
+                kayquitAccount: {
+                    email: values.email,
+                    defaultPassword: values.defaultPassword,
+                    password: values.defaultPassword,
+                }
+            }
 
-        const StudentInformation = {
-            personalDetails: {
-                fullname: values.fullname,
-                birthdate: values.birthdate,
-                sex: values.sex,
-                religion: values.religion,
-                civilStatus: values.civilStatus
-            },
-            enrollmentDetails: {
-                currentGradeLevel: values.gradeLevel,
-                currentSection: values.section,
-                lrn: values.studentLRN,
-                studentNumber: values.studentNumber
-            },
-            contactDetails: {
-                address: values.address,
-                guardian: values.guardian,
-                contactNumber: values.contactNumber,
-            },
-            kayquitGoogleAccount: {
-                email: values.email,
-                defaultPassword: values.defaultPassword,
-                password: values.defaultPassword,
-            },
+            // Save to database
+            const addedStudent: StudentResponse = await addStudent(studentInfo);
+
+            setStudents((prevStudents: Student[]) => {
+                studentInfo._id = addedStudent.data?.insertedId;
+                return [studentInfo, ...prevStudents];
+            })
+
+            setLoading(false);
+
+            Alert(
+                "Success!",
+                "Student successfully added",
+                "success",
+                "Thank you!"
+            );
+        } catch (error) {
+            Alert(
+                "There was an error",
+                "Please contact the administrator",
+                "error"
+            );
+
+            console.log(error);
         }
-
-        // Save to database
-        // console.log(StudentInformation)
-
-        setTimeout(() => setLoading(false), 2000);
     };
+
+    const addStudent = async (studentInfo: Student): Promise<StudentResponse> => {
+        const response = await axios.post(
+            `/api/v1/teacher/post/student`,
+            { studentInfo }
+        );
+
+        return response.data;
+    }
 
     return (
         <Modal

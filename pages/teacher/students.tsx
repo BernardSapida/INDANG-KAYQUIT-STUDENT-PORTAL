@@ -9,7 +9,7 @@ import dynamic from "next/dynamic";
 import { getSession } from "next-auth/react";
 
 // React Modules
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // React Bootstrap Components
 import { InputGroup } from "react-bootstrap";
@@ -66,7 +66,10 @@ export const getServerSideProps: GetServerSideProps = async (
 function Students({ studentList }: { studentList: any }) {
     const [addModalShow, setAddModalShow] = useState<boolean>(false);
     const [editModalShow, setEditModalShow] = useState<boolean>(false);
-    const [student, setStudent] = useState<Student | Record<string, any>>({});
+    const [student, setStudent] = useState<Student>(studentList[0]);
+    const [students, setStudents] = useState<Student[]>([]);
+
+    useEffect(() => setStudents(studentList), [studentList]);
 
     return (
         <div className="mb-5">
@@ -96,10 +99,23 @@ function Students({ studentList }: { studentList: any }) {
                         />
                     </InputGroup>
                 </div>
-                <TableList setModalShow={setEditModalShow} studentList={studentList} setStudent={setStudent} />
+                <TableList
+                    setModalShow={setEditModalShow}
+                    studentList={students}
+                    setStudent={setStudent}
+                />
             </div>
-            <AddModalForm modalShow={addModalShow} setModalShow={setAddModalShow} />
-            <EditModalForm modalShow={editModalShow} setModalShow={setEditModalShow} student={student} />
+            <AddModalForm
+                modalShow={addModalShow}
+                setModalShow={setAddModalShow}
+                setStudents={setStudents}
+            />
+            <EditModalForm
+                modalShow={editModalShow}
+                setModalShow={setEditModalShow}
+                student={student}
+                setStudents={setStudents}
+            />
         </div>
     );
 }

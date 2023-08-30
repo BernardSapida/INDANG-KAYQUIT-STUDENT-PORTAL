@@ -1,6 +1,6 @@
 import clientPromise from "@/lib/mongodb";
 
-import { Subject } from "@/types/global";
+import { Grade, Subject } from "@/types/global";
 import { ObjectId } from "mongodb";
 
 export const updateSection = async (gradeLevel: string, name: string, academicYear: string, subjects: Subject[]) => {
@@ -45,9 +45,13 @@ export const removeSubjectsInSection = async (sectionId: string, gradeLevel: str
             arrayFilters: [{ "class.section": new ObjectId(sectionId) }]
         }
     );
+
+    console.log("removed");
+    console.log(sectionId, gradeLevel, name, academicYear, removedSubjects);
+    console.log(response);
 }
 
-export const addSubjectsInSection = async (sectionId: string, gradeLevel: string, name: string, academicYear: string, addedSubjects: string[]) => {
+export const addSubjectsInSection = async (sectionId: string, gradeLevel: string, name: string, academicYear: string, addedSubjects: Grade[]) => {
     const client = await clientPromise;
     const db = client.db("student_portal");
 
@@ -70,6 +74,10 @@ export const addSubjectsInSection = async (sectionId: string, gradeLevel: string
             arrayFilters: [{ "class.section": new ObjectId(sectionId) }]
         }
     );
+
+    console.log("added");
+    console.log(sectionId, gradeLevel, name, academicYear, addedSubjects);
+    console.log(response);
 }
 
 // export const fetchProfileInDatabase = async (email: string) => {

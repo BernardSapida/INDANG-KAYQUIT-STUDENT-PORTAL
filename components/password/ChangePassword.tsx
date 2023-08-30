@@ -1,8 +1,5 @@
 import axios, { AxiosError } from "axios";
 
-// Next Modules
-import { useRouter } from "next/router";
-
 // React Modules
 import { useState } from "react";
 
@@ -16,7 +13,6 @@ import { Formik } from "formik";
 
 // Components
 import Field from "@/components/form/InputField";
-import Error from "@/components/alerts/error/Error";
 
 // React-Icons
 import { FaExchangeAlt } from 'react-icons/fa';
@@ -30,12 +26,11 @@ import { initialValues, validationSchema } from "@/helpers/teacher/password/Form
 // CSS
 import style from "@/public/css/teacher-change-password.module.css";
 import { User } from "@/types/global";
+import { Alert } from "@/utils/alert/Alert";
 
 
 function ChangePassword({ user }: { user: User }) {
     const [loading, setLoading] = useState<boolean>(false);
-    const [showError, setShowError] = useState<boolean>(false);
-    const [error, setError] = useState<string>("");
 
     const handleSubmit = async (
         values: { currentPassword: string; newPassword: string; confirmPassword: string },
@@ -43,18 +38,25 @@ function ChangePassword({ user }: { user: User }) {
     ) => {
         try {
             setLoading(true);
-            setShowError(false);
             const { currentPassword, newPassword, confirmPassword } = values;
             const passwordResponse = await updatePassword(currentPassword, newPassword, confirmPassword, user.role);
 
             resetForm();
+            Alert(
+                "Success",
+                "Successfully changed password",
+                "success"
+            );
             setLoading(false);
         } catch (error: any) {
             const errorMessage = error.response.data.message;
 
             setLoading(false);
-            setError(errorMessage);
-            setShowError(true);
+            Alert(
+                "Failed to reset password",
+                errorMessage,
+                "error"
+            );
         }
     };
 
@@ -75,7 +77,6 @@ function ChangePassword({ user }: { user: User }) {
 
     return (
         <>
-            <Error errMessage={error} showError={showError} />
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}

@@ -11,9 +11,6 @@ import Form from "react-bootstrap/Form";
 // React Modules
 import { Dispatch, SetStateAction, useState, useRef } from "react";
 
-// Sweet Alert Modules
-import Swal from "sweetalert2";
-
 // React-Ripples
 import Ripples from 'react-ripples'
 
@@ -28,15 +25,16 @@ import { nanoid } from 'nanoid';
 import style from "@/public/css/teacher-modal.module.css";
 import { FloatingLabel } from "react-bootstrap";
 import { Classes, Grade, Student } from "@/types/global";
+import { Alert } from "@/utils/alert/Alert";
 
 function ModalForm({
     student,
-    setStudent,
+    setStudents,
     modalShow,
     setModalShow
 }: {
-    student: Student | Record<string, any>;
-    setStudent: Dispatch<SetStateAction<Student | Record<string, any>>>;
+    student: Student;
+    setStudents: Dispatch<SetStateAction<Student[]>>;
     modalShow: boolean;
     setModalShow: Dispatch<SetStateAction<boolean>>;
 }) {
@@ -45,44 +43,82 @@ function ModalForm({
     const sectionId = useRef<string>("");
 
     const handleSubmit = (e: any) => {
-        e.preventDefault();
+        try {
+            e.preventDefault();
+            setLoading(true);
 
-        setLoading(true);
+            const formDataObject = new FormData(e.target);
+            const formValues: Record<string, any> = {};
+            let haveEmptyFields: boolean = false;
 
-        const formDataObject = new FormData(e.target);
-        const formValues: Record<string, any> = {};
+            formDataObject.forEach((value, key) => {
+                const [subjectName, quarter] = key.split(".");
 
-        formDataObject.forEach((value, key) => {
-            let [subjectName, quarter] = key.split(".");
+                if (value === "") {
+                    haveEmptyFields = true;
+                    return null;
+                }
 
-            if (formValues[subjectName] != undefined) {
-                formValues[subjectName][quarter] = Number(value);
-            } else {
-                formValues[subjectName] = {};
-                formValues[subjectName].subjectName = subjectName;
-                formValues[subjectName][quarter] = Number(value);
+                if (formValues[subjectName] != undefined) {
+                    formValues[subjectName][quarter] = Number(value);
+                } else {
+                    formValues[subjectName] = {};
+                    formValues[subjectName].subjectName = subjectName;
+                    formValues[subjectName][quarter] = Number(value);
+                }
+            });
+
+            if (haveEmptyFields || sectionId.current === "") {
+                setLoading(false);
+                Alert(
+                    "Failed to submit",
+                    "Make sure there are no fields empty!",
+                    "error"
+                );
+                return null;
             }
-        });
 
-        let studentGrade = Object.values(formValues);
+            let studentGrade = Object.values(formValues);
+            let newClass = student.classes?.map((c: Classes) => {
+                if (c.sectionDetails._id == sectionId.current) {
+                    c.grades = studentGrade;
+                }
 
-        let newClass = student.classes.map((c: Classes) => {
-            if (c.sectionDetails._id == sectionId.current) {
-                c.grades = studentGrade;
-            }
+                return c;
+            })
 
-            return c;
-        })
+            student.classes = newClass;
 
-        student.classes = newClass;
-        setStudent(JSON.parse(JSON.stringify(student)));
+            setStudents((prevStudents: Student[]) => (
+                prevStudents.map((currentStudent: Student) => {
+                    if (student._id == currentStudent._id) {
+                        currentStudent = student;
+                    }
 
-        syncTable();
+                    return currentStudent;
+                })
+            ));
 
-        // Save to database
-        updateGrade(studentGrade);
+            syncTable();
 
-        setLoading(false);
+            // Save to database
+            updateGrade(studentGrade);
+
+            setLoading(false);
+            Alert(
+                "Success!",
+                "Grade successfully submitted",
+                "success",
+                "Thank you!"
+            );
+        } catch (error) {
+            Alert(
+                "There was an error",
+                "Please contact the administrator",
+                "error"
+            );
+            console.log(error);
+        }
     };
 
     const updateGrade = async (studentGrade: Grade[]) => {
@@ -97,9 +133,9 @@ function ModalForm({
     }
 
     const syncTable = () => {
-        let newGrades = student.classes.filter((c: Classes) => {
+        let newGrades = student.classes?.filter((c: Classes) => {
             return c.sectionDetails._id === sectionId.current;
-        })[0]?.grades;
+        })[0]?.grades!;
 
         setGrades(newGrades);
     }
