@@ -25,7 +25,7 @@ import { nanoid } from 'nanoid';
 import style from "@/public/css/teacher-modal.module.css";
 import { FloatingLabel } from "react-bootstrap";
 import { Classes, Grade, Student } from "@/types/global";
-import { Alert } from "@/utils/alert/Alert";
+import { Alert } from "@/utils/alert";
 
 function ModalForm({
     student,

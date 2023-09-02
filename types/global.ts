@@ -12,16 +12,17 @@ export interface Subjects {
     room: string,
 }
 
-export interface SubjectDetails {
+export interface SectionDetails {
     name: string,
     gradeLevel: string,
     academicYear: string,
-    subjects?: Subjects[]
+    subjects?: Subjects[],
+    students?: any[]
 }
 
 export interface Section {
     section: string,
-    sectionDetails: SubjectDetails
+    sectionDetails: SectionDetails
 }
 
 export interface StudentClasses {
@@ -141,7 +142,7 @@ export interface Response {
 }
 
 export interface GradeResponse extends Response {
-    data: { sectionDetails?: SubjectDetails, grades?: Grade[] },
+    data: { sectionDetails?: SectionDetails, grades?: Grade[] },
 }
 
 export interface ProfileResponse extends Response {

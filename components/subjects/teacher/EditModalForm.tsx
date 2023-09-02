@@ -23,7 +23,7 @@ import Error from "@/components/alerts/error/Error";
 // CSS
 import style from "@/public/css/teacher-subjects.module.css";
 import Success from "@/components/alerts/success/Success";
-import { Alert } from "@/utils/alert/Alert";
+import { Alert } from "@/utils/alert";
 
 function EditModalForm({
     sectionInfo,

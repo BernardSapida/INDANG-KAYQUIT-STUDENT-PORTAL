@@ -26,7 +26,7 @@ import { initialValues, validationSchema } from "@/helpers/teacher/password/Form
 // CSS
 import style from "@/public/css/teacher-change-password.module.css";
 import { User } from "@/types/global";
-import { Alert } from "@/utils/alert/Alert";
+import { Alert } from "@/utils/alert";
 
 
 function ChangePassword({ user }: { user: User }) {

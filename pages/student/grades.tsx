@@ -8,7 +8,7 @@ import style from "@/public/css/student-grades.module.css";
 import AccordionDropdown from "@/components/grades/student/Accordion";
 
 import { fetchStudentGrade } from "@/helpers/student/Grades";
-import { SubjectDetails, Grade } from "@/types/global";
+import { SectionDetails, Grade } from "@/types/global";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -37,7 +37,7 @@ function Grades({
     classes
 }: {
     classes: {
-        sectionDetails: SubjectDetails;
+        sectionDetails: SectionDetails;
         grades: Grade[];
     }[]
 }) {

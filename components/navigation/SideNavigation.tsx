@@ -61,6 +61,12 @@ function SideNavigation({
             show: session?.user.role == "student",
         },
         {
+            name: "My Classmates",
+            path: "/student/classmates",
+            icon: <IoIosPeople />,
+            show: session?.user.role == "student",
+        },
+        {
             name: "Change Password",
             path: "/student/password",
             icon: <MdPassword />,

@@ -42,8 +42,9 @@ export const getServerSideProps: GetServerSideProps = async (
             return { notFound: true }
         }
 
-        const studentList = await axios.get(
-            `${process.env.NEXTAUTH_URL}/api/v1/teacher/get/student-grades`
+        const studentList = await axios.post(
+            `${process.env.NEXTAUTH_URL}/api/v1/teacher/post/student-grades`,
+
         );
 
         return {
@@ -66,7 +67,14 @@ function Students({ studentList }: { studentList: Student[] }) {
 
     useEffect(() => setStudents(studentList), [studentList]);
 
-    console.log(studentList)
+    const handleChange = async (e: any) => {
+        const result = await axios.post(
+            '/api/v1/teacher/post/student-grades',
+            { searchTerm: e.target.value }
+        );
+        const filteredStudentList = result.data;
+        setStudents(filteredStudentList);
+    }
 
     return (
         <div className="mb-5">
@@ -80,14 +88,13 @@ function Students({ studentList }: { studentList: Student[] }) {
                         <Form.Control
                             type="text"
                             name="keyword"
-                            // onChange={handleChange}
-                            // value={value}
+                            onChange={handleChange}
                             placeholder="Search student"
                         />
                     </InputGroup>
                 </div>
                 <TableList
-                    studentList={studentList}
+                    studentList={students}
                     setModalShow={setModalShow}
                     setStudent={setStudent}
                 />

@@ -3,12 +3,6 @@ import clientPromise from "@/lib/mongodb";
 import axios from "axios";
 import { ObjectId } from "mongodb";
 
-type Data = {
-    sucess: string;
-    message: string;
-    data: Array<number | string | Array<any>>;
-};
-
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<any>

@@ -34,7 +34,7 @@ import KayquitGoogleAccount from "@/components/students/KayquitGoogleAccount";
 // CSS
 import style from "@/public/css/teacher-modal.module.css";
 import { Section, Student, Subject } from "@/types/global";
-import { Alert } from "@/utils/alert/Alert";
+import { Alert } from "@/utils/alert";
 import { fetchStudentSubjects } from "@/helpers/student/Subjects";
 import { fetchSectionInformation } from "@/utils/sections";
 import { getGrades } from "@/utils/grades";
@@ -160,10 +160,6 @@ function ModalForm({
             console.log(error);
         }
     };
-
-    const addNewStudentSection = () => {
-
-    }
 
     const getCurrentSectionId = (sections: Section[], gradeLevel: string): null | string => {
         for (let entry of sections) {

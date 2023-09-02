@@ -1,5 +1,5 @@
 // React Bootstrap Components
-import { Grade, SubjectDetails } from '@/types/global';
+import { Grade, SectionDetails } from '@/types/global';
 import Accordion from 'react-bootstrap/Accordion';
 import Table from 'react-bootstrap/Table';
 
@@ -9,7 +9,7 @@ function AccordionDropdown(
         grades,
         uniqueKey
     }: {
-        subjectDetails: SubjectDetails,
+        subjectDetails: SectionDetails,
         grades: Grade[],
         uniqueKey: string
     }

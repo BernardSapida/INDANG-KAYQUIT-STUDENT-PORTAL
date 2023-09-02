@@ -79,8 +79,6 @@ function Announcements(
     const [modalShow, setModalShow] = useState(false);
     const [cards, setCards] = useState<JSX.Element[]>([]);
 
-    console.log(teacher)
-
     useEffect(() => {
         const res = announcement.announcements?.map((announcements: Announcements, key: number) => (
             <Announcement key={key} title={announcements.title} description={announcements.description} createdAt={announcements.createdAt} />

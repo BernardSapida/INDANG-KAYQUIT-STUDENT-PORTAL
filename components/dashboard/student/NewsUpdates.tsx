@@ -28,7 +28,7 @@ function NewsUpdates() {
             <div className={`${style.topic}`}>
                 <p className={`${style.title}`}>Classmates</p>
                 <div className={`${style.descriptions}`}>
-                    <p>• Visit <Link href="#">this link</Link> to easily access the list of fellow students who will be sharing your classroom in the upcoming section.</p>
+                    <p>• Visit <Link href="/student/classmates">this link</Link> to easily access the list of fellow students who will be sharing your classroom in the upcoming section.</p>
                 </div>
             </div>
         </div >

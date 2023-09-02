@@ -3,7 +3,7 @@ import axios from "axios";
 
 import { SectionDetails, Grade, GradeResponse } from "@/types/global";
 
-export const fetchStudentGrade = async (email: string): Promise<GradeResponse> => {
+export const fetchStudentClassmates = async (email: string): Promise<GradeResponse> => {
     const response = await axios.post(
         `${process.env.NEXTAUTH_URL}/api/v1/student/post/grades`,
         { email: email }

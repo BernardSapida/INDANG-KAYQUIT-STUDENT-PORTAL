@@ -32,7 +32,7 @@ import KayquitGoogleAccount from "@/components/students/KayquitGoogleAccount";
 import style from "@/public/css/teacher-modal.module.css";
 import { Grade, Section, Student, StudentResponse } from "@/types/global";
 import axios from "axios";
-import { Alert } from "@/utils/alert/Alert";
+import { Alert } from "@/utils/alert";
 import { getGrades } from "@/utils/grades";
 import { ObjectId } from "mongodb";
 import { fetchSectionInformation } from "@/utils/sections";
