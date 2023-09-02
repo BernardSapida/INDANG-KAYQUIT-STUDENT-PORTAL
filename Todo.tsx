@@ -1,37 +1,7 @@
 /**
     Teacher Side:
-        Sections (Filtered by academic year) last
+        Sections search by gradeLevel, section, academicYear
         Filter table search
 
-        Edit Student Profile:
-            Fetch Student's Sections
-                if Grade Level Exist (Diff Section)
-                then:
-                    Get new section id
-                    assign it to student.classes.section
-                else:
-                then: (New Academic School Year)
-                    Get new section id
-                    Transform section subjects to student grades per subjects
-                    Push section & grades to student.classes
-
-        Add Student Profile:
-                do: (New Academic School Year)
-                    Get section subjects by grade level, section, and academic year
-                    Transform section subjects to student grades per subjects
-                    Push section & grades to student.classes
-
-        Section: students[] => Fullname, studentNumber, section, sex
-
         Change Password Validation
-
-        Step 1: Fetch from subjects
-            Step 2: Loop and check if grade level exists
-                True:
-                    #1 Save section id to seciontId variable
-                    #2 Replace old section id in db with sectionId
-                False:
-                    #1 Find sectionId by grade level, section, and academic year
-                    #2 Transform section subjects to student grades per subjects
-                    #3 Push section & grades to student.classes
 */

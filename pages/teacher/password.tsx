@@ -12,6 +12,7 @@ import style from "@/public/css/teacher-password.module.css";
 
 // Components
 import ChangePassword from "@/components/password/ChangePassword";
+import { User } from "@/types/global";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -25,9 +26,7 @@ export const getServerSideProps: GetServerSideProps = async (
         }
 
         return {
-            props: {
-                user: session.user,
-            },
+            props: { user: session.user },
         };
     } catch (error) {
         return {
@@ -36,11 +35,7 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Password({
-    user
-}: {
-    user: Record<string, any>
-}) {
+function Password({ user }: { user: User }) {
     return (
         <div className="mb-5">
             <div className={`${style.title}`}>

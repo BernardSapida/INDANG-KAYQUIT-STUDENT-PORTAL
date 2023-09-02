@@ -23,6 +23,24 @@ export default async function handler(
             }
         );
 
+        const newSectionResponse = await db.collection("sections").updateOne(
+            { "_id": new ObjectId(newSectionId) },
+            {
+                $push: {
+                    students: new ObjectId(studentId)
+                }
+            }
+        );
+
+        const oldSectionResponse = await db.collection("sections").updateOne(
+            { "_id": new ObjectId(oldSectionId) },
+            {
+                $pull: {
+                    students: new ObjectId(studentId)
+                }
+            }
+        );
+
         res.status(200).json(data);
     } catch (e) {
         console.error(e);

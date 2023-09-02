@@ -23,16 +23,7 @@ db.createCollection("sections",
                     },
                     students: {
                         bsonType: "array",
-                        items: {
-                            bsonType: "object",
-                            required: ["fullname", "studentNumber", "section", "sex"],
-                            properties: {
-                                fullname: { bsonType: "string" },
-                                studentNumber: { bsonType: "string" },
-                                section: { bsonType: "string" },
-                                sex: { bsonType: "string" }
-                            }
-                        }
+                        items: { bsonType: "objectId" }
                     },
                     createdAt: { bsonType: "date" },
                     updatedAt: { bsonType: "date" }

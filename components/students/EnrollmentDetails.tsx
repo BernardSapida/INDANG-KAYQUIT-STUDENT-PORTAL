@@ -37,7 +37,7 @@ function EnrollmentDetails({
             const currentYear = new Date().getFullYear();
             const years: JSX.Element[] = [];
 
-            for (let year = 2019; year <= currentYear; year++) {
+            for (let year = 2017; year <= currentYear; year++) {
                 years.push(<option key={year} value={`${year}-${year + 1}`}>{`${year}-${year + 1}`}</option>)
             }
 

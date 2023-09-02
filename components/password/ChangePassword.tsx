@@ -43,7 +43,7 @@ function ChangePassword({ user }: { user: User }) {
 
             resetForm();
             Alert(
-                "Success",
+                "Password updated",
                 "Successfully changed password",
                 "success"
             );

@@ -6361,7 +6361,11 @@
         "room": "Room - 14"
       }
     ],
-    "students": [],
+    "students": [
+      {
+        "$oid": "64f30caeadee375b65393ee6"
+      }
+    ],
     "createdAt": {
       "$date": "2023-08-22T12:47:30.680Z"
     },

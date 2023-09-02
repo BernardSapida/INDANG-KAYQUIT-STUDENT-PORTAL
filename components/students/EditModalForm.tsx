@@ -121,7 +121,11 @@ function ModalForm({
                 const grades = getGrades(newSectionInfo.subjects);
                 const response = await axios.post(
                     '/api/v1/teacher/update/student-new-section',
-                    { studentId: student._id, section: newSectionInfo._id, grades }
+                    {
+                        studentId: student._id,
+                        sectionId: newSectionInfo._id,
+                        grades
+                    }
                 );
             }
 

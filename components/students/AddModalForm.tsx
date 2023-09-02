@@ -123,7 +123,8 @@ function ModalForm({
 
             setLoading(false);
 
-            resetForm();
+            // resetForm();
+
             Alert(
                 "Success!",
                 "Student successfully added",
