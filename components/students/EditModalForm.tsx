@@ -33,8 +33,9 @@ import KayquitGoogleAccount from "@/components/students/KayquitGoogleAccount";
 
 // CSS
 import style from "@/public/css/teacher-modal.module.css";
-import { Student } from "@/types/global";
+import { Section, Student, Subject } from "@/types/global";
 import { Alert } from "@/utils/alert/Alert";
+import { fetchStudentSubjects } from "@/helpers/student/Subjects";
 
 function ModalForm({
     modalShow,
@@ -70,7 +71,8 @@ function ModalForm({
         { resetForm }: { resetForm: any }
     ) => {
         try {
-            setLoading(true);
+            // setLoading(true);
+
             const studentInfo: Student = {
                 personalDetails: {
                     fullname: values.fullname,
@@ -98,27 +100,36 @@ function ModalForm({
                 },
             }
 
+            const { data: { classes } } = await getStudentSubjects(values.email);
+
+            // null or section id
+            const studentSectionId = getCurrentSectionId(classes, values.gradeLevel);
+
+            if (studentSectionId) {
+
+            }
+
             // Save to database
-            await updateInformation(studentInfo)
+            // await updateInformation(studentInfo)
 
-            setStudents((prevStudents: Student[]) => (
-                prevStudents.map((currentStudent: Student) => {
-                    if (student._id == currentStudent._id) {
-                        currentStudent = studentInfo;
-                    }
+            // setStudents((prevStudents: Student[]) => (
+            //     prevStudents.map((currentStudent: Student) => {
+            //         if (student._id == currentStudent._id) {
+            //             currentStudent = studentInfo;
+            //         }
 
-                    return currentStudent;
-                })
-            ));
+            //         return currentStudent;
+            //     })
+            // ));
 
-            setLoading(false);
+            // setLoading(false);
 
-            Alert(
-                "Success!",
-                "Student profile successfully updated",
-                "success",
-                "Thank you!"
-            );
+            // Alert(
+            //     "Success!",
+            //     "Student profile successfully updated",
+            //     "success",
+            //     "Thank you!"
+            // );
         } catch (error) {
             Alert(
                 "There was an error",
@@ -129,6 +140,25 @@ function ModalForm({
             console.log(error);
         }
     };
+
+    const getCurrentSectionId = (sections: Section[], gradeLevel: string): null | string => {
+        for (let entry of sections) {
+            if (entry.sectionDetails.gradeLevel == gradeLevel) {
+                return entry.section;
+            }
+        }
+
+        return null;
+    }
+
+    const getStudentSubjects = async (email: string) => {
+        const response = await axios.post(
+            '/api/v1/student/post/subjects',
+            { email: email }
+        );
+
+        return response.data;
+    }
 
     const updateInformation = async (studentInformation: Student) => {
         const response = await axios.post(
