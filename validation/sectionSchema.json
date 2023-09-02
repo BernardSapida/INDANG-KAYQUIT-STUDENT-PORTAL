@@ -16,6 +16,20 @@
             "room": "string"
         }
     ],
+    "students": [
+        {
+            "fullname": "string",
+            "studentNumber": "string",
+            "section": "string",
+            "sex": "string"
+        },
+        {
+            "fullname": "string",
+            "studentNumber": "string",
+            "section": "string",
+            "sex": "string"
+        }
+    ],
     "createdAt": "date",
     "updatedAt": "date"
 }

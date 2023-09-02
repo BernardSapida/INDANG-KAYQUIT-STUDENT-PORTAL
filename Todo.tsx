@@ -21,9 +21,9 @@
                     Transform section subjects to student grades per subjects
                     Push section & grades to student.classes
 
+        Section: students[] => Fullname, studentNumber, section, sex
+
         Change Password Validation
-
-
 
         Step 1: Fetch from subjects
             Step 2: Loop and check if grade level exists

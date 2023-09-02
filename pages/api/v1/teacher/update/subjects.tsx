@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import clientPromise from "@/lib/mongodb";
-import { ObjectId } from "mongodb";
 import { addSubjectsInSection, removeSubjectsInSection, updateSection } from "@/helpers/teacher/Subjects";
 
 import { Subject, Grade } from "@/types/global";

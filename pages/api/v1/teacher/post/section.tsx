@@ -44,12 +44,8 @@ export default async function handler(
                         classes: { $concatArrays: ["$classes", ["$newClass"]] }
                     }
                 },
-                {
-                    $unset: "newClass"
-                },
-                {
-                    $replaceWith: "$$ROOT"
-                }
+                { $unset: "newClass" },
+                { $replaceWith: "$$ROOT" }
             ]
         );
 

@@ -3,7 +3,7 @@ db.createCollection("sections",
         validator: {
             $jsonSchema: {
                 bsonType: "object",
-                required: ["gradeLevel", "name", "academicYear", "subjects"],
+                required: ["gradeLevel", "name", "academicYear", "subjects", "students", "createdAt", "updatedAt"],
                 properties: {
                     gradeLevel: { bsonType: "string" },
                     name: { bsonType: "string" },
@@ -18,6 +18,19 @@ db.createCollection("sections",
                                 time: { bsonType: "string" },
                                 day: { bsonType: "string" },
                                 room: { bsonType: "string" }
+                            }
+                        }
+                    },
+                    students: {
+                        bsonType: "array",
+                        items: {
+                            bsonType: "object",
+                            required: ["fullname", "studentNumber", "section", "sex"],
+                            properties: {
+                                fullname: { bsonType: "string" },
+                                studentNumber: { bsonType: "string" },
+                                section: { bsonType: "string" },
+                                sex: { bsonType: "string" }
                             }
                         }
                     },

@@ -36,6 +36,8 @@ import style from "@/public/css/teacher-modal.module.css";
 import { Section, Student, Subject } from "@/types/global";
 import { Alert } from "@/utils/alert/Alert";
 import { fetchStudentSubjects } from "@/helpers/student/Subjects";
+import { fetchSectionInformation } from "@/utils/sections";
+import { getGrades } from "@/utils/grades";
 
 function ModalForm({
     modalShow,
@@ -74,6 +76,7 @@ function ModalForm({
             // setLoading(true);
 
             const studentInfo: Student = {
+                _id: student._id,
                 personalDetails: {
                     fullname: values.fullname,
                     birthdate: values.birthdate,
@@ -103,33 +106,46 @@ function ModalForm({
             const { data: { classes } } = await getStudentSubjects(values.email);
 
             // null or section id
-            const studentSectionId = getCurrentSectionId(classes, values.gradeLevel);
+            const oldSectionId = getCurrentSectionId(classes, values.gradeLevel);
+            const newSectionInfo = await fetchSectionInformation(values.gradeLevel, values.section, values.academicYear);
 
-            if (studentSectionId) {
-
+            if (oldSectionId) {
+                // Replace
+                const newSectionId = newSectionInfo._id;
+                const response = await axios.post(
+                    '/api/v1/teacher/update/student-replace-section',
+                    { studentId: student._id, newSectionId: newSectionId, oldSectionId: oldSectionId }
+                );
+            } else {
+                // Push
+                const grades = getGrades(newSectionInfo.subjects);
+                const response = await axios.post(
+                    '/api/v1/teacher/update/student-new-section',
+                    { studentId: student._id, section: newSectionInfo._id, grades }
+                );
             }
 
             // Save to database
-            // await updateInformation(studentInfo)
+            await updateInformation(studentInfo)
 
-            // setStudents((prevStudents: Student[]) => (
-            //     prevStudents.map((currentStudent: Student) => {
-            //         if (student._id == currentStudent._id) {
-            //             currentStudent = studentInfo;
-            //         }
+            setStudents((prevStudents: Student[]) => (
+                prevStudents.map((currentStudent: Student) => {
+                    if (student._id == currentStudent._id) {
+                        currentStudent = studentInfo;
+                    }
 
-            //         return currentStudent;
-            //     })
-            // ));
+                    return currentStudent;
+                })
+            ));
 
-            // setLoading(false);
+            setLoading(false);
 
-            // Alert(
-            //     "Success!",
-            //     "Student profile successfully updated",
-            //     "success",
-            //     "Thank you!"
-            // );
+            Alert(
+                "Success!",
+                "Student profile successfully updated",
+                "success",
+                "Thank you!"
+            );
         } catch (error) {
             Alert(
                 "There was an error",
@@ -140,6 +156,10 @@ function ModalForm({
             console.log(error);
         }
     };
+
+    const addNewStudentSection = () => {
+
+    }
 
     const getCurrentSectionId = (sections: Section[], gradeLevel: string): null | string => {
         for (let entry of sections) {

@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import clientPromise from "@/lib/mongodb";
-import axios from "axios";
 import { ObjectId } from "mongodb";
 
 export default async function handler(
@@ -10,23 +9,18 @@ export default async function handler(
     try {
         const client = await clientPromise;
         const db = client.db("student_portal");
+        const { studentId, section, grades } = req.body;
 
-        const {
-            email,
-            currentPassword,
-            newPassword,
-            confirmPassword
-        } = req.body;
-
-        // Current Password validation
-
-        const data = await db.collection("teachers").updateOne(
+        const data = await db.collection("students").updateOne(
             {
-                "kayquitAccount.email": { $eq: email },
+                "_id": new ObjectId(studentId),
             },
             {
-                $set: {
-                    "kayquitAccount.password": newPassword
+                $push: {
+                    classes: {
+                        section: new ObjectId(section),
+                        grades: grades
+                    }
                 }
             }
         );
