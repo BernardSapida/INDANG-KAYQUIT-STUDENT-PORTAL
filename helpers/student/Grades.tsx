@@ -5,7 +5,7 @@ import { SubjectDetails, Grade, GradeResponse } from "@/types/global";
 
 export const fetchStudentGrade = async (email: string): Promise<GradeResponse> => {
     const response = await axios.post(
-        `${process.env.NEXTAUTH_URL}/api/v1/student/get/grades`,
+        `${process.env.NEXTAUTH_URL}/api/v1/student/post/grades`,
         { email: email }
     );
 

@@ -20,6 +20,7 @@ export interface SubjectDetails {
 }
 
 export interface Section {
+    section: string,
     sectionDetails: SubjectDetails
 }
 
@@ -78,7 +79,7 @@ export interface KayquitAccount {
 }
 
 export interface Classes {
-    section: string,
+    section: ObjectId,
     grades: Grade[],
     sectionDetails?: any
 }

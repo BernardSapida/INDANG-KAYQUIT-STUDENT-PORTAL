@@ -6,11 +6,15 @@ export default async function handler(
     res: NextApiResponse<any>
 ) {
     try {
-        const { email } = req.body;
-
+        const { gradeLevel, section, academicYear } = req.body;
         const client = await clientPromise;
         const db = client.db("student_portal");
-        const data = await db.collection("students").findOne({ "kayquitAccount.email": email });
+
+        const data = await db.collection("sections").findOne({
+            gradeLevel: gradeLevel,
+            name: section,
+            academicYear: academicYear
+        });
 
         res.json(data);
     } catch (e) {

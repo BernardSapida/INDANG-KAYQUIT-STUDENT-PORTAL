@@ -22,7 +22,7 @@ export default async function handler(
         });
         const sectionId = data.insertedId;
 
-        const student = await db.collection("students").updateMany(
+        const studentResult = await db.collection("students").updateMany(
             {
                 $and: [
                     { "enrollmentDetails.currentGradeLevel": gradeLevel },

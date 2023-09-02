@@ -45,10 +45,6 @@ export const removeSubjectsInSection = async (sectionId: string, gradeLevel: str
             arrayFilters: [{ "class.section": new ObjectId(sectionId) }]
         }
     );
-
-    console.log("removed");
-    console.log(sectionId, gradeLevel, name, academicYear, removedSubjects);
-    console.log(response);
 }
 
 export const addSubjectsInSection = async (sectionId: string, gradeLevel: string, name: string, academicYear: string, addedSubjects: Grade[]) => {
@@ -74,10 +70,6 @@ export const addSubjectsInSection = async (sectionId: string, gradeLevel: string
             arrayFilters: [{ "class.section": new ObjectId(sectionId) }]
         }
     );
-
-    console.log("added");
-    console.log(sectionId, gradeLevel, name, academicYear, addedSubjects);
-    console.log(response);
 }
 
 // export const fetchProfileInDatabase = async (email: string) => {

@@ -24,6 +24,7 @@ import Error from "@/components/alerts/error/Error";
 
 // CSS
 import style from "@/public/css/teacher-subjects.module.css";
+import { getGrades } from "@/utils/grades";
 
 function AddModalForm({
     modalShow,
@@ -104,24 +105,6 @@ function AddModalForm({
             }]
         ))
         // Update sectionState
-    }
-
-    const getGrades = (subjects: any[]) => {
-        let grades: any[] = [];
-
-        subjects.filter(subject => {
-            let gradeCollection = {
-                subjectName: subject.subjectName,
-                firstQuarter: 0,
-                secondQuarter: 0,
-                thirdQuarter: 0,
-                fourthQuarter: 0,
-            }
-
-            grades.push(gradeCollection);
-        })
-
-        return grades;
     }
 
     const postSection = async (output: Record<string, any>) => {

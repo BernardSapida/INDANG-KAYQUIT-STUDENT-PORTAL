@@ -1,5 +1,5 @@
 // React Modules
-import { ChangeEvent } from "react";
+import { ChangeEvent, useState, useEffect } from "react";
 
 // Formik Modules
 import { ErrorMessage } from "formik";
@@ -30,6 +30,21 @@ function EnrollmentDetails({
     };
     loading: boolean;
 }) {
+    const [academicYears, setAcademicYears] = useState<JSX.Element[]>([]);
+
+    useEffect(() => {
+        setAcademicYears(() => {
+            const currentYear = new Date().getFullYear();
+            const years: JSX.Element[] = [];
+
+            for (let year = 2019; year <= currentYear; year++) {
+                years.push(<option key={year} value={`${year}-${year + 1}`}>{`${year}-${year + 1}`}</option>)
+            }
+
+            return years;
+        });
+    }, [setAcademicYears])
+
     return (
         <div>
             <p className="fw-bold">Enrollment Details</p>
@@ -43,6 +58,7 @@ function EnrollmentDetails({
                             disabled={loading}
                         >
                             <option value="">--- Choose grade level --- </option>
+                            <option value="Kinder">Kinder</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -105,11 +121,7 @@ function EnrollmentDetails({
                             disabled={loading}
                         >
                             <option value="">--- Choose academic year --- </option>
-                            <option value="2019-2020">2019 - 2020</option>
-                            <option value="2020-2021">2020 - 2021</option>
-                            <option value="2021-2022">2021 - 2022</option>
-                            <option value="2022-2023">2022 - 2023</option>
-                            <option value="2023-2024">2023 - 2024</option>
+                            {academicYears}
                         </Form.Select>
                         <ErrorMessage
                             name="academicYear"

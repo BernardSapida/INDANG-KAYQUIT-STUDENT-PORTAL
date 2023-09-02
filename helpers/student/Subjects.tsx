@@ -6,11 +6,9 @@ import { SubjectResponse, StudentClasses } from "@/types/global";
 
 export const fetchStudentSubjects = async (email: string): Promise<SubjectResponse> => {
     const response = await axios.post(
-        `${process.env.NEXTAUTH_URL}/api/v1/student/get/subjects`,
+        `${process.env.NEXTAUTH_URL}/api/v1/student/post/subjects`,
         { email: email }
     );
-
-    console.log(response)
 
     return response.data;
 }
@@ -57,6 +55,7 @@ export const fetchSubjectsInDatabase = async (email: string): Promise<any> => {
         {
             $project: {
                 _id: 0,
+                "classes.section": 1,
                 "classes.sectionDetails": {
                     "gradeLevel": 1,
                     "name": 1,

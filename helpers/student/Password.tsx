@@ -93,8 +93,6 @@ export const updateUserPasswordInDatabase = async (email: string, newPassword: s
         }
     );
 
-    console.log(response);
-
     return {
         status: 200,
         isSuccess: true,

@@ -30,10 +30,12 @@ import KayquitGoogleAccount from "@/components/students/KayquitGoogleAccount";
 
 // CSS
 import style from "@/public/css/teacher-modal.module.css";
-import { Student, StudentResponse } from "@/types/global";
+import { Grade, Section, Student, StudentResponse } from "@/types/global";
 import axios from "axios";
-import { InsertOneResult } from "mongodb";
 import { Alert } from "@/utils/alert/Alert";
+import { getGrades } from "@/utils/grades";
+import { ObjectId } from "mongodb";
+import { fetchSectionInformation } from "@/utils/sections";
 
 function ModalForm({
     modalShow,
@@ -68,6 +70,8 @@ function ModalForm({
         try {
             // setLoading(true);
 
+            const section = await fetchSectionInformation(values.gradeLevel, values.section, values.academicYear);
+            const grades = getGrades(section.subjects);
             const studentInfo: Student = {
                 personalDetails: {
                     fullname: values.fullname,
@@ -83,7 +87,10 @@ function ModalForm({
                     studentNumber: values.studentNumber,
                     academicYear: values.academicYear
                 },
-                classes: [],
+                classes: [{
+                    section: section._id,
+                    grades: grades
+                } as any],
                 contactDetails: {
                     address: values.address,
                     guardian: values.guardian,
@@ -96,6 +103,16 @@ function ModalForm({
                 }
             }
 
+            const studentAlreadyExist = await studentExist(values.email);
+
+            if (studentAlreadyExist) {
+                return Alert(
+                    "Cannot add new student",
+                    `The student with email of <strong>${values.email}</strong> already exists in records.`,
+                    "error"
+                );
+            }
+
             // Save to database
             const addedStudent: StudentResponse = await addStudent(studentInfo);
 
@@ -106,6 +123,7 @@ function ModalForm({
 
             setLoading(false);
 
+            resetForm();
             Alert(
                 "Success!",
                 "Student successfully added",
@@ -123,9 +141,20 @@ function ModalForm({
         }
     };
 
-    const addStudent = async (studentInfo: Student): Promise<StudentResponse> => {
+    const studentExist = async (email: string): Promise<StudentResponse> => {
         const response = await axios.post(
             `/api/v1/teacher/post/student`,
+            { email }
+        );
+
+        console.log(response.data);
+
+        return response.data;
+    }
+
+    const addStudent = async (studentInfo: Student): Promise<StudentResponse> => {
+        const response = await axios.post(
+            `/api/v1/teacher/post/new-student`,
             { studentInfo }
         );
 
