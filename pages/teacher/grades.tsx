@@ -84,7 +84,7 @@ function Students({ studentList }: { studentList: Student[] }) {
             <div className={`${style.container}`}>
                 <div className={`${style.table_header}`}>
                     <InputGroup className="ms-auto mb-3">
-                        <InputGroup.Text id="basic-addon1"><AiOutlineSearch /></InputGroup.Text>
+                        <InputGroup.Text><AiOutlineSearch /></InputGroup.Text>
                         <Form.Control
                             type="text"
                             name="keyword"
