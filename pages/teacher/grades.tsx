@@ -44,7 +44,7 @@ export const getServerSideProps: GetServerSideProps = async (
         );
 
         return {
-            props: { studentList: studentList },
+            props: { studentList: studentList.data.data },
         };
     } catch (error: any) {
         console.log(error);
@@ -56,26 +56,25 @@ export const getServerSideProps: GetServerSideProps = async (
 };
 
 function Grades({ studentList }: { studentList: Student[] }) {
-    console.log(studentList);
-    // const [modalShow, setModalShow] = useState<boolean>(false);
-    // const [student, setStudent] = useState<Student>(studentList[0]);
-    // const [students, setStudents] = useState<Student[]>([]);
+    const [modalShow, setModalShow] = useState<boolean>(false);
+    const [student, setStudent] = useState<Student>(studentList[0]);
+    const [students, setStudents] = useState<Student[]>([]);
 
-    // useEffect(() => setStudents(studentList), [studentList]);
+    useEffect(() => setStudents(studentList), [studentList]);
 
-    // const handleChange = async (e: any) => {
-    //     const result = await axios.post(
-    //         '/api/v1/teacher/post/student-grades',
-    //         { searchTerm: e.target.value }
-    //     );
-    //     const filteredStudentList = result.data.data;
+    const handleChange = async (e: any) => {
+        const result = await axios.post(
+            '/api/v1/teacher/post/student-grades',
+            { searchTerm: e.target.value }
+        );
+        const filteredStudentList = result.data.data;
 
-    //     setStudents(filteredStudentList);
-    // }
+        setStudents(filteredStudentList);
+    }
 
     return (
         <section className={`mb-5 ${headerStyle.header_section}`}>
-            {/* <div className={`${headerStyle.title_container}`}>
+            <div className={`${headerStyle.title_container}`}>
                 <h1><MdGrade /> Student Grade</h1>
             </div>
             <div className={`${style.table_search}`}>
@@ -99,7 +98,7 @@ function Grades({ studentList }: { studentList: Student[] }) {
                 setStudents={setStudents}
                 modalShow={modalShow}
                 setModalShow={setModalShow}
-            /> */}
+            />
         </section>
     );
 }

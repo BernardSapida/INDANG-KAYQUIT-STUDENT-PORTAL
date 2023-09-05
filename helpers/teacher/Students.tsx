@@ -585,7 +585,14 @@ export const fetchFilteredStudentsGrade = async (searchTerm: string) => {
                     "lrn": 1,
                     "studentNumber": 1
                 },
-                "classes": 1,
+                "classes": {
+                    "section": 1,
+                    "grades": 1,
+                    "sectionDetails": {
+                        "gradeLevel": 1,
+                        "name": 1,
+                    }
+                },
                 "kayquitAccount.email": 1,
             },
         }
