@@ -1,11 +1,8 @@
-// React Boostrap Modules
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 
-// React Modules
 import { ChangeEvent } from "react";
 
-// Formik Modules
 import { ErrorMessage } from "formik";
 
 export default function Field({
@@ -15,6 +12,7 @@ export default function Field({
     value,
     handleChange,
     loading,
+    autocomplete
 }: {
     type: string;
     name: string;
@@ -27,6 +25,7 @@ export default function Field({
             : (e: string | ChangeEvent<any>) => void;
     };
     loading: boolean;
+    autocomplete?: string;
 }) {
     return (
         <FloatingLabel className="mb-3 w-100" label={label}>
@@ -37,6 +36,7 @@ export default function Field({
                 value={value}
                 placeholder={label}
                 disabled={loading}
+                autoComplete={autocomplete}
             />
             <ErrorMessage
                 name={name}

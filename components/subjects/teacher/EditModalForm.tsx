@@ -7,20 +7,16 @@ import Modal from "react-bootstrap/Modal";
 import Table from "react-bootstrap/Table";
 import Form from "react-bootstrap/Form";
 
-// React Modules
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 
-// React-Icons
 import { AiOutlinePlus } from 'react-icons/ai';
 import { BsFillSendFill, BsTrash } from 'react-icons/bs';
 import { BiSolidEdit } from 'react-icons/bi';
 
 import { Grade, Section, Subject } from "@/types/global";
 
-// Components
 import Error from "@/components/alerts/error/Error";
 
-// CSS
 import style from "@/public/css/teacher-subjects.module.css";
 import Success from "@/components/alerts/success/Success";
 import { Alert } from "@/utils/alert";

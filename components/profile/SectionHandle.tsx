@@ -1,8 +1,6 @@
-// React Bootstrap Components
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 
-// Utilities
 import { getAcademicYear } from "@/utils/date/date";
 
 import { SectionHandle } from "@/types/global";

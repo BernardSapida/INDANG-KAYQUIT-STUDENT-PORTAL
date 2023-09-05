@@ -1,7 +1,5 @@
-// React Modules
 import { ChangeEvent } from "react";
 
-// Components
 import Field from "@/components/form/InputField";
 
 function KayquitGoogleAccount({

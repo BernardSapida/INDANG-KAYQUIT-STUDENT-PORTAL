@@ -84,6 +84,7 @@ function ChangePassword({ user }: { user: User }) {
                             handleChange={handleChange}
                             value={values.currentPassword}
                             loading={loading}
+                            autocomplete={"current-password"}
                         />
                         <Field
                             type="password"
@@ -92,6 +93,7 @@ function ChangePassword({ user }: { user: User }) {
                             handleChange={handleChange}
                             value={values.newPassword}
                             loading={loading}
+                            autocomplete={"new-password"}
                         />
                         <Field
                             type="password"
@@ -100,6 +102,7 @@ function ChangePassword({ user }: { user: User }) {
                             handleChange={handleChange}
                             value={values.confirmPassword}
                             loading={loading}
+                            autocomplete={"new-password"}
                         />
                         <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="d-grid rounded">
                             <Button

@@ -1,16 +1,12 @@
-// React Modules
 import { ChangeEvent } from "react";
 
-// Formik Modules
 import { ErrorMessage } from "formik";
 
-// React Bootstrap Components
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-// Components
 import Field from "@/components/form/InputField";
 
 function PersonalDetails({

@@ -1,10 +1,7 @@
-// React-Icons
 import { AiOutlineLogin } from 'react-icons/ai';
 
-// Components
 import Form from "@/components/signin/Form";
 
-// CSS
 import style from "@/public/css/login.module.css";
 
 function Login() {

@@ -1,7 +1,5 @@
-// Next Modules
 import Link from "next/link";
 
-// React Bootstrap Components
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 

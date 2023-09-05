@@ -11,7 +11,7 @@ function NotFound() {
     const router = useRouter();
 
     return (
-        <div className={`${style.container}`}>
+        <section className={`${style.section_container}`}>
             <div className={`${style.content}`}>
                 <Image src="/images/kayquit-logo-gray.png" alt="Logo" width={220} height={220} priority={true} />
                 <h1 className={`${style.title}`}>Oops! That page can't be found.</h1 >
@@ -20,7 +20,7 @@ function NotFound() {
                     <BiArrowBack /> Go back
                 </Button>
             </div>
-        </div>
+        </section>
     );
 }
 

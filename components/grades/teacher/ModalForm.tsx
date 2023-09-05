@@ -1,31 +1,26 @@
-// Axios
 import axios from "axios";
 
-// React Bootstrap Components
+import { FloatingLabel } from "react-bootstrap";
 import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Table from "react-bootstrap/Table";
 import Form from "react-bootstrap/Form";
 
-// React Modules
 import { Dispatch, SetStateAction, useState, useRef } from "react";
 
-// React-Ripples
 import Ripples from 'react-ripples'
 
-// React-Icons
 import { BsSave } from 'react-icons/bs';
 import { MdGrade } from 'react-icons/md';
 
-// UID
 import { nanoid } from 'nanoid';
 
-// CSS
-import style from "@/public/css/teacher-modal.module.css";
-import { FloatingLabel } from "react-bootstrap";
-import { Classes, Grade, Student } from "@/types/global";
 import { Alert } from "@/utils/alert";
+
+import style from "@/public/css/teacher-modal.module.css";
+
+import { Classes, Grade, Student } from "@/types/global";
 
 function ModalForm({
     student,

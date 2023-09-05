@@ -1,11 +1,10 @@
-// React Bootstrap Components
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-// Utilities
 import { getAcademicYear } from "@/utils/date/date";
+
 import { EnrollmentDetails } from "@/types/global";
 
 function EnrollmentDetails({ enrollmentDetails }: { enrollmentDetails: EnrollmentDetails }) {

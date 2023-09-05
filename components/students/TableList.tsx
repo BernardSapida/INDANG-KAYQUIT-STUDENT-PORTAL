@@ -1,17 +1,12 @@
-// React Modules
 import { Dispatch, SetStateAction, useState, useEffect } from "react";
 
-// React Bootstrap Components
 import Spinner from "react-bootstrap/Spinner";
 import { Button } from "react-bootstrap";
 
-// React Data Table Component
 import DataTable from "react-data-table-component";
 
-// React-Ripples
 import Ripples from 'react-ripples'
 
-// React-Icons
 import { FaEdit } from 'react-icons/fa';
 import { Student } from "@/types/global";
 

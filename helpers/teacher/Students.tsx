@@ -19,8 +19,6 @@ export const createStudent = async (studentInfo: Student) => {
         updatedAt: new Date()
     });
 
-    console.log(sectionId, studentOID);
-
     await addStudentInSection(sectionId, studentOID);
 
     if (response.acknowledged) {

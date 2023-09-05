@@ -1,11 +1,5 @@
-// React Modules
 import { ChangeEvent } from "react";
 
-// React Bootstrap Components
-import FloatingLabel from "react-bootstrap/FloatingLabel";
-import Form from "react-bootstrap/Form";
-
-// Components
 import Field from "@/components/form/InputField";
 
 function ContactDetails({

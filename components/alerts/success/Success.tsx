@@ -1,4 +1,3 @@
-// React-Icons module
 import { AiFillCheckCircle } from "react-icons/ai";
 
 function Success({ successMessage, showSuccess }: { successMessage: string, showSuccess: boolean }) {

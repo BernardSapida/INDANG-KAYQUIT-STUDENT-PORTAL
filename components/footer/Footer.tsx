@@ -1,4 +1,3 @@
-// CSS
 import style from "@/public/css/footer.module.css";
 
 function Footer() {

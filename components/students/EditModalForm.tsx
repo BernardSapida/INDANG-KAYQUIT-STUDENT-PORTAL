@@ -39,7 +39,6 @@ function ModalForm({
     student: Student;
 }) {
     const [loading, setLoading] = useState<boolean>(false);
-    console.log(student)
 
     const handleSubmit = async (
         values: {
@@ -193,7 +192,6 @@ function ModalForm({
             scrollable
         >
             <Formik
-                // initialValues={initialValues}
                 initialValues={{
                     fullname: student.personalDetails?.fullname,
                     sex: student.personalDetails?.sex,

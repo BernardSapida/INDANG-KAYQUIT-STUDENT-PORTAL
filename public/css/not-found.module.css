@@ -1,38 +1,38 @@
-div.content_container {
+section.section_container {
   display: grid;
   place-items: center;
   height: calc(100vh - 60px);
 }
-div.content_container div.content img {
+section.section_container div.content img {
   display: block;
   margin: auto;
 }
-div.content_container div.content h1.title {
+section.section_container div.content h1.title {
   margin-top: 30px;
   font-size: clamp(1rem, 2.469vw + 0.648rem, 2.5rem);
   font-weight: bolder;
 }
-div.content_container div.content button.btn_back {
+section.section_container div.content button.btn_back {
   display: block;
   margin: 30px auto 0 auto;
   background-color: hsl(0, 0%, 12%);
   border: none;
 }
-div.content_container div.content button.btn_back svg {
+section.section_container div.content button.btn_back svg {
   margin-bottom: 5px;
 }
-div.content_container div.content button.btn_back:hover, div.content_container div.content button.btn_back:active {
+section.section_container div.content button.btn_back:hover, section.section_container div.content button.btn_back:active {
   background-color: hsl(0, 0%, 22%) !important;
 }
-div.content_container div.content a {
+section.section_container div.content a {
   display: block;
   margin: auto;
   background-color: hsl(0, 0%, 12%);
   border: none;
 }
-div.content_container div.content a svg {
+section.section_container div.content a svg {
   margin-bottom: 5px;
 }
-div.content_container div.content a:hover, div.content_container div.content a:active {
+section.section_container div.content a:hover, section.section_container div.content a:active {
   background-color: hsl(0, 0%, 22%) !important;
 }/*# sourceMappingURL=not-found.module.css.map */

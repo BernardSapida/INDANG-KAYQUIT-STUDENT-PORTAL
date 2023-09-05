@@ -1,15 +1,11 @@
-// React
 import { Dispatch, SetStateAction, useState } from 'react';
 
-// React Bootstrap Components
 import Accordion from 'react-bootstrap/Accordion';
 import Button from "react-bootstrap/Button";
 import Table from 'react-bootstrap/Table';
 
-// React-Icons
 import { FaEdit } from 'react-icons/fa';
 
-// CSS
 import style from "@/public/css/teacher-accordion.module.css";
 import { Section, Subject } from '@/types/global';
 

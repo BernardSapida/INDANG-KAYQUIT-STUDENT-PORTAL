@@ -1,4 +1,3 @@
-// React Bootstrap Components
 import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";

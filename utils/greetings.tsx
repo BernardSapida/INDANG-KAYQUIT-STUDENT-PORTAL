@@ -1,4 +1,3 @@
-// React-Icons
 import { BsFillSunFill, BsCloudSunFill, BsFillMoonStarsFill } from 'react-icons/bs';
 
 export const getGreeting = () => {

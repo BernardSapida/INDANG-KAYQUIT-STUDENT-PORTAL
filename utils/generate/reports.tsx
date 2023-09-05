@@ -8,7 +8,6 @@ export const generateExcel = (
     Report: string,
     inputs: ReportInputs
 ) => {
-    console.log(inputs)
     // Create a new workbook and worksheet
     const workbook = XLSX.utils.book_new();
 

@@ -1,4 +1,3 @@
-// React-Icons module
 import { BiSolidError } from "react-icons/bi";
 
 function Error({ errMessage, showError }: { errMessage: string, showError: boolean }) {

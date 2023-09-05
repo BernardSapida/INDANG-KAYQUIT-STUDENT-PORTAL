@@ -1,31 +1,24 @@
-// Next
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-// Next-Auth
 import { getSession, signIn } from "next-auth/react";
 
-// React
 import { useState, useEffect } from "react";
 
-// Formik
 import { Formik } from "formik";
 
-// React-Bootstrap
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-// React-Ripples
 import Ripples from 'react-ripples'
 
-// Helpers
 import { initialValues, validationSchema } from "@/helpers/signin/Form";
 
-// Components
 import Field from "@/components/form/InputField";
 import Error from "@/components/alerts/error/Error";
 
-// CSS
+import { Alert } from "@/utils/alert";
+
 import style from "@/public/css/button-provider.module.css";
 
 export default function SigninForm() {
@@ -74,8 +67,14 @@ export default function SigninForm() {
             setError(JSON.parse(response?.error!));
             setShowError(true);
             setLoading(false);
-        } catch (error) {
+        } catch (error: any) {
             setLoading(false);
+
+            Alert(
+                "Failed to login credential",
+                "Please contact the administrator",
+                "error"
+            );
         }
     };
 
@@ -98,6 +97,7 @@ export default function SigninForm() {
                             handleChange={handleChange}
                             value={values.email}
                             loading={loading}
+                            autocomplete={"username"}
                         />
                         <Field
                             type="password"
@@ -106,6 +106,7 @@ export default function SigninForm() {
                             handleChange={handleChange}
                             value={values.password}
                             loading={loading}
+                            autocomplete={"current-password"}
                         />
                         <div className="d-flex justify-content-between mb-3">
                             <div className="w-100">
