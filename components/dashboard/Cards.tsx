@@ -25,7 +25,7 @@ function Cards() {
             </article>
             <article className={`${style.dashboard_card}`}>
                 <div className={`${style.card_info}`}>
-                    <p className={`${style.card_value}`}>6 - Peace</p>
+                    <p className={`${style.card_value}`}>6 - Narra</p>
                     <p className={`${style.card_label}`}>Grade Level & Section</p>
                 </div>
                 <FaGraduationCap />
