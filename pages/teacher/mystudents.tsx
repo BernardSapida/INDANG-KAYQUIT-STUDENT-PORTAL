@@ -51,7 +51,7 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Students({ studentList }: { studentList: any }) {
+function MyStudents({ studentList }: { studentList: any }) {
     const [students, setStudents] = useState<Record<string, any>[]>([]);
 
     useEffect(() => setStudents(studentList), [studentList]);
@@ -68,4 +68,4 @@ function Students({ studentList }: { studentList: any }) {
     );
 }
 
-export default Students;
+export default MyStudents;
