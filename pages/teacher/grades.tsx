@@ -44,7 +44,7 @@ export const getServerSideProps: GetServerSideProps = async (
         );
 
         return {
-            props: { studentList: studentList.data.data },
+            props: { studentList: studentList },
         };
     } catch (error: any) {
         console.log(error);
