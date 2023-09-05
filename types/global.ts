@@ -10,6 +10,8 @@ export interface ReportInputs {
 export interface User {
     email: string,
     fullname: string,
+    gradeLevel: string,
+    section: string,
     role: string
 }
 
@@ -133,7 +135,9 @@ export interface Grade {
 
 export interface Password {
     fullname: string,
-    defaultPassword: string;
+    defaultPassword: string,
+    gradeLevel: string,
+    section: string,
     password: string;
 }
 
@@ -143,6 +147,8 @@ export interface AuthResult {
     data?: {
         email: string,
         fullname: string,
+        gradeLevel: string,
+        section: string,
         role: string,
     },
     message: string

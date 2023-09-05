@@ -6,7 +6,9 @@ import { getAcademicYear } from "@/utils/date/date";
 
 import style from "@/public/css/dashboard-cards.module.css";
 
-function Cards() {
+import { User } from '@/types/global';
+
+function Cards({ user }: { user: User }) {
     return (
         <div className={`${style.dashboard_container} mb-3`}>
             <article className={`${style.dashboard_card}`}>
@@ -25,7 +27,7 @@ function Cards() {
             </article>
             <article className={`${style.dashboard_card}`}>
                 <div className={`${style.card_info}`}>
-                    <p className={`${style.card_value}`}>6 - Narra</p>
+                    <p className={`${style.card_value}`}>{user.gradeLevel} - {user.section}</p>
                     <p className={`${style.card_label}`}>Grade Level & Section</p>
                 </div>
                 <FaGraduationCap />

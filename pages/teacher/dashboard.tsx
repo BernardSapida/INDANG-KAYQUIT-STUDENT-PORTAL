@@ -38,7 +38,7 @@ function Dashboard({ user }: { user: User }) {
     return (
         <section className={`mb-5 ${headerStyle.header_section}`}>
             <div className={`${headerStyle.title_container}`}>{getGreeting(user.fullname)}</div>
-            <Cards />
+            <Cards user={user} />
             <NewsUpdates />
         </section>
     );

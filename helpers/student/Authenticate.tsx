@@ -25,6 +25,8 @@ export const authenticateUser = async (email: string, password: string): Promise
             data: {
                 email: email,
                 fullname: user.fullname,
+                gradeLevel: user.gradeLevel,
+                section: user.section,
                 role: role
             },
             message: "Successfully authenticated"
@@ -37,6 +39,16 @@ export const authenticateUser = async (email: string, password: string): Promise
 const getUser = async (email: string, role: string): Promise<Password> => {
     const client = await clientPromise;
     const db = client.db("student_portal");
+    let gradeLevel: string;
+    let section: string;
+
+    if (role === "teacher") {
+        gradeLevel = "$sectionHandle.currentGradeLevel";
+        section = "$sectionHandle.currentSection";
+    } else {
+        gradeLevel = "$enrollmentDetails.currentGradeLevel";
+        section = "$enrollmentDetails.currentSection";
+    }
 
     // Get the passwords from the database
     const response = await db.collection(`${role}s`).aggregate([
@@ -46,6 +58,8 @@ const getUser = async (email: string, role: string): Promise<Password> => {
         {
             $addFields: {
                 "fullname": "$personalDetails.fullname",
+                "gradeLevel": gradeLevel,
+                "section": section,
                 "defaultPassword": "$kayquitAccount.defaultPassword",
                 "password": "$kayquitAccount.password"
             }
@@ -54,6 +68,8 @@ const getUser = async (email: string, role: string): Promise<Password> => {
             $project: {
                 "_id": 0,
                 "fullname": 1,
+                "gradeLevel": 1,
+                "section": 1,
                 "defaultPassword": 1,
                 "password": 1
             }
@@ -63,6 +79,8 @@ const getUser = async (email: string, role: string): Promise<Password> => {
 
     const result: Password = {
         fullname: response[0]?.fullname,
+        gradeLevel: response[0]?.gradeLevel,
+        section: response[0]?.section,
         defaultPassword: response[0]?.defaultPassword,
         password: response[0]?.password
     }

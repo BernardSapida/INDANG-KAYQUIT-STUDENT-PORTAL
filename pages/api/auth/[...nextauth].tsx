@@ -11,6 +11,8 @@ declare module "next-auth" {
       id: number;
       role: string;
       fullname: string;
+      gradeLevel: string;
+      section: string;
       email: string;
     } & DefaultSession["user"];
   }
@@ -21,6 +23,8 @@ declare module "next-auth/jwt" {
     id: string;
     role: string;
     fullname: string;
+    gradeLevel: string;
+    section: string;
     email: string;
     data: any;
   }
@@ -36,12 +40,13 @@ export const authOptions: NextAuthOptions = {
     },
     async session({ session, token }: { session: Session; token: JWT }) {
       const user = token.data;
-      console.log(user);
 
       if (session) {
         session.user.id = user?.id;
         session.user.role = user?.role;
         session.user.fullname = user?.fullname;
+        session.user.gradeLevel = user?.gradeLevel;
+        session.user.section = user?.section;
         session.user.email = user?.email;
       }
 
