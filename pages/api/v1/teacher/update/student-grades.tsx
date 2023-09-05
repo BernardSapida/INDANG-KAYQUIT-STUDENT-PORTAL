@@ -1,28 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import clientPromise from "@/lib/mongodb";
-import { ObjectId } from "mongodb";
+import { updateStudentGrade } from "@/helpers/teacher/Students";
 
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<any>
 ) {
     try {
-        const client = await clientPromise;
-        const db = client.db("student_portal");
         const { email, sectionId, grades } = req.body;
-        const data = await db.collection("students").updateOne(
-            {
-                "kayquitAccount.email": { $eq: email },
-                "classes.section": { $eq: new ObjectId(sectionId) },
-            },
-            {
-                $set: {
-                    "classes.$.grades": grades
-                }
-            }
-        );
+        const response = await updateStudentGrade(email, sectionId, grades);
 
-        res.json(data);
+        res.status(response.status).json(response);
     } catch (e) {
         console.error(e);
     }

@@ -22,6 +22,20 @@ export const updateSection = async (gradeLevel: string, name: string, academicYe
             }
         }
     );
+
+    if (response.acknowledged) {
+        return {
+            status: 200,
+            isSuccess: response.acknowledged,
+            message: "Successfully updated section subjects"
+        };
+    }
+
+    return {
+        status: 403,
+        isSuccess: response.acknowledged,
+        message: "Failed to update section subjects"
+    };
 }
 
 export const removeSubjectsInSection = async (sectionId: string, gradeLevel: string, name: string, academicYear: string, removedSubjects: string[]) => {
@@ -45,6 +59,20 @@ export const removeSubjectsInSection = async (sectionId: string, gradeLevel: str
             arrayFilters: [{ "class.section": new ObjectId(sectionId) }]
         }
     );
+
+    if (response.acknowledged) {
+        return {
+            status: 200,
+            isSuccess: response.acknowledged,
+            message: "Successfully removed subjects in section"
+        };
+    }
+
+    return {
+        status: 403,
+        isSuccess: response.acknowledged,
+        message: "Failed to remove subjects in section"
+    };
 }
 
 export const addSubjectsInSection = async (sectionId: string, gradeLevel: string, name: string, academicYear: string, addedSubjects: Grade[]) => {
@@ -70,49 +98,18 @@ export const addSubjectsInSection = async (sectionId: string, gradeLevel: string
             arrayFilters: [{ "class.section": new ObjectId(sectionId) }]
         }
     );
+
+    if (response.acknowledged) {
+        return {
+            status: 200,
+            isSuccess: response.acknowledged,
+            message: "Successfully added subjects in section"
+        };
+    }
+
+    return {
+        status: 403,
+        isSuccess: response.acknowledged,
+        message: "Failed to add subjects in section"
+    };
 }
-
-// export const fetchProfileInDatabase = async (email: string) => {
-//     const client = await clientPromise;
-//     const db = client.db("student_portal");
-
-//     const response = await db.collection("teachers").aggregate([
-//         {
-//             $match: { "kayquitAccount.email": email }
-//         },
-//         {
-//             $project: {
-//                 _id: 0,
-//                 "personalDetails": 1,
-//                 "sectionHandle": 1,
-//                 "contactDetails": 1,
-//                 "kayquitAccount": 1,
-//             }
-//         },
-//         {
-//             $limit: 1
-//         }
-//     ]).toArray();
-
-//     if (response.length > 0) {
-//         const teacherProfile: Teacher = {
-//             personalDetails: response[0].personalDetails,
-//             sectionHandle: response[0].sectionHandle,
-//             contactDetails: response[0].contactDetails,
-//             kayquitAccount: response[0].kayquitAccount
-//         };
-
-//         return {
-//             status: 200,
-//             isSuccess: true,
-//             data: teacherProfile,
-//             message: "Successfully found teacher profile"
-//         };
-//     }
-
-//     return {
-//         status: 404,
-//         isSuccess: true,
-//         message: "No teacher profile found"
-//     }
-// }

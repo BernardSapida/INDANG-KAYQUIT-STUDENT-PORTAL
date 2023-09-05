@@ -1,6 +1,5 @@
 import axios from "axios";
 
-// React Bootstrap Components
 import { FloatingLabel } from "react-bootstrap";
 import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
@@ -8,23 +7,18 @@ import Modal from "react-bootstrap/Modal";
 import Table from "react-bootstrap/Table";
 import Form from "react-bootstrap/Form";
 
-// React Modules
-import { Dispatch, MutableRefObject, SetStateAction, useEffect, useRef, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 
-// Sweet Alert Modules
-import Swal from "sweetalert2";
+import Ripples from 'react-ripples'
 
-// React-Icons
 import { AiOutlinePlus } from 'react-icons/ai';
-import { BsFillSendFill, BsTrash } from 'react-icons/bs';
 import { PiNotebookBold } from 'react-icons/pi';
+import { BsFillSendFill, BsTrash } from 'react-icons/bs';
 
-// Components
-import Error from "@/components/alerts/error/Error";
-
-// CSS
-import style from "@/public/css/teacher-subjects.module.css";
+import { Alert } from "@/utils/alert";
 import { getGrades } from "@/utils/grades";
+
+import style from "@/public/css/teacher-subjects.module.css";
 
 function AddModalForm({
     modalShow,
@@ -35,76 +29,95 @@ function AddModalForm({
     setModalShow: Dispatch<SetStateAction<boolean>>;
     setSections: Dispatch<SetStateAction<any[]>>;
 }) {
-    const [showError, setShowError] = useState<boolean>(false);
     const [tableRows, setTableRows] = useState<any[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
-    const [error, setError] = useState<string>("");
     let fieldId = useRef(1);
 
     useEffect(() => addRow(), []);
 
     const handleSubmit = async (e: any) => {
-        e.preventDefault();
-        setLoading(true);
-        setShowError(false);
-        setError("");
+        try {
+            e.preventDefault();
+            setLoading(true);
 
-        const formDataObject = new FormData(e.target);
-        const formValues: Record<string, any> = {};
-        let haveEmptyFields: boolean = false;
+            const formDataObject = new FormData(e.target);
+            const formValues: Record<string, any> = {};
+            let haveEmptyFields: boolean = false;
 
-        formDataObject.forEach((value, key) => {
-            let [fieldName, fieldNumber] = key.split(".");
+            formDataObject.forEach((value, key) => {
+                let [fieldName, fieldNumber] = key.split(".");
 
-            if (value === "") {
-                haveEmptyFields = true;
-                return null;
+                if (value === "") {
+                    haveEmptyFields = true;
+                    return null;
+                }
+
+                if (formValues[fieldNumber] != undefined) {
+                    formValues[fieldNumber][fieldName] = value;
+                } else {
+                    formValues[fieldNumber] = {};
+                    formValues[fieldNumber][fieldName] = value;
+                }
+            });
+
+            if (haveEmptyFields) {
+                setLoading(false);
+                Alert(
+                    "All fields are required",
+                    "Make sure you answered all the required fields",
+                    "error"
+                );
+                return;
             }
 
-            if (formValues[fieldNumber] != undefined) {
-                formValues[fieldNumber][fieldName] = value;
-            } else {
-                formValues[fieldNumber] = {};
-                formValues[fieldNumber][fieldName] = value;
-            }
-        });
+            let arr = Object.values(formValues);
+            let academicYear = arr[0].academicYear;
+            let name = arr[0].section;
+            let gradeLevel = arr[0].gradeLevel;
+            let subjects = [...arr.slice(1)];
 
-        if (haveEmptyFields) {
-            setShowError(true);
-            setError("All fields are required!")
-            return;
-        }
-
-        let arr = Object.values(formValues);
-        let academicYear = arr[0].academicYear;
-        let name = arr[0].section;
-        let gradeLevel = arr[0].gradeLevel;
-        let subjects = [...arr.slice(1)];
-
-        let output = {
-            academicYear: academicYear,
-            name: name,
-            gradeLevel: gradeLevel,
-            subjects: subjects,
-            grades: getGrades(subjects)
-        }
-
-        // Replace schoolSchedule element with this
-        let sectionId = await postSection(output);
-
-        // Update sections state by appending new section
-        setSections(prevSections => (
-            [...prevSections, {
-                _id: sectionId,
-                gradeLevel: gradeLevel,
-                name: name,
+            let output = {
                 academicYear: academicYear,
+                name: name,
+                gradeLevel: gradeLevel,
                 subjects: subjects,
-                updatedAt: new Date(),
-                createdAt: new Date()
-            }]
-        ))
-        // Update sectionState
+                grades: getGrades(subjects)
+            }
+
+            // Replace schoolSchedule element with this
+            const sectionId = await postSection(output);
+
+            // Update sections state by appending new section
+            setSections(prevSections => (
+                [...prevSections, {
+                    _id: sectionId,
+                    gradeLevel: gradeLevel,
+                    name: name,
+                    academicYear: academicYear,
+                    subjects: subjects,
+                    updatedAt: new Date(),
+                    createdAt: new Date()
+                }]
+            ))
+
+            Alert(
+                "Creation successfully",
+                "Successfully created new section",
+                "success"
+            );
+
+            setLoading(false);
+        } catch (error: any) {
+            setLoading(false);
+
+            const errorMessage = error.response.data.message;
+
+            Alert(
+                "Failed to create new section",
+                errorMessage,
+                "error"
+            );
+        }
     }
 
     const postSection = async (output: Record<string, any>) => {
@@ -113,7 +126,7 @@ function AddModalForm({
             output
         );
 
-        return res.data.sectionId;
+        return res.data.data.insertedId;
     }
 
     const removeRow = (position: number) => {
@@ -172,7 +185,6 @@ function AddModalForm({
             show={modalShow}
             onHide={() => {
                 setModalShow(false);
-                setShowError(false);
                 setTableRows([]);
                 addRow();
             }}
@@ -188,7 +200,6 @@ function AddModalForm({
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Error errMessage={error} showError={showError} />
                     <Form onSubmit={handleSubmit} id="gradesForm">
                         <FloatingLabel className="mb-3 w-100" label={"Grade Level"}>
                             <Form.Select name="gradeLevel">
@@ -212,7 +223,6 @@ function AddModalForm({
                         <FloatingLabel className="w-100" label={"Academic Year"}>
                             <Form.Select name="academicYear">
                                 <option value="">--- Choose academic year ---</option>
-                                <option value="">--- Choose academic year ---</option>
                                 <option value="2017-2018">2017-2018</option>
                                 <option value="2019-2020">2018-2019</option>
                                 <option value="2019-2020">2019-2020</option>
@@ -235,17 +245,29 @@ function AddModalForm({
                             <tbody className="align-middle">
                                 {tableRows}
                             </tbody>
-                        </Table >
+                        </Table>
                     </Form>
 
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button type="button" className={`d-block ${style.btn_add}`} onClick={addRow}>
-                        <AiOutlinePlus /> Add row
-                    </Button>
-                    <Button type="submit" className={`d-block ms-auto ${style.btn_submit}`} form="gradesForm">
-                        <BsFillSendFill /> Submit
-                    </Button>
+                    <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="me-auto rounded">
+                        <Button type="button" className={`${style.btn_add}`} onClick={addRow}>
+                            <AiOutlinePlus /> Add row
+                        </Button>
+                    </Ripples>
+                    <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="d-grid rounded">
+                        <Button
+                            type="submit"
+                            className={`d-block ms-auto ${style.btn_submit}`}
+                            form="gradesForm"
+                            disabled={loading}
+                        >
+                            {
+                                loading ? (<><Spinner animation="grow" size="sm" /> Creating...</>) :
+                                    (<><BsFillSendFill /> Create a section</>)
+                            }
+                        </Button>
+                    </Ripples>
                 </Modal.Footer>
             </>
         </Modal>

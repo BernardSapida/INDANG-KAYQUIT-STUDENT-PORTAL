@@ -1,25 +1,19 @@
-// Axios
 import axios from "axios";
 
-// Next Modules
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
+
 import dynamic from "next/dynamic";
 
-// Next-Auth Modules
 import { getSession } from "next-auth/react";
 
-// React Modules
 import { useState, useEffect } from "react";
 
-// React Bootstrap Components
 import { InputGroup } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 
-// React-Icons
 import { MdGrade } from 'react-icons/md';
 import { AiOutlineSearch } from "react-icons/ai";
 
-// Components
 const TableList = dynamic(() => import("@/components/grades/teacher/TableList"), {
     ssr: false,
 });
@@ -27,9 +21,10 @@ const ModalForm = dynamic(() => import("@/components/grades/teacher/ModalForm"),
     ssr: false,
 });
 
-// CSS
-import style from "@/public/css/teacher-students.module.css";
 import { Student } from "@/types/global";
+
+import headerStyle from "@/public/css/section-header.module.css";
+import style from "@/public/css/teacher-grades.module.css";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -48,10 +43,7 @@ export const getServerSideProps: GetServerSideProps = async (
         );
 
         return {
-            props: {
-                user: session.user,
-                studentList: studentList.data
-            },
+            props: { studentList: studentList.data.data },
         };
     } catch (error) {
         return {
@@ -72,40 +64,39 @@ function Students({ studentList }: { studentList: Student[] }) {
             '/api/v1/teacher/post/student-grades',
             { searchTerm: e.target.value }
         );
-        const filteredStudentList = result.data;
+        const filteredStudentList = result.data.data;
+
         setStudents(filteredStudentList);
     }
 
     return (
-        <div className="mb-5">
-            <div className={`${style.title}`}>
+        <section className={`mb-5 ${headerStyle.header_section}`}>
+            <div className={`${headerStyle.title_container}`}>
                 <h1><MdGrade /> Student Grade</h1>
             </div>
-            <div className={`${style.container}`}>
-                <div className={`${style.table_header}`}>
-                    <InputGroup className="ms-auto mb-3">
-                        <InputGroup.Text><AiOutlineSearch /></InputGroup.Text>
-                        <Form.Control
-                            type="text"
-                            name="keyword"
-                            onChange={handleChange}
-                            placeholder="Search student"
-                        />
-                    </InputGroup>
-                </div>
-                <TableList
-                    studentList={students}
-                    setModalShow={setModalShow}
-                    setStudent={setStudent}
-                />
+            <div className={`${style.table_search}`}>
+                <InputGroup className="ms-auto mb-3">
+                    <InputGroup.Text><AiOutlineSearch /></InputGroup.Text>
+                    <Form.Control
+                        type="text"
+                        name="keyword"
+                        onChange={handleChange}
+                        placeholder="Search student"
+                    />
+                </InputGroup>
             </div>
+            <TableList
+                studentList={students}
+                setModalShow={setModalShow}
+                setStudent={setStudent}
+            />
             <ModalForm
                 student={student}
                 setStudents={setStudents}
                 modalShow={modalShow}
                 setModalShow={setModalShow}
             />
-        </div>
+        </section>
     );
 }
 

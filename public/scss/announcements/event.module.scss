@@ -1,0 +1,32 @@
+article.event_container {
+    display: flex;
+    align-items: flex-start;
+
+    & div.event_time {
+        padding: 0 20px;
+        border-right: 1px solid hsl(0, 0%, 93%);
+
+        & p {
+            margin: 0;
+            width: 80px;
+            color: hsl(0, 0%, 50%);
+            font-size: 18px;
+        }
+    }
+
+    & div.event_content {
+        margin-left: 20px;
+
+        & p.event_title {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        & p.event_description {
+            margin: 0;
+            color: hsl(0, 0%, 50%);
+            font-size: 18px;
+        }
+    }
+}

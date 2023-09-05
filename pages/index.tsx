@@ -1,24 +1,22 @@
-// React-Icons
 import { FaGraduationCap } from 'react-icons/fa';
 
-// Components
 import PortalGuide from "@/components/signin/PortalGuide";
 import Login from "@/components/signin/Login";
 
-// CSS
+import headerStyle from "@/public/css/section-header.module.css";
 import style from "@/public/css/signin.module.css";
 
 function Signin() {
     return (
-        <div className="mb-5">
-            <div className={`${style.title}`}>
+        <section className={`mb-5 ${headerStyle.header_section}`}>
+            <div className={`${headerStyle.title_container}`}>
                 <h1><FaGraduationCap /> Student Portal</h1>
             </div>
-            <div className={`${style.container}`}>
+            <div className={`${style.content_container}`}>
                 <Login />
                 <PortalGuide />
             </div>
-        </div>
+        </section>
     );
 }
 

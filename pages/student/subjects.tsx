@@ -2,13 +2,15 @@ import { GetServerSideProps, GetServerSidePropsContext } from "next";
 
 import { getSession } from "next-auth/react";
 
-import { MdSubject } from 'react-icons/md';
-
 import AccordionDropdown from "@/components/subjects/student/Accordion";
 
-import style from "@/public/css/student-subjects.module.css";
-import { Section, StudentClasses } from "@/types/global";
+import { MdSubject } from 'react-icons/md';
+
 import { fetchStudentSubjects } from "@/helpers/student/Subjects";
+
+import { StudentClasses, StudentSection } from "@/types/global";
+
+import headerStyle from "@/public/css/section-header.module.css";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -35,22 +37,20 @@ export const getServerSideProps: GetServerSideProps = async (
 
 function Subjects({ student }: { student: StudentClasses }) {
     return (
-        <div className="mb-5">
-            <div className={`${style.title}`}>
+        <section className={`mb-5 ${headerStyle.header_section}`}>
+            <div className={`${headerStyle.title_container}`}>
                 <h1><MdSubject /> Enrolled Subjects</h1>
             </div>
-            <div className={`${style.container}`}>
-                {
-                    student.classes.map((item: Section, key: number) => (
-                        <AccordionDropdown
-                            key={key}
-                            section={item}
-                            uniqueKey={key.toString()}
-                        />
-                    ))
-                }
-            </div>
-        </div>
+            {
+                student.classes.map((item: StudentSection, key: number) => (
+                    <AccordionDropdown
+                        key={key}
+                        section={item}
+                        uniqueKey={key.toString()}
+                    />
+                ))
+            }
+        </section>
     );
 }
 

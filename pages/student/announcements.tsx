@@ -1,5 +1,3 @@
-import axios from "axios";
-
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 
 import { getSession } from "next-auth/react";
@@ -11,11 +9,11 @@ import { getAcademicYear } from "@/utils/date/date";
 import Announcement from "@/components/announcements/Announcement";
 
 import { fetchAnnouncements } from "@/helpers/student/Announcements";
-
-import style from "@/public/css/student-announcements.module.css";
 import { fetchStudentProfile } from "@/helpers/student/Profile";
 
 import { Announcements, ClassAnnouncement, ProfileResponse, Student } from "@/types/global";
+
+import headerStyle from "@/public/css/section-header.module.css";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -44,18 +42,16 @@ export const getServerSideProps: GetServerSideProps = async (
 
 function Announcements({ announcement }: { announcement: ClassAnnouncement }) {
     return (
-        <div className="mb-5">
-            <div className={`${style.title}`}>
+        <section className={`mb-5 ${headerStyle.header_section}`}>
+            <div className={`${headerStyle.title_container}`}>
                 <h1><IoMdNotifications /> Class Announcement(s) {getAcademicYear()}</h1>
             </div>
-            <div className={`${style.container}`}>
-                {
-                    announcement.announcements?.map((announcements: Announcements, key: number) => (
-                        <Announcement key={key} title={announcements.title} description={announcements.description} createdAt={announcements.createdAt} />
-                    ))
-                }
-            </div>
-        </div>
+            {
+                announcement.announcements?.map((announcements: Announcements, key: number) => (
+                    <Announcement key={key} title={announcements.title} description={announcements.description} createdAt={announcements.createdAt!} />
+                ))
+            }
+        </section>
     );
 }
 

@@ -1,14 +1,10 @@
-// Next Modules
 import Image from "next/image";
 import { useRouter } from 'next/router';
 
-// React-Icons
 import { BiArrowBack } from 'react-icons/bi';
 
-// React Bootstrap Components
 import Button from "react-bootstrap/Button";
 
-// CSS
 import style from "@/public/css/not-found.module.css";
 
 function NotFound() {

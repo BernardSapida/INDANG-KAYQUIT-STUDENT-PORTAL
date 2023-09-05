@@ -1,21 +1,15 @@
-// Next
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import dynamic from "next/dynamic";
 
-// Next-Auth
 import { getSession } from "next-auth/react";
 
-// React
 import { useEffect, useState } from "react";
 
-// React Bootstrap
 import Button from "react-bootstrap/Button";
 
-// React-Icons
 import { AiOutlinePlus } from 'react-icons/ai';
 import { IoMdNotifications } from 'react-icons/io';
 
-// React-Ripples
 import Ripples from 'react-ripples'
 
 import Announcement from "@/components/announcements/Announcement";
@@ -23,14 +17,15 @@ const ModalForm = dynamic(() => import("@/components/announcements/ModalForm"), 
     ssr: false,
 });
 
-// Utilities
+import { fetchTeacherProfile } from "@/helpers/teacher/Profile";
+import { fetchAnnouncements } from "@/helpers/teacher/Announcements";
+
 import { getAcademicYear } from "@/utils/date/date";
 
-// CSS
+import { Announcements, ClassAnnouncement, Teacher } from "@/types/global";
+
+import headerStyle from "@/public/css/section-header.module.css";
 import style from "@/public/css/teacher-announcements.module.css";
-import { fetchTeacherProfile } from "@/helpers/teacher/Profile";
-import { Announcements, ClassAnnouncement, Teacher, User } from "@/types/global";
-import { fetchAnnouncements } from "@/helpers/teacher/Announcements";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -81,17 +76,17 @@ function Announcements(
 
     useEffect(() => {
         const res = announcement.announcements?.map((announcements: Announcements, key: number) => (
-            <Announcement key={key} title={announcements.title} description={announcements.description} createdAt={announcements.createdAt} />
+            <Announcement key={key} title={announcements.title} description={announcements.description} createdAt={announcements.createdAt!} />
         ));
         setCards(res!);
     }, []);
 
     return (
-        <div className="mb-5">
-            <div className={`${style.title}`}>
+        <section className={`mb-5 ${headerStyle.header_section}`}>
+            <div className={`${headerStyle.title_container}`}>
                 <h1><IoMdNotifications /> Announcement(s) {getAcademicYear()}</h1>
             </div>
-            <div className={`${style.container}`}>
+            <div className={`${style.content_container}`}>
                 <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="d-grid rounded">
                     <Button type="button" className={`d-block ms-auto mb-4 ${style.btn_post}`} onClick={() => setModalShow(true)}>
                         <AiOutlinePlus /> New Announcement
@@ -100,7 +95,7 @@ function Announcements(
                 {cards}
             </div>
             <ModalForm modalShow={modalShow} setModalShow={setModalShow} setCards={setCards} teacher={teacher} />
-        </div>
+        </section>
     );
 }
 

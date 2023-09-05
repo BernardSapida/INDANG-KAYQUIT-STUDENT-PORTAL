@@ -4,7 +4,6 @@ import NextAuth, { getServerSession } from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import axios from "axios";
 import { JWT } from "next-auth/jwt";
-import { getSession } from "next-auth/react";
 
 declare module "next-auth" {
   interface Session extends DefaultSession {
@@ -12,7 +11,6 @@ declare module "next-auth" {
       id: number;
       role: string;
       email: string;
-      password: string;
     } & DefaultSession["user"];
   }
 }
@@ -22,7 +20,6 @@ declare module "next-auth/jwt" {
     id: string;
     role: string;
     email: string;
-    password: string;
     data: any;
   }
 }

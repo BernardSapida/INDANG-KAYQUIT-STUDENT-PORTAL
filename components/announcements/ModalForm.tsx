@@ -1,35 +1,27 @@
 import axios from "axios";
 
-// React Bootstrap Components
 import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 
-// React Modules
 import { Dispatch, SetStateAction, useState } from "react";
 
-// Formik Modules
 import { Formik } from "formik";
 
-// React-Icons
 import { BsFillSendFill } from 'react-icons/bs';
 import { MdNotificationsActive } from 'react-icons/md';
 
-// React-Ripples
 import Ripples from 'react-ripples'
 
-// Helpers
 import { initialValues, validationSchema } from "@/helpers/teacher/announcements/Form";
 
-// Components
 import Field from "@/components/form/InputField";
 import TextAreaField from "@/components/form/TextAreaField";
 import Announcement from "@/components/announcements/Announcement";
 
-// CSS
 import style from "@/public/css/teacher-modal.module.css";
-import { User } from "@/types/global";
+import { Alert } from "@/utils/alert";
 
 function ModalForm({
     modalShow,
@@ -54,35 +46,54 @@ function ModalForm({
         values: { title: string; description: string },
         { resetForm }: { resetForm: any }
     ) => {
-        setLoading(true);
+        try {
+            setLoading(true);
 
-        const { title, description } = values;
-        const output = {
-            gradeLevel: teacher.currentGradeLevel,
-            section: teacher.currentSection,
-            academicYear: teacher.academicYear,
-            adviserEmail: teacher.email,
-            title,
-            description
+            const { title, description } = values;
+            const output = {
+                gradeLevel: teacher.currentGradeLevel,
+                section: teacher.currentSection,
+                academicYear: teacher.academicYear,
+                adviserEmail: teacher.email,
+                title,
+                description
+            }
+
+            // Save to db
+            await postAnnouncement(output);
+
+            resetForm();
+            setCards((beforeCard: JSX.Element[]) => {
+                return [
+                    <Announcement
+                        key={beforeCard.length++}
+                        title={title}
+                        description={description}
+                        createdAt={new Date().toString()}
+                    />,
+                    ...beforeCard
+                ]
+            });
+
+            setLoading(false);
+
+            Alert(
+                "Success!",
+                "The announcement has been posted successfully",
+                "success",
+                "Thank you!"
+            );
+        } catch (error: any) {
+            setLoading(false);
+
+            const errorMessage = error.response.data.message;
+
+            Alert(
+                "Failed to post an announcement",
+                errorMessage,
+                "error"
+            );
         }
-
-        // Save to db
-        await postAnnouncement(output);
-
-        resetForm();
-        setCards((beforeCard: JSX.Element[]) => {
-            return [
-                ...beforeCard,
-                <Announcement
-                    key={beforeCard.length++}
-                    title={title}
-                    description={description}
-                    createdAt={new Date().toString()}
-                />
-            ]
-        });
-
-        setTimeout(() => setLoading(false), 2000);
     };
 
     const postAnnouncement = async (output: Record<string, any>) => {

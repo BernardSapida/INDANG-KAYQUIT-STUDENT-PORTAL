@@ -1,0 +1,27 @@
+article.event_container {
+  display: flex;
+  align-items: flex-start;
+}
+article.event_container div.event_time {
+  padding: 0 20px;
+  border-right: 1px solid hsl(0, 0%, 93%);
+}
+article.event_container div.event_time p {
+  margin: 0;
+  width: 80px;
+  color: hsl(0, 0%, 50%);
+  font-size: 18px;
+}
+article.event_container div.event_content {
+  margin-left: 20px;
+}
+article.event_container div.event_content p.event_title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+}
+article.event_container div.event_content p.event_description {
+  margin: 0;
+  color: hsl(0, 0%, 50%);
+  font-size: 18px;
+}/*# sourceMappingURL=event.module.css.map */

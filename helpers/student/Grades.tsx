@@ -79,7 +79,7 @@ export const fetchGradesInDatabase = async (email: string): Promise<GradeRespons
 
     return {
         status: 404,
-        isSuccess: true,
+        isSuccess: false,
         data: {},
         message: "No student grades found"
     }

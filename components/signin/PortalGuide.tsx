@@ -9,7 +9,7 @@ import style from "@/public/css/portal-guide.module.css";
 
 function PortalGuide() {
     return (
-        <div className={`${style.guide_container}`} >
+        <div className={`${style.guide_container}`}>
             <div className={`${style.title}`}>
                 <p><AiOutlineInfoCircle /> Portal Guide</p>
             </div>
@@ -36,7 +36,7 @@ function PortalGuide() {
                     <p>• Please fill up this <Link href="#">form</Link></p>
                 </div>
             </div>
-        </div >
+        </div>
     );
 }
 

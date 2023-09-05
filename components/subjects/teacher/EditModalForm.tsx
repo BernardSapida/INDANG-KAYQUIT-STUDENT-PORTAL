@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// React Bootstrap Components
 import { FloatingLabel } from "react-bootstrap";
+import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Table from "react-bootstrap/Table";
@@ -118,13 +118,17 @@ function EditModalForm({
                 "success",
                 "Thank you!"
             );
-        } catch (error) {
+            setLoading(false);
+        } catch (error: any) {
+            setLoading(false);
+
+            const errorMessage = error.response.data.message;
+
             Alert(
-                "There was an error",
-                "Please contact the administrator",
+                "Failed to update section",
+                errorMessage,
                 "error"
             );
-            console.error(error);
         }
     };
 
@@ -346,7 +350,7 @@ function EditModalForm({
                             <tbody className="align-middle">
                                 {tableRows}
                             </tbody>
-                        </Table >
+                        </Table>
                     </Form>
 
                 </Modal.Body>
@@ -354,8 +358,16 @@ function EditModalForm({
                     <Button type="button" className={`d-block ${style.btn_add}`} onClick={addRow}>
                         <AiOutlinePlus /> Add row
                     </Button>
-                    <Button type="submit" className={`d-block ms-auto ${style.btn_submit}`} form="gradesForm">
-                        <BsFillSendFill /> Submit
+                    <Button
+                        type="submit"
+                        className={`d-block ms-auto ${style.btn_submit}`}
+                        form="gradesForm"
+                        disabled={loading}
+                    >
+                        {
+                            loading ? (<><Spinner animation="grow" size="sm" /> Updating...</>) :
+                                (<><BsFillSendFill /> Update subjects</>)
+                        }
                     </Button>
                 </Modal.Footer>
             </>

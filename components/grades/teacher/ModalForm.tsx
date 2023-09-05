@@ -42,7 +42,7 @@ function ModalForm({
     const [grades, setGrades] = useState<Grade[]>([]);
     const sectionId = useRef<string>("");
 
-    const handleSubmit = (e: any) => {
+    const handleSubmit = async (e: any) => {
         try {
             e.preventDefault();
             setLoading(true);
@@ -102,7 +102,7 @@ function ModalForm({
             syncTable();
 
             // Save to database
-            updateGrade(studentGrade);
+            await updateGrade(studentGrade);
 
             setLoading(false);
             Alert(
@@ -111,13 +111,16 @@ function ModalForm({
                 "success",
                 "Thank you!"
             );
-        } catch (error) {
+        } catch (error: any) {
+            setLoading(false);
+
+            const errorMessage = error.response.data.message;
+
             Alert(
-                "There was an error",
-                "Please contact the administrator",
+                "Failed to update student grade",
+                errorMessage,
                 "error"
             );
-            console.log(error);
         }
     };
 
@@ -234,7 +237,7 @@ function ModalForm({
                                         ))
                                     }
                                 </tbody>
-                            </Table >) : <></>
+                            </Table>) : <></>
                         }
                     </Form>
                 </Modal.Body>

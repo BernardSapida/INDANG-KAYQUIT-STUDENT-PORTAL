@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import clientPromise from "@/lib/mongodb";
+import { fetchStudent } from "@/helpers/teacher/Students";
 
 export default async function handler(
     req: NextApiRequest,
@@ -7,12 +7,9 @@ export default async function handler(
 ) {
     try {
         const { email } = req.body;
+        const response = await fetchStudent(email);
 
-        const client = await clientPromise;
-        const db = client.db("student_portal");
-        const data = await db.collection("students").findOne({ "kayquitAccount.email": email });
-
-        res.json(data);
+        res.status(200).json(response);
     } catch (e) {
         console.error(e);
     }

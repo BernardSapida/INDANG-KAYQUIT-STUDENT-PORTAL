@@ -82,7 +82,7 @@ export const fetchSubjectsInDatabase = async (email: string): Promise<any> => {
 
     return {
         status: 404,
-        isSuccess: true,
+        isSuccess: false,
         data: [],
         message: "No student subjects found"
     }

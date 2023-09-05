@@ -1,19 +1,12 @@
-// React Modules
 import { ChangeEvent, useState, useEffect } from "react";
 
-// Formik Modules
 import { ErrorMessage } from "formik";
 
-// React Bootstrap Components
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-// Utilities
-import { getAcademicYear } from "@/utils/date/date";
-
-// Components
 import Field from "@/components/form/InputField";
 
 function EnrollmentDetails({
@@ -82,8 +75,8 @@ function EnrollmentDetails({
                             disabled={loading}
                         >
                             <option value="">--- Choose section --- </option>
-                            <option value="Narra">Narra</option>
-                            <option value="Akasya">Akasya</option>
+                            <option value="narra">Narra</option>
+                            <option value="akasya">Akasya</option>
                         </Form.Select>
                         <ErrorMessage
                             name="section"

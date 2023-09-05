@@ -1,33 +1,25 @@
-import axios, { AxiosError } from "axios";
+import axios from "axios";
 
-// React Modules
 import { useState } from "react";
 
-// React Bootstrap Components
 import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-// Formik Modules
 import { Formik } from "formik";
 
-// Components
 import Field from "@/components/form/InputField";
 
-// React-Icons
 import { FaExchangeAlt } from 'react-icons/fa';
 
-// React-Ripples
 import Ripples from 'react-ripples'
 
-// Helpers
-import { initialValues, validationSchema } from "@/helpers/teacher/password/Form";
+import { initialValues, validationSchema } from "@/helpers/password/Form";
 
-// CSS
-import style from "@/public/css/teacher-change-password.module.css";
 import { User } from "@/types/global";
 import { Alert } from "@/utils/alert";
 
+import style from "@/public/css/change-password.module.css";
 
 function ChangePassword({ user }: { user: User }) {
     const [loading, setLoading] = useState<boolean>(false);
@@ -49,9 +41,10 @@ function ChangePassword({ user }: { user: User }) {
             );
             setLoading(false);
         } catch (error: any) {
+            setLoading(false);
+
             const errorMessage = error.response.data.message;
 
-            setLoading(false);
             Alert(
                 "Failed to reset password",
                 errorMessage,

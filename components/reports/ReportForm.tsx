@@ -1,10 +1,7 @@
-// Next Modules
-import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
-// React Modules
-import { useState } from "react";
+import axios from "axios";
 
-// React Bootstrap Components
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
@@ -12,30 +9,37 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-// Formik Modules
 import { Formik } from "formik";
 import { ErrorMessage } from "formik";
 
-// React-Icons
 import { BiSolidReport } from 'react-icons/bi';
 
-// React-Ripples
 import Ripples from 'react-ripples'
 
-// Helpers
 import { initialValues, validationSchema } from "@/helpers/teacher/reports/Form";
 
-import axios from "axios";
-
-// Utilities
-import { Alert } from "@/utils/alert/swal";
-
-// CSS
-import style from "@/public/css/teacher-report.module.css";
 import { generateExcel } from "@/utils/generate/reports";
+
+import { Alert } from "@/utils/alert";
+
+import style from "@/public/css/report-form.module.css";
 
 function ReportForm() {
     const [loading, setLoading] = useState<boolean>(false);
+    const [academicYears, setAcademicYears] = useState<JSX.Element[]>([]);
+
+    useEffect(() => {
+        setAcademicYears(() => {
+            const currentYear = new Date().getFullYear();
+            const years: JSX.Element[] = [];
+
+            for (let year = 2017; year <= currentYear; year++) {
+                years.push(<option key={year} value={`${year}-${year + 1}`}>{`${year}-${year + 1}`}</option>)
+            }
+
+            return years;
+        });
+    }, [setAcademicYears])
 
     const handleSubmit = async (
         values: {
@@ -46,29 +50,38 @@ function ReportForm() {
         },
         { resetForm }: { resetForm: any }
     ) => {
-        setLoading(true);
-        const { report, gradeLevel, section, academicYear } = values;
+        try {
+            setLoading(true);
+            const { report, gradeLevel, section } = values;
 
-        if (report === "Student List") {
-            const sectionStudents = await axios.post(
-                `/api/v1/teacher/get/section-students`,
-                values
+            if (report === "Student List") {
+                const sectionStudents = await axios.post(
+                    `/api/v1/teacher/get/section-students`,
+                    values
+                );
+
+                generateExcel(sectionStudents.data.data, `Student List (${gradeLevel} - ${section})`, report, values)
+            } else if (report === "Student Report Card") {
+                const sectionStudents = await axios.post(
+                    `/api/v1/teacher/get/section-grades`,
+                    values
+                );
+
+                generateExcel(sectionStudents.data.data, `Student Report Card (${gradeLevel} - ${section})`, report, values)
+            }
+
+            setLoading(false)
+        } catch (error: any) {
+            setLoading(false);
+
+            const errorMessage = error.response.data.message;
+
+            Alert(
+                "Failed to generate report",
+                errorMessage,
+                "error"
             );
-
-            generateExcel(sectionStudents.data, `Student List (${gradeLevel} - ${section})`, report)
         }
-
-        if (report === "Student Report Card") {
-            const sectionStudents = await axios.post(
-                `/api/v1/teacher/get/section-grades`,
-                values
-            );
-
-
-            generateExcel(sectionStudents.data, `Student Report Card (${gradeLevel} - ${section})`, report)
-        }
-
-        setLoading(false)
     };
 
     return (
@@ -133,13 +146,7 @@ function ReportForm() {
                             <FloatingLabel className="mb-3 w-100" label={"Academic Year"}>
                                 <Form.Select name="academicYear" value={values.academicYear} onChange={handleChange} disabled={loading}>
                                     <option value="">--- Choose academic year ---</option>
-                                    <option value="2017-2018">2017-2018</option>
-                                    <option value="2018-2019">2018-2019</option>
-                                    <option value="2019-2020">2019-2020</option>
-                                    <option value="2020-2021">2020-2021</option>
-                                    <option value="2021-2022">2021-2022</option>
-                                    <option value="2022-2023">2022-2023</option>
-                                    <option value="2023-2024">2023-2024</option>
+                                    {academicYears}
                                 </Form.Select>
                                 <ErrorMessage
                                     name={"academicYear"}

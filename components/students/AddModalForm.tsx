@@ -30,11 +30,10 @@ import KayquitGoogleAccount from "@/components/students/KayquitGoogleAccount";
 
 // CSS
 import style from "@/public/css/teacher-modal.module.css";
-import { Grade, Section, Student, StudentResponse } from "@/types/global";
+import { Student, StudentResponse } from "@/types/global";
 import axios from "axios";
 import { Alert } from "@/utils/alert";
 import { getGrades } from "@/utils/grades";
-import { ObjectId } from "mongodb";
 import { fetchSectionInformation } from "@/utils/sections";
 
 function ModalForm({
@@ -68,7 +67,7 @@ function ModalForm({
         { resetForm }: { resetForm: any }
     ) => {
         try {
-            // setLoading(true);
+            setLoading(true);
 
             const section = await fetchSectionInformation(values.gradeLevel, values.section, values.academicYear);
             const grades = getGrades(section.subjects);
@@ -114,7 +113,7 @@ function ModalForm({
             }
 
             // Save to database
-            const addedStudent: StudentResponse = await addStudent(studentInfo);
+            const addedStudent: StudentResponse = await createStudent(studentInfo);
 
             setStudents((prevStudents: Student[]) => {
                 studentInfo._id = addedStudent.data?.insertedId;
@@ -123,7 +122,7 @@ function ModalForm({
 
             setLoading(false);
 
-            // resetForm();
+            resetForm();
 
             Alert(
                 "Success!",
@@ -131,14 +130,16 @@ function ModalForm({
                 "success",
                 "Thank you!"
             );
-        } catch (error) {
+        } catch (error: any) {
+            setLoading(false);
+
+            const errorMessage = error.response.data.message;
+
             Alert(
-                "There was an error",
-                "Please contact the administrator",
+                "Failed to create student",
+                errorMessage,
                 "error"
             );
-
-            console.log(error);
         }
     };
 
@@ -148,10 +149,10 @@ function ModalForm({
             { email }
         );
 
-        return response.data;
+        return response.data.data;
     }
 
-    const addStudent = async (studentInfo: Student): Promise<StudentResponse> => {
+    const createStudent = async (studentInfo: Student): Promise<StudentResponse> => {
         const response = await axios.post(
             `/api/v1/teacher/post/new-student`,
             { studentInfo }

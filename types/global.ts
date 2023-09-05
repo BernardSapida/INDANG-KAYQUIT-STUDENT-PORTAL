@@ -1,5 +1,12 @@
 import { ObjectId } from "mongodb"
 
+export interface ReportInputs {
+    report: string;
+    gradeLevel: string;
+    section: string;
+    academicYear: string;
+}
+
 export interface User {
     email: string,
     role: string
@@ -20,13 +27,13 @@ export interface SectionDetails {
     students?: any[]
 }
 
-export interface Section {
+export interface StudentSection {
     section: string,
     sectionDetails: SectionDetails
 }
 
 export interface StudentClasses {
-    classes: Section[]
+    classes: StudentSection[]
 }
 
 export interface Student {
@@ -36,6 +43,8 @@ export interface Student {
     contactDetails: ContactDetails,
     kayquitAccount: KayquitAccount,
     classes?: Classes[],
+    createdAt?: string,
+    updatedAt?: string
 }
 
 export interface Teacher {
@@ -91,8 +100,8 @@ export interface ClassDetails {
     name: string,
     academicYear: string,
     subjects: Subject[],
-    updatedAt: string,
-    createdAt: string
+    createdAt?: string,
+    updatedAt?: string
 }
 
 export interface ClassAnnouncement {
@@ -105,7 +114,8 @@ export interface ClassAnnouncement {
 export interface Announcements {
     title: string,
     description: string,
-    createdAt: string,
+    createdAt?: string,
+    updatedAt?: string
 }
 
 export interface Grades {
@@ -153,12 +163,23 @@ export interface TeacherProfileResponse extends Response {
     data?: Teacher,
 }
 
+export interface SectionDetailsResponse extends Response {
+    data?: Section,
+}
+
 export interface AnnouncementResponse extends Response {
     data: ClassAnnouncement,
 }
 
 export interface SubjectResponse extends Response {
     data?: Section[],
+}
+
+export interface SectionCreationResponse extends Response {
+    data?: {
+        acknowledged: boolean,
+        insertedId: ObjectId
+    }
 }
 
 export interface PasswordResponse extends Response {
@@ -178,8 +199,9 @@ export interface Section {
     name: string,
     academicYear: string,
     subjects: Subject[],
-    createdAt: string,
-    updatedAt: string,
+    students: ObjectId[],
+    createdAt?: string,
+    updatedAt?: string,
 }
 
 export interface StudentResponse extends Response {

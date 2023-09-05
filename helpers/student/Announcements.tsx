@@ -40,7 +40,7 @@ export const fetchAnnouncementsInDatabase = async (gradeLevel: string, section: 
 
     return {
         status: 404,
-        isSuccess: true,
+        isSuccess: false,
         data: {},
         message: "No announcements found"
     }

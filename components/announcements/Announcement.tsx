@@ -1,6 +1,6 @@
-// CSS
-import style from "@/public/css/student-event.module.css";
 import { formatDate } from "@/utils/date/date";
+
+import style from "@/public/css/event.module.css";
 
 function Announcement({
     title,
@@ -14,16 +14,16 @@ function Announcement({
     const formattedDate = formatDate(createdAt);
 
     return (
-        <div className={`mb-5 ${style.container}`}>
-            <div className={`${style.time}`}>
+        <article className={`mb-5 ${style.event_container}`}>
+            <div className={`${style.event_time}`}>
                 <p>{formattedDate.time}</p>
                 <p>{`${formattedDate.date} ${formattedDate.year}`}</p>
             </div>
             <div className={`${style.event_content}`}>
-                <p className={`${style.title}`}>{title}</p>
-                <p className={`${style.description}`}>{description}</p>
+                <p className={`${style.event_title}`}>{title}</p>
+                <p className={`${style.event_description}`}>{description}</p>
             </div>
-        </div>
+        </article>
     );
 }
 

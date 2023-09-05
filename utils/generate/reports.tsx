@@ -1,20 +1,22 @@
 import * as XLSX from "xlsx";
 import { saveAs } from "file-saver";
+import { ReportInputs } from "@/types/global";
 
 export const generateExcel = (
     student: Array<Record<string, any>>,
     Filename: string,
-    Report: string
+    Report: string,
+    inputs: ReportInputs
 ) => {
+    console.log(inputs)
     // Create a new workbook and worksheet
     const workbook = XLSX.utils.book_new();
 
     if (Report === "Student Report Card") {
-        createStudentsGradeCollection(workbook, XLSX, student);
+        createStudentsGradeCollection(workbook, XLSX, student, inputs);
     } else {
         createStudentList(workbook, XLSX, student);
     }
-
 
     // Convert the workbook to a binary Excel file
     const excelBuffer = XLSX.write(workbook, {
@@ -34,13 +36,14 @@ export const generateExcel = (
 const createStudentsGradeCollection = (
     workbook: XLSX.WorkBook,
     XLSX: any,
-    student: Array<Record<string, any>>
+    student: Array<Record<string, any>>,
+    inputs: ReportInputs
 ) => {
-    let res = student.map(s => {
+    const result = student.map(s => {
         const excelSheetData = [
             {
                 "Fullname": s["Fullname"],
-                "Section": s["Section"],
+                "Section": `${inputs.gradeLevel} - ${inputs.section}`,
                 "Student LRN": s["Student LRN"],
                 "Student Number": s["Student Number"],
                 "Email": s["Email"],
@@ -80,7 +83,7 @@ const createStudentsGradeCollection = (
         return excelSheetData;
     });
 
-    res.filter(r => createGradeSheet(workbook, XLSX, r))
+    result.filter(r => createGradeSheet(workbook, XLSX, r))
 };
 
 const createGradeSheet = (workbook: XLSX.WorkBook, XLSX: any, student: Record<string, any>[]) => {

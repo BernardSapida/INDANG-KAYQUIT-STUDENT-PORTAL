@@ -1,29 +1,22 @@
-// Axios
 import axios from "axios";
 
-// Next Modules
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
+
 import dynamic from "next/dynamic";
 
-// Next-Auth Modules
 import { getSession } from "next-auth/react";
 
-// React Modules
 import { useEffect, useState } from "react";
 
-// React Bootstrap Components
 import { InputGroup } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-// React-Ripples
 import Ripples from 'react-ripples'
 
-// React-Icons
 import { AiOutlineUnorderedList } from 'react-icons/ai';
 import { AiOutlineSearch, AiOutlinePlus } from "react-icons/ai";
 
-// Components
 const TableList = dynamic(() => import("@/components/students/TableList"), {
     ssr: false,
 });
@@ -34,9 +27,10 @@ const EditModalForm = dynamic(() => import("@/components/students/EditModalForm"
     ssr: false,
 });
 
-// CSS
-import style from "@/public/css/teacher-students.module.css";
 import { Student } from "@/types/global";
+
+import headerStyle from "@/public/css/section-header.module.css";
+import studentsStyle from "@/public/css/students.module.css";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -54,7 +48,7 @@ export const getServerSideProps: GetServerSideProps = async (
         );
 
         return {
-            props: { studentList: studentList.data }
+            props: { studentList: studentList.data.data }
         };
     } catch (error) {
         return {
@@ -76,21 +70,21 @@ function Students({ studentList }: { studentList: any }) {
             '/api/v1/teacher/post/student-list',
             { searchTerm: e.target.value }
         );
-        const filteredStudentList = result.data;
+        const filteredStudentList = result.data.data;
         setStudents(filteredStudentList);
     }
 
     return (
-        <div className="mb-5">
-            <div className={`${style.title}`}>
+        <section className={`mb-5 ${headerStyle.header_section}`}>
+            <div className={`${headerStyle.title_container}`}>
                 <h1><AiOutlineUnorderedList /> List of Students</h1>
             </div>
-            <div className={`${style.container}`}>
-                <div className={`${style.table_header}`}>
+            <div className={`${studentsStyle.table_container}`}>
+                <div className={`${studentsStyle.table_header}`}>
                     <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="rounded">
                         <Button
                             type="submit"
-                            className={`${style.btn_add}`}
+                            className={`${studentsStyle.btn_add}`}
                             form="gradesForm"
                             onClick={() => setAddModalShow(true)}
                         >
@@ -124,7 +118,7 @@ function Students({ studentList }: { studentList: any }) {
                 student={student}
                 setStudents={setStudents}
             />
-        </div>
+        </section>
     );
 }
 

@@ -1,0 +1,11 @@
+button.submit_btn {
+  height: 40px;
+  background: hsl(224, 94%, 21%);
+  border: none;
+  transition: all 250ms ease-out;
+  font-size: 18px;
+  line-height: 1;
+}
+button.submit_btn:hover, button.submit_btn:active {
+  background: hsl(224, 94%, 41%) !important;
+}/*# sourceMappingURL=report-form.module.css.map */

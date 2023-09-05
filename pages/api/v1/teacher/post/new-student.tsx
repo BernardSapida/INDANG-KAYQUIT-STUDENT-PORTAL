@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { postStudentInDatabase } from "@/helpers/teacher/Student";
+import { createStudent } from "@/helpers/teacher/Students";
 import { Student } from "@/types/global";
 
 export default async function handler(
@@ -8,14 +8,9 @@ export default async function handler(
 ) {
     try {
         const { studentInfo }: { studentInfo: Student } = req.body;
-        const addStudentResponse = await postStudentInDatabase(studentInfo);
+        const createStudentResponse = await createStudent(studentInfo);
 
-        res.status(200).json({
-            status: 200,
-            isSuccess: true,
-            data: addStudentResponse,
-            message: "Student added successfully"
-        });
+        res.status(200).json(createStudentResponse);
     } catch (e) {
         console.error(e);
     }

@@ -40,7 +40,7 @@ export const fetchAnnouncementsInDatabase = async (gradeLevel: string, section: 
 
     return {
         status: 404,
-        isSuccess: true,
+        isSuccess: false,
         data: {},
         message: "No announcements found"
     }
@@ -62,4 +62,18 @@ export const postAnnouncementInDatabase = async (gradeLevel: string, section: st
             }
         }
     );
+
+    if (response.acknowledged) {
+        return {
+            status: 200,
+            isSuccess: response.acknowledged,
+            message: "Successfully post the announcement"
+        };
+    }
+
+    return {
+        status: 403,
+        isSuccess: response.acknowledged,
+        message: "Failed to post the announcement"
+    };
 }

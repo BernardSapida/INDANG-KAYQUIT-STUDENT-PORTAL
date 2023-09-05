@@ -1,41 +1,29 @@
 import axios from "axios";
 
-// React Bootstrap Components
 import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 
-// React Modules
 import { Dispatch, SetStateAction, useState } from "react";
 
-// Formik Modules
 import { Formik, ErrorMessage } from "formik";
 
-// Sweet Alert Modules
-import Swal from "sweetalert2";
-
-// React-Icons
 import { BsFillPeopleFill } from 'react-icons/bs';
 import { MdSystemUpdateAlt } from 'react-icons/md';
 
-// Helpers
 import { initialValues, validationSchema } from "@/helpers/teacher/students/Form";
 
-// React-Ripples
 import Ripples from 'react-ripples'
 
-// Components
 import PersonalDetails from "@/components/students/PersonalDetails";
 import EnrollmentDetails from "@/components/students/EnrollmentDetails";
 import ContactDetails from "@/components/students/ContactDetails";
 import KayquitGoogleAccount from "@/components/students/KayquitGoogleAccount";
 
-// CSS
 import style from "@/public/css/teacher-modal.module.css";
-import { Section, Student, Subject } from "@/types/global";
+import { Student, StudentSection } from "@/types/global";
 import { Alert } from "@/utils/alert";
-import { fetchStudentSubjects } from "@/helpers/student/Subjects";
 import { fetchSectionInformation } from "@/utils/sections";
 import { getGrades } from "@/utils/grades";
 
@@ -73,7 +61,7 @@ function ModalForm({
         { resetForm }: { resetForm: any }
     ) => {
         try {
-            // setLoading(true);
+            setLoading(true);
 
             const studentInfo: Student = {
                 _id: student._id,
@@ -150,18 +138,20 @@ function ModalForm({
                 "success",
                 "Thank you!"
             );
-        } catch (error) {
+        } catch (error: any) {
+            setLoading(false);
+
+            const errorMessage = error.response.data.message;
+
             Alert(
-                "There was an error",
-                "Please contact the administrator",
+                "Failed to update student",
+                errorMessage,
                 "error"
             );
-
-            console.log(error);
         }
     };
 
-    const getCurrentSectionId = (sections: Section[], gradeLevel: string): null | string => {
+    const getCurrentSectionId = (sections: StudentSection[], gradeLevel: string): null | string => {
         for (let entry of sections) {
             if (entry.sectionDetails.gradeLevel == gradeLevel) {
                 return entry.section;
@@ -257,7 +247,7 @@ function ModalForm({
                     </>
                 )}
             </Formik>
-        </Modal >
+        </Modal>
     );
 }
 

@@ -52,7 +52,7 @@ export const fetchProfileInDatabase = async (email: string): Promise<ProfileResp
 
     return {
         status: 404,
-        isSuccess: true,
+        isSuccess: false,
         message: "No student profile found"
     }
 }

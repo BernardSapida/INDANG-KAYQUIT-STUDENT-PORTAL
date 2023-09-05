@@ -16,7 +16,7 @@ function Dashboard() {
             <div className={`${style.title}`}>
                 <h1><FaGraduationCap /> Dashboard</h1>
             </div>
-            <div className={`${style.container}`}>
+            <div className={`${style.content_container}`}>
                 {/* Components / Contents Goes here */}
             </div>
         </div>

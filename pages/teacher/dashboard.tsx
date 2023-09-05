@@ -1,18 +1,13 @@
-// Next Modules
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 
-// Next-Auth Modules
 import { getSession } from "next-auth/react";
 
-// Components
 import Cards from "@/components/dashboard/Cards";
 import NewsUpdates from "@/components/dashboard/teacher/NewsUpdates";
 
-// CSS
-import style from "@/public/css/teacher-dashboard.module.css";
-
-// Utilities
 import { getGreeting } from "@/utils/greetings";
+
+import headerStyle from "@/public/css/section-header.module.css";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -39,14 +34,11 @@ export const getServerSideProps: GetServerSideProps = async (
 
 function Dashboard() {
     return (
-        <div className="mb-5">
-            <div className={`${style.title}`}>{getGreeting()}</div>
-            <div className={`${style.container} mb-3`}>
-                {/* Components / Contents Goes here */}
-                <Cards />
-            </div>
+        <section className={`mb-5 ${headerStyle.header_section}`}>
+            <div className={`${headerStyle.title_container}`}>{getGreeting()}</div>
+            <Cards />
             <NewsUpdates />
-        </div>
+        </section>
     );
 }
 

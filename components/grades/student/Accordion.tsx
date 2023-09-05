@@ -1,7 +1,7 @@
-// React Bootstrap Components
-import { Grade, SectionDetails } from '@/types/global';
 import Accordion from 'react-bootstrap/Accordion';
 import Table from 'react-bootstrap/Table';
+
+import { Grade, SectionDetails } from '@/types/global';
 
 function AccordionDropdown(
     {
@@ -14,17 +14,21 @@ function AccordionDropdown(
         uniqueKey: string
     }
 ) {
-    let finalGWA = 0;
-    const rows = grades.map((d, key) => {
-        finalGWA += (d.firstQuarter + d.secondQuarter + d.thirdQuarter + d.fourthQuarter) / 4;
+    const { gradeLevel, name, academicYear } = subjectDetails;
+    let studentGWA = 0;
+
+    const rows = grades.map((grade: Grade, key: number) => {
+        const { subjectName, firstQuarter, secondQuarter, thirdQuarter, fourthQuarter } = grade;
+        studentGWA += (firstQuarter + secondQuarter + thirdQuarter + fourthQuarter) / 4;
+
         return (
             <tr key={key}>
-                <td>{d.subjectName}</td>
-                <td>{d.firstQuarter}</td>
-                <td>{d.secondQuarter}</td>
-                <td>{d.thirdQuarter}</td>
-                <td>{d.fourthQuarter}</td>
-                <td>{((d.firstQuarter + d.secondQuarter + d.thirdQuarter + d.fourthQuarter) / 4).toFixed(2)}</td>
+                <td>{subjectName}</td>
+                <td>{firstQuarter}</td>
+                <td>{secondQuarter}</td>
+                <td>{thirdQuarter}</td>
+                <td>{fourthQuarter}</td>
+                <td>{((firstQuarter + secondQuarter + thirdQuarter + fourthQuarter) / 4).toFixed(2)}</td>
             </tr>
         )
     });
@@ -33,7 +37,7 @@ function AccordionDropdown(
         <Accordion className='mb-3'>
             <Accordion.Item eventKey={uniqueKey}>
                 <Accordion.Header>
-                    <strong>Academic Year: {subjectDetails.academicYear} | {subjectDetails.gradeLevel} - {subjectDetails.name}</strong>
+                    <strong>Academic Year: {academicYear} | {gradeLevel} - {name}</strong>
                 </Accordion.Header>
                 <Accordion.Body>
                     <Table className='text-center' bordered striped responsive>
@@ -54,13 +58,13 @@ function AccordionDropdown(
                             {rows}
                             <tr>
                                 <td className='text-end' colSpan={5}>Final GWA</td>
-                                <td>{(finalGWA / grades.length).toFixed(2)}</td>
+                                <td>{(studentGWA / grades.length).toFixed(2)}</td>
                             </tr>
                         </tbody>
-                    </Table >
-                </Accordion.Body >
-            </Accordion.Item >
-        </Accordion >
+                    </Table>
+                </Accordion.Body>
+            </Accordion.Item>
+        </Accordion>
     );
 }
 

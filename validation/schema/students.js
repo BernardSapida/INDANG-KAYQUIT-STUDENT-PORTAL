@@ -67,10 +67,9 @@ db.createCollection("students", {
                         password: { bsonType: "string" }
                     }
                 },
-                createdAt: { bsonType: "date" },
-                updatedAt: { bsonType: "date" }
+                createdAt: { bsonType: "string" },
+                updatedAt: { bsonType: "string" }
             }
         }
     }
-
 });

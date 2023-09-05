@@ -1,13 +1,9 @@
-// React Modules
-import { Dispatch, SetStateAction } from "react";
-
-// Next Modules
 import Image from "next/image";
 
-// React-Icons
+import { Dispatch, SetStateAction } from "react";
+
 import { GiHamburgerMenu } from 'react-icons/gi';
 
-// CSS
 import style from "@/public/css/header.module.css";
 
 function Header({ showNavigation, setShowNavigation }: { showNavigation: boolean, setShowNavigation: Dispatch<SetStateAction<boolean>> }) {

@@ -1,4 +1,4 @@
-import { matchPasswordAndConfirmPassword, updateUserPasswordInDatabase, validatePassword } from "@/helpers/student/Password";
+import { matchPasswordAndConfirmPassword, updateUserPasswordInDatabase, validatePassword } from "@/helpers/Password";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(

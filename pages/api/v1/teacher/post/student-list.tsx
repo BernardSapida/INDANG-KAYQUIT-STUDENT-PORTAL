@@ -1,53 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import clientPromise from "@/lib/mongodb";
-import axios from "axios";
+import { fetchFilteredStudents } from "@/helpers/teacher/Students";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
   try {
-    const client = await clientPromise;
-    const db = client.db("student_portal");
-
     const { searchTerm } = req.body;
-    let searchQuery = {}
+    const response = await fetchFilteredStudents(searchTerm);
 
-    if (searchTerm) {
-      searchQuery = {
-        $or: [
-          { "personalDetails.fullname": { $regex: searchTerm, $options: "i" } },
-          { "enrollmentDetails.lrn": { $regex: searchTerm, $options: "i" } },
-          { "enrollmentDetails.studentNumber": { $regex: searchTerm, $options: "i" } },
-          { "combinedGradeSection": { $regex: searchTerm, $options: "i" } }
-        ]
-      }
-    }
-
-    const data = await db.collection("students").aggregate([
-      {
-        $addFields: {
-          combinedGradeSection: {
-            $concat: [{ $toString: "$enrollmentDetails.currentGradeLevel" }, " - ", "$enrollmentDetails.currentSection"]
-          }
-        }
-      },
-      {
-        $match: searchQuery
-      },
-      {
-        $project: {
-          _id: 1,
-          "personalDetails": 1,
-          "contactDetails": 1,
-          "enrollmentDetails": 1,
-          "kayquitAccount": 1,
-          "class": 1,
-        },
-      }
-    ]).toArray();
-
-    res.json(data);
+    res.status(response.status).json(response);
   } catch (e) {
     console.error(e);
   }

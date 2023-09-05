@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import clientPromise from "@/lib/mongodb";
+import { addStudentInSection } from "@/helpers/teacher/Sections";
+import { insertNewSectionAndGradesForStudent } from "@/helpers/teacher/Students";
 import { ObjectId } from "mongodb";
 
 export default async function handler(
@@ -7,33 +8,14 @@ export default async function handler(
     res: NextApiResponse<any>
 ) {
     try {
-        const client = await clientPromise;
-        const db = client.db("student_portal");
-        const { studentId, sectionId, grades } = req.body;
+        let { studentId, sectionId, grades } = req.body;
+        studentId = new ObjectId(studentId);
+        sectionId = new ObjectId(sectionId);
 
-        const data = await db.collection("students").updateOne(
-            { "_id": new ObjectId(studentId) },
-            {
-                $push: {
-                    classes: {
-                        section: new ObjectId(sectionId),
-                        grades: grades
-                    }
-                }
-            }
-        );
+        const insertResponse = await insertNewSectionAndGradesForStudent(studentId, sectionId, grades);
+        const insertStudentInSectionResponse = await addStudentInSection(sectionId, studentId);
 
-
-        const sectionResponse = await db.collection("sections").updateOne(
-            { "_id": new ObjectId(sectionId) },
-            {
-                $push: {
-                    students: new ObjectId(studentId)
-                }
-            }
-        );
-
-        res.status(200).json(data);
+        res.status(200).json(insertResponse);
     } catch (e) {
         console.error(e);
     }

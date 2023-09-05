@@ -4,11 +4,13 @@ import { getSession } from "next-auth/react";
 
 import { FaGraduationCap } from 'react-icons/fa';
 
-import style from "@/public/css/student-grades.module.css";
 import AccordionDropdown from "@/components/classmates/Accordion";
 
 import { fetchStudentClassmates } from "@/helpers/student/Classmates";
+
 import { SectionDetails, Grade, Section } from "@/types/global";
+
+import headerStyle from "@/public/css/section-header.module.css";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -178,23 +180,21 @@ function Grades({
         },
     ]
     return (
-        <div className="mb-5">
-            <div className={`${style.title}`}>
+        <section className={`mb-5  ${headerStyle.header_section}`}>
+            <div className={`${headerStyle.title_container}`}>
                 <h1><FaGraduationCap /> My Classmates</h1>
             </div>
-            <div className={`${style.container}`}>
-                {
-                    classmates?.map((c, key) => (
-                        <AccordionDropdown
-                            key={key}
-                            sectionDetails={c}
-                            students={c.students!}
-                            uniqueKey={key.toString()}
-                        />
-                    ))
-                }
-            </div>
-        </div>
+            {
+                classmates?.map((c, key) => (
+                    <AccordionDropdown
+                        key={key}
+                        sectionDetails={c}
+                        students={c.students!}
+                        uniqueKey={key.toString()}
+                    />
+                ))
+            }
+        </section>
     );
 }
 

@@ -1,23 +1,19 @@
-// React Modules
 import { Dispatch, SetStateAction } from "react";
 
-// Next-Auth Modules
-import { useSession, signOut } from "next-auth/react";
 import { useRouter } from "next/router";
 
-// Next Modules
+import { useSession, signOut } from "next-auth/react";
+
 import Link from "next/link";
 
-// React-Icons
-import { AiFillUnlock, AiOutlineDashboard } from 'react-icons/ai';
-import { HiOutlineDocumentReport } from 'react-icons/hi';
-import { BiLogOutCircle } from 'react-icons/bi';
 import { IoIosPeople } from 'react-icons/io';
+import { BiLogOutCircle } from 'react-icons/bi';
 import { AiOutlineLogin } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { HiOutlineDocumentReport } from 'react-icons/hi';
+import { AiFillUnlock, AiOutlineDashboard } from 'react-icons/ai';
 import { MdSubject, MdNotificationsActive, MdGrade, MdPassword } from 'react-icons/md';
 
-// CSS
 import style from "@/public/css/side-navigation.module.css";
 
 function SideNavigation({
@@ -99,13 +95,13 @@ function SideNavigation({
             show: session?.user.role == "teacher",
         },
         {
-            name: "Student Grades",
+            name: "Students Grade",
             path: "/teacher/grades",
             icon: <MdGrade />,
             show: session?.user.role == "teacher",
         },
         {
-            name: "Students",
+            name: "Students List",
             path: "/teacher/students",
             icon: <IoIosPeople />,
             show: session?.user.role == "teacher",

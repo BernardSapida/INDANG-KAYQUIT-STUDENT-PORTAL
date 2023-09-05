@@ -1,18 +1,14 @@
-// Next Modules
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 
-// Next-Auth Modules
 import { getSession } from "next-auth/react";
 
-// React-Icons
 import { MdPassword } from 'react-icons/md';
 
-// CSS
-import style from "@/public/css/teacher-password.module.css";
-
-// Components
 import ChangePassword from "@/components/password/ChangePassword";
+
 import { User } from "@/types/global";
+
+import headerStyle from "@/public/css/section-header.module.css";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -37,15 +33,13 @@ export const getServerSideProps: GetServerSideProps = async (
 
 function Password({ user }: { user: User }) {
     return (
-        <div className="mb-5">
-            <div className={`${style.title}`}>
+        <section className={`mb-5 ${headerStyle.header_section}`}>
+            <div className={`${headerStyle.title_container}`}>
                 <h1><MdPassword /> Change Password</h1>
             </div>
-            <div className={`${style.container}`}>
-                <p className="fw-bold">Password</p>
-                <ChangePassword user={user} />
-            </div>
-        </div>
+            <p className="fw-bold">Password</p>
+            <ChangePassword user={user} />
+        </section >
     );
 }
 

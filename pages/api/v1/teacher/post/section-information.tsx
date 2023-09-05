@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import clientPromise from "@/lib/mongodb";
+import { fetchSection } from "@/helpers/teacher/Sections";
 
 export default async function handler(
     req: NextApiRequest,
@@ -7,16 +7,9 @@ export default async function handler(
 ) {
     try {
         const { gradeLevel, section, academicYear } = req.body;
-        const client = await clientPromise;
-        const db = client.db("student_portal");
+        const response = await fetchSection(gradeLevel, section, academicYear);
 
-        const data = await db.collection("sections").findOne({
-            gradeLevel: gradeLevel,
-            name: section,
-            academicYear: academicYear
-        });
-
-        res.json(data);
+        res.status(response.status).json(response);
     } catch (e) {
         console.error(e);
     }

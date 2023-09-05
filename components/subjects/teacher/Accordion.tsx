@@ -63,10 +63,10 @@ function AccordionDropdown({
                                     ))
                                 }
                             </tbody>
-                        </Table >
-                    </Accordion.Body >
-                </Accordion.Item >
-            </Accordion >
+                        </Table>
+                    </Accordion.Body>
+                </Accordion.Item>
+            </Accordion>
         </>
     );
 }

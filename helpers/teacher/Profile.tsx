@@ -52,7 +52,7 @@ export const fetchProfileInDatabase = async (email: string): Promise<TeacherProf
 
     return {
         status: 404,
-        isSuccess: true,
+        isSuccess: false,
         message: "No teacher profile found"
     }
 }

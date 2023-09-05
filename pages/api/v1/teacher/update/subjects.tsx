@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import clientPromise from "@/lib/mongodb";
 import { addSubjectsInSection, removeSubjectsInSection, updateSection } from "@/helpers/teacher/Subjects";
 
 import { Subject, Grade } from "@/types/global";
@@ -9,9 +8,6 @@ export default async function handler(
     res: NextApiResponse<any>
 ) {
     try {
-        const client = await clientPromise;
-        const db = client.db("student_portal");
-
         const {
             sectionId,
             gradeLevel,
@@ -30,7 +26,7 @@ export default async function handler(
             removedSubjects: string[]
         } = req.body;
 
-        await updateSection(gradeLevel, name, academicYear, subjects);
+        const updateResponse = await updateSection(gradeLevel, name, academicYear, subjects);
 
 
         if (removedSubjects.length > 0) {
@@ -41,10 +37,7 @@ export default async function handler(
             await addSubjectsInSection(sectionId, gradeLevel, name, academicYear, addedSubjects);
         }
 
-        res.status(200).json({
-            status: 200,
-            message: "Successfully updated section"
-        });
+        res.status(200).json(updateResponse);
     } catch (e) {
         console.error(e);
     }

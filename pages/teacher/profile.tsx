@@ -1,23 +1,19 @@
-// Next Modules
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 
-// Next-Auth Modules
 import { getSession } from "next-auth/react";
 
-// React-Icons
 import { FaGraduationCap } from 'react-icons/fa';
 
-// Components
-import PersonalDetails from "@/components/profile/teacher/PersonalDetails";
-import SectionHandle from "@/components/profile/teacher/SectionHandle";
-import ContactDetails from "@/components/profile/teacher/ContactDetails";
-import KayquitAccount from "@/components/profile/teacher/KayquitAccount";
+import PersonalDetails from "@/components/profile/PersonalDetails";
+import SectionHandle from "@/components/profile/SectionHandle";
+import ContactDetails from "@/components/profile/ContactDetails";
+import KayquitAccount from "@/components/profile/KayquitAccount";
 
 import { fetchTeacherProfile } from "@/helpers/teacher/Profile";
 
-// CSS
-import style from "@/public/css/teacher-profile.module.css";
 import { Teacher } from "@/types/global";
+
+import headerStyle from "@/public/css/section-header.module.css";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -44,17 +40,15 @@ export const getServerSideProps: GetServerSideProps = async (
 
 function Profile({ teacher }: { teacher: Teacher }) {
     return (
-        <div className="mb-5">
-            <div className={`${style.title}`}>
+        <section className={`mb-5 ${headerStyle.header_section}`}>
+            <div className={`${headerStyle.title_container}`}>
                 <h1><FaGraduationCap /> Teacher Profile</h1>
             </div>
-            <div className={`${style.container}`}>
-                <PersonalDetails personalDetails={teacher.personalDetails} />
-                <SectionHandle sectionHandle={teacher.sectionHandle} />
-                <ContactDetails contactDetails={teacher.contactDetails} />
-                <KayquitAccount kayquitAccount={teacher.kayquitAccount} />
-            </div>
-        </div>
+            <PersonalDetails personalDetails={teacher.personalDetails} />
+            <SectionHandle sectionHandle={teacher.sectionHandle} />
+            <ContactDetails contactDetails={teacher.contactDetails} />
+            <KayquitAccount kayquitAccount={teacher.kayquitAccount} />
+        </section>
     );
 }
 

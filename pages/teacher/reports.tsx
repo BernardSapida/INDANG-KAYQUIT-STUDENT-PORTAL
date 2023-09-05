@@ -1,17 +1,12 @@
-// Next Modules
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 
-// Next-Auth Modules
 import { getSession } from "next-auth/react";
 
-// React-Icons
 import { HiOutlineDocumentReport } from 'react-icons/hi';
 
-// CSS
-import style from "@/public/css/teacher-password.module.css";
-
-// Components
 import ReportForm from "@/components/reports/ReportForm";
+
+import headerStyle from "@/public/css/section-header.module.css";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -34,17 +29,15 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Reports({ user }: { user: Record<string, any> }) {
+function Reports() {
     return (
-        <div className="mb-5">
-            <div className={`${style.title}`}>
+        <section className={`mb-5 ${headerStyle.header_section}`}>
+            <div className={`${headerStyle.title_container}`}>
                 <h1><HiOutlineDocumentReport /> Reports</h1>
             </div>
-            <div className={`${style.container}`}>
-                <p className="fw-bold">Generate Excel Report</p>
-                <ReportForm />
-            </div>
-        </div>
+            <p className="fw-bold">Generate Excel Report</p>
+            <ReportForm />
+        </section>
     );
 }
 

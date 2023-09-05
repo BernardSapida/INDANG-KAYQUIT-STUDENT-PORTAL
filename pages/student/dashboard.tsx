@@ -3,12 +3,11 @@ import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import { getSession } from "next-auth/react";
 
 import Cards from "@/components/dashboard/Cards";
-
-import style from "@/public/css/student-dashboard.module.css";
-
 import NewsUpdates from "@/components/dashboard/student/NewsUpdates";
 
 import { getGreeting } from "@/utils/greetings";
+
+import headerStyle from "@/public/css/section-header.module.css";
 
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
@@ -35,14 +34,11 @@ export const getServerSideProps: GetServerSideProps = async (
 
 function Dashboard() {
     return (
-        <div className="mb-5">
-            <div className={`${style.title}`}>{getGreeting()}</div>
-            <div className={`${style.container} mb-3`}>
-                {/* Components / Contents Goes here */}
-                <Cards />
-            </div>
+        <section className={`mb-5 ${headerStyle.header_section}`}>
+            <div className={`${headerStyle.title_container}`}>{getGreeting()}</div>
+            <Cards />
             <NewsUpdates />
-        </div>
+        </section>
     );
 }
 

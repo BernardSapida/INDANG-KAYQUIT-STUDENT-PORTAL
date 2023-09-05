@@ -1,10 +1,10 @@
 import * as Yup from "yup";
 
 export const initialValues = {
-    report: "Student Report Card",
-    gradeLevel: "5",
-    section: "Akasya",
-    academicYear: "2022-2023",
+    report: "",
+    gradeLevel: "",
+    section: "",
+    academicYear: "",
 };
 
 export const validationSchema = Yup.object({
