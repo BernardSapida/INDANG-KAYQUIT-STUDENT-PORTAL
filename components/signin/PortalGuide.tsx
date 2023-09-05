@@ -30,7 +30,7 @@ function PortalGuide() {
             <div className={`${style.topic}`}>
                 <p className={`${style.title}`}>For student portal concerns</p>
                 <div className={`${style.descriptions}`}>
-                    <p>• Please fill up this <Link href="https://forms.gle/gkciobEpWPPKpooz9">form</Link></p>
+                    <p>• Please fill up this <Link href="https://forms.gle/gkciobEpWPPKpooz9" target="_blank">form</Link></p>
                 </div>
             </div>
         </div>
