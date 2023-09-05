@@ -39,7 +39,7 @@ export const getServerSideProps: GetServerSideProps = async (
 
         const studentList = await axios.post(
             `${process.env.NEXTAUTH_URL}/api/v1/teacher/post/student-grades`,
-
+            { searchTerm: "" }
         );
 
         return {

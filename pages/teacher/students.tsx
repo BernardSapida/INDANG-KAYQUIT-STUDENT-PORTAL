@@ -43,8 +43,9 @@ export const getServerSideProps: GetServerSideProps = async (
             return { notFound: true }
         }
 
-        const studentList = await axios.get(
-            `${process.env.NEXTAUTH_URL}/api/v1/teacher/post/student-list`
+        const studentList = await axios.post(
+            `${process.env.NEXTAUTH_URL}/api/v1/teacher/post/student-list`,
+            { searchTerm: "" }
         );
 
         return {
