@@ -2,7 +2,7 @@ import { TbNumbers } from 'react-icons/tb';
 import { FaGraduationCap } from 'react-icons/fa';
 import { BsFillCalendarDateFill } from 'react-icons/bs';
 
-import { getAcademicYear } from "@/utils/date/date";
+import { getAcademicYear, getCurrentQuarter } from "@/utils/date/date";
 
 import style from "@/public/css/dashboard-cards.module.css";
 
@@ -20,7 +20,7 @@ function Cards({ user }: { user: User }) {
             </article>
             <article className={`${style.dashboard_card}`}>
                 <div className={`${style.card_info}`}>
-                    <p className={`${style.card_value}`}>First</p>
+                    <p className={`${style.card_value}`}>{getCurrentQuarter()}</p>
                     <p className={`${style.card_label}`}>Current Quarter</p>
                 </div>
                 <TbNumbers />
