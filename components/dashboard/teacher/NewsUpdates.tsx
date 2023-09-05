@@ -13,19 +13,19 @@ function NewsUpdates() {
             <article className={`${style.dashboard_topic}`}>
                 <p className={`${style.dashboard_title}`}>Class Announcement(s)</p>
                 <div className={`${style.dashboard_descriptions}`}>
-                    <p>• Teachers have the capability to share class-related updates based on the designated class timetable. Take a moment to visit <Link href="#">this link</Link> and verify if any announcements have been posted for your specific class.</p>
+                    <p>• Teachers have the capability to share class-related updates based on the designated class timetable. Take a moment to visit <Link href="/teacher/announcements">this link</Link> and verify if any announcements have been posted for your specific class.</p>
                 </div>
             </article>
             <article className={`${style.dashboard_topic}`}>
                 <p className={`${style.dashboard_title}`}>Teacher Information</p>
                 <div className={`${style.dashboard_descriptions}`}>
-                    <p>• Feel free to access <Link href="#">this link</Link> to explore the details included in the teacher profile information.</p>
+                    <p>• Feel free to access <Link href="/teacher/profile">this link</Link> to explore the details included in the teacher profile information.</p>
                 </div>
             </article>
             <article className={`${style.dashboard_topic}`}>
                 <p className={`${style.dashboard_title}`}>Students</p>
                 <div className={`${style.dashboard_descriptions}`}>
-                    <p>• Visit <Link href="#">this link</Link> to easily access the list of students who will be sharing your classroom in the upcoming section.</p>
+                    <p>• Visit <Link href="/teacher/mystudents">this link</Link> to easily access the list of students who will be sharing your classroom in the upcoming section.</p>
                 </div>
             </article>
         </div>
