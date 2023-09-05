@@ -71,7 +71,7 @@ function Students({ studentList }: { studentList: Student[] }) {
 
     return (
         <section className={`mb-5 ${headerStyle.header_section}`}>
-            <div className={`${headerStyle.title_container}`}>
+            {/* <div className={`${headerStyle.title_container}`}>
                 <h1><MdGrade /> Student Grade</h1>
             </div>
             <div className={`${style.table_search}`}>
@@ -95,7 +95,7 @@ function Students({ studentList }: { studentList: Student[] }) {
                 setStudents={setStudents}
                 modalShow={modalShow}
                 setModalShow={setModalShow}
-            />
+            /> */}
         </section>
     );
 }
