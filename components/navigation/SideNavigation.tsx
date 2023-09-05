@@ -13,6 +13,7 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { HiOutlineDocumentReport } from 'react-icons/hi';
 import { AiFillUnlock, AiOutlineDashboard } from 'react-icons/ai';
 import { MdSubject, MdNotificationsActive, MdGrade, MdPassword } from 'react-icons/md';
+import { PiStudentFill } from 'react-icons/pi';
 
 import style from "@/public/css/side-navigation.module.css";
 
@@ -83,7 +84,13 @@ function SideNavigation({
             show: session?.user.role == "teacher",
         },
         {
-            name: "Subjects",
+            name: "My Students",
+            path: "/teacher/mystudents",
+            icon: <PiStudentFill />,
+            show: session?.user.role == "teacher",
+        },
+        {
+            name: "Section Subjects",
             path: "/teacher/subjects",
             icon: <MdSubject />,
             show: session?.user.role == "teacher",

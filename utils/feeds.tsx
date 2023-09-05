@@ -45,7 +45,7 @@ export const generateReligion = (): string => {
 
 export const generateContact = (): string => {
     const contact = Math.floor(Math.random() * 100000000) + 99999999;
-    return contact.toString();
+    return "09" + contact.toString();
 }
 
 export const generateCivilStatus = (): string => {

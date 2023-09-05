@@ -75,8 +75,8 @@ function EnrollmentDetails({
                             disabled={loading}
                         >
                             <option value="">--- Choose section --- </option>
-                            <option value="narra">Narra</option>
-                            <option value="akasya">Akasya</option>
+                            <option value="Narra">Narra</option>
+                            <option value="Akasya">Akasya</option>
                         </Form.Select>
                         <ErrorMessage
                             name="section"

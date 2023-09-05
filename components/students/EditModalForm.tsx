@@ -7,12 +7,12 @@ import Form from "react-bootstrap/Form";
 
 import { Dispatch, SetStateAction, useState } from "react";
 
-import { Formik, ErrorMessage } from "formik";
+import { Formik } from "formik";
 
 import { BsFillPeopleFill } from 'react-icons/bs';
 import { MdSystemUpdateAlt } from 'react-icons/md';
 
-import { initialValues, validationSchema } from "@/helpers/teacher/students/Form";
+import { validationSchema } from "@/helpers/teacher/students/Form";
 
 import Ripples from 'react-ripples'
 
@@ -39,6 +39,7 @@ function ModalForm({
     student: Student;
 }) {
     const [loading, setLoading] = useState<boolean>(false);
+    console.log(student)
 
     const handleSubmit = async (
         values: {

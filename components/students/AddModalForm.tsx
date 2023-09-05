@@ -4,31 +4,21 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 
-// React Modules
 import { Dispatch, SetStateAction, useState } from "react";
 
-// Formik Modules
-import { Formik, ErrorMessage } from "formik";
+import { Formik } from "formik";
 
-// Sweet Alert Modules
-import Swal from "sweetalert2";
-
-// React-Ripples
 import Ripples from 'react-ripples'
 
-// React-Icons
 import { BsFillPeopleFill, BsPersonFillAdd } from 'react-icons/bs';
 
-// Helpers
 import { initialValues, validationSchema } from "@/helpers/teacher/students/Form";
 
-// Components
 import PersonalDetails from "@/components/students/PersonalDetails";
 import EnrollmentDetails from "@/components/students/EnrollmentDetails";
 import ContactDetails from "@/components/students/ContactDetails";
 import KayquitGoogleAccount from "@/components/students/KayquitGoogleAccount";
 
-// CSS
 import style from "@/public/css/teacher-modal.module.css";
 import { Student, StudentResponse } from "@/types/global";
 import axios from "axios";
@@ -107,7 +97,7 @@ function ModalForm({
             if (studentAlreadyExist) {
                 return Alert(
                     "Cannot add new student",
-                    `The student with email of <strong>${values.email}</strong> already exists in records.`,
+                    `The student with email of <strong class="text-danger">${values.email}</strong> already exists in records.`,
                     "error"
                 );
             }

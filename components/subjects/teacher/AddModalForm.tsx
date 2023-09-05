@@ -85,7 +85,7 @@ function AddModalForm({
             }
 
             // Replace schoolSchedule element with this
-            const sectionId = await postSection(output);
+            const sectionId = await createSection(output);
 
             // Update sections state by appending new section
             setSections(prevSections => (
@@ -120,7 +120,7 @@ function AddModalForm({
         }
     }
 
-    const postSection = async (output: Record<string, any>) => {
+    const createSection = async (output: Record<string, any>) => {
         const res = await axios.post(
             `/api/v1/teacher/post/section`,
             output

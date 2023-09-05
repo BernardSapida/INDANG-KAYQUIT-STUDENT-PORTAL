@@ -8,6 +8,7 @@ export default async function handler(
 ) {
     try {
         const { gradeLevel, section, academicYear } = req.body;
+
         const sectionResponse = await fetchSection(gradeLevel, section, academicYear);
 
         if (!sectionResponse.isSuccess) return res.status(sectionResponse.status).json(sectionResponse);
