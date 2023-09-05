@@ -9,6 +9,8 @@ import { getGreeting } from "@/utils/greetings";
 
 import headerStyle from "@/public/css/section-header.module.css";
 
+import { User } from "@/types/global";
+
 export const getServerSideProps: GetServerSideProps = async (
     context: GetServerSidePropsContext
 ) => {
@@ -32,10 +34,12 @@ export const getServerSideProps: GetServerSideProps = async (
     }
 };
 
-function Dashboard() {
+function Dashboard({ user }: { user: User }) {
+    console.log(user);
+
     return (
         <section className={`mb-5 ${headerStyle.header_section}`}>
-            <div className={`${headerStyle.title_container}`}>{getGreeting()}</div>
+            <div className={`${headerStyle.title_container}`}>{getGreeting(user.fullname)}</div>
             <Cards />
             <NewsUpdates />
         </section>

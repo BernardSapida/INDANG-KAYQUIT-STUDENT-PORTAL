@@ -9,7 +9,7 @@ export const authenticateUser = async (email: string, password: string): Promise
 
     if (!role) return { status: 400, isAuthorized: false, message: "Email address is invalid" };
 
-    const user = await getPasswords(email, role);
+    const user = await getUser(email, role);
 
     if (user?.password == undefined && user?.defaultPassword == undefined) {
         return { status: 400, isAuthorized: false, message: "Email address didn't exist" };
@@ -24,6 +24,7 @@ export const authenticateUser = async (email: string, password: string): Promise
             isAuthorized: true,
             data: {
                 email: email,
+                fullname: user.fullname,
                 role: role
             },
             message: "Successfully authenticated"
@@ -33,7 +34,7 @@ export const authenticateUser = async (email: string, password: string): Promise
     return { status: 401, isAuthorized: false, message: "Password is incorrect" };
 }
 
-const getPasswords = async (email: string, role: string): Promise<Password> => {
+const getUser = async (email: string, role: string): Promise<Password> => {
     const client = await clientPromise;
     const db = client.db("student_portal");
 
@@ -44,6 +45,7 @@ const getPasswords = async (email: string, role: string): Promise<Password> => {
         },
         {
             $addFields: {
+                "fullname": "$personalDetails.fullname",
                 "defaultPassword": "$kayquitAccount.defaultPassword",
                 "password": "$kayquitAccount.password"
             }
@@ -51,6 +53,7 @@ const getPasswords = async (email: string, role: string): Promise<Password> => {
         {
             $project: {
                 "_id": 0,
+                "fullname": 1,
                 "defaultPassword": 1,
                 "password": 1
             }
@@ -59,6 +62,7 @@ const getPasswords = async (email: string, role: string): Promise<Password> => {
     ]).toArray();
 
     const result: Password = {
+        fullname: response[0]?.fullname,
         defaultPassword: response[0]?.defaultPassword,
         password: response[0]?.password
     }

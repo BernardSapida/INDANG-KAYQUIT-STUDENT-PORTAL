@@ -9,6 +9,7 @@ export interface ReportInputs {
 
 export interface User {
     email: string,
+    fullname: string,
     role: string
 }
 
@@ -131,6 +132,7 @@ export interface Grade {
 }
 
 export interface Password {
+    fullname: string,
     defaultPassword: string;
     password: string;
 }
@@ -140,6 +142,7 @@ export interface AuthResult {
     isAuthorized: boolean,
     data?: {
         email: string,
+        fullname: string,
         role: string,
     },
     message: string
