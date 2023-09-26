@@ -25,7 +25,6 @@ const getSections = (sections: any[]): Record<string, any>[] => {
     const allSections: Record<string, any>[] = [];
 
     sections.filter(section => {
-        // sections.filter(section => {
         const academicYears: string[] = Object.keys(section);
 
         for (let i = 0; i < academicYears.length; i++) {

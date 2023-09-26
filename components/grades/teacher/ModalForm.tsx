@@ -37,6 +37,8 @@ function ModalForm({
     const [grades, setGrades] = useState<Grade[]>([]);
     const sectionId = useRef<string>("");
 
+    console.log(student)
+
     const handleSubmit = async (e: any) => {
         try {
             e.preventDefault();
@@ -75,7 +77,7 @@ function ModalForm({
 
             let studentGrade = Object.values(formValues);
             let newClass = student.classes?.map((c: Classes) => {
-                if (c.sectionDetails._id == sectionId.current) {
+                if (c.section.toString() == sectionId.current) {
                     c.grades = studentGrade;
                 }
 
@@ -132,7 +134,7 @@ function ModalForm({
 
     const syncTable = () => {
         let newGrades = student.classes?.filter((c: Classes) => {
-            return c.sectionDetails._id === sectionId.current;
+            return c.section.toString() === sectionId.current;
         })[0]?.grades!;
 
         setGrades(newGrades);
@@ -164,11 +166,11 @@ function ModalForm({
                     <p><strong>Student Name:</strong> {student.personalDetails?.fullname}</p>
                     <p><strong>Student LRN:</strong> {student.enrollmentDetails?.lrn}</p>
                     <p><strong>Student Number:</strong> {student.enrollmentDetails?.studentNumber}</p>
-                    <FloatingLabel className="w-100" label={"Grade & Section"} onChange={changeAcademicYear}>
-                        <Form.Select>
+                    <FloatingLabel className="w-100" label={"Grade & Section"}>
+                        <Form.Select onChange={changeAcademicYear}>
                             <option value="">--- Choose grade & section ---</option>
                             {student.classes?.map((c: Classes, key: number) => (
-                                <option key={key} value={`${c.sectionDetails._id}`}>{`${c.sectionDetails.gradeLevel} - ${c.sectionDetails.name}`}</option>
+                                <option key={key} value={`${c.section}`}>{`${c.sectionDetails.gradeLevel} - ${c.sectionDetails.name}`}</option>
                             ))}
                         </Form.Select>
                     </FloatingLabel>
