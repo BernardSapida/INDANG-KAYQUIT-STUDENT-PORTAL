@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 
 import { getSession } from "next-auth/react";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { InputGroup } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
@@ -63,13 +63,14 @@ function Students({ studentList }: { studentList: any }) {
     const [editModalShow, setEditModalShow] = useState<boolean>(false);
     const [student, setStudent] = useState<Student>(studentList[0]);
     const [students, setStudents] = useState<Student[]>([]);
+    const search = useRef<HTMLInputElement>(null);
 
     useEffect(() => setStudents(studentList), [studentList]);
 
-    const handleChange = async (e: any) => {
+    const handleSearch = async (e: any) => {
         const result = await axios.post(
             '/api/v1/teacher/post/student-list',
-            { searchTerm: e.target.value }
+            { searchTerm: search.current?.value }
         );
         const filteredStudentList = result.data.data;
         setStudents(filteredStudentList);
@@ -93,12 +94,12 @@ function Students({ studentList }: { studentList: any }) {
                         </Button>
                     </Ripples>
                     <InputGroup className="ms-auto mb-3">
-                        <InputGroup.Text><AiOutlineSearch /></InputGroup.Text>
+                        <InputGroup.Text onClick={handleSearch}><AiOutlineSearch /></InputGroup.Text>
                         <Form.Control
                             type="text"
                             name="keyword"
-                            onChange={handleChange}
                             placeholder="Search student"
+                            ref={search}
                         />
                     </InputGroup>
                 </div>
