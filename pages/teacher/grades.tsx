@@ -80,7 +80,7 @@ function Grades({ studentList }: { studentList: Student[] }) {
             </div>
             <div className={`${style.table_search}`}>
                 <InputGroup className="ms-auto mb-3">
-                    <InputGroup.Text onClick={handleSearch}><AiOutlineSearch /></InputGroup.Text>
+                    <InputGroup.Text style={{ cursor: 'pointer' }} onClick={handleSearch}><AiOutlineSearch /></InputGroup.Text>
                     <Form.Control
                         type="text"
                         name="keyword"

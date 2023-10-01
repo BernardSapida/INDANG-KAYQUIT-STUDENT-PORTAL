@@ -94,7 +94,7 @@ function Students({ studentList }: { studentList: any }) {
                         </Button>
                     </Ripples>
                     <InputGroup className="ms-auto mb-3">
-                        <InputGroup.Text onClick={handleSearch}><AiOutlineSearch /></InputGroup.Text>
+                        <InputGroup.Text style={{ cursor: 'pointer' }} onClick={handleSearch}><AiOutlineSearch /></InputGroup.Text>
                         <Form.Control
                             type="text"
                             name="keyword"
