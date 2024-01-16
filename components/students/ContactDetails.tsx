@@ -36,7 +36,7 @@ function ContactDetails({
                 loading={loading}
             />
             <Field
-                type="text"
+                type="number"
                 name="contactNumber"
                 label="Contact Number"
                 handleChange={handleChange}

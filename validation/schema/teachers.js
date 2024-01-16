@@ -37,10 +37,6 @@ db.createCollection("teachers", {
                             bsonType: "string",
                             description: "Religion is required."
                         },
-                        civilStatus: {
-                            bsonType: "string",
-                            description: "Civil status is required."
-                        }
                     }
                 },
                 sectionHandle: {

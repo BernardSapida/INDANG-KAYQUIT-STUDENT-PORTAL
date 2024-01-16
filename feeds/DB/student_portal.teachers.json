@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "64ed8480f9c0f5105a08e089"
+  },
+  "personalDetails": {
+    "fullname": "John Doe",
+    "birthdate": "2002-12-17",
+    "sex": "Male",
+    "religion": "Christianity",
+    "civilStatus": "Single"
+  },
+  "sectionHandle": {
+    "currentGradeLevel": "6",
+    "currentSection": "Narra",
+    "academicYear": "2023-2024"
+  },
+  "contactDetails": {
+    "address": "123 Main St, City",
+    "contactNumber": "09472126029"
+  },
+  "kayquitAccount": {
+    "email": "john.doe@teacher.kayquit.edu.ph",
+    "defaultPassword": "@Password123",
+    "password": "$2b$10$8UTuCxSC7mOzi6jkdJKUS.K3mX6PrkDd4GEqOIcAR9aQviZTFAv6W"
+  },
+  "createdAt": {
+    "$date": "2023-08-29T05:39:12.070Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-29T05:39:12.070Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6512d1d1ece021a7b5dffd08"
+  },
+  "personalDetails": {
+    "fullname": "Maria Doe",
+    "birthdate": "2002-12-17",
+    "sex": "Female",
+    "religion": "Christianity",
+    "civilStatus": "Single"
+  },
+  "sectionHandle": {
+    "currentGradeLevel": "6",
+    "currentSection": "Akasya",
+    "academicYear": "2023-2024"
+  },
+  "contactDetails": {
+    "address": "123 Main St, City",
+    "contactNumber": "09472126029"
+  },
+  "kayquitAccount": {
+    "email": "maria.doe@teacher.kayquit.edu.ph",
+    "defaultPassword": "@Password123",
+    "password": "$2b$10$8UTuCxSC7mOzi6jkdJKUS.K3mX6PrkDd4GEqOIcAR9aQviZTFAv6W"
+  },
+  "createdAt": {
+    "$date": "2023-08-29T05:39:12.070Z"
+  },
+  "updatedAt": {
+    "$date": "2023-08-29T05:39:12.070Z"
+  }
+}]

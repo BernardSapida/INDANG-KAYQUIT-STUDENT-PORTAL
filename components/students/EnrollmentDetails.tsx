@@ -86,14 +86,6 @@ function EnrollmentDetails({
                     </FloatingLabel>
                 </Col>
             </Row>
-            <Field
-                type="text"
-                name="studentLRN"
-                label="Student LRN"
-                handleChange={handleChange}
-                value={values.studentLRN}
-                loading={loading}
-            />
             <Row>
                 <Col sm={12} md={6}>
                     <Field

@@ -44,13 +44,6 @@ function EnrollmentDetails({ enrollmentDetails }: { enrollmentDetails: Enrollmen
                     </FloatingLabel>
                 </Col>
             </Row>
-            <FloatingLabel className="mb-3 w-100" label={"Student LRN"}>
-                <Form.Control
-                    type={"text"}
-                    defaultValue={enrollmentDetails?.lrn}
-                    disabled={true}
-                />
-            </FloatingLabel>
             <Row>
                 <Col sm={12} md={6}>
                     <FloatingLabel className="mb-3 w-100" label={"Student Number"}>

@@ -62,7 +62,6 @@ export interface PersonalDetails {
     birthdate: string,
     sex: string,
     religion: string,
-    civilStatus: string,
 }
 
 export interface SectionHandle {
@@ -74,7 +73,6 @@ export interface SectionHandle {
 export interface EnrollmentDetails {
     currentGradeLevel: string,
     currentSection: string,
-    lrn: string,
     studentNumber: string,
     academicYear: string,
 }

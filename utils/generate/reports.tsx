@@ -43,7 +43,6 @@ const createStudentsGradeCollection = (
             {
                 "Fullname": s["Fullname"],
                 "Section": `${inputs.gradeLevel} - ${inputs.section}`,
-                "Student LRN": s["Student LRN"],
                 "Student Number": s["Student Number"],
                 "Email": s["Email"],
                 "": ""
@@ -51,7 +50,6 @@ const createStudentsGradeCollection = (
             {
                 "Fullname": "",
                 "Section": "",
-                "Student LRN": "",
                 "Student Number": "",
                 "Email": "",
                 "": "",
@@ -59,9 +57,9 @@ const createStudentsGradeCollection = (
             {
                 "Fullname": "Subject Name",
                 "Section": "1st Quarter",
-                "Student LRN": "2nd Quarter",
-                "Student Number": "3rd Quarter",
-                "Email": "4th Quarter",
+                "Student Number": "2nd Quarter",
+                "Email": "3rd Quarter",
+                "": "4th Quarter",
                 "": "Final Grade",
             }
         ];
@@ -71,9 +69,9 @@ const createStudentsGradeCollection = (
                 excelSheetData.push({
                     "Fullname": item.subjectName,
                     "Section": item.firstQuarter,
-                    "Student LRN": item.secondQuarter,
-                    "Student Number": item.thirdQuarter,
-                    "Email": item.fourthQuarter,
+                    "Student Number": item.secondQuarter,
+                    "Email": item.thirdQuarter,
+                    "": item.fourthQuarter,
                     "": ((item.firstQuarter + item.secondQuarter + item.thirdQuarter + item.fourthQuarter) / 4).toFixed(2),
                 })
             }

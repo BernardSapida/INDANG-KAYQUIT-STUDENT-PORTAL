@@ -59,15 +59,17 @@ function PersonalDetails({
                     </FloatingLabel>
                 </Col>
             </Row>
-            <Field
-                type="date"
-                name="birthdate"
-                label="Birth Date"
-                handleChange={handleChange}
-                value={values.birthdate}
-                loading={loading}
-            />
             <Row>
+                <Col sm={12} md={6}>
+                    <Field
+                        type="date"
+                        name="birthdate"
+                        label="Birth Date"
+                        handleChange={handleChange}
+                        value={values.birthdate}
+                        loading={loading}
+                    />
+                </Col>
                 <Col sm={12} md={6}>
                     <FloatingLabel className="mb-3 w-100" label={"Religion"}>
                         <Form.Select
@@ -101,29 +103,6 @@ function PersonalDetails({
                         </Form.Select>
                         <ErrorMessage
                             name="religion"
-                            component="p"
-                            className="text-danger"
-                        />
-                    </FloatingLabel>
-                </Col>
-                <Col sm={12} md={6}>
-                    <FloatingLabel className="mb-3 w-100" label={"Civil Status"}>
-                        <Form.Select
-                            name="civilStatus"
-                            onChange={handleChange}
-                            value={values.civilStatus}
-                            disabled={loading}
-                        >
-                            <option value="">--- Choose civil status ---</option>
-                            <option value="Single">Single</option>
-                            <option value="Married">Married</option>
-                            <option value="Divorced">Divorced</option>
-                            <option value="Widowed">Widowed</option>
-                            <option value="Separated">Separated</option>
-                            <option value="Civil_union">Civil Union</option>
-                        </Form.Select>
-                        <ErrorMessage
-                            name="civilStatus"
                             component="p"
                             className="text-danger"
                         />

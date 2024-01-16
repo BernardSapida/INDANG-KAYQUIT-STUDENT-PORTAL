@@ -1,6 +1,6 @@
 export const getAcademicYear = () => {
     const currentDate = new Date();
-    const year = currentDate.getFullYear();
+    const year = currentDate.getFullYear() - 1;
 
     return `${year}-${year + 1}`;
 }

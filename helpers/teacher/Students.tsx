@@ -133,7 +133,6 @@ export const fetchFilteredStudents = async (searchTerm: string) => {
         searchQuery = {
             $or: [
                 { "personalDetails.fullname": { $regex: searchTerm, $options: "i" } },
-                { "enrollmentDetails.lrn": { $regex: searchTerm, $options: "i" } },
                 { "enrollmentDetails.studentNumber": { $regex: searchTerm, $options: "i" } },
                 { "combinedGradeSection": { $regex: searchTerm, $options: "i" } }
             ]
@@ -233,7 +232,6 @@ export const fetchSectionStudentGrades = async (sectionId: string, gradeLevel: s
                         "$enrollmentDetails.currentSection"
                     ]
                 },
-                "Student LRN": "$enrollmentDetails.lrn",
                 "Student Number": "$enrollmentDetails.studentNumber",
                 "Email": "$kayquitAccount.email",
             }
@@ -243,7 +241,6 @@ export const fetchSectionStudentGrades = async (sectionId: string, gradeLevel: s
                 _id: 0,
                 "Fullname": 1,
                 "Section": 1,
-                "Student LRN": 1,
                 "Student Number": 1,
                 "Email": 1,
                 "classes": {
@@ -272,7 +269,6 @@ export const fetchSectionStudentGrades = async (sectionId: string, gradeLevel: s
                 "grades": 1,
                 "Fullname": 1,
                 "Section": 1,
-                "Student LRN": 1,
                 "Student Number": 1,
                 "Email": 1,
             },
@@ -375,13 +371,11 @@ export const fetchSectionStudents = async (sectionId: string, gradeLevel: string
                         { $arrayElemAt: ["$classes.sectionDetails.name", 0] },
                     ]
                 },
-                "Student LRN": "$enrollmentDetails.lrn",
                 "Student Number": "$enrollmentDetails.studentNumber",
                 "Email": "$kayquitAccount.email",
                 "Sex": "$personalDetails.sex",
                 "Religion": "$personalDetails.religion",
                 "Birthdate": "$personalDetails.birthdate",
-                "Civil Status": "$personalDetails.civilStatus",
                 "Guardian Name": "$contactDetails.guardian",
                 "Contact Number": "$contactDetails.contactNumber",
             }
@@ -390,13 +384,11 @@ export const fetchSectionStudents = async (sectionId: string, gradeLevel: string
             $project: {
                 "Fullname": 1,
                 "Section": 1,
-                "Student LRN": 1,
                 "Student Number": 1,
                 "Email": 1,
                 "Sex": 1,
                 "Religion": 1,
                 "Birthdate": 1,
-                "Civil Status": 1,
                 "Guardian Name": 1,
                 "Contact Number": 1,
             }
@@ -527,7 +519,6 @@ export const fetchFilteredStudentsGrade = async (searchTerm: string) => {
         searchQuery = {
             $or: [
                 { "personalDetails.fullname": { $regex: searchTerm, $options: "i" } },
-                { "enrollmentDetails.lrn": { $regex: searchTerm, $options: "i" } },
                 { "enrollmentDetails.studentNumber": { $regex: searchTerm, $options: "i" } },
                 { "combinedGradeSection": { $regex: searchTerm, $options: "i" } }
             ]
@@ -582,7 +573,6 @@ export const fetchFilteredStudentsGrade = async (searchTerm: string) => {
                 _id: 1,
                 "personalDetails.fullname": 1,
                 "enrollmentDetails": {
-                    "lrn": 1,
                     "studentNumber": 1
                 },
                 "classes": {

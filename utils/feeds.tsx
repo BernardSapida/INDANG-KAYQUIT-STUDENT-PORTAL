@@ -48,19 +48,6 @@ export const generateContact = (): string => {
     return "09" + contact.toString();
 }
 
-export const generateCivilStatus = (): string => {
-    const civilStatus = [
-        "Single",
-        "Married",
-        "Divorced",
-        "Widowed",
-        "Separated",
-        "Civil_union"
-    ][Math.floor(Math.random() * 6)];
-
-    return civilStatus;
-}
-
 export const generateBirthdate = (): string => {
     const year = (Math.floor(Math.random() * 17) + 1).toString().padStart(4, "200");
     const month = (Math.floor(Math.random() * 12) + 1).toString().padStart(2, "0");
@@ -74,14 +61,6 @@ export const generateStudentNumber = (studentNumber: number): string => {
     const studentUID = studentNumber.toString();
 
     return year + studentUID.padStart(5, "0");
-}
-
-export const generateLRN = (studentNumber: number): string => {
-    const regionDivisionId = "40829";
-    const calendarYear = "02";
-    const lrn = regionDivisionId + calendarYear + studentNumber.toString().padStart(5, "0");
-
-    return lrn;
 }
 
 export const generateGrade = (): number => {

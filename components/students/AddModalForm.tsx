@@ -41,10 +41,8 @@ function ModalForm({
             sex: string;
             birthdate: string;
             religion: string;
-            civilStatus: string;
             gradeLevel: string;
             section: string;
-            studentLRN: string;
             studentNumber: string;
             academicYear: string;
             address: string;
@@ -66,12 +64,10 @@ function ModalForm({
                     birthdate: values.birthdate,
                     sex: values.sex,
                     religion: values.religion,
-                    civilStatus: values.civilStatus
                 },
                 enrollmentDetails: {
                     currentGradeLevel: values.gradeLevel,
                     currentSection: values.section,
-                    lrn: values.studentLRN,
                     studentNumber: values.studentNumber,
                     academicYear: values.academicYear
                 },
@@ -94,6 +90,8 @@ function ModalForm({
             const studentAlreadyExist = await studentExist(values.email);
 
             if (studentAlreadyExist) {
+                setLoading(false);
+
                 return Alert(
                     "Cannot add new student",
                     `The student with email of <strong class="text-danger">${values.email}</strong> already exists in records.`,

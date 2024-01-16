@@ -4,7 +4,7 @@ import bcrypt from 'bcrypt';
 import type { NextApiRequest, NextApiResponse } from "next";
 
 import { ObjectId } from 'mongodb';
-import { capitalize, generateAddress, generateBirthdate, generateCivilStatus, generateContact, generateFullname, generateGrade, generateGradeLevel, generateLRN, generatePassword, generateReligion, generateSex, generateStudentEmail, generateStudentNumber } from '@/utils/feeds';
+import { capitalize, generateAddress, generateBirthdate, generateContact, generateFullname, generateGrade, generatePassword, generateReligion, generateSex, generateStudentEmail, generateStudentNumber } from '@/utils/feeds';
 
 export default async function handler(
     req: NextApiRequest,
@@ -138,12 +138,10 @@ const createNewStudent = async (
             "birthdate": generateBirthdate(),
             "sex": capitalize(sex),
             "religion": generateReligion(),
-            "civilStatus": generateCivilStatus()
         },
         "enrollmentDetails": {
             "currentGradeLevel": "6",
             "currentSection": section,
-            "lrn": generateLRN(n),
             "studentNumber": generateStudentNumber(n),
             "academicYear": `${academicYear}-${academicYear + 1}`
         },

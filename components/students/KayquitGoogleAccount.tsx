@@ -29,8 +29,8 @@ function KayquitGoogleAccount({
             />
             <Field
                 type="password"
-                name="defaultPassword"
-                label="Default Password"
+                name="password"
+                label="Password"
                 handleChange={handleChange}
                 value={values.defaultPassword}
                 loading={loading}

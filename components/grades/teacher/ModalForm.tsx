@@ -13,13 +13,9 @@ import Ripples from 'react-ripples'
 
 import { BsSave } from 'react-icons/bs';
 import { MdGrade } from 'react-icons/md';
-
 import { nanoid } from 'nanoid';
-
 import { Alert } from "@/utils/alert";
-
 import style from "@/public/css/teacher-modal.module.css";
-
 import { Classes, Grade, Student } from "@/types/global";
 
 function ModalForm({
@@ -37,8 +33,6 @@ function ModalForm({
     const [grades, setGrades] = useState<Grade[]>([]);
     const sectionId = useRef<string>("");
 
-    console.log(student)
-
     const handleSubmit = async (e: any) => {
         try {
             e.preventDefault();
@@ -47,9 +41,15 @@ function ModalForm({
             const formDataObject = new FormData(e.target);
             const formValues: Record<string, any> = {};
             let haveEmptyFields: boolean = false;
+            let validGrade: boolean = true;
 
             formDataObject.forEach((value, key) => {
                 const [subjectName, quarter] = key.split(".");
+
+                if ((Number(value) > 100 || Number(value) < 65) && Number(value) != 0) {
+                    validGrade = false;
+                    return null;
+                }
 
                 if (value === "") {
                     haveEmptyFields = true;
@@ -70,6 +70,16 @@ function ModalForm({
                 Alert(
                     "Failed to submit",
                     "Make sure there are no fields empty!",
+                    "error"
+                );
+                return null;
+            }
+
+            if (!validGrade || sectionId.current === "") {
+                setLoading(false);
+                Alert(
+                    "Failed to submit",
+                    "Make sure all grades are valid!",
                     "error"
                 );
                 return null;
@@ -164,7 +174,6 @@ function ModalForm({
                 </Modal.Header>
                 <Modal.Body>
                     <p><strong>Student Name:</strong> {student.personalDetails?.fullname}</p>
-                    <p><strong>Student LRN:</strong> {student.enrollmentDetails?.lrn}</p>
                     <p><strong>Student Number:</strong> {student.enrollmentDetails?.studentNumber}</p>
                     <FloatingLabel className="w-100" label={"Grade & Section"}>
                         <Form.Select onChange={changeAcademicYear}>

@@ -31,15 +31,17 @@ function PersonalDetails({ personalDetails }: { personalDetails: PersonalDetails
                     </FloatingLabel>
                 </Col>
             </Row>
-            <FloatingLabel className="mb-3 w-100" label={"Birth Date"}>
-                <Form.Control
-                    type={"date"}
-                    name={"birthdate"}
-                    defaultValue={personalDetails?.birthdate}
-                    disabled={true}
-                />
-            </FloatingLabel>
             <Row>
+                <Col sm={12} md={6}>
+                    <FloatingLabel className="mb-3 w-100" label={"Birth Date"}>
+                        <Form.Control
+                            type={"date"}
+                            name={"birthdate"}
+                            defaultValue={personalDetails?.birthdate}
+                            disabled={true}
+                        />
+                    </FloatingLabel>
+                </Col>
                 <Col sm={12} md={6}>
                     <FloatingLabel className="mb-3 w-100" label={"Religion"}>
                         <Form.Select defaultValue={personalDetails?.religion} disabled={true}>
@@ -65,19 +67,6 @@ function PersonalDetails({ personalDetails }: { personalDetails: PersonalDetails
                             <option value="Taoism">Taoism</option>
                             <option value="Wicca">Wicca and Neopaganism</option>
                             <option value="Zoroastrianism">Zoroastrianism</option>
-                        </Form.Select>
-                    </FloatingLabel>
-                </Col>
-                <Col sm={12} md={6}>
-                    <FloatingLabel className="mb-3 w-100" label={"Civil Status"}>
-                        <Form.Select defaultValue={personalDetails?.civilStatus} disabled={true}>
-                            <option value="">--- Choose civil status ---</option>
-                            <option value="Single">Single</option>
-                            <option value="Married">Married</option>
-                            <option value="Divorced">Divorced</option>
-                            <option value="Widowed">Widowed</option>
-                            <option value="Separated">Separated</option>
-                            <option value="Civil_union">Civil Union</option>
                         </Form.Select>
                     </FloatingLabel>
                 </Col>

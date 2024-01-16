@@ -28,10 +28,6 @@ function TableList({
             sortable: true,
         },
         {
-            name: "Student LRN",
-            selector: (student: Student) => student.enrollmentDetails.lrn,
-        },
-        {
             name: "Student Number",
             selector: (student: Student) => student.enrollmentDetails.studentNumber,
         },

@@ -18,10 +18,6 @@ function TableList({ studentList }: { studentList: Record<string, any>[] }) {
             sortable: true,
         },
         {
-            name: "Student LRN",
-            selector: (student: Record<string, any>) => student["Student LRN"],
-        },
-        {
             name: "Student Number",
             selector: (student: Record<string, any>) => student["Student Number"],
         }
