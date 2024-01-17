@@ -1,6 +1,5 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import Modal from "react-bootstrap/Modal";
 import Spinner from "react-bootstrap/Spinner";
 
 import { useState } from "react";
@@ -11,37 +10,31 @@ import Ripples from 'react-ripples';
 
 import { BsFillPeopleFill, BsPersonFillAdd } from 'react-icons/bs';
 
-import { initialValues, validationSchema } from "@/helpers/teacher/students/Form";
+import { initialValues, validationSchema } from "@/helpers/teacher/account/Form";
 
-import ContactDetails from "@/components/students/ContactDetails";
-import EnrollmentDetails from "@/components/students/EnrollmentDetails";
 import KayquitGoogleAccount from "@/components/students/KayquitGoogleAccount";
 import PersonalDetails from "@/components/students/PersonalDetails";
 
+import ContactDetailsSignup from '@/components/profile/ContactDetailsSignup';
 import SectionHandleSignup from '@/components/profile/SectionHandleSignup';
 import style from "@/public/css/teacher-modal.module.css";
-import { Student, StudentResponse } from "@/types/global";
+import { StudentResponse, Teacher, TeacherResponse } from "@/types/global";
 import { Alert } from "@/utils/alert";
-import { getGrades } from "@/utils/grades";
-import { fetchSectionInformation } from "@/utils/sections";
 import axios from "axios";
-import ContactDetailsSignup from '@/components/profile/ContactDetailsSignup';
 
 function Signup() {
     const [loading, setLoading] = useState<boolean>(false);
     const handleSubmit = async (
         values: {
             fullname: string;
-            sex: string;
             birthdate: string;
+            sex: string;
             religion: string;
-            gradeLevel: string;
-            section: string;
-            studentNumber: string;
+            currentGradeLevel: string;
+            currentSection: string;
             academicYear: string;
             address: string;
             contactNumber: string;
-            guardian: string;
             email: string;
             defaultPassword: string;
         },
@@ -50,30 +43,22 @@ function Signup() {
         try {
             setLoading(true);
 
-            const section = await fetchSectionInformation(values.gradeLevel, values.section, values.academicYear);
-            const grades = getGrades(section.subjects);
-            const studentInfo: Student = {
+            const teacherInfo: Teacher = {
                 personalDetails: {
                     fullname: values.fullname,
                     birthdate: values.birthdate,
                     sex: values.sex,
                     religion: values.religion,
                 },
-                enrollmentDetails: {
-                    currentGradeLevel: values.gradeLevel,
-                    currentSection: values.section,
-                    studentNumber: values.studentNumber,
-                    academicYear: values.academicYear
+                sectionHandle: {
+                    currentGradeLevel: values.currentGradeLevel,
+                    currentSection: values.currentSection,
+                    academicYear: values.academicYear,
                 },
-                classes: [{
-                    section: section._id,
-                    grades: grades
-                } as any],
                 contactDetails: {
                     address: values.address,
-                    guardian: values.guardian,
                     contactNumber: values.contactNumber,
-                },
+                } as any,
                 kayquitAccount: {
                     email: values.email,
                     defaultPassword: values.defaultPassword,
@@ -81,20 +66,22 @@ function Signup() {
                 }
             }
 
-            const studentAlreadyExist = await studentExist(values.email);
+            const teacherAlreadyExist = await teacherExist(values.email);
 
-            if (studentAlreadyExist) {
+            console.log(teacherAlreadyExist);
+
+            if (teacherAlreadyExist) {
                 setLoading(false);
 
                 return Alert(
                     "Cannot add new student",
-                    `The student with email of <strong class="text-danger">${values.email}</strong> already exists in records.`,
+                    `The teacher with email of <strong class="text-danger">${values.email}</strong> already exists.`,
                     "error"
                 );
             }
 
             // Save to database
-            const addedStudent: StudentResponse = await createStudent(studentInfo);
+            await createTeacher(teacherInfo);
 
             setLoading(false);
 
@@ -102,7 +89,7 @@ function Signup() {
 
             Alert(
                 "Success!",
-                "Student successfully added",
+                "Account successfully created",
                 "success",
                 "Thank you!"
             );
@@ -112,26 +99,26 @@ function Signup() {
             const errorMessage = error.response.data.message;
 
             Alert(
-                "Failed to create student",
+                "Failed to create account",
                 errorMessage,
                 "error"
             );
         }
     };
 
-    const studentExist = async (email: string): Promise<StudentResponse> => {
+    const teacherExist = async (email: string): Promise<TeacherResponse> => {
         const response = await axios.post(
-            `/api/v1/teacher/post/student`,
+            `/api/v1/teacher/get/profile`,
             { email }
         );
 
         return response.data.data;
     }
 
-    const createStudent = async (studentInfo: Student): Promise<StudentResponse> => {
+    const createTeacher = async (teacherInfo: Teacher): Promise<StudentResponse> => {
         const response = await axios.post(
-            `/api/v1/teacher/post/new-student`,
-            { studentInfo }
+            `/api/v1/teacher/post/new-account`,
+            { teacherInfo }
         );
 
         return response.data;
@@ -145,34 +132,28 @@ function Signup() {
         >
             {({ handleSubmit, handleChange, values, resetForm }) => (
                 <div className='my-5'>
-                    <Modal.Header closeButton>
-                        <Modal.Title>
-                            <BsFillPeopleFill className="mb-2" /> Teacher Sign Up
-                        </Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <Form onSubmit={handleSubmit} id="modalForm">
-                            <PersonalDetails values={values} handleChange={handleChange} loading={loading} />
-                            <SectionHandleSignup values={values} handleChange={handleChange} loading={loading} />
-                            <ContactDetailsSignup values={values} handleChange={handleChange} loading={loading} />
-                            <KayquitGoogleAccount values={values} handleChange={handleChange} loading={loading} />
-                        </Form>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="rounded">
-                            <Button
-                                type="submit"
-                                className={`${style.btn_post}`}
-                                form="modalForm"
-                                disabled={loading}
-                            >
-                                {
-                                    loading ? (<><Spinner animation="grow" size="sm" /> Creating...</>) :
-                                        (<><BsPersonFillAdd /> Create account</>)
-                                }
-                            </Button>
-                        </Ripples>
-                    </Modal.Footer>
+                    <h3 className='mb-3'>
+                        <BsFillPeopleFill className="mb-2" /> Teacher Sign Up
+                    </h3>
+                    <Form onSubmit={handleSubmit} id="modalForm">
+                        <PersonalDetails values={values} handleChange={handleChange} loading={loading} />
+                        <SectionHandleSignup values={values} handleChange={handleChange} loading={loading} />
+                        <ContactDetailsSignup values={values} handleChange={handleChange} loading={loading} />
+                        <KayquitGoogleAccount values={values} handleChange={handleChange} loading={loading} />
+                    </Form>
+                    <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="rounded bg-danger">
+                        <Button
+                            type="submit"
+                            className={`${style.btn_post}`}
+                            form="modalForm"
+                            disabled={loading}
+                        >
+                            {
+                                loading ? (<><Spinner animation="grow" size="sm" /> Creating...</>) :
+                                    (<><BsPersonFillAdd /> Create account</>)
+                            }
+                        </Button>
+                    </Ripples>
                 </div>
             )}
         </Formik>

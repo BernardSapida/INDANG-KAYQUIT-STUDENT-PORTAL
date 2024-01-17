@@ -6,6 +6,7 @@ import { getAcademicYear } from "@/utils/date/date";
 import { SectionHandle } from "@/types/global";
 import { ChangeEvent } from 'react';
 import Field from '../form/InputField';
+import { ErrorMessage } from 'formik';
 
 function SectionHandleSignup({
     values,
@@ -26,9 +27,9 @@ function SectionHandleSignup({
             <p className="fw-bold">Section Handle</p>
             <FloatingLabel className="mb-3 w-100" label={"Grade Level"}>
                 <Form.Select
-                    name={"gradeLevel"}
+                    name={"currentGradeLevel"}
                     onChange={handleChange}
-                    value={values.gradeLevel}
+                    value={values.currentGradeLevel}
                     disabled={loading}
                 >
                     <option value="">--- Choose grade level --- </option>
@@ -40,18 +41,28 @@ function SectionHandleSignup({
                     <option value="5">5</option>
                     <option value="6">6</option>
                 </Form.Select>
+                <ErrorMessage
+                    name="currentGradeLevel"
+                    component="p"
+                    className="text-danger"
+                />
             </FloatingLabel>
             <FloatingLabel className="mb-3 w-100" label={"Section"}>
                 <Form.Select
-                    name="section"
+                    name="currentSection"
                     onChange={handleChange}
-                    value={values.section}
+                    value={values.currentSection}
                     disabled={loading}
                 >
                     <option value="">--- Choose section --- </option>
                     <option value="Narra">Narra</option>
                     <option value="Akasya">Akasya</option>
                 </Form.Select>
+                <ErrorMessage
+                    name="currentSection"
+                    component="p"
+                    className="text-danger"
+                />
             </FloatingLabel>
             <FloatingLabel className="w-100" label={"Academic Year"}>
                 <Form.Select
@@ -70,6 +81,11 @@ function SectionHandleSignup({
                     <option value="2023-2024">2023-2024</option>
                     <option value="2024-2025">2024-2025</option>
                 </Form.Select>
+                <ErrorMessage
+                    name="academicYear"
+                    component="p"
+                    className="text-danger"
+                />
             </FloatingLabel>
         </div>
     );

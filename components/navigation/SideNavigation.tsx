@@ -2,18 +2,16 @@ import { Dispatch, SetStateAction } from "react";
 
 import { useRouter } from "next/router";
 
-import { useSession, signOut } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 
 import Link from "next/link";
 
-import { IoIosPeople } from 'react-icons/io';
+import { AiFillUnlock, AiOutlineDashboard, AiOutlineLogin } from 'react-icons/ai';
 import { BiLogOutCircle } from 'react-icons/bi';
-import { AiOutlineLogin } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { HiOutlineDocumentReport } from 'react-icons/hi';
-import { AiFillUnlock, AiOutlineDashboard } from 'react-icons/ai';
-import { MdSubject, MdNotificationsActive, MdGrade, MdPassword } from 'react-icons/md';
-import { PiStudentFill } from 'react-icons/pi';
+import { IoIosPeople } from 'react-icons/io';
+import { MdGrade, MdOutlineCreate, MdPassword, MdSubject } from 'react-icons/md';
 
 import style from "@/public/css/side-navigation.module.css";
 
@@ -131,6 +129,12 @@ function SideNavigation({
             name: "Login",
             path: "/",
             icon: <AiOutlineLogin />,
+            show: !session,
+        },
+        {
+            name: "Signup",
+            path: "/signup",
+            icon: <MdOutlineCreate />,
             show: !session,
         },
         {

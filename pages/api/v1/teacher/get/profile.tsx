@@ -9,7 +9,7 @@ export default async function handler(
         const { email } = req.body;
         const response = await fetchProfileInDatabase(email);
 
-        res.status(response.status).json(response);
+        res.status(200).json(response);
     } catch (e) {
         console.error(e);
     }

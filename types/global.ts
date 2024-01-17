@@ -215,6 +215,10 @@ export interface StudentResponse extends Response {
     data?: InsertOneResult,
 }
 
+export interface TeacherResponse extends Response {
+    data?: InsertOneResult,
+}
+
 export interface InsertOneResult {
     acknowledged: boolean,
     insertedId: ObjectId,

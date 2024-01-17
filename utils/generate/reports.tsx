@@ -59,7 +59,7 @@ const createStudentsGradeCollection = (
                 "Section": "1st Quarter",
                 "Student Number": "2nd Quarter",
                 "Email": "3rd Quarter",
-                "": "4th Quarter",
+                ".": "4th Quarter",
                 "": "Final Grade",
             }
         ];
@@ -71,7 +71,7 @@ const createStudentsGradeCollection = (
                     "Section": item.firstQuarter,
                     "Student Number": item.secondQuarter,
                     "Email": item.thirdQuarter,
-                    "": item.fourthQuarter,
+                    ".": item.fourthQuarter,
                     "": ((item.firstQuarter + item.secondQuarter + item.thirdQuarter + item.fourthQuarter) / 4).toFixed(2),
                 })
             }
