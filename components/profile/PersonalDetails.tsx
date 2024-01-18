@@ -11,7 +11,7 @@ function PersonalDetails({ personalDetails }: { personalDetails: PersonalDetails
             <p className="fw-bold">Personal Details</p>
             <Row>
                 <Col sm={12} md={6}>
-                    <FloatingLabel className="mb-3 w-100" label={"Full Name"}>
+                    <FloatingLabel className="mb-3 w-100" label={"Firstname"}>
                         <Form.Control
                             type={"text"}
                             name={"firstname"}
@@ -22,7 +22,7 @@ function PersonalDetails({ personalDetails }: { personalDetails: PersonalDetails
                     </FloatingLabel>
                 </Col>
                 <Col sm={12} md={6}>
-                    <FloatingLabel className="mb-3 w-100" label={"Full Name"}>
+                    <FloatingLabel className="mb-3 w-100" label={"Lastname"}>
                         <Form.Control
                             type={"text"}
                             name={"lastname"}

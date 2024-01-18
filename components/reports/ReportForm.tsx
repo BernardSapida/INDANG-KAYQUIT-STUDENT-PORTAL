@@ -163,7 +163,7 @@ function ReportForm() {
                             disabled={loading}
                         >
                             {
-                                loading ? (<><Spinner animation="grow" size="sm" /> Updating...</>) :
+                                loading ? (<><Spinner animation="grow" size="sm" /> Generating...</>) :
                                     (<><BiSolidReport className="mb-1" /> Generate Report</>)
                             }
 
