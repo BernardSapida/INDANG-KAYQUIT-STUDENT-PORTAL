@@ -77,8 +77,6 @@ const getUser = async (email: string, role: string): Promise<Password> => {
         { $limit: 1 }
     ]).toArray();
 
-    console.log(`${role}s`, email)
-    console.log(response)
 
     const result: Password = {
         fullname: response[0]?.fullname,
