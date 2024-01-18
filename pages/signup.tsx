@@ -26,7 +26,8 @@ function Signup() {
     const [loading, setLoading] = useState<boolean>(false);
     const handleSubmit = async (
         values: {
-            fullname: string;
+            firstname: string;
+            lastname: string;
             birthdate: string;
             sex: string;
             religion: string;
@@ -45,7 +46,7 @@ function Signup() {
 
             const teacherInfo: Teacher = {
                 personalDetails: {
-                    fullname: values.fullname,
+                    fullname: `${values.firstname} ${values.lastname}`,
                     birthdate: values.birthdate,
                     sex: values.sex,
                     religion: values.religion,
@@ -67,8 +68,6 @@ function Signup() {
             }
 
             const teacherAlreadyExist = await teacherExist(values.email);
-
-            console.log(teacherAlreadyExist);
 
             if (teacherAlreadyExist) {
                 setLoading(false);

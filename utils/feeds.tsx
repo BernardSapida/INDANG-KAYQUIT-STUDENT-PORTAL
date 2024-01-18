@@ -56,9 +56,9 @@ export const generateBirthdate = (): string => {
     return `${year} - ${month} - ${day}`;
 }
 
-export const generateStudentNumber = (studentNumber: number): string => {
+export const generateLRN = (lrn: number): string => {
     const year = "2017";
-    const studentUID = studentNumber.toString();
+    const studentUID = lrn.toString();
 
     return year + studentUID.padStart(5, "0");
 }

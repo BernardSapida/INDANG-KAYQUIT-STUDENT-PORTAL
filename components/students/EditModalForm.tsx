@@ -42,13 +42,14 @@ function ModalForm({
 
     const handleSubmit = async (
         values: {
-            fullname: string;
+            firstname: string;
+            lastname: string;
             sex: string;
             birthdate: string;
             religion: string;
             gradeLevel: string;
             section: string;
-            studentNumber: string;
+            lrn: string;
             academicYear: string;
             address: string;
             contactNumber: string;
@@ -64,7 +65,7 @@ function ModalForm({
             const studentInfo: Student = {
                 _id: student._id,
                 personalDetails: {
-                    fullname: values.fullname,
+                    fullname: `${values.firstname} ${values.lastname}`,
                     birthdate: values.birthdate,
                     sex: values.sex,
                     religion: values.religion,
@@ -72,7 +73,7 @@ function ModalForm({
                 enrollmentDetails: {
                     currentGradeLevel: values.gradeLevel,
                     currentSection: values.section,
-                    studentNumber: values.studentNumber,
+                    lrn: values.lrn,
                     academicYear: values.academicYear
                 },
                 contactDetails: {
@@ -189,13 +190,14 @@ function ModalForm({
         >
             <Formik
                 initialValues={{
-                    fullname: student.personalDetails?.fullname,
+                    firstname: student.personalDetails?.fullname?.split(" ")[0],
+                    lastname: student.personalDetails?.fullname?.split(" ")[1],
                     sex: student.personalDetails?.sex,
                     birthdate: student.personalDetails?.birthdate,
                     religion: student.personalDetails?.religion,
                     gradeLevel: student.enrollmentDetails?.currentGradeLevel,
                     section: student.enrollmentDetails?.currentSection,
-                    studentNumber: student.enrollmentDetails?.studentNumber,
+                    lrn: student.enrollmentDetails?.lrn,
                     academicYear: student.enrollmentDetails?.academicYear,
                     address: student.contactDetails?.address,
                     contactNumber: student.contactDetails?.contactNumber,

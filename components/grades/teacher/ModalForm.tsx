@@ -174,7 +174,7 @@ function ModalForm({
                 </Modal.Header>
                 <Modal.Body>
                     <p><strong>Student Name:</strong> {student.personalDetails?.fullname}</p>
-                    <p><strong>Student Number:</strong> {student.enrollmentDetails?.studentNumber}</p>
+                    <p><strong>LRN:</strong> {student.enrollmentDetails?.lrn}</p>
                     <FloatingLabel className="w-100" label={"Grade & Section"}>
                         <Form.Select onChange={changeAcademicYear}>
                             <option value="">--- Choose grade & section ---</option>

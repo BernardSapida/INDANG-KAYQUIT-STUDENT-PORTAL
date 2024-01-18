@@ -1,59 +1,89 @@
+import { ChangeEvent } from "react";
+
+import { ErrorMessage } from "formik";
+
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import { PersonalDetails } from "@/types/global";
+import Field from "@/components/form/InputField";
 
-function PersonalDetails({ personalDetails }: { personalDetails: PersonalDetails }) {
+function DisplayPersonalDetails({
+    values,
+    handleChange,
+    loading,
+}: {
+    values: Record<string, any>;
+    handleChange: {
+        (e: ChangeEvent<any>): void;
+        <T = string | ChangeEvent<any>>(field: T): T extends ChangeEvent<any>
+            ? void
+            : (e: string | ChangeEvent<any>) => void;
+    };
+    loading: boolean;
+}) {
     return (
-        <article>
+        <div>
             <p className="fw-bold">Personal Details</p>
             <Row>
                 <Col sm={12} md={6}>
-                    <FloatingLabel className="mb-3 w-100" label={"Full Name"}>
-                        <Form.Control
-                            type={"text"}
-                            name={"firstname"}
-                            defaultValue={personalDetails?.fullname?.split(" ")[0]}
-                            placeholder={"Enter firstname"}
-                            disabled={true}
-                        />
-                    </FloatingLabel>
+                    <Field
+                        type="text"
+                        name="firstname"
+                        label="Firstname"
+                        handleChange={handleChange}
+                        value={values.fullname?.split(" ")[0]}
+                        loading={loading}
+                    />
                 </Col>
                 <Col sm={12} md={6}>
-                    <FloatingLabel className="mb-3 w-100" label={"Full Name"}>
-                        <Form.Control
-                            type={"text"}
-                            name={"lastname"}
-                            defaultValue={personalDetails?.fullname?.split(" ")[1]}
-                            placeholder={"Enter lastname"}
-                            disabled={true}
-                        />
-                    </FloatingLabel>
+                    <Field
+                        type="text"
+                        name="lastname"
+                        label="Lastname"
+                        handleChange={handleChange}
+                        value={values.fullname?.split(" ")[1]}
+                        loading={loading}
+                    />
                 </Col>
             </Row>
             <FloatingLabel className="mb-3 w-100" label={"Sex"}>
-                <Form.Select defaultValue={personalDetails?.sex} disabled={true}>
-                    <option value="">--- Choose sex ---</option>
+                <Form.Select
+                    name="sex"
+                    onChange={handleChange}
+                    value={values.sex}
+                    disabled={loading}
+                >
+                    <option value="">--- Choose sex --- </option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                 </Form.Select>
+                <ErrorMessage
+                    name="sex"
+                    component="p"
+                    className="text-danger"
+                />
             </FloatingLabel>
             <Row>
                 <Col sm={12} md={6}>
-                    <FloatingLabel className="mb-3 w-100" label={"Birth Date"}>
-                        <Form.Control
-                            type={"date"}
-                            name={"birthdate"}
-                            defaultValue={personalDetails?.birthdate}
-                            disabled={true}
-                        />
-                    </FloatingLabel>
+                    <Field
+                        type="date"
+                        name="birthdate"
+                        label="Birth Date"
+                        handleChange={handleChange}
+                        value={values.birthdate}
+                        loading={loading}
+                    />
                 </Col>
                 <Col sm={12} md={6}>
                     <FloatingLabel className="mb-3 w-100" label={"Religion"}>
-                        <Form.Select defaultValue={personalDetails?.religion} disabled={true}>
+                        <Form.Select
+                            name="religion"
+                            onChange={handleChange}
+                            value={values.religion}
+                            disabled={loading}
+                        >
                             <option value="">--- Choose religion ---</option>
                             <option value="Agnosticism">Agnosticism</option>
                             <option value="Atheism">Atheism</option>
@@ -77,11 +107,16 @@ function PersonalDetails({ personalDetails }: { personalDetails: PersonalDetails
                             <option value="Wicca">Wicca and Neopaganism</option>
                             <option value="Zoroastrianism">Zoroastrianism</option>
                         </Form.Select>
+                        <ErrorMessage
+                            name="religion"
+                            component="p"
+                            className="text-danger"
+                        />
                     </FloatingLabel>
                 </Col>
             </Row>
-        </article>
+        </div>
     );
 }
 
-export default PersonalDetails;
+export default DisplayPersonalDetails;

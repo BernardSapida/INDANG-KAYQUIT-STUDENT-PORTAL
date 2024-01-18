@@ -1,4 +1,4 @@
-import { Student, Section, SectionDetails } from '@/types/global';
+import { SectionDetails } from '@/types/global';
 import Accordion from 'react-bootstrap/Accordion';
 import Table from 'react-bootstrap/Table';
 
@@ -20,7 +20,7 @@ function AccordionDropdown(
                 <td>{key + 1}</td>
                 <td>{student.fullname}</td>
                 <td>{student.sex}</td>
-                <td>{student.studentNumber}</td>
+                <td>{student.lrn}</td>
                 <td>{student.email}</td>
             </tr>
         )
@@ -39,7 +39,7 @@ function AccordionDropdown(
                                 <th className="bg-dark text-light">No.</th>
                                 <th className="bg-dark text-light">Student Fullname</th>
                                 <th className="bg-dark text-light ">Email</th>
-                                <th className="bg-dark text-light">Student Number</th>
+                                <th className="bg-dark text-light">LRN</th>
                                 <th className="bg-dark text-light">Sex</th>
                             </tr>
                         </thead>

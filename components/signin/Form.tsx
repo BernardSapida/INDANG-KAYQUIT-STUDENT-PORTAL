@@ -108,11 +108,6 @@ export default function SigninForm() {
                             loading={loading}
                             autocomplete={"current-password"}
                         />
-                        <div className="d-flex justify-content-between mb-3">
-                            <div className="w-100">
-                                <Link className="text-end" href="/forgot_password">Forgot password?</Link>
-                            </div>
-                        </div>
                         <Ripples color="rgba(255, 255, 255, 0.3)" during={2000} className="d-grid rounded">
                             <Button type="submit" className={`${style.signin_btn}`}>
                                 Login

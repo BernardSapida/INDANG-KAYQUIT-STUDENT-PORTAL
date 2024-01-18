@@ -46,11 +46,11 @@ function EnrollmentDetails({ enrollmentDetails }: { enrollmentDetails: Enrollmen
             </Row>
             <Row>
                 <Col sm={12} md={6}>
-                    <FloatingLabel className="mb-3 w-100" label={"Student Number"}>
+                    <FloatingLabel className="mb-3 w-100" label={"LRN"}>
                         <Form.Control
                             type={"text"}
-                            name={"studentNumber"}
-                            defaultValue={enrollmentDetails?.studentNumber}
+                            name={"lrn"}
+                            defaultValue={enrollmentDetails?.lrn}
                             disabled={true}
                         />
                     </FloatingLabel>
@@ -59,7 +59,7 @@ function EnrollmentDetails({ enrollmentDetails }: { enrollmentDetails: Enrollmen
                     <FloatingLabel className="mb-3 w-100" label={"Academic Year"}>
                         <Form.Control
                             type={"text"}
-                            name={"studentNumber"}
+                            name={"academicYear"}
                             defaultValue={getAcademicYear()}
                             disabled={true}
                         />

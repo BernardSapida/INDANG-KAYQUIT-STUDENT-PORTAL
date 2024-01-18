@@ -1,7 +1,8 @@
 import * as Yup from "yup";
 
 export const initialValues = {
-    fullname: "",
+    firstname: "",
+    lastname: "",
     birthdate: "",
     sex: "",
     religion: "",
@@ -15,7 +16,8 @@ export const initialValues = {
 };
 
 export const validationSchema = Yup.object({
-    fullname: Yup.string().required("Fullname is required"),
+    firstname: Yup.string().required("Firstname is required"),
+    lastname: Yup.string().required("Lastname is required"),
     birthdate: Yup.string().required("Birthdate is required"),
     sex: Yup.string().required("Sex is required"),
     religion: Yup.string().required("Religion is required"),

@@ -90,10 +90,10 @@ function EnrollmentDetails({
                 <Col sm={12} md={6}>
                     <Field
                         type="text"
-                        name="studentNumber"
-                        label="Student Number"
+                        name="lrn"
+                        label="LRN"
                         handleChange={handleChange}
-                        value={values.studentNumber}
+                        value={values.lrn}
                         loading={loading}
                     />
                 </Col>

@@ -73,7 +73,7 @@ export interface SectionHandle {
 export interface EnrollmentDetails {
     currentGradeLevel: string,
     currentSection: string,
-    studentNumber: string,
+    lrn: string,
     academicYear: string,
 }
 

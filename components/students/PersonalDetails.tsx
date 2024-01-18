@@ -30,33 +30,41 @@ function PersonalDetails({
                 <Col sm={12} md={6}>
                     <Field
                         type="text"
-                        name="fullname"
-                        label="Full Name"
+                        name="firstname"
+                        label="Firstname"
                         handleChange={handleChange}
-                        value={values.fullname}
+                        value={values.firstname}
                         loading={loading}
                     />
                 </Col>
                 <Col sm={12} md={6}>
-                    <FloatingLabel className="mb-3 w-100" label={"Sex"}>
-                        <Form.Select
-                            name="sex"
-                            onChange={handleChange}
-                            value={values.sex}
-                            disabled={loading}
-                        >
-                            <option value="">--- Choose sex --- </option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                        </Form.Select>
-                        <ErrorMessage
-                            name="sex"
-                            component="p"
-                            className="text-danger"
-                        />
-                    </FloatingLabel>
+                    <Field
+                        type="text"
+                        name="lastname"
+                        label="Lastname"
+                        handleChange={handleChange}
+                        value={values.lastname}
+                        loading={loading}
+                    />
                 </Col>
             </Row>
+            <FloatingLabel className="mb-3 w-100" label={"Sex"}>
+                <Form.Select
+                    name="sex"
+                    onChange={handleChange}
+                    value={values.sex}
+                    disabled={loading}
+                >
+                    <option value="">--- Choose sex --- </option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </Form.Select>
+                <ErrorMessage
+                    name="sex"
+                    component="p"
+                    className="text-danger"
+                />
+            </FloatingLabel>
             <Row>
                 <Col sm={12} md={6}>
                     <Field

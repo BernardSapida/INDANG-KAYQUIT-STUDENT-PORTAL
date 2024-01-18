@@ -37,13 +37,14 @@ function ModalForm({
     const [loading, setLoading] = useState<boolean>(false);
     const handleSubmit = async (
         values: {
-            fullname: string;
+            firstname: string;
+            lastname: string;
             sex: string;
             birthdate: string;
             religion: string;
             gradeLevel: string;
             section: string;
-            studentNumber: string;
+            lrn: string;
             academicYear: string;
             address: string;
             contactNumber: string;
@@ -60,7 +61,7 @@ function ModalForm({
             const grades = getGrades(section.subjects);
             const studentInfo: Student = {
                 personalDetails: {
-                    fullname: values.fullname,
+                    fullname: `${values.firstname} ${values.lastname}`,
                     birthdate: values.birthdate,
                     sex: values.sex,
                     religion: values.religion,
@@ -68,7 +69,7 @@ function ModalForm({
                 enrollmentDetails: {
                     currentGradeLevel: values.gradeLevel,
                     currentSection: values.section,
-                    studentNumber: values.studentNumber,
+                    lrn: values.lrn,
                     academicYear: values.academicYear
                 },
                 classes: [{
